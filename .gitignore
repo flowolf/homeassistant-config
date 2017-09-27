@@ -1,0 +1,38 @@
+*.pid
+*.xml
+*.csr
+*.crt
+*.key
+*.conf
+*.pickle
+OZW_Log.txt
+home-assistant.log
+home-assistant_v2.db
+*.db-journal
+*.db-shm
+*.db-wal
+lib
+deps
+tts
+secrets.yaml
+secrets
+tradfri.conf
+known_devices.yaml
+phue.conf
+ios.conf
+pyozw.sqlite
+nest.conf
+.uuid
+ipchange.yaml
+
+# meta
+.HA_VERSION
+.uuid
+# zwave
+pyozw.sqlite
+zwave_device_config.yaml
+zwcfg_*xml
+
+# zamg
+.zamg-stations.json.gz
+
