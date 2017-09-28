@@ -1,0 +1,74 @@
+- platform: rpi_rf
+  gpio: 17
+  switches:
+    wz_light_1:
+      code_on: 4456469
+      code_off: 4456468
+      pulselength: 367
+      protocol: 1
+      signal_repetitions: 15
+#      friendly_name: "grosse Stehlampe"
+    wz_light_2:
+      code_on: 4472853
+      code_off: 4472852
+      pulselength: 367
+      protocol: 1
+#      friendly_name: "Lampe Couch"
+    wz_light_3:
+      code_on: 4460565
+      code_off: 4460564
+      pulselength: 367
+      protocol: 1
+#      friendly_name: "Lego Lampe"
+    wz_light_4:
+      code_on: 69909
+      code_off: 69908
+      pulselength: 500
+      protocol: 1
+    wz_light_5:
+      code_on: 70677
+      code_off: 70676
+      pulselength: 500
+      protocol: 1
+    wz_light_6:
+      code_on: 70933
+      code_off: 70932
+      pulselength: 500
+      protocol: 1
+
+
+#- platform: mqtt
+#  name: "WZ Vitrine"
+#  friendly_name: "Vitrine"
+#  command_topic: "/socket/uPy/uPy-c4872400"
+#  state_topic: "/socket/uPy/uPy-c4872400/status"
+#  payload_on: "on"
+#  payload_off: "off"
+#  optimistic: false
+#- platform: mqtt
+#  name: "Christbaum"
+#  friendly_name: "Christbaum"
+#  command_topic: "/socket/uPy/uPy-488b2400"
+#  state_topic: "/socket/uPy/uPy-488b2400/status"
+#  payload_on: "on"
+#  payload_off: "off"
+#  optimistic: false
+
+#- platform: zwave
+ 
+- platform: mqtt
+  name: "WZ Vitrine"
+  friendly_name: "Vitrine"
+  command_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
+  state_topic:   "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
+  payload_on: "1"
+  payload_off: "0"
+  optimistic: false
+- platform: mqtt
+  name: "Ventilator"
+  friendly_name: "Ventilator"
+  command_topic: "/socket/uPy/uPy-488b2400"
+  state_topic: "/socket/uPy/uPy-488b2400/status"
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false

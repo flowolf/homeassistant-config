@@ -1,0 +1,225 @@
+#customize:
+switch.wz_light_1:
+  icon: mdi:lightbulb
+  friendly_name: "grosse Stehlampe"
+switch.wz_light_2:
+  icon: mdi:lightbulb
+  friendly_name: "Lampe Couch"
+switch.wz_light_3:
+  icon: mdi:power-plug
+  friendly_name: "Lego Lampe Stecker"
+light.tradfri_bulb_e27_ws_opal_980lm:
+  icon: mdi:lamp
+  friendly_name: "Lego Lampe"
+light.tradfri_bulb_e27_ws_opal_980lm_2:
+  icon: mdi:ceiling-light
+  friendly_name: "Licht"
+light.tradfri_bulb_e27_opal_1000lm:
+  icon: mdi:lightbulb-outline
+  friendly_name: "Loggia Licht"
+switch.wz_light_4:
+  icon: mdi:lightbulb
+  friendly_name: "Funkstecker A"
+switch.wz_light_5:
+  icon: mdi:lightbulb
+  friendly_name: "Funkstecker B"
+switch.wz_light_6:
+  icon: mdi:lightbulb
+  friendly_name: "Funkstecker C"
+switch.wz_vitrine:
+  icon: mdi:lightbulb
+  friendly_name: "Vitrine"
+switch.christbaum:
+  icon: mdi:pine-tree
+switch.ventilator:
+  icon: mdi:fan
+switch.esstisch_switch:
+  friendly_name: Esstisch
+  icon: mdi:silverware-variant
+#switch.fibaro_system_fgs223_double_relay_switch_2_0:
+#  friendly_name: Esstisch
+#  icon: mdi:silverware-variant
+#switch.fibaro_system_fgs223_double_relay_switch_2_0_2:
+#  friendly_name: Esstisch_2_unverkabelt
+sensor.wz_temp:
+  friendly_name: "Temperatur"
+sensor.wz_lfeucht:
+  icon: mdi:water-percent
+  friendly_name: "Feuchtigkeit"
+sensor.aussen_temp:
+  friendly_name: "Temperatur"
+sensor.aussen_lfeucht:
+  icon: mdi:water-percent
+  friendly_name: "Feuchtigkeit"
+sensor.abstellraum_temp:
+  friendly_name: "Temperatur"
+sensor.abstellraum_lfeucht:
+  icon: mdi:water-percent
+  friendly_name: "Feuchtigkeit"
+scene.wz_movies:
+  icon: mdi:movie
+  friendly_name: "WZ Movie (Lampe 3)"
+scene.wz_movies_2:
+  icon: mdi:movie
+  friendly_name: "WZ Movie (Lampe 1+3)"
+scene.wz_movies_3:
+  icon: mdi:movie
+  friendly_name: "WZ Movie (Lampe 1+2+3)"
+#binary_sensor.wohnungstuer:
+#  friendly_name: "Wohnungstür"
+#  entity_picture: /local/door_closed-512.png
+## hide ##
+#group.automation:
+#  hidden: True
+## OSM ##
+#sensor.owm_cloud_coverage:
+#  hidden: True
+#sensor.owm_condition:
+#  hidden: True
+#sensor.owm_forecast:
+#  hidden: True
+#sensor.owm_humidity:
+#  hidden: True
+#sensor.owm_pressure:
+#  hidden: True
+#sensor.owm_rain:
+#  hidden: True
+#sensor.owm_snow:
+#  hidden: True
+#sensor.owm_temperature:
+#  hidden: True
+#sensor.owm_wind_speed:
+#  hidden: True
+#sun.sun:
+#  hidden: True
+#sensor.yr_symbol:
+#  hidden: True
+
+#weather
+sun.sun:
+  icon: mdi:white-balance-sunny
+sensor.owm_cloud_coverage:
+  icon: mdi:cloud
+sensor.owm_condition:
+  icon: mdi:weather-sunny
+#sensor.owm_forecast:
+sensor.owm_humidity:
+  icon: mdi:water-percent
+sensor.owm_pressure:
+  icon: mdi:weight
+sensor.owm_rain:
+  icon: mdi:weather-rainy
+sensor.owm_snow:
+  icon: mdi:weather-snowy
+sensor.owm_temperature:
+  icon: mdi:thermometer
+sensor.owm_wind_speed:
+  icon: mdi:weather-windy
+sensor.dark_sky_temperature:
+  friendly_name: 'Outdoor Temperature'
+sensor.dark_sky_summary:
+  friendly_name: 'Summary'
+sensor.dark_sky_hourly_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Hourly Summary'
+sensor.dark_sky_minutely_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Minute Summary'
+sensor.dark_sky_daily_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Daily Summary'
+sensor.dark_sky_apparent_temperature:
+  icon: mdi:thermometer-lines
+  friendly_name: 'Apparent Temperature'
+sensor.dark_sky_precip:
+  icon: mdi:weather-pouring
+  friendly_name: 'Precipitation'
+sensor.dark_sky_precip_probability:
+  icon: mdi:weather-pouring
+  friendly_name: 'Precipitation Probability'
+sensor.dark_sky_precip_intensity:
+  icon: mdi:weather-pouring
+  friendly_name: 'Rainfall'
+sensor.dark_sky_humidity:
+  icon: mdi:water-percent
+  friendly_name: 'Outdoor Humidity'
+sensor.dark_sky_cloud_cover:
+  icon: mdi:weather-cloudy
+  friendly_name: 'Cloud Cover'
+sensor.dark_sky_nearest_storm_distance:
+  icon: mdi:weather-lightning
+  friendly_name: 'Nearest Storm'
+sensor.dark_sky_wind_speed:
+  icon: mdi:weather-windy
+  friendly_name: 'Wind Speed'
+sensor.dark_sky_wind_bearing:
+  icon: mdi:compass-outline
+  friendly_name: 'Wind Bearing'
+sensor.dark_sky_ozone:
+  icon: mdi:cloud
+  friendly_name: 'Ozone'
+sensor.dark_sky_pressure:
+  icon: mdi:weight
+  friendly_name: 'Pressure'
+sensor.dark_sky_dew_point:
+  friendly_name: 'Dew Point'
+sensor.dark_sky_visibility:
+  friendly_name: 'Visibility'
+sensor.zamg_temperature:
+  friendly_name: 'Temperature'
+sensor.zamg_dewpoint:
+  icon: mdi:thermometer-lines
+  friendly_name: 'Dewpoint'
+sensor.zamg_humidity:
+  icon: mdi:water-percent
+  friendly_name: 'Humidity'
+sensor.zamg_wind_speed:
+  icon: mdi:weather-windy
+  friendly_name: 'Wind Speed'
+sensor.zamg_wind_bearing:
+  icon: mdi:compass-outline
+  friendly_name: 'Wind Bearing'
+sensor.zamg_wind_max_speed:
+  icon: mdi:weather-windy
+  friendly_name: 'Wind Max Speed'
+sensor.zamg_precipitation:
+  icon: mdi:weather-rainy
+  friendly_name: 'Precipitation'
+sensor.zamg_sun_last_hour:
+  icon: mdi:weather-sunny
+  friendly_name: 'Sun Last Hour'
+
+# feinstaub:
+sensor.staub_10u:
+  icon: mdi:blur-radial
+  friendly_name: "Feinstaub (10µ)"
+sensor.staub_25u:
+  icon: mdi:blur
+  friendly_name: "Feinstaub (2.5µ)"
+sensor.staub_humi:
+  icon: mdi:water-percent
+  friendly_name: "Feuchtigkeit"
+sensor.staub_temp:
+  friendly_name: "Temperatur"
+
+# mobile Sensors:
+sensor.flo_oneplus3_akku:
+  icon: mdi:battery-70
+
+# Views
+group.wohnzimmer_view:
+  icon: mdi:sofa
+group.automation_view:
+  icon: mdi:robot
+group.default_view:
+  icon: mdi:home-variant
+group.weather_view:
+  icon: mdi:weather-partlycloudy
+  friendly_name: Wetter
+group.sensors_view:
+  icon: mdi:gauge
+group.kinderzimmer_view:
+  icon: mdi:baby
+group.scenes_view:
+  icon: mdi:movie
+  friendly_name: "Scenen"

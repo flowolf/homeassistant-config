@@ -36,3 +36,5 @@ zwcfg_*xml
 # zamg
 .zamg-stations.json.gz
 
+# www folder for images
+www

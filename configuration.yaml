@@ -1,0 +1,502 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !secret name_home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat
+  longitude: !secret lon
+  # Impacts weather/sunrise data
+  elevation: 459
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Vienna
+
+  customize: !include customize.yaml
+
+zone 1:
+  name: !secret zone1_name
+  latitude: !secret lat
+  longitude: !secret lon
+  radius: 40
+
+zone 2:
+  name: !secret zone2_name
+  icon: mdi:factory
+  latitude: !secret lat_zone2
+  longitude: !secret lon_zone2
+  radius: 90
+
+zone 3:
+  name: !secret zone3_name
+  icon: mdi:castle
+  latitude: !secret lat_zone3
+  longitude: !secret lon_zone3
+  radius: 150
+
+zone 4:
+  name: !secret zone4_name
+  icon: mdi:wrench
+  latitude: !secret lat_zone4
+  longitude: !secret lon_zone4
+  radius: 40
+
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+  themes:
+    darkcyan:
+    # Main colors that can be changed
+      primary-color: "#00bcd4"
+      disabled-text-color: "#545454"
+      divider-color: "rgba(255, 255, 255, 0.12)"
+      paper-card-background-color: "#4e4e4e"
+      paper-grey-200: "#191919"
+      paper-item-icon-color: "#d3d3d3"
+      paper-listbox-background-color: "#202020"
+      paper-listbox-color: "#FFFFFF"      
+      primary-background-color: "#303030"
+      primary-text-color: "#cfcfcf"      
+      secondary-background-color: "#2b2b2b"
+      secondary-text-color: "#04a7bc"
+    # Colors based on variables, see above
+      label-badge-background-color: "var(--secondary-background-color)"
+      label-badge-text-color: "var(--text-primary-color)"
+      paper-card-header-color: "#var(--paper-item-icon-color)"
+      paper-grey-50: "var(--primary-text-color)"
+      paper-item-icon-active-color: "var(--primary-color)"
+      paper-item-icon_-_color: "var(--primary-text-color)"
+      paper-slider-active-color: "var(--primary-color)"
+      paper-slider-knob-color: "var(--primary-color)"
+      paper-slider-knob-start-color: "var(--primary-color)"
+      paper-slider-pin-color: "var(--primary-color)"
+      paper-slider-secondary-color: "var(--light-primary-color)"     
+      paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+      paper-toggle-button-checked-button-color: "var(--primary-color)"
+      paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
+      paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+
+
+
+http:
+  api_password: !secret api_password
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+config:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# NoSQL really pounded the SD-card of my Raspberry Pi
+# trying external USB-stick
+recorder:
+  db_url: !secret external_sqlite_url
+#  purge_days: 14
+#  db_url: !secret mariadb_url
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+
+tradfri:
+  host: !secret tradfri_ip
+  api_key: !secret tradfri_security_key
+
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /srv/homeassistant/src/open-zwave-control-panel/config
+  #config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config/
+
+# TODO sensors to seperate file
+#sensor: !include_dir_list sensors/
+#sensor 1:
+#  platform: yr
+
+sensor 2:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-4d701b00/temp"
+  name: "WZ Temp"
+  qos: 0
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.temperature | round(1) }}"
+
+
+sensor 3:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-4d701b00/humi"
+  name: "WZ LFeucht"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1)}}'
+
+#sensor 4:
+#  platform: mqtt
+#  state_topic: "/sensor/uPy/uPy-4d701b00/bright"
+#  name: "WZ Brightness"
+#  qos: 0
+#  unit_of_measurement: "%"
+#  value_template: "{{ value_json.brightness }}"
+
+sensor 5:
+  platform: openweathermap
+  api_key: !secret owm_api_key
+  forecast: 1
+  monitored_conditions:
+    - weather
+    - temperature
+    - wind_speed
+    - humidity
+    - pressure
+    - clouds
+    - rain
+    - snow
+
+sensor 6:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-326e1b00/temp"
+  name: "Aussen Temp"
+  qos: 0
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.temperature | round(1) }}"
+
+sensor 7:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-326e1b00/humi"
+  name: "Aussen LFeucht"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1) }}'
+
+sensor 8:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-ba662400/temp"
+  name: "Abstellraum Temp"
+  qos: 0
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.temperature | round(1) }}"
+
+sensor 9:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-ba662400/humi"
+  name: "Abstellraum LFeucht"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1) }}'
+
+sensor 10:
+  platform: darksky
+  api_key: !secret darksky_api_key
+  update_interval: '00:15'
+  monitored_conditions:
+    - summary
+    - minutely_summary
+    - hourly_summary
+    - daily_summary
+    - nearest_storm_distance
+    - nearest_storm_bearing
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+    - ozone
+
+sensor 11:
+  platform: systemmonitor
+  resources:
+    - type: memory_free
+    - type: memory_use_percent
+    - type: processor_use
+    - type: since_last_boot
+
+sensor 12:
+  platform: mqtt
+  state_topic: "home/esp8266_7b910a00"
+  name: "uPyMotion1"
+
+sensor 13:
+  platform: rest
+  name: staub_10u
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[0]["value"] }}'
+  unit_of_measurement: "µg/m³"
+
+sensor 14:
+  platform: rest
+  name: staub_25u
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[1]["value"] }}'
+  unit_of_measurement: "µg/m³"
+
+sensor 16:
+  platform: rest
+  name: staub_humi
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[3]["value"] }}'
+  unit_of_measurement: "%"
+
+sensor 15:
+  platform: rest
+  name: staub_temp
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[2]["value"] }}'
+  unit_of_measurement: "°C"
+
+sensor 17:
+  platform: zamg
+  station_id: 11240
+  monitored_conditions:
+    - temperature
+    - wind_speed
+    - wind_bearing
+    - wind_max_speed
+    - humidity
+    - pressure
+    - sun_last_hour
+    - precipitation
+    - dewpoint
+
+sensor 18:
+  platform: mqtt
+  state_topic: !secret flo_phone_topic
+  name: !secret flo_phone_label
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.batt }}"
+
+binary_sensor 19:
+  platform: mqtt
+  state_topic: "/sensor/uPy/uPy-70dd0600/motion"
+  name: "WZ motion"
+  device_class: motion
+
+binary_sensor 20:
+  platform: template
+  sensors: 
+    wohnungstuer:
+      device_class: opening
+      friendly_name: 'Wohnungstür'
+      value_template: >- 
+        {%- if is_state("sensor.tuer1_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
+binary_sensor 21:
+  platform: template
+  sensors: 
+    wohnzimmerbalkontuer:
+      device_class: opening
+      friendly_name: 'Wohnzimmerbalkontür'
+      value_template: >- 
+        {%- if is_state("sensor.tuer2_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
+binary_sensor 22:
+  platform: template
+  sensors: 
+    kuechenbalkontuer:
+      device_class: opening
+      friendly_name: 'Küchenbalkontür'
+      value_template: >- 
+        {%- if is_state("sensor.tuer3_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
+
+
+
+camera: !include camera.yaml
+
+mqtt:
+  broker: localhost
+  port: 1883
+  username: !secret mqtt_user
+  password: !secret mqtt_pwd
+
+#shell_command: !include shell_command.yaml
+
+switch: !include switches.yaml
+
+# Groups
+group: !include groups.yaml
+
+media_player:
+  - platform: kodi
+    host: !secret kodi_IP
+    port: !secret kodi_port
+    name: "osmc-Waldo"
+    turn_on_action:
+      service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: activate
+    turn_off_action:
+#      - service: media_player.media_stop
+#        data:
+#          entity_id: media_player.kodi
+      - service: media_player.kodi_call_method
+        data: 
+          entity_id: media_player.kodi
+          method: Addons.ExecuteAddon
+          addonid: script.json-cec
+          params:
+            command: standby
+#    turn_off_action: none
+
+device_tracker 1:
+  platform: luci
+  host: !secret router_IP
+  username: !secret router_user
+  password: !secret router_pwd
+  track_new_devices: False
+
+#device_tracker 2:
+#  - platform: bluetooth_le_tracker
+
+#device_tracker 3:
+#  - platform: bluetooth_tracker
+
+device_tracker 4:
+  platform: owntracks
+  max_gps_accuracy: 200
+  waypoints: True
+  waypoint_whitelist:
+    - flo
+
+###### fancy lights ######
+light:
+  - platform: mqtt
+    name: "LEDstrip"
+    command_topic: "esp8266/mqttstrip/setpower"
+    state_topic: "esp8266/mqttstrip/setpowerpub"
+    rgb_state_topic: "esp8266/mqttstrip/setcolorpub"
+    rgb_command_topic: "esp8266/mqttstrip/setcolor"
+    brightness_state_topic: "esp8266/mqttstrip/setbrightnesspub"
+    brightness_command_topic: "esp8266/mqttstrip/setbrightness"
+    optimistic: false
+
+input_select:
+  ledstrip_effect:
+    name: LEDstrip Effect
+    options:
+     - "Solid"
+     - "BPM"
+     - "Confetti"
+     - "Cyclon Rainbow"
+     - "Dots"
+     - "Fire"
+     - "Glitter"
+     - "Juggle"
+     - "Lightning"
+     - "Noise"
+     - "Police All"
+     - "Police One"
+     - "Rainbow"
+     - "Ripple"
+     - "Sinelon"
+     - "Solid"
+     - "Twinkle"
+    initial: "Solid"
+
+input_slider:
+  ledstrip_animation_speed:
+    name: LEDstrip Animation Speed
+    initial: 150
+    min: 1
+    max: 150
+    step: 10
+
+automation 12:
+  - alias: "LEDstrip Input Effect"
+    initial_state: True
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: input_select.ledstrip_effect
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "esp8266/mqttstrip/seteffect"
+          payload: '{{ trigger.to_state.state | string }}'
+
+  - alias: "LEDstrip Animation Speed"
+    initial_state: True
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: input_slider.ledstrip_animation_speed
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "esp8266/mqttstrip/setanimationspeed"
+          payload: '{{ trigger.to_state.state | int }}'
+
+
+notify:
+  - name: jabber
+    platform: xmpp
+    sender: !secret xmpp_user
+    password: !secret xmpp_pwd
+    recipient: !secret xmpp_recipient
+    tls: True
+    verify: False
+  - name: yessssms
+    platform: command_line
+    command: !secret yessssms_command
+
+
+scene: !include scenes.yaml
+#script: !include_dir_list script/
+
+script:
+  sunset:
+    sequence:
+      - service: notify.jabber
+        data:
+          title: ""
+          message: "sunset is around the corner!"
+#      - delay: 00:00:10
+      - service: switch.turn_on
+        data:
+          entity_id: switch.wz_light_1
+      - service: switch.turn_on
+        data:
+          entity_id: switch.wz_light_2
+      - service: notify.jabber
+        data:
+          title: ""
+          message: "activated lights :)"
+
+automation: !include automations.yml
+
+

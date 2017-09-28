@@ -1,0 +1,229 @@
+wohnzimmer:
+  name: Wohnzimmer
+  #control: hidden
+  entities:
+    - switch.wz_light_1
+    - switch.wz_light_2
+    - light.tradfri_bulb_e27_ws_opal_980lm
+    - switch.wz_vitrine
+    - switch.esstisch_switch
+    - switch.ventilator
+    - media_player.osmcwaldo
+    - light.LEDstrip
+    - input_select.ledstrip_effect
+    - input_slider.ledstrip_animation_speed
+    - sensor.wz_temp
+    - sensor.wz_lfeucht
+wohnzimmer_sensors:
+  name: Wohnzimmer
+  entities:
+    - sensor.wz_temp
+    - sensor.wz_lfeucht
+automation:
+  entities:
+    - automation.update_info
+    - automation.sunset
+    - automation.wakeup7
+    - automation.tine_home
+    - automation.tree_on
+    - automation.christmas_lights_on
+    - automation.christmas_lights_off
+    - automation.coming_home
+    - automation.welcome_message_for_flo
+    - automation.welcome_message_for_tine
+    - automation.motion_light
+    - automation.motion_test
+    - automation.motion_test_off
+    - automation.esstisch_lampe_defekt
+    - automation.warn_for_open_front_door
+#      - automation.button_press
+#    - automation.ledstrip_animation_speed
+#    - automation.ledstrip_input_effect
+
+scripts:
+  name: Scripts
+  entities:
+    - script.sunset
+abstellraum:
+  name: Abstellraum
+  entities:
+    - sensor.abstellraum_temp
+    - sensor.abstellraum_lfeucht
+abstellraum_sensors:
+  name: Abstellraum
+  entities:
+    - sensor.abstellraum_temp
+    - sensor.abstellraum_lfeucht
+loggia:
+  name: Loggia
+  entities:
+    - sensor.aussen_temp
+    - sensor.aussen_lfeucht
+    - sensor.staub_10u
+    - light.tradfri_bulb_e27_opal_1000lm
+    - camera.balkonblick
+loggia_sensors:
+  name: Loggia
+  entities:
+    - sensor.aussen_temp
+    - sensor.aussen_lfeucht
+    - sensor.staub_10u
+    - sensor.staub_25u
+    - sensor.staub_temp
+    - sensor.staub_humi
+door_sensors:
+  name: Tür Sensoren
+  entities:
+    - binary_sensor.wohnungstuer
+    - binary_sensor.wohnzimmerbalkontuer
+    - binary_sensor.kuechenbalkontuer
+vorzimmer:
+  name: Vorzimmer
+  entities:
+    light.vzlicht_level
+kinderzimmer:
+  name: Kinderzimmer
+  entities:
+    - light.tradfri_bulb_e27_ws_opal_980lm_2
+other:
+  name: other
+  entities:
+    - switch.wz_light_3
+#    - switch.sonoff
+owm_weather:
+  name: Open Weather Map
+  entities:
+    - sun.sun
+    - sensor.owm_cloud_coverage
+    - sensor.owm_condition
+    - sensor.owm_forecast
+    - sensor.owm_humidity
+    - sensor.owm_pressure
+    - sensor.owm_rain
+    - sensor.owm_snow
+    - sensor.owm_temperature
+    - sensor.owm_wind_speed
+darksky_weather:
+  name: DarkSky Weather
+  entities:
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_dew_point
+    - sensor.dark_sky_cloud_ciover
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_wind_bearing
+    - sensor.dark_sky_visibility
+    - sensor.dark_sky_ozone
+    - sensor.dark_sky_pressure
+zamg:
+  name: ZAMG Weather
+  entities:
+    - sensor.zamg_temperature
+    - sensor.zamg_dewpoint
+    - sensor.zamg_humidity
+    - sensor.zamg_precipitation
+    - sensor.zamg_sun_last_hour
+    - sensor.zamg_wind_speed
+    - sensor.zamg_wind_bearing
+    - sensor.zamg_wind_max_speed
+system_sensors:
+  name: System Sensors
+  entities:
+    - sensor.cpu_use
+    - sensor.ram_free
+    - sensor.ram_use
+    - sensor.since_last_boot
+    - updater.updater
+mobile_sensors:
+  name: Mobile Sensors
+  entities:
+    - !secret flo_phone_battery
+
+scenes_wz:
+  name: Scenen Wohnzimmer
+  entities:
+    - scene.wz_movies
+    - scene.wz_movies_2
+    - scene.wz_movies_3
+
+scenes:
+  name: Scenen
+  entities:
+    - scene.all_off
+    - scene.all_on
+
+
+power_sensors:
+  name: Power Sensors
+  entities:
+    - sensor.esstisch_power
+#    - sensor.fibaro_system_fgs223_double_relay_power_2_8
+#      - sensor.fibaro_system_fgs223_double_relay_power_2_8_2
+    - sensor.esstisch_power_2
+    - sensor.vzlicht_power
+#    - sensor.fibaro_system_fgs223_double_relay_energy_2_0
+#      - sensor.fibaro_system_fgs223_double_relay_energy_2_0_2
+
+## VIEWS ##
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.wohnzimmer
+    - group.loggia
+    - group.abstellraum
+    - !secret flo_phone_tracker
+#      - !secret ble_tracker
+    - !secret tine_phone_tracker
+    - scene.wz_movies
+    - group.kinderzimmer
+    - group.vorzimmer
+wohnzimmer_view:
+  view: yes
+  entities:
+    - group.wohnzimmer
+    - scene.wz_movies
+    - scene.wz_movies_2
+sensors_view:
+  view: yes
+  entities:
+    - group.loggia_sensors
+    - group.system_sensors
+    - group.power_sensors
+    - group.abstellraum_sensors
+    - group.wohnzimmer_sensors
+    - group.door_sensors
+    - group.mobile_sensors
+    - group.other
+camera_view:
+  view: yes
+  icon: mdi:camera
+  entities:
+    - camera.balkonblick
+    - camera.android_app
+scenes_view:
+  view: yes
+  entities:
+    - group.scenes_wz
+    - group.scenes
+weather_view:
+  view: yes
+  entities:
+    - group.owm_weather
+    - group.zamg
+    - group.darksky_weather
+automation_view:
+  view: yes
+  entities:
+    - group.automation
+    - group.scripts
+kinderzimmer_view:
+  view: yes
+  entities:
+    - group.kinderzimmer
