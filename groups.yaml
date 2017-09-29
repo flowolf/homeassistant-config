@@ -206,7 +206,7 @@ camera_view:
   icon: mdi:camera
   entities:
     - camera.balkonblick
-    - camera.android_app
+    - camera.raspy_cam
 scenes_view:
   view: yes
   entities:
