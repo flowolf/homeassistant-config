@@ -1,16 +1,16 @@
-# Home Assistant config
+* Home Assistant config
 
-currently my [[https://home-assistant.io][Home Assistant]] Setup contains the following devices:
+currently my [[https://home-assistant.io][Home Assistant]] setup contains the following devices:
 
-* Ikea [[http://www.ikea.com/de/de/catalog/categories/departments/lighting/smart_lighting/][Trådfri]]
-* [[https://www.itead.cc/sonoff-wifi-wireless-switch.html][Sonoff]] (with [[https://bitbucket.org/xoseperez/espurna][ESPurna firmware]] for MQTT)
-* RF-433 plugs
-* Z-wave:
-** [[https://www.fibaro.com/de/products/dimmer-2/][fibaro dimmer]]
-** [[https://www.fibaro.com/de/products/switches/][fibaro double relay]]
-** [[https://de.aliexpress.com/item/alarme-system-with-mini-siren-quad-band-GSM-PIR-motion-PIR-detector-burglar-alarm-systemsecurity-alarm/907236108.html][door sensors]]
-* self built MQTT temperature/humidity sensors ([[https://micropython.org][MicroPython]])
-* self built [[https://github.com/bruhautomation/ESP-MQTT-JSON-Digital-LEDs][RGB-led strip light]]
-* Kodi on a Raspberry Pi
-* IP webcam with a Raspberry Pi
-* IP webcam with an old Android phone and [[https://play.google.com/store/apps/details?id=com.pas.webcam][IPWebcam]]
+- Ikea [[http://www.ikea.com/de/de/catalog/categories/departments/lighting/smart_lighting/][Trådfri]]
+- [[https://www.itead.cc/sonoff-wifi-wireless-switch.html][Sonoff]] (with [[https://bitbucket.org/xoseperez/espurna][ESPurna firmware]] for MQTT)
+- RF-433MHz plugs
+- Z-wave:
+  - [[https://www.fibaro.com/de/products/dimmer-2/][fibaro dimmer]]
+  - [[https://www.fibaro.com/de/products/switches/][fibaro double relay]]
+  - [[https://de.aliexpress.com/item/alarme-system-with-mini-siren-quad-band-GSM-PIR-motion-PIR-detector-burglar-alarm-systemsecurity-alarm/907236108.html][door sensors]]
+- self built MQTT temperature/humidity sensors ([[https://micropython.org][MicroPython]])
+- self built [[https://github.com/bruhautomation/ESP-MQTT-JSON-Digital-LEDs][RGB-led strip light]]
+- Kodi on a Raspberry Pi
+- IP webcam with a Raspberry Pi
+- IP webcam with an old Android phone and [[https://play.google.com/store/apps/details?id=com.pas.webcam][IPWebcam]]
