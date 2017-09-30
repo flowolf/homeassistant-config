@@ -372,6 +372,10 @@ media_player:
           params:
             command: standby
 #    turn_off_action: none
+  - platform: samsungtv
+    host: !secret samsung_smart_tv
+    port: 8001
+    name: "TV"
 
 device_tracker 1:
   platform: luci
