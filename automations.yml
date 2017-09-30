@@ -324,3 +324,31 @@
 #    data:
 #      title: "Battery low"
 #      message: "change battery on door sensor 1"
+#
+#- alias: "Media player paused/stopped"
+#  trigger:
+#    - platform: state
+#      entity_id: media_player.osmcwaldo
+#      from: 'playing'
+#      to: 'idle'
+##  condition:
+##    - condition: state
+##      entity_id: sun.sun
+##      state: 'below_horizon'
+#  action:
+#      service: scene.turn_on
+#      entity_id: scene.wz_normal
+
+- alias: "Media player playing"
+  trigger:
+    - platform: state
+      entity_id: media_player.osmcwaldo
+      to: 'playing'
+      from: 'idle'
+#  condition:
+#    - condition: state
+#      entity_id: sun.sun
+#      state: 'below_horizon'
+  action:
+      service: scene.turn_on
+      entity_id: scene.wz_movies_3

@@ -353,13 +353,17 @@ media_player:
     port: !secret kodi_port
     name: "osmc-Waldo"
     turn_on_action:
-      service: media_player.kodi_call_method
+      service: wake_on_lan.send_magic_packet
       data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: activate
+        mac: !secret kodi_mac_address
+        broadcast_address: !secret broadcast_IP
+#      service: media_player.kodi_call_method
+#      data:
+#        entity_id: media_player.kodi
+#        method: Addons.ExecuteAddon
+#        addonid: script.json-cec
+#        params:
+#          command: activate
     turn_off_action:
 #      - service: media_player.media_stop
 #        data:
@@ -367,10 +371,11 @@ media_player:
       - service: media_player.kodi_call_method
         data: 
           entity_id: media_player.kodi
-          method: Addons.ExecuteAddon
-          addonid: script.json-cec
-          params:
-            command: standby
+          method: System.suspend
+#          method: Addons.ExecuteAddon
+#          addonid: script.json-cec
+#          params:
+#            command: standby
 #    turn_off_action: none
   - platform: samsungtv
     # UE55MU6170UXZG
