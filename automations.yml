@@ -311,3 +311,16 @@
     service: notify.yessssms
     data:
       message: 'Front door Open (> 55 seconds)'
+
+## todo: figure out what sensor is used for zwave device battery
+#- alias: "Battery low on door sensor"
+#  initial_state: True
+#  trigger:
+#    platform: numeric_state
+#    entity_id: zwave.tuer1
+#    below: 90
+#  action:
+#    service: notify.jabber
+#    data:
+#      title: "Battery low"
+#      message: "change battery on door sensor 1"
