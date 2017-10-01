@@ -84,7 +84,7 @@
       color_temp: 454.54
       brightness: 150
 
-- name: WZ Movies 4
+- name: WZ Fireplace
   entities: 
     switch.wz_light_1: off
     switch.wz_light_2: off
@@ -94,12 +94,14 @@
     switch.fibaro_system_fgs223_double_relay_switch_2_0: off
     light.ledstrip: 
       state: on
-      brightness: 250
+      brightness: 9
       rgb_color: [228,48,0]
     #input_select.ledstrip_effect: Solid
     light.tradfri_bulb_e27_ws_opal_980lm: 
       state: on
       color_temp: 454.54
-      brightness: 150
+      brightness: 90
+    media_player.osmcwaldo:
+      source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
 
 

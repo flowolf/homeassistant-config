@@ -345,10 +345,12 @@
       entity_id: media_player.osmcwaldo
       to: 'playing'
       from: 'idle'
-#  condition:
-#    - condition: state
-#      entity_id: sun.sun
-#      state: 'below_horizon'
+      for:
+        minutes: 2
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
   action:
       service: scene.turn_on
-      entity_id: scene.wz_movies_3
+      entity_id: scene.wz_movies

@@ -150,6 +150,7 @@ scenes_wz:
   name: Scenen Wohnzimmer
   entities:
     - scene.wz_movies
+    - scene.wz_fireplace
     - scene.wz_movies_2
     - scene.wz_movies_3
 
