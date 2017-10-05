@@ -339,7 +339,7 @@
 #      service: scene.turn_on
 #      entity_id: scene.wz_normal
 
-- alias: "Media player playing"
+- alias: "auto media player lighting"
   trigger:
     - platform: state
       entity_id: media_player.osmcwaldo

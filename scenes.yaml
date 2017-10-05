@@ -46,7 +46,7 @@
       brightness: 9
     light.ledstrip: 
       state: on
-      brightness: 155
+      brightness: 55
       rgb_color: [0,151,205]
  
 - name: WZ Movies 2
