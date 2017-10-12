@@ -205,7 +205,7 @@
     from: 'off'
     to: 'on'
     for:
-      seconds: 2
+      seconds: 5
   condition:
     - condition: numeric_state
       entity_id: sensor.esstisch_power
