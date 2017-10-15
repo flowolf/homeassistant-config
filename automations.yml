@@ -358,3 +358,12 @@
   action:
       service: scene.turn_on
       entity_id: scene.wz_movies
+
+- alias: "button test 1"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.switch_158d000128afa3
+      to: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.all_off
