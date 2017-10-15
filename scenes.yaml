@@ -31,6 +31,8 @@
       state: off
     light.tradfri_bulb_e27_ws_opal_980lm_2:
       state: off
+    light.gateway_light_286c07fa1faa:
+      state: off
  
 - name: WZ Movies
   entities: 
@@ -48,7 +50,9 @@
       state: on
       brightness: 55
       rgb_color: [0,151,205]
- 
+    light.gateway_light_286c07fa1faa:
+      state: off
+  
 - name: WZ Movies 2
   entities: 
     switch.wz_light_1: off 
@@ -65,6 +69,8 @@
       state: on
       brightness: 90
       rgb_color: [0,69,108]
+    light.gateway_light_286c07fa1faa:
+      state: off
  
 - name: WZ Movies 3
   entities: 
@@ -83,7 +89,26 @@
       state: on
       color_temp: 454.54
       brightness: 150
-
+    light.gateway_light_286c07fa1faa:
+      state: off
+ 
+- name: WZ Movies 4
+  entities: 
+    switch.wz_light_1: off 
+    switch.wz_light_2: off 
+    switch.wz_light_3: off
+    switch.wz_vitrine: off 
+    switch.christbaum: off 
+    switch.fibaro_system_fgs223_double_relay_switch_2_0: off
+    light.ledstrip: 
+      state: on
+      brightness: 155
+      rgb_color: [0,151,205]
+    light.gateway_light_286c07fa1faa:
+      state: on 
+      brightness: 255
+      rgb_color: [0,34,128]
+ 
 - name: WZ Fireplace
   entities: 
     switch.wz_light_1: off

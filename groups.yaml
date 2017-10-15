@@ -160,6 +160,7 @@ scenes_wz:
     - scene.wz_fireplace
     - scene.wz_movies_2
     - scene.wz_movies_3
+    - scene.wz_movies_4
 
 scenes:
   name: Scenen
