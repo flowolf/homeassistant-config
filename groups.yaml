@@ -63,6 +63,7 @@ loggia:
   entities:
     - sensor.aussen_temp
     - sensor.aussen_lfeucht
+    - sensor.balkon_light_level
     - sensor.staub_10u
     - light.tradfri_bulb_e27_opal_1000lm
     - camera.balkonblick
