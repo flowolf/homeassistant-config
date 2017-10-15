@@ -68,6 +68,8 @@ scene.wz_movies_3:
 #binary_sensor.wohnungstuer:
 #  friendly_name: "Wohnungstür"
 #  entity_picture: /local/door_closed-512.png
+binary_sensor.door_window_sensor_158d00014df204:
+   friendly_name: "WZ Fenster 1"
 ## hide ##
 #group.automation:
 #  hidden: True
