@@ -10,10 +10,3 @@
   username: !secret android_ipc_user
   password: !secret android_ipc_pass
 
-- android_ip_cam:
-  - host: !secret android_ip_cam_ip
-    name: "Balkon"
-    username: !secret android_ipc_user
-    password: !secret android_ipc_pass
-    sensors: 
-      - light

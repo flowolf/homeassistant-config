@@ -132,6 +132,14 @@ xiaomi_aqara:
 #sensor 1:
 #  platform: yr
 
+android_ip_webcam:
+  - host: !secret android_ip_cam_ip
+    name: "Balkon"
+    username: !secret android_ipc_user
+    password: !secret android_ipc_pass
+    sensors: 
+      - light
+
 sensor 2:
   platform: mqtt
   state_topic: "/sensor/uPy/uPy-4d701b00/temp"
