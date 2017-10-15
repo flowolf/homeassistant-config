@@ -31,7 +31,7 @@ automation:
     - automation.tree_on
     - automation.christmas_lights_on
     - automation.christmas_lights_off
-    - automation.coming_home
+    - automation.coming_home_turn_on_vz_light
     - automation.welcome_message_for_flo
     - automation.welcome_message_for_tine
     - automation.motion_light
