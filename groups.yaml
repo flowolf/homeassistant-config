@@ -78,6 +78,7 @@ loggia_sensors:
     - sensor.staub_25u
     - sensor.staub_temp
     - sensor.staub_humi
+    - sensor.balkon_light_level
 door_sensors:
   name: Tür Sensoren
   entities:
