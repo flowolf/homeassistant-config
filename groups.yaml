@@ -40,7 +40,9 @@ automation:
     - automation.esstisch_lampe_defekt
     - automation.warn_for_open_front_door
     - automation.auto_media_player_lighting
-#      - automation.button_press
+#     - automation.button_press
+#     - automation.set_dark_theme_for_night
+#     - automation.set_default_theme_for_day
 #    - automation.ledstrip_animation_speed
 #    - automation.ledstrip_input_effect
 
