@@ -2,7 +2,10 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "-00:15:00"
+    # summer
+    #offset: "-00:15:00"
+    # winter
+    offset: "-00:45:00"
   condition:
     condition: and
     conditions:
