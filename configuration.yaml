@@ -137,6 +137,7 @@ android_ip_webcam:
     name: "Balkon"
     username: !secret android_ipc_user
     password: !secret android_ipc_pass
+    scan_interval: 60
     sensors: 
       - light
 
@@ -455,7 +456,8 @@ input_select:
      - "Twinkle"
     initial: "Solid"
 
-input_number:
+#input_number:
+input_slider:
   ledstrip_animation_speed:
     name: LEDstrip Animation Speed
     initial: 150
