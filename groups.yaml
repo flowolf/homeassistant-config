@@ -26,6 +26,7 @@ automation:
   entities:
     - automation.update_info
     - automation.sunset
+    - automation.sunset_2
     - automation.wakeup7
     - automation.tine_home
     - automation.tree_on

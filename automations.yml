@@ -22,6 +22,21 @@
   action:
     service: script.sunset
 
+- alias: "Sunset 2"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.balkon_light_level
+    below: 25
+    for:
+      minutes: 5
+  condition:
+    condition: state
+    entity_id: group.all_devices
+    state: "home"
+  action:
+    service: script.sunset
+
+
 - alias: "wakeup7"
   hide_entity: False
   initial_state: False
@@ -136,6 +151,24 @@
 #        - switch.wz_light_2
 #        - light.vzlicht_level
 
+#- alias: "coming home (turn on VZ light)"
+#  hide_entity: False
+#  trigger:
+#    platform: state
+#    entity_id: binary_sensor.wohnungstuer
+#    from: 'off'
+#    to: 'on'
+#  condition:
+#    condition: sun
+#    after: sunset
+#    after_offset: "-00:45:00"
+#  action:
+#    - service: homeassistant.turn_on
+#      entity_id:
+#        - switch.wz_light_1
+#        - switch.wz_light_2
+#        - light.vzlicht_level
+
 - alias: "coming home (turn on VZ light)"
   hide_entity: False
   trigger:
@@ -144,15 +177,16 @@
     from: 'off'
     to: 'on'
   condition:
-    condition: sun
-    after: sunset
-    after_offset: "-00:45:00"
+    condition: numeric_state
+    entity_id: sensor.balkon_light_level
+    below: 25
   action:
     - service: homeassistant.turn_on
       entity_id:
         - switch.wz_light_1
         - switch.wz_light_2
         - light.vzlicht_level
+
 
 - alias: "welcome message for flo"
   hide_entity: False
