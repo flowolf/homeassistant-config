@@ -51,7 +51,9 @@
       brightness: 55
       rgb_color: [0,151,205]
     light.gateway_light_286c07fa1faa:
-      state: off
+      state: on 
+      brightness: 255
+      rgb_color: [0,34,128]
   
 - name: WZ Movies 2
   entities: 
@@ -91,7 +93,7 @@
       brightness: 150
     light.gateway_light_286c07fa1faa:
       state: off
- 
+
 - name: WZ Movies 4
   entities: 
     switch.wz_light_1: off 

@@ -58,13 +58,13 @@ sensor.abstellraum_lfeucht:
   friendly_name: "Feuchtigkeit"
 scene.wz_movies:
   icon: mdi:movie
-  friendly_name: "WZ Movie (Lampe 3)"
+  friendly_name: "WZ Movie 1 (Lampe 3, blue)"
 scene.wz_movies_2:
   icon: mdi:movie
-  friendly_name: "WZ Movie (Lampe 1+3)"
+  friendly_name: "WZ Movie 2 (Lampe 1+3, blue)"
 scene.wz_movies_3:
   icon: mdi:movie
-  friendly_name: "WZ Movie (Lampe 1+2+3)"
+  friendly_name: "WZ Movie (Lampe 1+2+3, orange)"
 #binary_sensor.wohnungstuer:
 #  friendly_name: "Wohnungstür"
 #  entity_picture: /local/door_closed-512.png
