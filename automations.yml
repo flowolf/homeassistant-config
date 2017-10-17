@@ -23,6 +23,7 @@
     service: script.sunset
 
 - alias: "Sunset 2"
+  initial_state: False
   trigger:
     platform: numeric_state
     entity_id: sensor.balkon_light_level
@@ -378,6 +379,7 @@
 #      entity_id: scene.wz_normal
 
 - alias: "auto media player lighting"
+  initial_state: False
   trigger:
     - platform: state
       entity_id: media_player.osmcwaldo
@@ -393,7 +395,7 @@
       service: scene.turn_on
       entity_id: scene.wz_movies
 
-- alias: "button test 1"
+- alias: "Button WZ all off"
   trigger:
     - platform: state
       entity_id: binary_sensor.switch_158d000128afa3
