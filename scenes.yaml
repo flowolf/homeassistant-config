@@ -96,7 +96,7 @@
   entities: 
     switch.wz_light_1: off 
     switch.wz_light_2: off 
-    switch.wz_light_3: off
+#    switch.wz_light_3: off
     switch.wz_vitrine: off 
     switch.christbaum: off 
     switch.esstisch_switch: off
@@ -108,6 +108,26 @@
       state: on 
       brightness: 255
       rgb_color: [0,34,128]
+
+- name: Green
+  entities: 
+    switch.wz_light_1: on
+    switch.wz_light_2: on 
+    switch.wz_light_3: on
+    switch.wz_vitrine: on 
+    switch.esstisch_switch: on
+    light.tradfri_bulb_e27_ws_opal_980lm: 
+      state: on
+      color_temp: 373.412
+      brightness: 145
+    light.ledstrip: 
+      state: on
+      brightness: 255
+      rgb_color: [5,149,0]
+    light.gateway_light_286c07fa1faa:
+      state: on 
+      brightness: 255
+      rgb_color: [4,111,0]
  
 - name: WZ Fireplace
   entities: 

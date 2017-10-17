@@ -163,6 +163,7 @@ scenes_wz:
     - scene.wz_movies_2
     - scene.wz_movies_3
     - scene.wz_movies_4
+    - scene.green
 
 scenes:
   name: Scenen
