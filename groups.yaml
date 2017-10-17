@@ -9,7 +9,7 @@ wohnzimmer:
     - switch.esstisch_switch
     - switch.ventilator
     - media_player.osmcwaldo
-    - media_player.tv
+#    - media_player.tv
     - light.LEDstrip
     - input_select.ledstrip_effect
     - input_slider.ledstrip_animation_speed
