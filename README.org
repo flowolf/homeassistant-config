@@ -14,3 +14,8 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
 - Kodi on a Raspberry Pi
 - IP webcam with a Raspberry Pi
 - IP webcam with an old Android phone and [[https://play.google.com/store/apps/details?id=com.pas.webcam][IPWebcam]]
+- Xiaomi Gateway
+  - Xiaomi door sensor
+  - Xiaomi motion sensor
+  - Xiaomi switch (button)
+
