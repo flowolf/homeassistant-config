@@ -16,7 +16,7 @@ wohnzimmer:
     - sensor.wz_temp
     - sensor.wz_lfeucht
     - light.gateway_light_286c07fa1faa
-    - switch.wz_light_3
+#    - switch.wz_light_3
 wohnzimmer_sensors:
   name: Wohnzimmer
   entities:
