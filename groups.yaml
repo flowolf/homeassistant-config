@@ -22,6 +22,12 @@ wohnzimmer_sensors:
   entities:
     - sensor.wz_temp
     - sensor.wz_lfeucht
+    - sensor.illumination_286c07fa1faa
+vorzimmer_sensors:
+  name: Vorzimmer
+  entities:
+    - binary_sensor.motion_sensor_158d00015ef681
+    - sensor.vzlicht_power
 automation_switch:
   entities:
     - automation.sunset
@@ -213,6 +219,7 @@ sensors_view:
     - group.power_sensors
     - group.abstellraum_sensors
     - group.wohnzimmer_sensors
+    - group.vorzimmer_sensors
     - group.door_sensors
     - group.mobile_sensors
     - group.other
