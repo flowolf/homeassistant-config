@@ -346,19 +346,19 @@ binary_sensor 22:
           False
         {%- endif -%}
 
-sensor 23:
-  platform: mqtt
-  state_topic: "/sensor/uPy/geiger/uPy-02e82100/cpm"
-  name: "Radiation (CPM)"
-  qos: 0
-  unit_of_measurement: "clicks/min"
-
-sensor 24:
-  platform: mqtt
-  state_topic: "/sensor/uPy/geiger/uPy-02e82100/radiation"
-  name: "Radiation (μSv/h)"
-  qos: 0
-  unit_of_measurement: "μSv/h"
+#sensor 23:
+#  platform: mqtt
+#  state_topic: "/sensor/uPy/geiger/uPy-02e82100/cpm"
+#  name: "Radiation (CPM)"
+#  qos: 0
+#  unit_of_measurement: "clicks/min"
+#
+#sensor 24:
+#  platform: mqtt
+#  state_topic: "/sensor/uPy/geiger/uPy-02e82100/radiation"
+#  name: "Radiation (μSv/h)"
+#  qos: 0
+#  unit_of_measurement: "μSv/h"
 
 
 camera: !include camera.yaml
