@@ -403,3 +403,21 @@
   action:
     service: scene.turn_on
     entity_id: scene.all_off
+
+- alias: "Radiation Warning"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.radiation_cpm
+      above: 200
+      for:
+        minutes: 10
+  action:
+    - service: notify.jabber
+      data:
+        title: "Radiation Warning!"
+        message: >
+          "Geigercounter counted more than 200 clicks per minute for 10 minutes"
+    - service: notify.yessssms
+      data:
+        message: "Radiation Warning! Geigercounter has more than 200 clicks for 10'"
+ 
