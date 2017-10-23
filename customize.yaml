@@ -56,6 +56,10 @@ sensor.abstellraum_temp:
 sensor.abstellraum_lfeucht:
   icon: mdi:water-percent
   friendly_name: "Feuchtigkeit"
+sensor.radiation_cpm:
+  icon: mdi:radioactive
+sensor.radiation_svh:
+  icon: mdi:radioactive
 scene.wz_movies:
   icon: mdi:movie
   friendly_name: "WZ Movie 1 (Lampe 3, blue)"

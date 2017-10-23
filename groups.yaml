@@ -85,6 +85,8 @@ loggia_sensors:
     - sensor.aussen_lfeucht
     - sensor.staub_10u
     - sensor.staub_25u
+    - sensor.radiation_cpm
+    - sensor.radiation_svh
     - sensor.staub_temp
     - sensor.staub_humi
     - sensor.balkon_light_level
