@@ -194,25 +194,7 @@ media_player:
 #    port: 8001
 #    name: "TV"
 
-device_tracker 1:
-  platform: luci
-  host: !secret router_IP
-  username: !secret router_user
-  password: !secret router_pwd
-  track_new_devices: False
-
-#device_tracker 2:
-#  - platform: bluetooth_le_tracker
-
-#device_tracker 3:
-#  - platform: bluetooth_tracker
-
-device_tracker 4:
-  platform: owntracks
-  max_gps_accuracy: 200
-  waypoints: True
-  waypoint_whitelist:
-    - flo
+device_tracker: !include device_tracker.yaml
 
 ###### fancy lights ######
 light:

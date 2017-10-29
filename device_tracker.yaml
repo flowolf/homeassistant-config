@@ -1,0 +1,15 @@
+- platform: luci
+  host: !secret router_IP
+  username: !secret router_user
+  password: !secret router_pwd
+  track_new_devices: False
+
+# - platform: bluetooth_le_tracker
+
+# - platform: bluetooth_tracker
+
+- platform: owntracks
+  max_gps_accuracy: 200
+  waypoints: True
+  waypoint_whitelist:
+    - flo
