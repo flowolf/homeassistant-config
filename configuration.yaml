@@ -148,6 +148,8 @@ android_ip_webcam:
     sensors:
       - light
 
+binary_sensor: !include_dir_merge_list binary_sensors/
+
 sensor: !include_dir_merge_list sensors/
 #sensor 1:
 #  platform: yr
