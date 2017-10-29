@@ -1,0 +1,35 @@
+- platform: template
+  sensors:
+    wohnungstuer:
+      device_class: opening
+      friendly_name: 'Wohnungstür'
+      value_template: >-
+        {%- if is_state("sensor.tuer1_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
+
+- platform: template
+  sensors:
+    wohnzimmerbalkontuer:
+      device_class: opening
+      friendly_name: 'Wohnzimmerbalkontür'
+      value_template: >-
+        {%- if is_state("sensor.tuer2_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
+
+- platform: template
+  sensors:
+    kuechenbalkontuer:
+      device_class: opening
+      friendly_name: 'Küchenbalkontür'
+      value_template: >-
+        {%- if is_state("sensor.tuer3_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
