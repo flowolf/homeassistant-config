@@ -1,0 +1,13 @@
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-4d701b00/temp"
+  name: "WZ Temp"
+  qos: 0
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.temperature | round(1) }}"
+
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-4d701b00/humi"
+  name: "WZ LFeucht"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1)}}'

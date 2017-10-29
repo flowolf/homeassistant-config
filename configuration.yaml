@@ -56,9 +56,9 @@ frontend:
       paper-grey-200: "#191919"
       paper-item-icon-color: "#d3d3d3"
       paper-listbox-background-color: "#202020"
-      paper-listbox-color: "#FFFFFF"      
+      paper-listbox-color: "#FFFFFF"
       primary-background-color: "#303030"
-      primary-text-color: "#cfcfcf"      
+      primary-text-color: "#cfcfcf"
       secondary-background-color: "#2b2b2b"
       secondary-text-color: "#04a7bc"
     # Colors based on variables, see above
@@ -72,7 +72,7 @@ frontend:
       paper-slider-knob-color: "var(--primary-color)"
       paper-slider-knob-start-color: "var(--primary-color)"
       paper-slider-pin-color: "var(--primary-color)"
-      paper-slider-secondary-color: "var(--light-primary-color)"     
+      paper-slider-secondary-color: "var(--light-primary-color)"
       paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
       paper-toggle-button-checked-button-color: "var(--primary-color)"
       paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
@@ -123,14 +123,9 @@ zwave:
 
 xiaomi_aqara:
   gateways:
-    - mac: 
+    - mac:
       key: !secret xiaomi_gw_key
 
-
-# TODO sensors to seperate file
-#sensor: !include_dir_list sensors/
-#sensor 1:
-#  platform: yr
 
 android_ip_webcam:
   - host: !secret android_ip_cam_ip
@@ -138,25 +133,31 @@ android_ip_webcam:
     username: !secret android_ipc_user
     password: !secret android_ipc_pass
     scan_interval: 60
-    sensors: 
+    sensors:
       - light
 
-sensor 2:
-  platform: mqtt
-  state_topic: "/sensor/uPy/uPy-4d701b00/temp"
-  name: "WZ Temp"
-  qos: 0
-  unit_of_measurement: "°C"
-  value_template: "{{ value_json.temperature | round(1) }}"
+# TODO sensors to seperate file
+#sensor: !include_dir_list sensors/
+sensor: !include_dir_merge_list sensors/
+#sensor 1:
+#  platform: yr
 
-
-sensor 3:
-  platform: mqtt
-  state_topic: "/sensor/uPy/uPy-4d701b00/humi"
-  name: "WZ LFeucht"
-  qos: 0
-  unit_of_measurement: "%"
-  value_template: '{{ value_json.humidity | round(1)}}'
+# sensor 2:
+#   platform: mqtt
+#   state_topic: "/sensor/uPy/uPy-4d701b00/temp"
+#   name: "WZ Temp"
+#   qos: 0
+#   unit_of_measurement: "°C"
+#   value_template: "{{ value_json.temperature | round(1) }}"
+#
+#
+# sensor 3:
+#   platform: mqtt
+#   state_topic: "/sensor/uPy/uPy-4d701b00/humi"
+#   name: "WZ LFeucht"
+#   qos: 0
+#   unit_of_measurement: "%"
+#   value_template: '{{ value_json.humidity | round(1)}}'
 
 #sensor 4:
 #  platform: mqtt
@@ -180,21 +181,21 @@ sensor 5:
     - rain
     - snow
 
-sensor 6:
-  platform: mqtt
-  state_topic: "/sensor/uPy/uPy-326e1b00/temp"
-  name: "Aussen Temp"
-  qos: 0
-  unit_of_measurement: "°C"
-  value_template: "{{ value_json.temperature | round(1) }}"
-
-sensor 7:
-  platform: mqtt
-  state_topic: "/sensor/uPy/uPy-326e1b00/humi"
-  name: "Aussen LFeucht"
-  qos: 0
-  unit_of_measurement: "%"
-  value_template: '{{ value_json.humidity | round(1) }}'
+# sensor 6:
+#   platform: mqtt
+#   state_topic: "/sensor/uPy/uPy-326e1b00/temp"
+#   name: "Aussen Temp"
+#   qos: 0
+#   unit_of_measurement: "°C"
+#   value_template: "{{ value_json.temperature | round(1) }}"
+#
+# sensor 7:
+#   platform: mqtt
+#   state_topic: "/sensor/uPy/uPy-326e1b00/humi"
+#   name: "Aussen LFeucht"
+#   qos: 0
+#   unit_of_measurement: "%"
+#   value_template: '{{ value_json.humidity | round(1) }}'
 
 sensor 8:
   platform: mqtt
@@ -311,11 +312,11 @@ binary_sensor 19:
 
 binary_sensor 20:
   platform: template
-  sensors: 
+  sensors:
     wohnungstuer:
       device_class: opening
       friendly_name: 'Wohnungstür'
-      value_template: >- 
+      value_template: >-
         {%- if is_state("sensor.tuer1_access_control", "22") -%}
           True
         {%- else -%}
@@ -323,11 +324,11 @@ binary_sensor 20:
         {%- endif -%}
 binary_sensor 21:
   platform: template
-  sensors: 
+  sensors:
     wohnzimmerbalkontuer:
       device_class: opening
       friendly_name: 'Wohnzimmerbalkontür'
-      value_template: >- 
+      value_template: >-
         {%- if is_state("sensor.tuer2_access_control", "22") -%}
           True
         {%- else -%}
@@ -335,11 +336,11 @@ binary_sensor 21:
         {%- endif -%}
 binary_sensor 22:
   platform: template
-  sensors: 
+  sensors:
     kuechenbalkontuer:
       device_class: opening
       friendly_name: 'Küchenbalkontür'
-      value_template: >- 
+      value_template: >-
         {%- if is_state("sensor.tuer3_access_control", "22") -%}
           True
         {%- else -%}
@@ -398,7 +399,7 @@ media_player:
 #        data:
 #          entity_id: media_player.kodi
       - service: media_player.kodi_call_method
-        data: 
+        data:
           entity_id: media_player.kodi
           method: System.suspend
 #          method: Addons.ExecuteAddon
@@ -542,5 +543,3 @@ script:
           message: "activated lights :)"
 
 automation: !include automations.yml
-
-

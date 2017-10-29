@@ -1,0 +1,13 @@
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-326e1b00/temp"
+  name: "Aussen Temp"
+  qos: 0
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.temperature | round(1) }}"
+
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-326e1b00/humi"
+  name: "Aussen LFeucht"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1) }}'
