@@ -270,23 +270,6 @@ notify: !include notify.yaml
 scene: !include scenes.yaml
 #script: !include_dir_list script/
 
-script:
-  sunset:
-    sequence:
-      - service: notify.jabber
-        data:
-          title: ""
-          message: "sunset is around the corner!"
-#      - delay: 00:00:10
-      - service: switch.turn_on
-        data:
-          entity_id: switch.wz_light_1
-      - service: switch.turn_on
-        data:
-          entity_id: switch.wz_light_2
-      - service: notify.jabber
-        data:
-          title: ""
-          message: "activated lights :)"
+script: !include_dir_merge_list scripts/
 
 automation: !include automations.yml
