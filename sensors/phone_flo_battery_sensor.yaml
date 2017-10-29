@@ -1,0 +1,5 @@
+- platform: mqtt
+  state_topic: !secret flo_phone_topic
+  name: !secret flo_phone_label
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.batt }}"

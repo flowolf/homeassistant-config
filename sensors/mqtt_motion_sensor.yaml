@@ -1,0 +1,8 @@
+- platform: mqtt
+  state_topic: "home/esp8266_7b910a00"
+  name: "uPyMotion1"
+
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-70dd0600/motion"
+  name: "WZ motion"
+  device_class: motion

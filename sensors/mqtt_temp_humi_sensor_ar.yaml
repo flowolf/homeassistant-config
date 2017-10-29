@@ -1,0 +1,13 @@
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-ba662400/temp"
+  name: "Abstellraum Temp"
+  qos: 0
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.temperature | round(1) }}"
+
+- platform: mqtt
+  state_topic: "/sensor/uPy/uPy-ba662400/humi"
+  name: "Abstellraum LFeucht"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1) }}'

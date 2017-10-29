@@ -1,0 +1,12 @@
+- platform: zamg
+  station_id: 11240
+  monitored_conditions:
+    - temperature
+    - wind_speed
+    - wind_bearing
+    - wind_max_speed
+    - humidity
+    - pressure
+    - sun_last_hour
+    - precipitation
+    - dewpoint

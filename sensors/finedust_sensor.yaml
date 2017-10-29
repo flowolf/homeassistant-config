@@ -1,0 +1,13 @@
+- platform: rest
+  name: staub_10u
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[0]["value"] }}'
+  unit_of_measurement: "µg/m³"
+
+- platform: rest
+  name: staub_25u
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[1]["value"] }}'
+  unit_of_measurement: "µg/m³"

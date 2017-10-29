@@ -1,0 +1,13 @@
+- platform: rest
+  name: staub_humi
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[3]["value"] }}'
+  unit_of_measurement: "%"
+
+- platform: rest
+  name: staub_temp
+  resource: !secret feinstaub_URL
+  method: GET
+  value_template: '{{ value_json.sensordatavalues[2]["value"] }}'
+  unit_of_measurement: "°C"
