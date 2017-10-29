@@ -153,7 +153,7 @@ zamg:
     - sensor.zamg_wind_bearing
     - sensor.zamg_wind_max_speed
 system_sensors:
-  name: System Sensors
+  name: System Sensoren
   entities:
     - sensor.cpu_use
     - sensor.ram_free
@@ -161,7 +161,7 @@ system_sensors:
     - sensor.since_last_boot
     - updater.updater
 battery_sensors:
-  name: Battery Sensors
+  name: Batterie Sensoren
   entities:
     - sensor.zwave_battery_wohnungstuer_sensor
     - sensor.zwave_battery_wohnzimmerbalkontuer_sensor
