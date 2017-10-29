@@ -265,19 +265,7 @@ automation 12:
           topic: "esp8266/mqttstrip/setanimationspeed"
           payload: '{{ trigger.to_state.state | int }}'
 
-
-notify:
-  - name: jabber
-    platform: xmpp
-    sender: !secret xmpp_user
-    password: !secret xmpp_pwd
-    recipient: !secret xmpp_recipient
-    tls: True
-    verify: False
-  - name: yessssms
-    platform: command_line
-    command: !secret yessssms_command
-
+notify: !include notify.yaml
 
 scene: !include scenes.yaml
 #script: !include_dir_list script/

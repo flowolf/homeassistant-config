@@ -1,0 +1,14 @@
+- name: jabber
+  platform: xmpp
+  sender: !secret xmpp_user
+  password: !secret xmpp_pwd
+  recipient: !secret xmpp_recipient
+  tls: True
+  verify: False
+
+# version 0.57
+# - name: sms_to_flo
+#   platform: yessssms
+#   username: !secret yesss_user
+#   password: !secret yesss_pw
+#   recipient: !secret yesss_sms_flo
