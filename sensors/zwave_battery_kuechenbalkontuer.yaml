@@ -1,7 +1,7 @@
 - platform: template
   sensors:
     zwave_battery_kuechenbalkontuer_sensor:
-      friendly_name: "Küchenbalkontürsensor"
+      friendly_name: "Küchenbalkontürsensorbatteriestand"
       unit_of_measurement: '%'
       value_template: '{{ states.zwave.tuer3.attributes.battery_level|default(0) }}'
       icon_template: >

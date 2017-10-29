@@ -1,7 +1,7 @@
 - platform: template
   sensors:
     zwave_battery_wohnungstuer_sensor:
-      friendly_name: "Wohnungstürsensor"
+      friendly_name: "Wohnungstürsensorbatteriestand"
       unit_of_measurement: '%'
       value_template: '{{ states.zwave.tuer1.attributes.battery_level|default(0) }}'
       icon_template: >
