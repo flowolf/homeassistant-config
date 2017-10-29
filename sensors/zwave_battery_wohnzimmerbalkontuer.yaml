@@ -1,0 +1,16 @@
+- platform: template
+  sensors:
+    zwave_battery_wohnzimmerbalkontuer_sensor:
+      friendly_name: "Wohnzimmerbalkontürsensor"
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.tuer2.attributes.battery_level|default(0) }}'
+      icon_template: >
+        {% set battery_level = states.zwave.tuer2.attributes.battery_level | default(0) | int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}

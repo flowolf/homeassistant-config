@@ -160,6 +160,12 @@ system_sensors:
     - sensor.ram_use
     - sensor.since_last_boot
     - updater.updater
+battery_sensors:
+  name: Battery Sensors
+  entities:
+    - sensor.zwave_battery_wohnungstuer_sensor
+    - sensor.zwave_battery_wohnzimmerbalkontuer_sensor
+    - sensor.zwave_battery_kuechenbalkontuer_sensor
 mobile_sensors:
   name: Mobile Sensors
   entities:
@@ -224,6 +230,7 @@ sensors_view:
     - group.vorzimmer_sensors
     - group.door_sensors
     - group.mobile_sensors
+    - group.battery_sensors
     - group.other
 camera_view:
   view: yes
