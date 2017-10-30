@@ -3,7 +3,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.balkon_light_level
-    below: 25
+    below: 20
     for:
       minutes: 5
   condition:

@@ -1,10 +1,9 @@
-- alias: "coming home (turn on VZ light)"
+- alias: "coming home (turn on WZ light)"
   hide_entity: False
   trigger:
     platform: state
-    entity_id: binary_sensor.wohnungstuer
-    from: 'off'
-    to: 'on'
+    entity_id: !secret flo_phone_tracker
+    to: 'home'
   condition:
     condition: numeric_state
     entity_id: sensor.balkon_light_level
@@ -12,4 +11,5 @@
   action:
     - service: homeassistant.turn_on
       entity_id:
-        - light.vzlicht_level
+        - switch.wz_light_1
+        - switch.wz_light_2

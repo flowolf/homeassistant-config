@@ -37,6 +37,7 @@ automation_switch:
     - automation.christmas_lights_on
     - automation.christmas_lights_off
     - automation.coming_home_turn_on_vz_light
+    - automation.coming_home_turn_on_wz_light
     - automation.motion_light
     - automation.motion_test
     - automation.motion_test_off
