@@ -378,31 +378,31 @@
 #      service: scene.turn_on
 #      entity_id: scene.wz_normal
 
-- alias: "auto media player lighting"
-  initial_state: False
-  trigger:
-    - platform: state
-      entity_id: media_player.osmcwaldo
-      to: 'playing'
-      from: 'idle'
-      for:
-        minutes: 2
-  condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
-  action:
-      service: scene.turn_on
-      entity_id: scene.wz_movies
+# - alias: "auto media player lighting"
+#   initial_state: False
+#   trigger:
+#     - platform: state
+#       entity_id: media_player.osmcwaldo
+#       to: 'playing'
+#       from: 'idle'
+#       for:
+#         minutes: 2
+#   condition:
+#     - condition: state
+#       entity_id: sun.sun
+#       state: 'below_horizon'
+#   action:
+#       service: scene.turn_on
+#       entity_id: scene.wz_movies
 
-- alias: "Button WZ all off"
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.switch_158d000128afa3
-      to: 'on'
-  action:
-    service: scene.turn_on
-    entity_id: scene.all_off
+# - alias: "Button WZ all off"
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.switch_158d000128afa3
+#       to: 'on'
+#   action:
+#     service: scene.turn_on
+#     entity_id: scene.all_off
 
 #- alias: "Radiation Warning"
 #  trigger:
