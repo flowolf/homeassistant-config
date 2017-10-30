@@ -1,0 +1,9 @@
+# - alias: "Christmas lights off"
+#   trigger:
+#     platform: sun
+#     event: sunset
+#     offset: "07:05:00"
+#   action:
+#     service: homeassistant.turn_off
+#     entity_id:
+#       - switch.wz_light_1

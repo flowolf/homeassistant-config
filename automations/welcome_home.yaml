@@ -1,0 +1,12 @@
+- alias: "welcome message for flo"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: !secret flo_phone_tracker
+    from: 'not_home'
+    to: 'home'
+  action:
+    - service: notify.jabber
+      data:
+        title: ""
+        message: "Welcome Home Florian!"

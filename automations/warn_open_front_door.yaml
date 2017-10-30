@@ -1,0 +1,15 @@
+- alias: "warn for open front door"
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wohnungstuer
+    # from: 'off'
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 55
+  action:
+    service: notify.jabber
+    data:
+      message: "Front door Open (> 1' 55\")"

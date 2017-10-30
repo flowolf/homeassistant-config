@@ -1,0 +1,21 @@
+- alias: "Esstisch Lampe defekt"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: switch.esstisch_switch
+    from: 'off'
+    to: 'on'
+    for:
+      seconds: 5
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.esstisch_power
+      above: 2
+      below: 145
+  action:
+    - service: notify.jabber
+      data:
+        title: "Esszimmerlicht defekt"
+        message: >
+          "Birne wechseln!
+          (OSRAM Classic 64542 P, E14 Halogen 30W/2700K, 405lm, kleine Birnenform"

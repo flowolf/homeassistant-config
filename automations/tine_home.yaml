@@ -1,0 +1,16 @@
+- alias: "tine_home"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: !secret tine_phone_tracker
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: state
+    entity_id: !secret flo_phone_tracker
+    state: 'not_home'
+  action:
+    service: notify.jabber
+    data:
+      title: ""
+      message: "Tine is home! :)"

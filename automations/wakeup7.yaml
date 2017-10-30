@@ -1,0 +1,21 @@
+- alias: "wakeup7"
+  hide_entity: False
+  initial_state: False
+  trigger:
+    platform: time
+    hours: 6
+    minutes: 45
+    seconds: 10
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+      - switch.wz_light_1
+      - switch.wz_light_2

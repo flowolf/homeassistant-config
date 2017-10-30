@@ -1,91 +1,91 @@
-- alias: "Sunset"
-  trigger:
-    platform: sun
-    event: sunset
-    # summer
-    #offset: "-00:15:00"
-    # winter
-    offset: "-00:25:00"
-  condition:
-    condition: and
-    conditions:
-      - condition: template
-        value_template: >
-          {%- if states.automation.sunset.attributes.last_triggered -%}
-            {{ (as_timestamp(now()) - as_timestamp(states.automation.sunset.attributes.last_triggered)) > 150 }}
-          {%- else -%}
-            true
-          {%- endif -%}
-      - condition: state
-        entity_id: group.all_devices
-        state: "home"
-  action:
-    service: script.sunset
+# - alias: "Sunset"
+#   trigger:
+#     platform: sun
+#     event: sunset
+#     # summer
+#     #offset: "-00:15:00"
+#     # winter
+#     offset: "-00:25:00"
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: template
+#         value_template: >
+#           {%- if states.automation.sunset.attributes.last_triggered -%}
+#             {{ (as_timestamp(now()) - as_timestamp(states.automation.sunset.attributes.last_triggered)) > 150 }}
+#           {%- else -%}
+#             true
+#           {%- endif -%}
+#       - condition: state
+#         entity_id: group.all_devices
+#         state: "home"
+#   action:
+#     service: script.sunset
 
-- alias: "Sunset 2"
-  initial_state: False
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.balkon_light_level
-    below: 25
-    for:
-      minutes: 5
-  condition:
-    condition: state
-    entity_id: group.all_devices
-    state: "home"
-  action:
-    service: script.sunset
+# - alias: "Sunset 2"
+#   initial_state: False
+#   trigger:
+#     platform: numeric_state
+#     entity_id: sensor.balkon_light_level
+#     below: 25
+#     for:
+#       minutes: 5
+#   condition:
+#     condition: state
+#     entity_id: group.all_devices
+#     state: "home"
+#   action:
+#     service: script.sunset
 
 
-- alias: "wakeup7"
-  hide_entity: False
-  initial_state: False
-  trigger:
-    platform: time
-    hours: 6
-    minutes: 45
-    seconds: 10
-  condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-  action:
-    service: homeassistant.turn_on
-    entity_id:
-      - switch.wz_light_1
-      - switch.wz_light_2
+# - alias: "wakeup7"
+#   hide_entity: False
+#   initial_state: False
+#   trigger:
+#     platform: time
+#     hours: 6
+#     minutes: 45
+#     seconds: 10
+#   condition:
+#     condition: time
+#     weekday:
+#       - mon
+#       - tue
+#       - wed
+#       - thu
+#       - fri
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id:
+#       - switch.wz_light_1
+#       - switch.wz_light_2
+#
+# - alias: "tine_home"
+#   hide_entity: False
+#   trigger:
+#     platform: state
+#     entity_id: !secret tine_phone_tracker
+#     from: 'not_home'
+#     to: 'home'
+#   condition:
+#     condition: state
+#     entity_id: !secret flo_phone_tracker
+#     state: 'not_home'
+#   action:
+#     service: notify.jabber
+#     data:
+#       title: ""
+#       message: "Tine is home! :)"
 
-- alias: "tine_home"
-  hide_entity: False
-  trigger:
-    platform: state
-    entity_id: !secret tine_phone_tracker
-    from: 'not_home'
-    to: 'home'
-  condition:
-    condition: state
-    entity_id: !secret flo_phone_tracker
-    state: 'not_home'
-  action:
-    service: notify.jabber
-    data:
-      title: ""
-      message: "Tine is home! :)"
-
-- alias: "Update info"
-  trigger:
-    platform: state
-    entity_id: updater.updater
-  action:
-    service: notify.jabber
-    data:
-      title: "Update: "
-      message: "New Home Assistant version available ({{states.updater.updater.state }})"
+# - alias: "Update info"
+#   trigger:
+#     platform: state
+#     entity_id: updater.updater
+#   action:
+#     service: notify.jabber
+#     data:
+#       title: "Update: "
+#       message: "New Home Assistant version available ({{states.updater.updater.state }})"
 
 ##automation 5:
 ##  alias: "Tree on"
@@ -170,51 +170,51 @@
 #        - switch.wz_light_2
 #        - light.vzlicht_level
 
-- alias: "coming home (turn on VZ light)"
-  hide_entity: False
-  trigger:
-    platform: state
-    entity_id: binary_sensor.wohnungstuer
-    from: 'off'
-    to: 'on'
-  condition:
-    condition: numeric_state
-    entity_id: sensor.balkon_light_level
-    below: 25
-  action:
-    - service: homeassistant.turn_on
-      entity_id:
-        - switch.wz_light_1
-        - switch.wz_light_2
-        - light.vzlicht_level
+# - alias: "coming home (turn on VZ light)"
+#   hide_entity: False
+#   trigger:
+#     platform: state
+#     entity_id: binary_sensor.wohnungstuer
+#     from: 'off'
+#     to: 'on'
+#   condition:
+#     condition: numeric_state
+#     entity_id: sensor.balkon_light_level
+#     below: 25
+#   action:
+#     - service: homeassistant.turn_on
+#       entity_id:
+#         - switch.wz_light_1
+#         - switch.wz_light_2
+#         - light.vzlicht_level
 
 
-- alias: "welcome message for flo"
-  hide_entity: False
-  trigger:
-    platform: state
-    entity_id: !secret flo_phone_tracker
-    from: 'not_home'
-    to: 'home'
-  action:
-    - service: notify.jabber
-      data:
-        title: ""
-        message: "Welcome Home Florian!"
+# - alias: "welcome message for flo"
+#   hide_entity: False
+#   trigger:
+#     platform: state
+#     entity_id: !secret flo_phone_tracker
+#     from: 'not_home'
+#     to: 'home'
+#   action:
+#     - service: notify.jabber
+#       data:
+#         title: ""
+#         message: "Welcome Home Florian!"
 
-- alias: "welcome message for tine"
-  hide_entity: False
-  initial_state: False
-  trigger:
-    platform: state
-    entity_id: !secret tine_phone_tracker
-    from: 'not_home'
-    to: 'home'
-  action:
-    - service: notify.jabber
-      data:
-        title: ""
-        message: "Welcome Home Tine!"
+# - alias: "welcome message for tine"
+#   hide_entity: False
+#   initial_state: False
+#   trigger:
+#     platform: state
+#     entity_id: !secret tine_phone_tracker
+#     from: 'not_home'
+#     to: 'home'
+#   action:
+#     - service: notify.jabber
+#       data:
+#         title: ""
+#         message: "Welcome Home Tine!"
 
 ##- alias: "motion light"
 ##  initial_state: True
@@ -236,41 +236,41 @@
 ##        entity_id: light.ledstrip
 ##
 
-- alias: "Esstisch Lampe defekt"
-  hide_entity: False
-  trigger:
-    platform: state
-    entity_id: switch.esstisch_switch
-    from: 'off'
-    to: 'on'
-    for:
-      seconds: 5
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.esstisch_power
-      above: 2
-      below: 145
-  action:
-    - service: notify.jabber
-      data:
-        title: "Esszimmerlicht defekt"
-        message: >
-          "Birne wechseln!
-          (OSRAM Classic 64542 P, E14 Halogen 30W/2700K, 405lm, kleine Birnenform"
-#  condition:
-#    condition: and
-#    conditions:
-#      - condition: template
-#        value_template: >
-#          {%- if states.automation.esstisch_lampe_defekt.attributes.last_triggered -%}
-#            {{ (as_timestamp(now()) - as_timestamp(states.automation.esstisch_lampe_defekt.attributes.last_triggered)) > 15 }}
-#          {%- else -%}
-#            true
-#          {%- endif -%}
-#      - condition: numeric_state
-#        entity_id: sensor.esstisch_power
-#        below: 145
-#        above: 2
+# - alias: "Esstisch Lampe defekt"
+#   hide_entity: False
+#   trigger:
+#     platform: state
+#     entity_id: switch.esstisch_switch
+#     from: 'off'
+#     to: 'on'
+#     for:
+#       seconds: 5
+#   condition:
+#     - condition: numeric_state
+#       entity_id: sensor.esstisch_power
+#       above: 2
+#       below: 145
+#   action:
+#     - service: notify.jabber
+#       data:
+#         title: "Esszimmerlicht defekt"
+#         message: >
+#           "Birne wechseln!
+#           (OSRAM Classic 64542 P, E14 Halogen 30W/2700K, 405lm, kleine Birnenform"
+# #  condition:
+# #    condition: and
+# #    conditions:
+# #      - condition: template
+# #        value_template: >
+# #          {%- if states.automation.esstisch_lampe_defekt.attributes.last_triggered -%}
+# #            {{ (as_timestamp(now()) - as_timestamp(states.automation.esstisch_lampe_defekt.attributes.last_triggered)) > 15 }}
+# #          {%- else -%}
+# #            true
+# #          {%- endif -%}
+# #      - condition: numeric_state
+# #        entity_id: sensor.esstisch_power
+# #        below: 145
+# #        above: 2
 
 
 #input_boolean:
@@ -315,41 +315,41 @@
 #    - service: input_boolean.turn_off
 #      entity_id: input_boolean.motion_detected_1
 
-- alias: "set dark theme for the night"
-  initial_state: True
-  trigger:
-    - platform: time
-      at: '21:00'
-  action:
-    - service: frontend.set_theme
-      data:
-        name: darkcyan
+# - alias: "set dark theme for the night"
+#   initial_state: True
+#   trigger:
+#     - platform: time
+#       at: '21:00'
+#   action:
+#     - service: frontend.set_theme
+#       data:
+#         name: darkcyan
+#
+# - alias: "set default theme for the day"
+#   initial_state: True
+#   trigger:
+#     - platform: time
+#       at: '06:00'
+#   action:
+#     - service: frontend.set_theme
+#       data:
+#         name: default
 
-- alias: "set default theme for the day"
-  initial_state: True
-  trigger:
-    - platform: time
-      at: '06:00'
-  action:
-    - service: frontend.set_theme
-      data:
-        name: default
-
-- alias: "warn for open front door"
-  initial_state: True
-  trigger:
-    platform: state
-    entity_id: binary_sensor.wohnungstuer
-    from: 'off'
-    to: 'on'
-    for:
-      hours: 0
-      minutes: 1
-      seconds: 55
-  action:
-    service: notify.yessssms
-    data:
-      message: "Front door Open (> 1' 55\")"
+# - alias: "warn for open front door"
+#   initial_state: True
+#   trigger:
+#     platform: state
+#     entity_id: binary_sensor.wohnungstuer
+#     from: 'off'
+#     to: 'on'
+#     for:
+#       hours: 0
+#       minutes: 1
+#       seconds: 55
+#   action:
+#     service: notify.yessssms
+#     data:
+#       message: "Front door Open (> 1' 55\")"
 
 ## todo: figure out what sensor is used for zwave device battery
 #- alias: "Battery low on door sensor"

@@ -272,4 +272,5 @@ scene: !include scenes.yaml
 
 script: !include_dir_merge_list scripts/
 
-automation: !include automations.yml
+automation 1: !include automations.yml
+automation 2: !include_dir_merge_list automations/

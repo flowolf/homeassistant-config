@@ -1,0 +1,17 @@
+- alias: "coming home (turn on VZ light)"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wohnungstuer
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: numeric_state
+    entity_id: sensor.balkon_light_level
+    below: 25
+  action:
+    - service: homeassistant.turn_on
+      entity_id:
+        - switch.wz_light_1
+        - switch.wz_light_2
+        - light.vzlicht_level

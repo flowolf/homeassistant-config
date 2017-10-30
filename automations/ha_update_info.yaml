@@ -1,0 +1,9 @@
+- alias: "Update info"
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.jabber
+    data:
+      title: "Update: "
+      message: "New Home Assistant version available ({{states.updater.updater.state }})"

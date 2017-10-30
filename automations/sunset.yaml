@@ -1,0 +1,23 @@
+- alias: "Sunset"
+  trigger:
+    platform: sun
+    event: sunset
+    # summer
+    #offset: "-00:15:00"
+    # winter
+    offset: "-00:25:00"
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: >
+          {%- if states.automation.sunset.attributes.last_triggered -%}
+            {{ (as_timestamp(now()) - as_timestamp(states.automation.sunset.attributes.last_triggered)) > 150 }}
+          {%- else -%}
+            true
+          {%- endif -%}
+      - condition: state
+        entity_id: group.all_devices
+        state: "home"
+  action:
+    service: script.sunset
