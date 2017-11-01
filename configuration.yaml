@@ -101,7 +101,8 @@ history:
 # trying external USB-stick
 recorder:
   db_url: !secret external_sqlite_url
-#  purge_days: 14
+#  purge_interval: 3
+#  purge_keep_days: 14
 #  db_url: !secret mariadb_url
 
 # View all events in a logbook
@@ -231,8 +232,8 @@ input_select:
      - "Twinkle"
     initial: "Solid"
 
-#input_number:
-input_slider:
+#input_slider:
+input_number:
   ledstrip_animation_speed:
     name: LEDstrip Animation Speed
     initial: 150
