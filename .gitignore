@@ -17,6 +17,7 @@ tts
 secrets.yaml
 secrets
 tradfri.conf
+.tradfri_psk.conf
 known_devices.yaml
 phue.conf
 ios.conf
