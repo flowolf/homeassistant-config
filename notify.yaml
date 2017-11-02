@@ -7,8 +7,8 @@
   verify: False
 
 # version 0.57
-# - name: sms_to_flo
-#   platform: yessssms
-#   username: !secret yesss_user
-#   password: !secret yesss_pw
-#   recipient: !secret yesss_sms_flo
+- name: sms_to_flo
+  platform: yessssms
+  username: !secret yesss_user
+  password: !secret yesss_pw
+  recipient: !secret yesss_sms_flo
