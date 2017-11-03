@@ -198,6 +198,7 @@ media_player:
 
 device_tracker: !include device_tracker.yaml
 
+
 ###### fancy lights ######
 light:
   - platform: mqtt
@@ -209,6 +210,25 @@ light:
     brightness_state_topic: "esp8266/mqttstrip/setbrightnesspub"
     brightness_command_topic: "esp8266/mqttstrip/setbrightness"
     optimistic: false
+#  - platform: mqtt
+#    name: 'B1 Light TEST'
+#    state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0'
+#    command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0/set'
+#    payload_on: 1
+#    payload_off: 0
+#    rgb_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color'
+#    rgb_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color/set'
+#    rgb: true
+#    optimistic: false
+#    color_temp: true
+#    color_temp_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/mired/set'
+#    brightness: true
+#    brightness_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/brightness/set'
+#    brightness_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/brightness'
+#    white_value: true
+#    white_value_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3/set'
+#    white_value_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3'
+
 
 input_select:
   ledstrip_effect:
