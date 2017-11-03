@@ -17,7 +17,8 @@
             true
           {%- endif -%}
       - condition: state
-        entity_id: group.all_devices
+        #entity_id: group.all_devices
+        entity_id: !secret flo_phone_tracker
         state: "home"
   action:
     service: script.sunset
