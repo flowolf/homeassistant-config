@@ -208,10 +208,6 @@ sensor.staub_humi:
 sensor.staub_temp:
   friendly_name: "Temperatur"
 
-# mobile Sensors:
-sensor.flo_oneplus3_akku:
-  icon: mdi:battery-70
-
 # Views
 group.wohnzimmer_view:
   icon: mdi:sofa
