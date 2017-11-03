@@ -138,7 +138,7 @@ zwave:
 
 xiaomi_aqara:
   gateways:
-    - mac:
+    - mac: !secret xiaomi_gw_mac
       key: !secret xiaomi_gw_key
 
 android_ip_webcam:
