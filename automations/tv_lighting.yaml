@@ -12,5 +12,8 @@
       entity_id: sun.sun
       state: 'below_horizon'
   action:
-      service: scene.turn_on
+    - service: scene.turn_on
       entity_id: scene.wz_movies
+    # automatically disable automation after one run
+    - service: automation.turn_off
+      entity_id: automation.auto_media_player_lighting 
