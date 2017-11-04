@@ -226,6 +226,9 @@ group.scenes_view:
   icon: mdi:movie
   friendly_name: "Scenen"
 
+device_tracker.flo_laptop:
+  friendly_name: "Flo Laptop"
+
 sensor.flo_home:
   friendly_name: "Flo home bayes"
   entity_picture: /local/flo_avatar.jpg
