@@ -225,3 +225,7 @@ group.kinderzimmer_view:
 group.scenes_view:
   icon: mdi:movie
   friendly_name: "Scenen"
+
+sensor.flo_home:
+  friendly_name: "Flo home bayes"
+  entity_picture: /local/flo_avatar.jpg

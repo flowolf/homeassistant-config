@@ -7,7 +7,7 @@
     to: 'home'
   condition:
     condition: state
-    entity_id: !secret flo_phone_tracker
+    entity_id: sensor.flo_home
     state: 'not_home'
   action:
     service: notify.jabber

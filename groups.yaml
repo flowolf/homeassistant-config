@@ -173,7 +173,15 @@ mobile_sensors:
   name: Mobile Sensors
   entities:
     - sensor.flo_phone_battery
-
+presence_sensors:
+  name: Presence
+  entities:
+    - sensor.flo_home
+    - binary_sensor.flo_home
+    - device_tracker.floop3_oneplus3
+    - device_tracker.flo_laptop
+    - device_tracker.ble_f9e7c2412ef2
+    - device_tracker.tine_g4
 scenes_wz:
   name: Scenen Wohnzimmer
   entities:
@@ -211,6 +219,7 @@ default_view:
     - group.loggia
     - group.abstellraum
     - !secret flo_phone_tracker
+    #- sensor.flo_home
 #      - !secret ble_tracker
     - !secret tine_phone_tracker
     - scene.wz_movies
@@ -234,6 +243,7 @@ sensors_view:
     - group.door_sensors
     - group.mobile_sensors
     - group.battery_sensors
+    - group.presence_sensors
     - group.other
 camera_view:
   view: yes

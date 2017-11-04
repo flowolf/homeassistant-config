@@ -19,7 +19,7 @@
           {%- endif -%}
       - condition: state
         #entity_id: group.all_devices
-        entity_id: !secret flo_phone_tracker
+        entity_id: sensor.flo_home
         state: "home"
   action:
     service: script.sunset
