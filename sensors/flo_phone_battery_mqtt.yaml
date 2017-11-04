@@ -1,0 +1,5 @@
+# - platform: mqtt
+#   state_topic: !secret flo_phone_topic
+#   name: flo_phone_battery_mqtt
+#   unit_of_measurement: "%"
+#   value_template: "{{ value_json.batt | default(0) }}"

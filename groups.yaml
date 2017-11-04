@@ -172,7 +172,7 @@ battery_sensors:
 mobile_sensors:
   name: Mobile Sensors
   entities:
-    - !secret flo_phone_battery
+    - sensor.flo_phone_battery
 
 scenes_wz:
   name: Scenen Wohnzimmer
