@@ -1,0 +1,27 @@
+- alias: "Loggia Lights"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kuechenbalkontuer
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.wohnzimmerbalkontuer
+      to: "on"
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.balkon_light_level
+        below: 15
+      - condition: state
+        entity_id: light.tradfri_bulb_e27_opal_1000lm
+        state: "off"
+  action:
+    - service: light.turn_on
+      entity_id:
+        - light.tradfri_bulb_e27_opal_1000lm
+      data:
+        brightness: 234
+    - delay: 00:01:00
+    - service: light.turn_off
+      entity_id:
+        - light.tradfri_bulb_e27_opal_1000lm
