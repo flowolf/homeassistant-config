@@ -6,9 +6,16 @@
     from: 'off'
     to: 'on'
   condition:
-    condition: numeric_state
-    entity_id: sensor.balkon_light_level
-    below: 25
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.balkon_light_level
+        below: 25
+      - condition: state
+        entity_id: light.vzlicht_level
+        state: "off"
+        for:
+          minutes: 1
   action:
     - service: homeassistant.turn_on
       entity_id:
