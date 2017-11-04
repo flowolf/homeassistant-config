@@ -8,7 +8,7 @@
       minutes: 5
   condition:
     condition: state
-#    entity_id: group.all_devices
+    #entity_id: device_tracker.floop3_oneplus3
     entity_id: sensor.flo_home
     state: "home"
   action:
