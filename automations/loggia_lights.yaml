@@ -11,7 +11,7 @@
     conditions:
       - condition: numeric_state
         entity_id: sensor.balkon_light_level
-        below: 15
+        below: 5
       - condition: state
         entity_id: light.tradfri_bulb_e27_opal_1000lm
         state: "off"
