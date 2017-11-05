@@ -179,7 +179,6 @@ presence_sensors:
   name: Presence
   entities:
     - sensor.flo_home
-    - binary_sensor.flo_home
     - device_tracker.floop3_oneplus3
     - device_tracker.flo_laptop
     - device_tracker.ble_f9e7c2412ef2
@@ -290,5 +289,5 @@ warn_all_lights:
     - switch.esstisch_switch
     - switch.wz_light_1
     - switch.wz_light_2
-    - switch.wz_light_3
+    #- switch.wz_light_3
     - switch.wz_vitrine

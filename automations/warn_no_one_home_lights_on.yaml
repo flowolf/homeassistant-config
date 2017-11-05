@@ -1,15 +1,26 @@
-- alias: "warn_no_one_home_but_lights_on"
+- alias: "warn no one home but lights on"
   initial_state: True
   trigger:
-    platform: state
-    entity_id: group.all_devices
-    to: 'not_home'
-    for:
-      minutes: 10
-      seconds: 5
+    # when no one is home OR
+    - platform: state
+      entity_id: group.all_devices
+      to: 'not_home'
+      for:
+        minutes: 10
+        seconds: 5
+    # when lights are on
+    - platform: state
+      entity_id: group.warn_all_lights
+      to: 'on'
+      for:
+        minutes: 10
+        seconds: 5
   condition:
-    condition: or
+    condition: and
     conditions:
+      - condition: state
+        entity_id: group.all_devices
+        state: "not_home"
       - condition: state
         entity_id: group.warn_all_lights
         state: "on"
