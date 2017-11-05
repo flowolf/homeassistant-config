@@ -57,6 +57,7 @@ automation_notify:
     - automation.welcome_message_for_tine
     - automation.esstisch_lampe_defekt
     - automation.warn_for_open_front_door
+    - automation.warn_no_one_home_but_lights_on
 
 scripts:
   name: Scripts

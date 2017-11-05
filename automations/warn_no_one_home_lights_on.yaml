@@ -1,0 +1,19 @@
+- alias: "warn_no_one_home_but_lights_on"
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    to: 'not_home'
+    for:
+      minutes: 10
+      seconds: 5
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+        state: "on"
+  action:
+    service: notify.jabber
+    data:
+      message: "No one home, but lights are on!"
