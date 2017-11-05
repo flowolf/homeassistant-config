@@ -1,4 +1,5 @@
 # - alias: "Tree on"
+#   initial_state: False
 #   hide_entity: False
 #   trigger:
 #     platform: time

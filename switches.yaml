@@ -45,17 +45,17 @@
 #  payload_on: "on"
 #  payload_off: "off"
 #  optimistic: false
-#- platform: mqtt
-#  name: "Christbaum"
-#  friendly_name: "Christbaum"
-#  command_topic: "/socket/uPy/uPy-488b2400"
-#  state_topic: "/socket/uPy/uPy-488b2400/status"
-#  payload_on: "on"
-#  payload_off: "off"
-#  optimistic: false
+- platform: mqtt
+ name: "Christbaum"
+ friendly_name: "Christbaum"
+ command_topic: "/socket/uPy/uPy-488b2400"
+ state_topic: "/socket/uPy/uPy-488b2400/status"
+ payload_on: "on"
+ payload_off: "off"
+ optimistic: false
 
 #- platform: zwave
- 
+
 - platform: mqtt
   name: "WZ Vitrine"
   friendly_name: "Vitrine"
@@ -72,11 +72,11 @@
   payload_on: "1"
   payload_off: "0"
   optimistic: false
-- platform: mqtt
-  name: "Ventilator"
-  friendly_name: "Ventilator"
-  command_topic: "/socket/uPy/uPy-488b2400"
-  state_topic: "/socket/uPy/uPy-488b2400/status"
-  payload_on: "on"
-  payload_off: "off"
-  optimistic: false
+# - platform: mqtt
+#   name: "Ventilator"
+#   friendly_name: "Ventilator"
+#   command_topic: "/socket/uPy/uPy-488b2400"
+#   state_topic: "/socket/uPy/uPy-488b2400/status"
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
