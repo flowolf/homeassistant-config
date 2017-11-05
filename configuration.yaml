@@ -294,5 +294,13 @@ scene: !include scenes.yaml
 
 script: !include_dir_named scripts/
 
-#automation 1: !include automations.yml
 automation: !include_dir_merge_list automations/
+
+# via https://github.com/arsaboo/homeassistant-config/blob/01ed7ded33f7cc64ad878f123d3f2118dd77ba07/configuration.yaml#L288
+logger:
+  # levels: notset, debug, info, warn, warning, error, fatal, critical
+  default: warn
+  logs:
+    homeassistant.core: warn
+    # supress 'unparsed data' WARNING from AndroidIPCam
+    urllib3.connectionpool: critical
