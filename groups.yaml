@@ -11,7 +11,7 @@ wohnzimmer:
     - media_player.osmcwaldo
     - light.LEDstrip
     - input_select.ledstrip_effect
-    - input_slider.ledstrip_animation_speed
+    - input_number.ledstrip_animation_speed
     - sensor.wz_temp
     - sensor.wz_lfeucht
 #    - media_player.tv
