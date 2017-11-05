@@ -1,20 +1,28 @@
+# For info on bayesian sensor see:
+# https://home-assistant.io/components/binary_sensor.bayesian/
+#
+#
+# https://github.com/home-assistant/home-assistant/issues/9347 
+# https://community.home-assistant.io/t/best-implementation-strategy-for-bayesian-binary-sensor/22673/15
+
+
 - platform: bayesian
-  prior: 0.1
+  prior: 0.25
   name: "flo_home"
-  probability_threshold: 0.75
+  probability_threshold: 0.85
   observations:
     - entity_id: 'device_tracker.floop3_oneplus3'
-      prob_given_true: '0.98'
+      prob_given_true: '0.99'
       prob_given_false: '0.05'
       platform: 'state'
       to_state: 'home'
     - entity_id: 'device_tracker.flo_laptop'
-      prob_given_true: '0.8'
-      prob_given_false: '0.2'
+      prob_given_true: '0.97'
+      prob_given_false: '0.5'
       platform: 'state'
       to_state: 'home'
     - entity_id: 'media_player.osmcwaldo'
-      prob_given_true: '0.6'
-      prob_given_false: '0.1'
+      prob_given_true: '0.75'
+      prob_given_false: '0.5'
       platform: 'state'
       to_state: 'playing'
