@@ -1,93 +1,93 @@
 - name: All on
-  entities: 
+  entities:
     switch.wz_light_1: on
-    switch.wz_light_2: on 
-    switch.wz_light_3: on 
-    switch.wz_vitrine: on 
-    switch.christbaum: on 
+    switch.wz_light_2: on
+    switch.wz_light_3: on
+    switch.wz_vitrine: on
+    switch.christbaum: on
     switch.esstisch_switch: on
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
       brightness: 254
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 254
       rgb_color: [0,69,108]
     light.tradfri_bulb_e27_ws_opal_980lm_2:
       state: on
- 
+
 - name: All off
-  entities: 
+  entities:
     switch.wz_light_1: off
-    switch.wz_light_2: off 
-    switch.wz_light_3: off 
-    switch.wz_vitrine: off 
-    switch.christbaum: off 
+    switch.wz_light_2: off
+    switch.wz_light_3: off
+    switch.wz_vitrine: off
+    switch.christbaum: off
     switch.esstisch_switch: off
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: off
-    light.ledstrip: 
+    light.ledstrip:
       state: off
     light.tradfri_bulb_e27_ws_opal_980lm_2:
       state: off
     light.gateway_light_286c07fa1faa:
       state: off
- 
+
 - name: WZ Movies
-  entities: 
-    switch.wz_light_1: off 
-    switch.wz_light_2: off 
-    switch.wz_light_3: on 
-    switch.wz_vitrine: off 
-    switch.christbaum: off 
+  entities:
+    switch.wz_light_1: off
+    switch.wz_light_2: off
+    switch.wz_light_3: on
+    switch.wz_vitrine: off
+    switch.christbaum: off
     switch.esstisch_switch: off
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
       brightness: 9
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 55
       rgb_color: [0,151,205]
     light.gateway_light_286c07fa1faa:
-      state: on 
+      state: on
       brightness: 255
       rgb_color: [0,34,128]
-  
+
 - name: WZ Movies 2
-  entities: 
-    switch.wz_light_1: off 
-    switch.wz_light_2: on 
-    switch.wz_light_3: on 
-    switch.wz_vitrine: off 
-    switch.christbaum: off 
+  entities:
+    switch.wz_light_1: off
+    switch.wz_light_2: on
+    switch.wz_light_3: on
+    switch.wz_vitrine: off
+    switch.christbaum: off
     switch.esstisch_switch: off
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
       brightness: 9
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 90
       rgb_color: [0,69,108]
     light.gateway_light_286c07fa1faa:
       state: off
- 
+
 - name: WZ Movies 3
-  entities: 
+  entities:
     switch.wz_light_1: on
-    switch.wz_light_2: on 
-    switch.wz_light_3: on 
-    switch.wz_vitrine: off 
-    switch.christbaum: off 
+    switch.wz_light_2: on
+    switch.wz_light_3: on
+    switch.wz_vitrine: off
+    switch.christbaum: off
     switch.esstisch_switch: off
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 9
       rgb_color: [228,48,0]
     #input_select.ledstrip_effect: Solid
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
       brightness: 150
@@ -95,60 +95,60 @@
       state: off
 
 - name: WZ Movies 4
-  entities: 
-    switch.wz_light_1: off 
-    switch.wz_light_2: off 
+  entities:
+    switch.wz_light_1: off
+    switch.wz_light_2: off
 #    switch.wz_light_3: off
-    switch.wz_vitrine: off 
-    switch.christbaum: off 
+    switch.wz_vitrine: off
+    switch.christbaum: off
     switch.esstisch_switch: off
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 155
       rgb_color: [0,151,205]
     light.gateway_light_286c07fa1faa:
-      state: on 
+      state: on
       brightness: 255
       rgb_color: [0,34,128]
 
 - name: Green
-  entities: 
+  entities:
     switch.wz_light_1: on
-    switch.wz_light_2: on 
+    switch.wz_light_2: on
     switch.wz_light_3: on
-    switch.wz_vitrine: on 
+    switch.wz_vitrine: on
     switch.esstisch_switch: on
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 373.412
       brightness: 145
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 255
       rgb_color: [5,149,0]
     light.gateway_light_286c07fa1faa:
-      state: on 
+      state: on
       brightness: 255
       rgb_color: [4,111,0]
- 
+
 - name: WZ Fireplace
-  entities: 
+  entities:
     switch.wz_light_1: off
     switch.wz_light_2: off
-    switch.wz_light_3: on 
-    switch.wz_vitrine: off 
-    switch.christbaum: off 
+    switch.wz_light_3: on
+    switch.wz_vitrine: off
+    switch.christbaum: off
     switch.esstisch_switch: off
-    light.ledstrip: 
+    light.ledstrip:
       state: on
       brightness: 9
       rgb_color: [228,48,0]
     #input_select.ledstrip_effect: Solid
-    light.tradfri_bulb_e27_ws_opal_980lm: 
+    light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
       brightness: 90
     media_player.osmcwaldo:
       source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
-
-
+    # TODO try:
+    #curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open","params":{"item":{"file":"plugin://plugin.video.youtube/?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}' -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/jsonrpc
