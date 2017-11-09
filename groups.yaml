@@ -17,7 +17,6 @@ wohnzimmer:
     - switch.wz_vitrine
     - switch.esstisch_switch
     - light.gateway_light_286c07fa1faa
-    - media_player.osmcwaldo
     - light.LEDstrip
     - input_select.ledstrip_effect
     - input_number.ledstrip_animation_speed
@@ -245,6 +244,7 @@ wohnzimmer_view:
   view: yes
   entities:
     - group.wohnzimmer
+    - media_player.osmcwaldo
     - scene.wz_movies
     - scene.wz_movies_2
 sensors_view:
