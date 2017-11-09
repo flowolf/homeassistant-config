@@ -1,3 +1,12 @@
+wohnzimmer_compact:
+  name: Wohnzimmer
+  #control: hidden
+  entities:
+    - switch.wz_light_1
+    - switch.wz_light_2
+    - light.tradfri_bulb_e27_ws_opal_980lm
+    - switch.esstisch_switch
+    - sensor.wz_temp
 wohnzimmer:
   name: Wohnzimmer
   #control: hidden
@@ -73,6 +82,13 @@ abstellraum_sensors:
   entities:
     - sensor.abstellraum_temp
     - sensor.abstellraum_lfeucht
+loggia_compact:
+  name: Loggia
+  entities:
+    - sensor.aussen_temp
+    - sensor.staub_10u
+    - light.tradfri_bulb_e27_opal_1000lm
+    - camera.balkonblick
 loggia:
   name: Loggia
   entities:
@@ -219,14 +235,10 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-    - group.wohnzimmer
-    - group.loggia
-    - group.abstellraum
+    - group.wohnzimmer_compact
+    - group.loggia_compact
     - !secret flo_phone_tracker
-    #- sensor.flo_home
-#      - !secret ble_tracker
     - !secret tine_phone_tracker
-    - scene.wz_movies
     - group.kinderzimmer
     - group.vorzimmer
 wohnzimmer_view:
@@ -249,17 +261,6 @@ sensors_view:
     - group.battery_sensors
     - group.presence_sensors
     - group.other
-camera_view:
-  view: yes
-  icon: mdi:camera
-  entities:
-    - camera.balkonblick
-    - camera.raspy_cam
-scenes_view:
-  view: yes
-  entities:
-    - group.scenes_wz
-    - group.scenes
 weather_view:
   view: yes
   entities:
@@ -276,6 +277,17 @@ kinderzimmer_view:
   view: yes
   entities:
     - group.kinderzimmer
+scenes_view:
+  view: yes
+  entities:
+    - group.scenes_wz
+    - group.scenes
+camera_view:
+  view: yes
+  icon: mdi:camera
+  entities:
+    - camera.balkonblick
+    - camera.raspy_cam
 
 warn_all_lights:
   view: no
