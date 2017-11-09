@@ -273,10 +273,6 @@ automation_view:
     - group.automation_switch
     - group.automation_notify
     - group.scripts
-kinderzimmer_view:
-  view: yes
-  entities:
-    - group.kinderzimmer
 scenes_view:
   view: yes
   entities:
@@ -288,6 +284,10 @@ camera_view:
   entities:
     - camera.balkonblick
     - camera.raspy_cam
+kinderzimmer_view:
+  view: yes
+  entities:
+    - group.kinderzimmer
 
 warn_all_lights:
   view: no
