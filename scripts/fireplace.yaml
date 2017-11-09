@@ -1,0 +1,13 @@
+sequence:
+  #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
+  - service: media_player.kodi_call_method
+    data:
+      entity_id: media_player.osmcwaldo
+      method: Player.Open
+      #addonid: script.json-cec
+      item:
+        file: "plugin://plugin.video.youtube/?action=play_video&videoid=quYru3pzhYo&t=120"
+    # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
+    # "params":{"item":{"file":"plugin://plugin.video.youtube/
+    # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
+    # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/jsonrpc
