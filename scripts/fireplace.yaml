@@ -7,6 +7,7 @@ sequence:
       #addonid: script.json-cec
       item:
         file: "plugin://plugin.video.youtube/?action=play_video&videoid=quYru3pzhYo&t=120"
+    # same as:
     # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
     # "params":{"item":{"file":"plugin://plugin.video.youtube/
     # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
