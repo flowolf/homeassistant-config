@@ -69,6 +69,8 @@ scene.wz_movies_2:
 scene.wz_movies_3:
   icon: mdi:movie
   friendly_name: "WZ Movie (Lampe 1+2+3, orange)"
+scene.fireplace:
+  icon: mdi:fire
 #binary_sensor.wohnungstuer:
 #  friendly_name: "Wohnungstür"
 #  entity_picture: /local/door_closed-512.png

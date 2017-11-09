@@ -144,11 +144,15 @@
       brightness: 9
       rgb_color: [228,48,0]
     #input_select.ledstrip_effect: Solid
+    light.gateway_light_286c07fa1faa:
+      state: on
+      brightness: 122
+      rgb_color: [182,39,0]
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
       transition: 30
-      brightness: 90
+      brightness: 40
     script.fireplace:
       state: on
     #   #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
