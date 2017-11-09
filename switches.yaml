@@ -6,7 +6,7 @@
       code_off: 4456468
       pulselength: 367
       protocol: 1
-      signal_repetitions: 15
+      signal_repetitions: 25
 #      friendly_name: "grosse Stehlampe"
     wz_light_2:
       code_on: 4472853
