@@ -1,6 +1,6 @@
 - platform: template
   sensors:
-    flo_home:
+    tine_home:
       friendly_name: "Tine home"
       value_template: >-
         {%- if is_state('binary_sensor.tine_home', 'on') -%}
