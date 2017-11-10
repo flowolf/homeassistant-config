@@ -1,4 +1,5 @@
 sequence:
+  # - TODO: send CEC power action to TV
   #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
   - service: media_player.kodi_call_method
     data:
