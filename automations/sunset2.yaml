@@ -7,10 +7,20 @@
     for:
       minutes: 5
   condition:
-    # TODO not if mediaplayer is running
-    condition: state
-    #entity_id: device_tracker.floop3_oneplus3
-    entity_id: sensor.flo_home
-    state: "home"
+    condition: and
+    conditions:
+      # make sure the script continues only around sunset
+      # after 20 min before sunset
+      - condition: sun
+        after: sunset
+        after_offset: "-00:20:00"
+      # before 20 min after sunset
+      - condition: sun
+        before: sunset
+        before_offset: "00:20:00"
+        # TODO not if mediaplayer is running
+      - condition: state
+        entity_id: sensor.flo_home
+        state: "home"
   action:
     service: script.sunset
