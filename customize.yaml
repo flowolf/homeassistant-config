@@ -69,6 +69,10 @@ scene.wz_movies_2:
 scene.wz_movies_3:
   icon: mdi:movie
   friendly_name: "WZ Movie (Lampe 1+2+3, orange)"
+scene.wz_movies_4:
+  icon: mdi:movie
+scene.green:
+  icon: mdi:cards-playing-outline
 scene.wz_fireplace:
   icon: mdi:fire
 #binary_sensor.wohnungstuer:
