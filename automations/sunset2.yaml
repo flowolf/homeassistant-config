@@ -10,15 +10,20 @@
     condition: and
     conditions:
       # make sure the script continues only around sunset
+      # must be
       # after 20 min before sunset
       - condition: sun
         after: sunset
         after_offset: "-00:20:00"
+      # and
       # before 20 min after sunset
       - condition: sun
         before: sunset
         before_offset: "00:20:00"
-        # TODO not if mediaplayer is running
+      # only continue if media_player is not playing
+      - condition: template
+        value_template: '{{ states.media_player.osmcwaldo != "playing" }}'
+      # only if Flo is home
       - condition: state
         entity_id: sensor.flo_home
         state: "home"
