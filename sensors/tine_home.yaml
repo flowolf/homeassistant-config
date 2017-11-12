@@ -1,7 +1,7 @@
 - platform: template
   sensors:
     tine_home:
-      friendly_name: "Tine home"
+      friendly_name: "Tine home bayes"
       value_template: >-
         {%- if is_state('binary_sensor.tine_home', 'on') -%}
           home

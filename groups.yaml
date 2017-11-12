@@ -205,7 +205,7 @@ presence_sensors:
     - sensor.tine_home
     - device_tracker.tine_g4
     - device_tracker.40d32d9c185d
-    - device_tracker.001d4f0ed3ae
+    - device_tracker.tine_ipad
 scenes_wz:
   name: Scenen Wohnzimmer
   entities:
