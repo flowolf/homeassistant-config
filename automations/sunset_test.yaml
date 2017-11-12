@@ -1,0 +1,30 @@
+- alias: "Sunset test"
+  initial_state: False
+  trigger:
+    platform: state
+    entity_id: input_boolean.testinger
+    to: "on"
+  condition:
+    condition: and
+    conditions:
+      # # make sure the script continues only around sunset
+      # # must be
+      # # after 20 min before sunset
+      # - condition: sun
+      #   after: sunset
+      #   after_offset: "-00:20:00"
+      # # and
+      # # before 20 min after sunset
+      # - condition: sun
+      #   before: sunset
+      #   before_offset: "00:20:00"
+      # only continue if media_player is not playing
+      - condition: template
+        value_template: '{{ not is_state("media_player.osmcwaldo", "playing") }}'
+      # only if Flo is home
+      - condition: state
+        entity_id: sensor.flo_home
+        state: "home"
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.tradfri_bulb_e27_ws_opal_980lm

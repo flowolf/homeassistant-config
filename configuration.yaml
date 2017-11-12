@@ -305,6 +305,10 @@ logger:
     # supress 'unparsed data' WARNING from AndroidIPCam
     urllib3.connectionpool: critical
 
+input_boolean:
+  testinger:
+    initial: off
+    
 
 input_datetime:
   # both_date_and_time:

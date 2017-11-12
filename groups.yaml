@@ -131,6 +131,7 @@ kinderzimmer:
 other:
   name: other
   entities:
+    - input_boolean.testinger
     - switch.wz_light_3
 #    - switch.sonoff
 owm_weather:
