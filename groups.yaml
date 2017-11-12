@@ -57,6 +57,10 @@ automation_switch:
 #     - automation.set_default_theme_for_day
 #    - automation.ledstrip_animation_speed
 #    - automation.ledstrip_input_effect
+automation_timer:
+  entities:
+    - automation.wakeup_lights
+    - input_datetime.time_wakeup_lights
 automation_notify:
   entities:
     - automation.update_info
@@ -272,6 +276,7 @@ automation_view:
   entities:
     - group.automation_switch
     - group.automation_notify
+    - group.automation_timer
     - group.scripts
 scenes_view:
   view: yes

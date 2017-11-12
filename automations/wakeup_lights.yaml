@@ -1,0 +1,21 @@
+- alias: "wakeup lights"
+  hide_entity: False
+  initial_state: False
+  trigger:
+    platform: template
+    value_template: >-
+      {{ (strptime(states.sensor.time.state, "%H:%M").hour | int == states.input_datetime.time_wakeup_lights.attributes.hour | int)
+      and (strptime(states.sensor.time.state, "%H:%M").minute | int == states.input_datetime.time_wakeup_lights.attributes.minute | int) }}
+  condition:
+    condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+      - switch.wz_light_1
+      - switch.wz_light_2
+#      - tradfri_bulb_e27_ws_opal_980lm
+        # data:
+        #   - brightness: 254,
+        #   - transition: 240

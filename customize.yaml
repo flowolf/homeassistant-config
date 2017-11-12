@@ -238,3 +238,5 @@ device_tracker.flo_laptop:
 sensor.flo_home:
   friendly_name: "Flo home bayes"
   entity_picture: /local/flo_avatar.jpg
+input_datetime.time_wakeup_lights:
+  icon: mdi:alarm
