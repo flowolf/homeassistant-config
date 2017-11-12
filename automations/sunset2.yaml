@@ -22,7 +22,7 @@
         before_offset: "00:20:00"
       # only continue if media_player is not playing
       - condition: template
-        value_template: '{{ states.media_player.osmcwaldo != "playing" }}'
+        value_template: '{{ not is_state("media_player.osmcwaldo", "playing") }}'
       # only if Flo is home
       - condition: state
         entity_id: sensor.flo_home
