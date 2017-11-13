@@ -1,21 +1,38 @@
-- alias: "wakeup lights"
-  hide_entity: False
-  initial_state: False
-  trigger:
-    platform: template
-    value_template: >-
-      {{ (strptime(states.sensor.time.state, "%H:%M").hour | int == states.input_datetime.time_wakeup_lights.attributes.hour | int)
-      and (strptime(states.sensor.time.state, "%H:%M").minute | int == states.input_datetime.time_wakeup_lights.attributes.minute | int) }}
-  condition:
-    condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  action:
-    service: homeassistant.turn_on
-    entity_id:
-      - switch.wz_light_1
-      - switch.wz_light_2
-#      - tradfri_bulb_e27_ws_opal_980lm
-        # data:
-        #   - brightness: 254,
-        #   - transition: 240
+# - alias: "wakeup lights"
+#   hide_entity: False
+#   initial_state: True
+#   trigger:
+#     platform: time
+#     hours: '{{ states.input_datetime.time_wakeup_lights.attributes.hour | int }}'
+#     minutes: '{{ states.input_datetime.time_wakeup_lights.attributes.minute | int }}'
+#     seconds: '00'
+#     # minutes: '/1'
+#     # seconds: '00'
+#     # platform: time
+#     # minutes: '/1'
+#     # seconds: '00'
+#     # platform: time
+#     # hours: '{{ states.input_datetime.time_wakeup_lights.attributes.hour | int }}'
+#     # minutes: '{{ states.input_datetime.time_wakeup_lights.attributes.minute | int }}'
+#   # condition:
+#   # #   condition: and
+#   # #   conditions:
+#   # #     - condition: state
+#   # #       entity_id: binary_sensor.workday_sensor
+#   # #       state: 'on'
+#   # #     - condition: state
+#   # #       entity_id: sensor.flo_home
+#   # #       state: 'home'
+#   action:
+#     # - service: homeassistant.turn_on
+#     #   entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+#     - service: light.turn_on
+#       data:
+#         entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+#         color_temp: 454.54
+#         brightness: 254
+#         transition: 10
+#     - service: notify.jabber
+#       data:
+#         title: ""
+#         message: "alarm triggered"
