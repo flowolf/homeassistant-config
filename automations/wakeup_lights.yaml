@@ -25,7 +25,7 @@
         color_temp: 454.54
         brightness: 254
         transition: 60
-    - service: notify.jabber
-      data:
-        title: ""
-        message: "alarm triggered"
+    # - service: notify.jabber
+    #   data:
+    #     title: ""
+    #     message: "alarm triggered"

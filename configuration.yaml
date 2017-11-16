@@ -314,12 +314,4 @@ input_datetime:
     name: Time for wakeup lights
     has_date: false
     has_time: true
-    initial: "1970-01-01 19:18"
-  # both_date_and_time:
-  #   name: Input with both date and time
-  #   has_date: true
-  #   has_time: true
-  # only_date:
-  #   name: Input with only date
-  #   has_date: true
-  #   has_time: false
+    initial: "1970-01-01 6:43"
