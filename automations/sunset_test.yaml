@@ -20,7 +20,7 @@
       entity_id: light.tradfri_bulb_e27_ws_opal_980lm
       color_temp: 441
       brightness: 254
-      transition: 3
+      transition: 13
 
 - alias: "Test Automation2"
   initial_state: True
