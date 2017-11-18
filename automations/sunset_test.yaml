@@ -1,5 +1,5 @@
 - alias: "Test Automation"
-  initial_state: True
+  initial_state: False
   trigger:
     platform: state
     entity_id: input_boolean.testinger
@@ -23,7 +23,7 @@
       transition: 13
 
 - alias: "Test Automation2"
-  initial_state: True
+  initial_state: False
   trigger:
     platform: state
     entity_id: input_boolean.testinger

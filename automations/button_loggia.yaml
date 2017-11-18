@@ -1,0 +1,15 @@
+- alias: "Button Loggia Lights toggle"
+  initial_state: True
+  trigger:
+    # - platform: state
+    #   entity_id: input_boolean.testinger
+    - platform: state
+      entity_id: binary_sensor.switch_158d00016bf4aa
+      to: 'on'
+  action:
+    service: light.toggle
+    data:
+      entity_id: light.tradfri_bulb_e27_opal_1000lm
+      # color_temp: 441
+      # brightness: 254
+      transition: 3
