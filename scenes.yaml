@@ -94,7 +94,7 @@
     light.gateway_light_286c07fa1faa:
       state: off
 
-- name: WZ Movies 4
+- name: Blue
   entities:
     switch.wz_light_1: off
     switch.wz_light_2: off
