@@ -4,7 +4,11 @@
   password: !secret router_pwd
   track_new_devices: False
 
-# - platform: bluetooth_le_tracker
+# install deps first:
+# https://home-assistant.io/components/device_tracker.bluetooth_le_tracker/
+# LOOONG build time at next startup!
+# just wait
+#- platform: bluetooth_le_tracker
 
 # - platform: bluetooth_tracker
 
