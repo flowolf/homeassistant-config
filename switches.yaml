@@ -45,13 +45,22 @@
 #  payload_on: "on"
 #  payload_off: "off"
 #  optimistic: false
+# - platform: mqtt
+#   name: "Christbaum"
+#   friendly_name: "Christbaum"
+#   command_topic: "/socket/uPy/uPy-488b2400"
+#   state_topic: "/socket/uPy/uPy-488b2400/status"
+#   payload_on: "on"
+#   payload_off: "off"
+#   optimistic: false
+
 - platform: mqtt
-  name: "Christbaum"
-  friendly_name: "Christbaum"
-  command_topic: "/socket/uPy/uPy-488b2400"
-  state_topic: "/socket/uPy/uPy-488b2400/status"
-  payload_on: "on"
-  payload_off: "off"
+  name: "christmas lights"
+  friendly_name: "Weihnachtsbeleuchtung"
+  command_topic: "/br38/sonoff/switch/SONOFF_BASIC_3EFBC1/relay/0/set"
+  state_topic:   "/br38/sonoff/switch/SONOFF_BASIC_3EFBC1/relay/0"
+  payload_on: "1"
+  payload_off: "0"
   optimistic: false
 
 #- platform: zwave
@@ -67,8 +76,8 @@
 - platform: mqtt
   name: "SONOFF1"
   friendly_name: "SONOFF1"
-  command_topic: "/br38/sonoff/switch/SONOFF_BASIC_A7FEB5/relay/0"
-  state_topic:   "/br38/sonoff/switch/SONOFF_BASIC_A7FEB5/status"
+  command_topic: "/br38/sonoff/switch/SONOFF_BASIC_A7FEB5/relay/0/set"
+  state_topic:   "/br38/sonoff/switch/SONOFF_BASIC_A7FEB5/relay/0"
   payload_on: "1"
   payload_off: "0"
   optimistic: false

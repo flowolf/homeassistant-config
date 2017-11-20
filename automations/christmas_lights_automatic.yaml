@@ -1,18 +1,18 @@
-# - alias: "Christmas lights on"
-#   trigger:
-#     platform: sun
-#     event: sunset
-#     offset: "00:20:00"
-#   action:
-#     service: homeassistant.turn_on
-#     entity_id:
-#       - switch.wz_light_1
-# - alias: "Christmas lights off"
-#   trigger:
-#     platform: sun
-#     event: sunset
-#     offset: "07:05:00"
-#   action:
-#     service: homeassistant.turn_off
-#     entity_id:
-#       - switch.wz_light_1
+- alias: "Christmas lights on"
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "00:20:00"
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+      - switch.christmas_lights
+- alias: "Christmas lights off"
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "07:05:00"
+  action:
+    service: homeassistant.turn_off
+    entity_id:
+      - switch.christmas_lights

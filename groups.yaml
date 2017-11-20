@@ -91,6 +91,7 @@ loggia_compact:
     - sensor.aussen_temp
     - sensor.staub_10u
     - light.tradfri_bulb_e27_opal_1000lm
+    - switch.christmas_lights
     - camera.balkonblick
 loggia:
   name: Loggia
@@ -100,6 +101,7 @@ loggia:
     - sensor.balkon_light_level
     - sensor.staub_10u
     - light.tradfri_bulb_e27_opal_1000lm
+    - switch.christmas_lights
     - camera.balkonblick
 loggia_sensors:
   name: Loggia
