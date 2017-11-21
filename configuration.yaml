@@ -314,4 +314,4 @@ input_datetime:
     name: Time for wakeup lights
     has_date: false
     has_time: true
-    initial: "2017-01-01 6:43"
+    initial: "6:43"
