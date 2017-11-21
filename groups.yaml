@@ -41,7 +41,6 @@ automation_switch:
   entities:
     - automation.sunset
     - automation.sunset_2
-    - automation.wakeup7
     - automation.tree_on
     - automation.christmas_lights_on
     - automation.christmas_lights_off
@@ -52,11 +51,11 @@ automation_switch:
     - automation.motion_test
     - automation.motion_test_off
     - automation.auto_media_player_lighting
-#     - automation.button_press
-#     - automation.set_dark_theme_for_night
-#     - automation.set_default_theme_for_day
-#    - automation.ledstrip_animation_speed
-#    - automation.ledstrip_input_effect
+    # - automation.button_press
+    # - automation.set_dark_theme_for_night
+    # - automation.set_default_theme_for_day
+    # - automation.ledstrip_animation_speed
+    # - automation.ledstrip_input_effect
 automation_timer:
   entities:
     - automation.wakeup_lights
