@@ -12,8 +12,15 @@
       entity_id: sun.sun
       state: 'below_horizon'
   action:
+    # making sure all devices catch the scene
+    - service: scene.turn_on
+      entity_id: scene.wz_movies
+    - delay: 00:00:05
+    - service: scene.turn_on
+      entity_id: scene.wz_movies
+    - delay: 00:00:05
     - service: scene.turn_on
       entity_id: scene.wz_movies
     # automatically disable automation after one run
     - service: automation.turn_off
-      entity_id: automation.auto_media_player_lighting 
+      entity_id: automation.auto_media_player_lighting
