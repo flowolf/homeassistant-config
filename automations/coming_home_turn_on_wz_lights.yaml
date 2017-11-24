@@ -12,4 +12,9 @@
     - service: homeassistant.turn_on
       entity_id:
         - switch.wz_light_1
-        - switch.wz_light_2
+    - service: light.turn_on
+      data:
+        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+        color_temp: 454.54
+        brightness: 254
+        transition: 60

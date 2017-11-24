@@ -6,6 +6,10 @@
     switch.wz_vitrine: on
     switch.christbaum: on
     switch.esstisch_switch: on
+    light.lego_lampe:
+      state: on
+      color_temp: 454.54
+      brightness: 255
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
@@ -25,6 +29,8 @@
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
+    light.lego_lampe:
+      state: off
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: off
     light.ledstrip:
@@ -37,15 +43,17 @@
 - name: WZ Movies
   entities:
     switch.wz_light_1: off
-    switch.wz_light_2: off
+    switch.wz_light_2: on
     switch.wz_light_3: on
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
-    light.tradfri_bulb_e27_ws_opal_980lm:
+    light.lego_lampe:
       state: on
       color_temp: 454.54
       brightness: 9
+    light.tradfri_bulb_e27_ws_opal_980lm:
+      state: off
     light.ledstrip:
       state: on
       brightness: 55
@@ -64,6 +72,8 @@
     switch.christbaum: off
     switch.esstisch_switch: off
     light.tradfri_bulb_e27_ws_opal_980lm:
+      state: off
+    light.lego_lampe:
       state: on
       color_temp: 454.54
       brightness: 9
@@ -87,21 +97,27 @@
       brightness: 9
       rgb_color: [228,48,0]
     #input_select.ledstrip_effect: Solid
-    light.tradfri_bulb_e27_ws_opal_980lm:
+    light.lego_lampe:
       state: on
       color_temp: 454.54
-      brightness: 150
+      brightness: 20
+    light.tradfri_bulb_e27_ws_opal_980lm:
+      state: off
     light.gateway_light_286c07fa1faa:
       state: off
 
 - name: Blue
   entities:
     switch.wz_light_1: off
-    switch.wz_light_2: off
+    switch.wz_light_2: on
 #    switch.wz_light_3: off
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
+    light.lego_lampe:
+      state: on
+      rgb_color: [0,151,205]
+      brightness: 40
     light.ledstrip:
       state: on
       brightness: 155
@@ -118,6 +134,10 @@
     switch.wz_light_3: on
     switch.wz_vitrine: on
     switch.esstisch_switch: on
+    light.lego_lampe:
+      state: on
+      color_temp: 454.54
+      brightness: 255
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 373.412
@@ -139,6 +159,10 @@
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
+    light.lego_lampe:
+      state: on
+      color_temp: 454.54
+      brightness: 20
     light.ledstrip:
       state: on
       brightness: 9
@@ -164,9 +188,9 @@
     #     method: Player.Open
     #     #addonid: script.json-cec
     #     item:
-    #         file: "plugin://plugin.video.youtube/?action=play_video&videoid=quYru3pzhYo&t=120"
     # TODO try:
     # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
+    #         file: "plugin://plugin.video.youtube/?action=play_video&videoid=quYru3pzhYo&t=120"
     # "params":{"item":{"file":"plugin://plugin.video.youtube/
     # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
     # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/jsonrpc

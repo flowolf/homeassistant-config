@@ -21,10 +21,14 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+        entity_id: light.lego_lampe
         color_temp: 454.54
         brightness: 254
         transition: 60
     - delay: 00:10:00
-    - service: homeassistant.turn_on
-      entity_id: switch.wz_light_2
+    - service: light.turn_on
+      data:
+        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+        color_temp: 454.54
+        brightness: 254
+        transition: 180

@@ -3,8 +3,8 @@ wohnzimmer_compact:
   #control: hidden
   entities:
     - switch.wz_light_1
-    - switch.wz_light_2
     - light.tradfri_bulb_e27_ws_opal_980lm
+    - light.lego_lampe
     - switch.esstisch_switch
     - sensor.wz_temp
 wohnzimmer:
@@ -12,8 +12,8 @@ wohnzimmer:
   #control: hidden
   entities:
     - switch.wz_light_1
-    - switch.wz_light_2
     - light.tradfri_bulb_e27_ws_opal_980lm
+    - light.lego_lampe
     - switch.wz_vitrine
     - switch.esstisch_switch
     - light.gateway_light_286c07fa1faa
@@ -133,6 +133,7 @@ other:
   name: other
   entities:
     - input_boolean.testinger
+    - switch.wz_light_2
     - switch.wz_light_3
 #    - switch.sonoff
 owm_weather:
@@ -310,6 +311,7 @@ warn_all_lights:
     #- light.wz
     - switch.esstisch_switch
     - switch.wz_light_1
-    - switch.wz_light_2
+    - light.lego_lampe
+    #- switch.wz_light_2
     #- switch.wz_light_3
     - switch.wz_vitrine

@@ -7,9 +7,12 @@ sequence:
   - service: switch.turn_on
     data:
       entity_id: switch.wz_light_1
-  - service: switch.turn_on
+  - service: light.turn_on
     data:
-      entity_id: switch.wz_light_2
+      entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+      brightness: 255
+      color_temp: 454.54
+      transition: 60
   - service: notify.jabber
     data:
       title: ""
