@@ -141,6 +141,11 @@ xiaomi_aqara:
     - mac: !secret xiaomi_gw_mac
       key: !secret xiaomi_gw_key
 
+vacuum:
+  - platform: xiaomi_miio
+    host: 192.168.3.138
+    token: !secret xiaomi_vacuum_key
+
 android_ip_webcam:
   - host: !secret android_ip_cam_ip
     name: "Balkon"
