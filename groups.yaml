@@ -282,6 +282,13 @@ automation_view:
     - group.automation_notify
     - group.automation_timer
     - group.scripts
+vacuum_view:
+  view: yes
+  icon: mdi:roomba
+  # icon: mdi:checkbox-multiple-blank-circle
+  entities:
+    - group.xiaomi_vacuum_controls
+    - group.xiaomi_vacuum_sensors
 scenes_view:
   view: yes
   entities:
@@ -297,6 +304,15 @@ kinderzimmer_view:
   view: yes
   entities:
     - group.kinderzimmer
+
+
+xiaomi_vacuum_controls:
+  entities:
+    - 
+xiaomi_vacuum_sensors:
+  entities:
+    - vacuum.xiaomi_vacuum_cleaner
+    - sensor.xiaomi_vacuum_battery
 
 warn_all_lights:
   view: no

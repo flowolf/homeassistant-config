@@ -1,0 +1,16 @@
+- platform: template
+  sensors:
+    xiaomi_vacuum_battery:
+      friendly_name: "Akku"
+      unit_of_measurement: '%'
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level|default(None) }}'
+      icon_template: >
+        {% set battery_level = states.vacuum.xiaomi_vacuum_cleaner.battery_level | default(None) | int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
