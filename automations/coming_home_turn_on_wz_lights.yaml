@@ -15,6 +15,6 @@
     - service: light.turn_on
       data:
         entity_id: light.tradfri_bulb_e27_ws_opal_980lm
-        color_temp: 454.54
-        brightness: 254
+        color_temp: 340
+        brightness: 255
         transition: 60
