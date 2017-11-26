@@ -13,21 +13,21 @@
     xiaomi_vacuum_fan_speed:
       friendly_name: "Saugstärke"
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.fan_speed }}'
-      icon: mdi:fan
+      icon_template: '{{ "mdi:fan" }}'
 
 - platform: template
   sensors:
     xiaomi_vacuum_status:
       friendly_name: "Status"
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}'
-      icon: mdi:roomba
+      icon_template: '{{ "mdi:roomba" }}'
 
 - platform: template
   sensors:
     xiaomi_vacuum_cleaning_time:
       friendly_name: "Putzzeit"
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time }}'
-      icon: mdi:clock-end
+      icon_template: '{{ "mdi:clock-end" }}'
 
 - platform: template
   sensors:
@@ -35,15 +35,14 @@
       friendly_name: "Filterrestzeit"
       unit_of_measurement: 'h'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }}'
-      icon: mdi:filter-outline
-
+      icon_template: '{{ "mdi:filter-outline" }}'
 - platform: template
   sensors:
     xiaomi_vacuum_main_brush_left:
       friendly_name: "Bürstenrestzeit"
       unit_of_measurement: 'h'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }}'
-      icon: mdi:broom
+      icon_template: '{{ "mdi:broom" }}'
 
 - platform: template
   sensors:
@@ -51,7 +50,7 @@
       friendly_name: "Seitenbürstenrestzeit"
       unit_of_measurement: 'h'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left }}'
-      icon: mdi:brush
+      icon_template: '{{ "mdi:brush" }}'
 
 - platform: template
   sensors:
@@ -59,4 +58,4 @@
       friendly_name: "gereinigte Fläche"
       unit_of_measurement: 'm²'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area }}'
-      icon: mdi:image-area
+      icon_template: '{{ "mdi:image-area" }}'

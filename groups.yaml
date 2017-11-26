@@ -309,7 +309,9 @@ kinderzimmer_view:
 #   entities:
 #     -
 xiaomi_vacuum_sensors:
+  name: Staubsaugerroboter
   entities:
+    - input_boolean.vacuum_bot_auto
     - vacuum.xiaomi_vacuum_cleaner
     - sensor.xiaomi_vacuum_battery
     - sensor.xiaomi_vacuum_fan_speed

@@ -310,9 +310,12 @@ logger:
     # supress 'unparsed data' WARNING from AndroidIPCam
     urllib3.connectionpool: critical
 
-input_boolean:
-  testinger:
-    initial: off
+input_boolean: !include input_booleans.yaml
+  # testinger:
+  #   initial: off
+  # vacuum_bot_auto:
+  #   initial: on
+  #   name: "automatisch staubsaugen"
 
 input_datetime:
   time_wakeup_lights:
