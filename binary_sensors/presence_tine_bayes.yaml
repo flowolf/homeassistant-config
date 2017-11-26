@@ -23,6 +23,6 @@
       to_state: 'home'
     - entity_id: 'device_tracker.tine_ipad'
       prob_given_true: '0.65'
-      prob_given_false: '0.3'
+      prob_given_false: '0.5'
       platform: 'state'
       to_state: 'home'
