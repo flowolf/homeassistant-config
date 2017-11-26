@@ -5,12 +5,58 @@
       unit_of_measurement: '%'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level|default(None) }}'
       icon_template: >
-        {% set battery_level = states.vacuum.xiaomi_vacuum_cleaner.battery_level | default(None) | int %}
-        {% set battery_round = (battery_level / 10) |int * 10 %}
-        {% if battery_round >= 100 %}
-          mdi:battery
-        {% elif battery_round > 0 %}
-          mdi:battery-{{ battery_round }}
-        {% else %}
-          mdi:battery-alert
-        {% endif %}
+        {% set battery_icon = states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon %}
+        {{ battery_icon }}
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_fan_speed:
+      friendly_name: "Saugstärke"
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.fan_speed }}'
+      icon: mdi:fan
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_status:
+      friendly_name: "Status"
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}'
+      icon: mdi:roomba
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_cleaning_time:
+      friendly_name: "Putzzeit"
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time }}'
+      icon: mdi:clock-end
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_filter_left:
+      friendly_name: "Filterrestzeit"
+      unit_of_measurement: 'h'
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }}'
+      icon: mdi:filter-outline
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_main_brush_left:
+      friendly_name: "Bürstenrestzeit"
+      unit_of_measurement: 'h'
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }}'
+      icon: mdi:broom
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_side_brush_left:
+      friendly_name: "Seitenbürstenrestzeit"
+      unit_of_measurement: 'h'
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left }}'
+      icon: mdi:brush
+
+- platform: template
+  sensors:
+    xiaomi_vacuum_cleaned_area:
+      friendly_name: "gereinigte Fläche"
+      unit_of_measurement: 'm²'
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area }}'
+      icon: mdi:image-area

@@ -305,15 +305,20 @@ kinderzimmer_view:
   entities:
     - group.kinderzimmer
 
-
-xiaomi_vacuum_controls:
-  entities:
-    - 
+# xiaomi_vacuum_controls:
+#   entities:
+#     -
 xiaomi_vacuum_sensors:
   entities:
     - vacuum.xiaomi_vacuum_cleaner
     - sensor.xiaomi_vacuum_battery
-
+    - sensor.xiaomi_vacuum_fan_speed
+    - sensor.xiaomi_vacuum_status
+    - sensor.xiaomi_vacuum_cleaning_time
+    - sensor.xiaomi_vacuum_filter_left
+    - sensor.xiaomi_vacuum_main_brush_left
+    - sensor.xiaomi_vacuum_side_brush_left
+    - sensor.xiaomi_vacuum_cleaned_area
 warn_all_lights:
   view: no
   entities:
