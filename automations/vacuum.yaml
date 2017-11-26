@@ -1,0 +1,54 @@
+- alias: "Automatic vacuum on"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'home'
+    to: 'not_home'
+    for:
+      seconds: 0
+      minutes: 15
+      hours: 0
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacuum_bot_auto
+        state: 'on'
+      - condition: time
+        after: '09:00'
+        before: '18:00'
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'on'
+      - condition: numeric_state
+        entity_id: sensor.xiaomi_vacuum_battery
+        above: 99
+  action:
+    - service: notify.jabber
+      data:
+        title: "Vacuum bot"
+        message: "activated, cleaning now!"
+    - service: vacuum.turn_on
+      data:
+        entity_id: vacuum.xiaomi_vacuum_cleaner
+
+- alias: "Automatic vacuum off"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'not_home'
+    to: 'home'
+  condition:
+    - condition: state
+      entity_id: input_boolean.vacuum_bot_auto
+      state: 'on'
+  action:
+    - service: notify.jabber
+      data:
+        title: "Vacuum bot"
+        message: "someone coming home, going to base!"
+    - service: vacuum.return_to_base
+      data:
+        entity_id: vacuum.xiaomi_vacuum_cleaner
