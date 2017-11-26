@@ -151,6 +151,29 @@
       brightness: 255
       rgb_color: [4,111,0]
 
+
+- name: Red
+  entities:
+    switch.wz_light_1: off
+    switch.wz_light_2: on
+    switch.wz_light_3: on
+    switch.wz_vitrine: off
+    switch.esstisch_switch: off
+    light.lego_lampe:
+      state: on
+      rgb_color: [255,0,0]
+      brightness: 150
+    light.tradfri_bulb_e27_ws_opal_980lm:
+      state: off
+    light.ledstrip:
+      state: on
+      brightness: 255
+      rgb_color: [255,20,0]
+    light.gateway_light_286c07fa1faa:
+      state: on
+      brightness: 255
+      rgb_color: [255,20,0]
+
 - name: WZ Fireplace
   entities:
     switch.wz_light_1: off
