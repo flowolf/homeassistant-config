@@ -1,6 +1,6 @@
 wohnzimmer_compact:
   name: Wohnzimmer
-  #control: hidden
+  control: hidden
   entities:
     - switch.wz_light_1
     - light.tradfri_bulb_e27_ws_opal_980lm
@@ -38,6 +38,7 @@ vorzimmer_sensors:
     - binary_sensor.motion_sensor_158d00015ef681
     - sensor.vzlicht_power
 automation_switch:
+  control: hidden
   entities:
     - automation.sunset
     - automation.sunset_2
@@ -57,10 +58,12 @@ automation_switch:
     # - automation.ledstrip_animation_speed
     # - automation.ledstrip_input_effect
 automation_timer:
+  control: hidden
   entities:
     - automation.wakeup_lights
     - input_datetime.time_wakeup_lights
 automation_notify:
+  control: hidden
   entities:
     - automation.update_info
     - automation.tine_home
@@ -131,6 +134,7 @@ kinderzimmer:
     - light.tradfri_bulb_e27_ws_opal_980lm_2
 other:
   name: other
+  control: hidden
   entities:
     - input_boolean.testinger
     - switch.wz_light_2
@@ -268,12 +272,6 @@ sensors_view:
     - group.battery_sensors
     - group.presence_sensors
     - group.other
-weather_view:
-  view: yes
-  entities:
-    - group.owm_weather
-    - group.zamg
-    - group.darksky_weather
 automation_view:
   view: yes
   entities:
@@ -303,12 +301,19 @@ kinderzimmer_view:
   view: yes
   entities:
     - group.kinderzimmer
+weather_view:
+  view: yes
+  entities:
+    - group.owm_weather
+    - group.zamg
+    - group.darksky_weather
 
 # xiaomi_vacuum_controls:
 #   entities:
 #     -
 xiaomi_vacuum_sensors:
   name: Staubsaugerroboter
+  control: hidden
   entities:
     - input_boolean.vacuum_bot_auto
     - vacuum.xiaomi_vacuum_cleaner
