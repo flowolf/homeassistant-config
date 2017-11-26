@@ -139,27 +139,26 @@ other:
 owm_weather:
   name: Open Weather Map
   entities:
-    - sun.sun
+    - sensor.owm_temperature
+    - sensor.owm_humidity
     - sensor.owm_cloud_coverage
     - sensor.owm_condition
     - sensor.owm_forecast
-    - sensor.owm_humidity
     - sensor.owm_pressure
     - sensor.owm_rain
     - sensor.owm_snow
-    - sensor.owm_temperature
     - sensor.owm_wind_speed
 darksky_weather:
   name: DarkSky Weather
   entities:
     - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_dew_point
     - sensor.dark_sky_summary
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_precip
     - sensor.dark_sky_precip_probability
     - sensor.dark_sky_precip_intensity
-    - sensor.dark_sky_humidity
-    - sensor.dark_sky_dew_point
     - sensor.dark_sky_cloud_ciover
     - sensor.dark_sky_nearest_storm_distance
     - sensor.dark_sky_wind_speed
@@ -171,8 +170,8 @@ zamg:
   name: ZAMG Weather
   entities:
     - sensor.zamg_temperature
-    - sensor.zamg_dewpoint
     - sensor.zamg_humidity
+    - sensor.zamg_dewpoint
     - sensor.zamg_precipitation
     - sensor.zamg_sun_last_hour
     - sensor.zamg_wind_speed
