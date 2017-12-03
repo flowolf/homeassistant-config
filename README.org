@@ -6,6 +6,7 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
 - [[https://www.itead.cc/sonoff-wifi-wireless-switch.html][Sonoff]] (with [[https://bitbucket.org/xoseperez/espurna][ESPurna firmware]] for MQTT)
 - RF-433MHz plugs
 - Z-wave:
+  - [[https://www.amazon.de/dp/B00VKEH1BQ/ref=cm_sw_em_r_mt_dp_tx9gAb1DQX50P][Z-Wave USB Stick]]
   - [[https://www.fibaro.com/de/products/dimmer-2/][fibaro dimmer]]
   - [[https://www.fibaro.com/de/products/switches/][fibaro double relay]]
   - [[https://de.aliexpress.com/item/alarme-system-with-mini-siren-quad-band-GSM-PIR-motion-PIR-detector-burglar-alarm-systemsecurity-alarm/907236108.html][door sensors]]
@@ -18,4 +19,3 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
   - Xiaomi door sensor
   - Xiaomi motion sensor
   - Xiaomi switch (button)
-
