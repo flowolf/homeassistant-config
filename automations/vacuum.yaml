@@ -1,17 +1,22 @@
 - alias: "Automatic vacuum on"
   hide_entity: False
   trigger:
-    platform: state
-    entity_id: group.all_devices
-    from: 'home'
-    to: 'not_home'
-    for:
-      seconds: 0
-      minutes: 15
-      hours: 0
+    - platform: state
+      entity_id: group.all_devices
+      from: 'home'
+      to: 'not_home'
+      for:
+        seconds: 0
+        minutes: 15
+        hours: 0
+    - platform: time
+      at: '09:00:00'
   condition:
     condition: and
     conditions:
+      - condition: state
+        entity_id: group.all_devices
+        state: "not_home"
       - condition: state
         entity_id: input_boolean.vacuum_bot_auto
         state: 'on'
