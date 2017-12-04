@@ -1,6 +1,6 @@
-- platform: mjpeg
-  mjpeg_url: !secret raspi_camera 
-  name: "Raspy Cam"
+# - platform: mjpeg
+#   mjpeg_url: !secret raspi_camera 
+#   name: "Raspy Cam"
 
 ## android IP cam
 - platform: mjpeg

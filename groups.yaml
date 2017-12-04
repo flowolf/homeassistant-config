@@ -296,7 +296,7 @@ camera_view:
   icon: mdi:camera
   entities:
     - camera.balkonblick
-    - camera.raspy_cam
+#    - camera.raspy_cam
 kinderzimmer_view:
   view: yes
   entities:
