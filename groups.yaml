@@ -253,6 +253,9 @@ default_view:
     - !secret tine_phone_tracker
     - group.kinderzimmer
     - group.vorzimmer
+    - media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
+    - media_player.snapcast_client_2e7311d7868244978f314762db251c8e
+    - media_player.mpd
 wohnzimmer_view:
   view: yes
   entities:

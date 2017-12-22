@@ -201,6 +201,13 @@ media_player:
 #    port: 8001
 #    name: "TV"
 
+  - platform: snapcast
+    host: 192.168.3.236
+  - platform: mpd
+    host: 192.168.3.236
+    port: 6601
+   
+
 device_tracker: !include device_tracker.yaml
 
 
