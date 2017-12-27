@@ -45,14 +45,15 @@
 #  payload_on: "on"
 #  payload_off: "off"
 #  optimistic: false
-# - platform: mqtt
-#   name: "Christbaum"
-#   friendly_name: "Christbaum"
-#   command_topic: "/socket/uPy/uPy-488b2400"
-#   state_topic: "/socket/uPy/uPy-488b2400/status"
-#   payload_on: "on"
-#   payload_off: "off"
-#   optimistic: false
+
+- platform: mqtt
+  name: "Christbaum"
+  friendly_name: "Christbaum"
+  command_topic: "/socket/uPy/uPy-488b2400"
+  state_topic: "/socket/uPy/uPy-488b2400/status"
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
 
 - platform: mqtt
   name: "christmas lights"
