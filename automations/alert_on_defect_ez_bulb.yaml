@@ -11,7 +11,7 @@
     - condition: numeric_state
       entity_id: sensor.esstisch_power
       above: 2
-      below: 138
+      below: 132
   action:
     - service: notify.jabber
       data:
