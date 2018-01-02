@@ -229,6 +229,8 @@ group.weather_view:
   friendly_name: Wetter
 group.sensors_view:
   icon: mdi:gauge
+group.player_view:
+  icon: mdi:play-circle-outline
 group.kinderzimmer_view:
   icon: mdi:baby
 group.scenes_view:

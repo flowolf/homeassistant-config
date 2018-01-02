@@ -202,9 +202,9 @@ media_player:
 #    name: "TV"
 
   - platform: snapcast
-    host: 192.168.3.236
+    host: !secret snapcast_main_ip
   - platform: mpd
-    host: 192.168.3.236
+    host: !secret mpd_main_ip
     port: 6601
    
 
