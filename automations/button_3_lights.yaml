@@ -1,0 +1,14 @@
+- alias: "toggle living room lights"
+  initial_state: True
+  trigger:
+    - platform: state
+      # xiaomi button n°3
+      entity_id: binary_sensor.switch_158d00016bf562
+      to: 'on'
+  action:
+    - service: light.toggle
+      data:
+        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+    - service: switch.toggle
+      data:
+        entity_id: switch.wz_light_1

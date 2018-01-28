@@ -54,6 +54,7 @@ automation_switch:
     - automation.motion_test
     - automation.motion_test_off
     - automation.auto_media_player_lighting
+    - automation.toggle_living_room_lights
     # - automation.button_press
     # - automation.set_dark_theme_for_night
     # - automation.set_default_theme_for_day
@@ -257,6 +258,7 @@ wohnzimmer_view:
   view: yes
   entities:
     - group.wohnzimmer
+    - light.wordclock
     - media_player.osmcwaldo
     - scene.wz_movies
     - scene.wz_movies_2

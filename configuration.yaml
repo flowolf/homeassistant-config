@@ -242,6 +242,15 @@ light:
 #    white_value_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3'
 
 
+  - platform: mqtt
+    name: "wordclock"
+    command_topic: "/wordclock-01201b00/wordclock/command"
+    rgb_state_topic: "/wordclock-01201b00/wordclock/color"
+    rgb_command_topic: "/wordclock-01201b00/wordclock/color"
+    brightness_command_topic: "/wordclock-01201b00/wordclock/brightness"
+    retain: True
+
+
 input_select:
   ledstrip_effect:
     name: LEDstrip Effect
