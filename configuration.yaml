@@ -186,27 +186,27 @@ media_player:
         data:
           entity_id: media_player.kodi
           method: System.suspend
-#          method: Addons.ExecuteAddon
-#          addonid: script.json-cec
-#          params:
-#            command: standby
+          # method: Addons.ExecuteAddon
+          # addonid: script.json-cec
+          # params:
+          #  command: standby
 #    turn_off_action: none
 
 # not working as expected... put asleep
-#  - platform: samsungtv
-#    # UE55MU6170UXZG
-#    # requires pip3 install websocket-client
-#    host: !secret samsung_smart_tv
-#    mac: !secret samsung_smart_tv_mac
-#    port: 8001
-#    name: "TV"
+  - platform: samsungtv
+    # UE55MU6170UXZG
+    # requires pip3 install websocket-client
+    host: !secret samsung_smart_tv
+    mac: !secret samsung_smart_tv_mac
+    port: 8001
+    name: "TV"
 
   - platform: snapcast
     host: !secret snapcast_main_ip
   - platform: mpd
     host: !secret mpd_main_ip
     port: 6601
-   
+
 
 device_tracker: !include device_tracker.yaml
 
