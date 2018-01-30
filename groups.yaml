@@ -259,6 +259,7 @@ wohnzimmer_view:
   entities:
     - group.wohnzimmer
     - light.wordclock
+    - input_select.wordclock_effect
     - media_player.osmcwaldo
     - scene.wz_movies
     - scene.wz_movies_2

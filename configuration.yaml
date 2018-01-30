@@ -273,6 +273,13 @@ input_select:
      - "Solid"
      - "Twinkle"
     initial: "Solid"
+  wordclock_effect:
+    name: wordclock effect
+    options:
+     - "clock"
+     - "rgb_sparcle"
+     - "blue_sparcle"
+    initial: "clock"
 
 #input_slider:
 input_number:
@@ -307,6 +314,18 @@ automation 12:
         data_template:
           topic: "esp8266/mqttstrip/setanimationspeed"
           payload: '{{ trigger.to_state.state | int }}'
+
+  - alias: "wordclock update"
+    initial_state: True
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: input_select.wordclock_effect
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "/wordclock-01201b00/wordclock/command"
+          payload: '{{ trigger.to_state.state | string }}'
 
 notify: !include notify.yaml
 
