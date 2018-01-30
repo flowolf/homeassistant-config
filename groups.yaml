@@ -283,6 +283,7 @@ player_view:
     - media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
     - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
     - media_player.mpd
+    - media_player.tv
 automation_view:
   view: yes
   entities:
@@ -354,3 +355,5 @@ warn_all_lights:
     #- switch.wz_light_2
     #- switch.wz_light_3
     - switch.wz_vitrine
+    # tv is also a 'light'
+    - media_player.tv
