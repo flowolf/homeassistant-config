@@ -24,7 +24,7 @@ wohnzimmer:
     - input_number.ledstrip_animation_speed
     - sensor.wz_temp
     - sensor.wz_lfeucht
-    - media_player.tv
+#    - media_player.tv
 #    - switch.ventilator
 #    - light.b1_light_test
 #    - switch.wz_light_3
@@ -243,6 +243,12 @@ power_sensors:
 #    - sensor.fibaro_system_fgs223_double_relay_energy_2_0
 #      - sensor.fibaro_system_fgs223_double_relay_energy_2_0_2
 
+wordclock:
+  name: Wordclock
+  entities:
+    - light.wordclock
+    - input_select.wordclock_effect
+
 ## VIEWS ##
 default_view:
   view: yes
@@ -258,11 +264,11 @@ wohnzimmer_view:
   view: yes
   entities:
     - group.wohnzimmer
-    - light.wordclock
-    - input_select.wordclock_effect
+    - media_player.tv
     - media_player.osmcwaldo
     - scene.wz_movies
     - scene.wz_movies_2
+    - group.wordclock
 sensors_view:
   view: yes
   entities:
