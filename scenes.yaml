@@ -24,8 +24,8 @@
 - name: All off
   entities:
     switch.wz_light_1: off
-    switch.wz_light_2: off
-    switch.wz_light_3: off
+    #switch.wz_light_2: off
+    #switch.wz_light_3: off
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
