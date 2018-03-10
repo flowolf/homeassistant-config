@@ -2,11 +2,11 @@
 #   mjpeg_url: !secret raspi_camera 
 #   name: "Raspy Cam"
 
-## android IP cam
-# - platform: mjpeg
-#   name: "Balkonblick"
-#   #still_image_url: http://IP/
-#   mjpeg_url: !secret android_ipc_path
-#   username: !secret android_ipc_user
-#   password: !secret android_ipc_pass
-# 
+# android IP cam
+ - platform: mjpeg
+   name: "Balkonblick"
+   #still_image_url: !secret android_ipc_photo_path
+   mjpeg_url: !secret android_ipc_video_path
+   username: !secret android_ipc_user
+   password: !secret android_ipc_pass
+ 
