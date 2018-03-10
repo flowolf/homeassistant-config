@@ -1,0 +1,12 @@
+- alias: "lights out in the living room"
+  initial_state: True
+  trigger:
+    - platform: time
+      at: '02:50'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.all_off
+    - service: media_player.media_pause
+      entity_id: media_player.osmcwaldo
+    - service: media_player.turn_off
+      entity_id: media_player.tv
