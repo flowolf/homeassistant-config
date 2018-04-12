@@ -34,6 +34,10 @@ wohnzimmer_sensors:
     - sensor.wz_temp
     - sensor.wz_lfeucht
     - sensor.illumination_286c07fa1faa
+kitchen:
+  name: Küche
+  entities:
+    - switch.kitchen_light1
 vorzimmer_sensors:
   name: Vorzimmer
   entities:
@@ -261,6 +265,7 @@ default_view:
     - !secret tine_phone_tracker
     - group.kinderzimmer
     - group.vorzimmer
+    - group.kitchen
 wohnzimmer_view:
   view: yes
   entities:
@@ -292,6 +297,11 @@ player_view:
     - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
     - media_player.mpd
     - media_player.tv
+scenes_view:
+  view: yes
+  entities:
+    - group.scenes_wz
+    - group.scenes
 automation_view:
   view: yes
   entities:
@@ -306,11 +316,6 @@ vacuum_view:
   entities:
     - group.xiaomi_vacuum_controls
     - group.xiaomi_vacuum_sensors
-scenes_view:
-  view: yes
-  entities:
-    - group.scenes_wz
-    - group.scenes
 # camera_view:
 #   view: yes
 #   icon: mdi:camera
@@ -363,5 +368,6 @@ warn_all_lights:
     #- switch.wz_light_2
     #- switch.wz_light_3
     - switch.wz_vitrine
+    - switch.kitchen_light1
     # tv is also a 'light'
     - media_player.tv
