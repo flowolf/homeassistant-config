@@ -11,7 +11,7 @@
   name: "tine_home"
   probability_threshold: 0.85
   observations:
-    - entity_id: 'device_tracker.tine_nexus4'
+    - entity_id: 'device_tracker.tine_g6'
       prob_given_true: '0.99'
       prob_given_false: '0.05'
       platform: 'state'

@@ -216,7 +216,7 @@ presence_sensors:
     - device_tracker.flo_laptop
     - device_tracker.ble_f9e7c2412ef2
     - sensor.tine_home
-    - device_tracker.tine_nexus4
+    - device_tracker.tine_g6
     - device_tracker.40d32d9c185d
     - device_tracker.tine_ipad
 scenes_wz:
