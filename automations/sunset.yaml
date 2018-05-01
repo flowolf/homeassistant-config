@@ -1,5 +1,5 @@
 - alias: "Sunset"
-  initial_state: False
+  initial_state: True
   trigger:
     platform: sun
     event: sunset
