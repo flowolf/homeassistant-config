@@ -13,7 +13,7 @@ sequence:
       entity_id: light.tradfri_bulb_e27_ws_opal_980lm
       brightness: 255
       color_temp: 454.54
-      transition: 30
+      transition: 20
   - service: switch.turn_on
     data:
       entity_id: switch.wz_light_1
