@@ -236,7 +236,7 @@ group.sensors_view:
   icon: mdi:gauge
 group.player_view:
   icon: mdi:play-circle-outline
-group.kitchen:
+group.kitchen_view:
   icon: mdi:stove
 group.kinderzimmer_view:
   icon: mdi:baby
