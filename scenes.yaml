@@ -64,8 +64,8 @@
       rgb_color: [0,34,128]
     light.wordclock:
       state: on
-      brightness: 20
-      rgb_color: [0,199,255]
+      brightness: 33
+      rgb_color: [0,185,255]
 
 - name: WZ Movies 2
   entities:
@@ -89,8 +89,8 @@
       state: off
     light.wordclock:
       state: on
-      brightness: 20
-      rgb_color: [0,199,255]
+      brightness: 33
+      rgb_color: [0,185,255]
 
 - name: WZ Movies 3
   entities:
@@ -115,8 +115,8 @@
       state: off
     light.wordclock:
       state: on
-      brightness: 20
-      rgb_color: [0,199,255]
+      brightness: 33
+      rgb_color: [0,185,255]
 
 - name: Blue
   entities:
@@ -140,8 +140,8 @@
       rgb_color: [0,34,128]
     light.wordclock:
       state: on
-      brightness: 20
-      rgb_color: [0,199,255]
+      brightness: 33
+      rgb_color: [0,185,255]
 
 - name: Green
   entities:
