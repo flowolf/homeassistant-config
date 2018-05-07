@@ -95,6 +95,14 @@
   payload_on: "1"
   payload_off: "0"
   optimistic: false
+- platform: mqtt
+  name: "Door Buzzer"
+  friendly_name: "Türoffner"
+  command_topic: "/br38/door_buzzer/uPy-ed211b00"
+  state_topic:   "/br38/door_buzzer/uPy-ed211b00/state"
+  payload_on: "buzzing"
+  payload_off: "off"
+  optimistic: false
 # - platform: mqtt
 #   name: "Ventilator"
 #   friendly_name: "Ventilator"

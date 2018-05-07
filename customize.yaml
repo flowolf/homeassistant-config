@@ -42,6 +42,8 @@ switch.esstisch_switch:
 switch.kitchen_light1:
   friendly_name: Küche Licht 1
   icon: mdi:lightbulb
+switch.door_buzzer:
+  icon: mdi:lock-open
 #switch.fibaro_system_fgs223_double_relay_switch_2_0:
 #  friendly_name: Esstisch
 #  icon: mdi:silverware-variant
@@ -234,6 +236,8 @@ group.sensors_view:
   icon: mdi:gauge
 group.player_view:
   icon: mdi:play-circle-outline
+group.kitchen:
+  icon: mdi:stove
 group.kinderzimmer_view:
   icon: mdi:baby
 group.scenes_view:

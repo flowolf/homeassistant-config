@@ -34,10 +34,15 @@ wohnzimmer_sensors:
     - sensor.wz_temp
     - sensor.wz_lfeucht
     - sensor.illumination_286c07fa1faa
+doors:
+  name: Haustür
+  entities:
+    - switch.door_buzzer
 kitchen:
   name: Küche
   entities:
     - switch.kitchen_light1
+    - binary_sensor.kuechenbalkontuer
 vorzimmer_sensors:
   name: Vorzimmer
   entities:
@@ -253,7 +258,7 @@ wordclock:
   entities:
     - light.wordclock
     - input_select.wordclock_effect
-
+#########################################################################
 ## VIEWS ##
 default_view:
   view: yes
@@ -266,6 +271,7 @@ default_view:
     - group.kinderzimmer
     - group.vorzimmer
     - group.kitchen
+    - group.doors
 wohnzimmer_view:
   view: yes
   entities:
@@ -309,6 +315,10 @@ automation_view:
     - group.automation_notify
     - group.automation_timer
     - group.scripts
+kitchen_view:
+  view: yes
+  entities:
+    - group.kitchen
 vacuum_view:
   view: yes
   icon: mdi:roomba
