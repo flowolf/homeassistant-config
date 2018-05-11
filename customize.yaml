@@ -238,6 +238,8 @@ group.player_view:
   icon: mdi:play-circle-outline
 group.kitchen_view:
   icon: mdi:stove
+group.vacuum_view:
+  icon: mdi:robot-vacuum
 group.kinderzimmer_view:
   icon: mdi:baby
 group.scenes_view:

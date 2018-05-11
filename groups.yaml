@@ -321,10 +321,8 @@ kitchen_view:
     - group.kitchen
 vacuum_view:
   view: yes
-  icon: mdi:robot-vacuum
-  # icon: mdi:checkbox-multiple-blank-circle
   entities:
-    - group.xiaomi_vacuum_controls
+    #- group.xiaomi_vacuum_controls
     - group.xiaomi_vacuum_sensors
 # camera_view:
 #   view: yes
