@@ -1,7 +1,8 @@
 - platform: rpi_rf
   gpio: 17
   switches:
-    wz_light_1:
+#    wz_light_1:
+    rf_light_1:
       code_on: 4456469
       code_off: 4456468
       pulselength: 367
@@ -103,6 +104,15 @@
   payload_on: "buzzing"
   payload_off: "off"
   optimistic: false
+- platform: mqtt
+  name: "wz light 1"
+  friendly_name: "Licht S20 1"
+  command_topic: "cmnd/sonoff_s20_1/POWER"
+  state_topic:   "stat/sonoff_s20_1/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
 # - platform: mqtt
 #   name: "Ventilator"
 #   friendly_name: "Ventilator"
