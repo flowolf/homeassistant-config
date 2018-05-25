@@ -47,7 +47,9 @@ vorzimmer_sensors:
   name: Vorzimmer
   entities:
     - binary_sensor.motion_sensor_158d00015ef681
+    - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
     - sensor.vzlicht_power
+    - binary_sensor.wohnungstuer_burglar
 automation_switch:
   control: hidden
   entities:

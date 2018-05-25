@@ -4,7 +4,19 @@
       device_class: opening
       friendly_name: 'Wohnungstür'
       value_template: >-
-        {%- if is_state("sensor.tuer1_access_control", "22") -%}
+        {%- if is_state("sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control", "22") -%}
+          True
+        {%- else -%}
+          False
+        {%- endif -%}
+
+- platform: template
+  sensors:
+    wohnungstuer_burglar:
+      device_class: safety
+      friendly_name: 'Wohnungstürsensor Manipulation'
+      value_template: >-
+        {%- if not is_state("sensor.fibaro_system_fgdw002_door_opening_sensor_2_burglar", "0") -%}
           True
         {%- else -%}
           False
