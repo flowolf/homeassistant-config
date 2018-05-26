@@ -5,6 +5,7 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
 - Ikea [[http://www.ikea.com/de/de/catalog/categories/departments/lighting/smart_lighting/][Trådfri]]
 - [[https://www.itead.cc/sonoff-wifi-wireless-switch.html][Sonoff]] (with [[https://bitbucket.org/xoseperez/espurna][ESPurna firmware]] for MQTT)
 - Sonoff with [[https://github.com/arendst/Sonoff-Tasmota][Tasmota]] via MQTT
+- [[https://www.itead.cc/smart-home/smart-socket.html][Sonoff S20]] with [[https://github.com/arendst/Sonoff-Tasmota][Tasmota]] via MQTT
 - Z-wave:
   - [[https://www.amazon.de/dp/B00VKEH1BQ/ref=cm_sw_em_r_mt_dp_tx9gAb1DQX50P][Z-Wave USB Stick]]
   - [[https://www.fibaro.com/de/products/dimmer-2/][fibaro dimmer]]
