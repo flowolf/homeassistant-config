@@ -106,12 +106,21 @@
   optimistic: false
 - platform: mqtt
   name: "wz light 1"
-  friendly_name: "Licht S20 1"
-  command_topic: "cmnd/sonoff_s20_1/POWER"
-  state_topic:   "stat/sonoff_s20_1/POWER"
+  friendly_name: "Licht S20 0954"
+  command_topic: "cmnd/sonoff_s20_0954/POWER"
+  state_topic:   "stat/sonoff_s20_0954/POWER"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
+- platform: mqtt
+  name: "sonoffS20_6448"
+  friendly_name: "S20 6448"
+  command_topic: "cmnd/sonoff_s20_6448/POWER"
+  state_topic:   "stat/sonoff_s20_6448/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
 
 # - platform: mqtt
 #   name: "Ventilator"
