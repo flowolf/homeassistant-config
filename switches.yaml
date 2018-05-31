@@ -1,3 +1,4 @@
+# not really used anymore...
 - platform: rpi_rf
   gpio: 17
   switches:
@@ -55,6 +56,7 @@
   payload_on: "1"
   payload_off: "0"
   optimistic: false
+  retain: true
 #  command_topic: "/socket/uPy/uPy-488b2400"
 #  state_topic: "/socket/uPy/uPy-488b2400/status"
 #  payload_on: "on"
@@ -80,6 +82,7 @@
   payload_on: "1"
   payload_off: "0"
   optimistic: false
+  retain: true
 - platform: mqtt
   name: "Kitchen light1"
   friendly_name: "Licht 1"
@@ -87,7 +90,11 @@
   state_topic:   "stat/sonoff_kitchen1/POWER"
   payload_on: "ON"
   payload_off: "OFF"
+  availability_topic: "tele/sonoff_kitchen1/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
   optimistic: false
+#  retain: true
 - platform: mqtt
   name: "SONOFF1"
   friendly_name: "SONOFF1"
@@ -104,6 +111,7 @@
   payload_on: "buzzing"
   payload_off: "off"
   optimistic: false
+  retain: false
 - platform: mqtt
   name: "wz light 1"
   friendly_name: "Licht S20 0954"
@@ -112,6 +120,7 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
+  #retain: true
 - platform: mqtt
   name: "sonoffS20_6448"
   friendly_name: "S20 6448"
@@ -120,6 +129,7 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
+  #retain: true
 
 
 # - platform: mqtt

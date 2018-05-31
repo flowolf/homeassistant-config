@@ -123,6 +123,10 @@ group: !include groups.yaml
 
 camera: !include camera.yaml
 
+tts:
+  - platform: picotts
+    language: 'de-DE'
+
 mqtt:
   broker: localhost
   port: 1883
@@ -223,6 +227,7 @@ light:
     brightness_state_topic: "esp8266/mqttstrip/setbrightnesspub"
     brightness_command_topic: "esp8266/mqttstrip/setbrightness"
     optimistic: false
+    retain: true
 #  - platform: mqtt
 #    name: 'B1 Light TEST'
 #    state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0'
@@ -249,7 +254,7 @@ light:
     rgb_state_topic: "/wordclock-01201b00/wordclock/color"
     rgb_command_topic: "/wordclock-01201b00/wordclock/color"
     brightness_command_topic: "/wordclock-01201b00/wordclock/brightness"
-    retain: True
+    retain: true
 
 
 input_select:

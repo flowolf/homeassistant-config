@@ -92,6 +92,7 @@ scripts:
   name: Scripts
   entities:
     - script.sunset
+    - script.test_speech
 abstellraum:
   name: Abstellraum
   entities:
