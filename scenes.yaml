@@ -14,12 +14,12 @@
       state: on
       color_temp: 454.54
       brightness: 254
+    light.tradfri_bulb_e27_ws_opal_980lm_2:
+      state: on
     light.ledstrip:
       state: on
       brightness: 254
       rgb_color: [0,69,108]
-    light.tradfri_bulb_e27_ws_opal_980lm_2:
-      state: on
 
 - name: All off
   entities:
