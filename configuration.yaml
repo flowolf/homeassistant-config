@@ -286,6 +286,18 @@ input_select:
      - "rgb_sparcle"
      - "blue_sparcle"
     initial: "clock"
+  radio_stations:
+    name: Radio Stations
+    options:
+      - "Ö3:s15552"
+      - "Kronehit:s15570"
+      - "Ö1:s15555"
+      - "loungeFM:s177755"
+      - "Helsinki:s17838"
+      - "Soundportal:s25852"
+      - "Antenne:s1139"
+      - "BBC1:s24939"
+      
 
 #input_slider:
 input_number:
@@ -332,6 +344,21 @@ automation 12:
         data_template:
           topic: "/wordclock-01201b00/wordclock/command"
           payload: '{{ trigger.to_state.state | string }}'
+
+  - alias: "radio select"
+    initial_state: True
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: input_select.radio_stations
+    action:
+      - service: media_player.play_media
+        data_template:
+          entity_id: media_player.mpd
+          media_content_id: 'tunein:station:{{ states("input_select.radio_stations").split(":")[1] | string }}'
+          media_content_type: "channel"
+
+
 
 notify: !include notify.yaml
 
