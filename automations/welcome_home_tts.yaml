@@ -1,0 +1,25 @@
+- alias: "say welcome home"
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wohnungstuer
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.tine_home
+        state: "not_home"
+      - condition: state
+        entity_id: light.vzlicht_level
+        state: "off"
+        for:
+          minutes: 60
+      - condition: state
+        entity_id: sensor.flo_home
+        state: "not_home"
+        for:
+          minutes: 240
+  action:
+    - service: script.say_welcome_home
