@@ -1,0 +1,39 @@
+- alias: Alarm for tampering with door sensor
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wohnungstuer_burglar
+    from: 'off'
+    to: 'on'
+  condition:
+    # prevent false positives after reboot/restart of HomeAssistant
+    - condition: numeric_state
+      entity_id: sensor.uptime_min
+      above: 0.5
+  action:
+    - service: notify.sms_to_flo
+      data:
+        message: "Alarm! Someone tampered with the door sensor" 
+
+- alias: Alarm for door opening when no-one is home
+  hide_entity: False
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wohnungstuer
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: and
+    conditions: 
+      - condition: state
+        entity_id: group.all_devices
+        state: "not_home"
+  action:
+    - service: notify.sms_to_flo
+      data:
+        message: "Alarm! Door openend and no-one home!!" 
+    - service: notify.jabber
+      data: 
+        title: "ALARM!"
+        message: "Door openend and no-one home!!"
+
