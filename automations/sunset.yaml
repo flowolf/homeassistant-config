@@ -21,5 +21,11 @@
         #entity_id: group.all_devices
         entity_id: sensor.flo_home
         state: "home"
+      - condition: state
+        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+        state: 'off'
+      - condition: state
+        entity_id: switch.wz_light_1
+        state: 'off'
   action:
     service: script.sunset

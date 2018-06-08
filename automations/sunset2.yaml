@@ -20,6 +20,14 @@
       - condition: sun
         before: sunset
         before_offset: "00:20:00"
+      # only fire once in 40 min (2400 secs)
+      - condition: template
+        value_template: >
+          {%- if states.automation.sunset_2.attributes.last_triggered -%}
+            {{ (as_timestamp(now()) - as_timestamp(states.automation.sunset_2.attributes.last_triggered)) > 2400 }}
+          {%- else -%}
+            true
+          {%- endif -%}
       # only continue if media_player is not playing
       - condition: template
         value_template: '{{ not is_state("media_player.osmcwaldo", "playing") }}'
@@ -27,5 +35,12 @@
       - condition: state
         entity_id: sensor.flo_home
         state: "home"
+      # both lights need to be off 
+      - condition: state
+        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+        state: 'off'
+      - condition: state
+        entity_id: switch.wz_light_1
+        state: 'off'
   action:
     service: script.sunset
