@@ -9,4 +9,12 @@
    mjpeg_url: !secret android_ipc_video_path
    username: !secret android_ipc_user
    password: !secret android_ipc_pass
- 
+
+ - platform: mjpeg
+   name: "Freibad Fürstenfeld"
+   mjpeg_url: "http://84.115.191.3/mjpg/video.mjpg?COUNTER"
+
+ - platform: mjpeg
+   name: "Dornbirn"
+   mjpeg_url: "http://212.51.246.241/mjpg/video.mjpg?COUNTER"
+   

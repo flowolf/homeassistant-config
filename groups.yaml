@@ -88,6 +88,8 @@ automation_notify:
     - automation.esstisch_lampe_defekt
     - automation.warn_for_open_front_door
     - automation.warn_no_one_home_but_lights_on
+    - automation.alarm_for_door_opening_when_noone_is_home
+    - automation.alarm_for_tampering_with_door_sensor
 
 scripts:
   name: Scripts
@@ -337,11 +339,13 @@ vacuum_view:
   entities:
     #- group.xiaomi_vacuum_controls
     - group.xiaomi_vacuum_sensors
-# camera_view:
-#   view: yes
-#   icon: mdi:camera
-#   entities:
-#     - camera.balkonblick
+camera_view:
+  view: yes
+  icon: mdi:camera
+  entities:
+    - camera.balkonblick
+    - camera.freibad_furstenfeld
+    - camera.dornbirn
 # #    - camera.raspy_cam
 # kinderzimmer_view:
 #   view: yes
