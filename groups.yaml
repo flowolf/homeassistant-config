@@ -287,6 +287,7 @@ wohnzimmer_view:
     - group.wohnzimmer
     - media_player.tv
     - media_player.osmcwaldo
+    - media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
     - scene.wz_movies
     - scene.wz_movies_2
     - group.wordclock
@@ -334,6 +335,7 @@ kitchen_view:
   view: yes
   entities:
     - group.kitchen
+    - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
 vacuum_view:
   view: yes
   entities:
