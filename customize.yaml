@@ -1,4 +1,5 @@
-#customize:
+---
+# customize:
 switch.wz_light_1:
   icon: mdi:lightbulb
   friendly_name: "grosse Stehlampe"
@@ -44,11 +45,11 @@ switch.kitchen_light1:
   icon: mdi:lightbulb
 switch.door_buzzer:
   icon: mdi:lock-open
-#switch.fibaro_system_fgs223_double_relay_switch_2_0:
-#  friendly_name: Esstisch
-#  icon: mdi:silverware-variant
-#switch.fibaro_system_fgs223_double_relay_switch_2_0_2:
-#  friendly_name: Esstisch_2_unverkabelt
+# switch.fibaro_system_fgs223_double_relay_switch_2_0:
+#   friendly_name: Esstisch
+#   icon: mdi:silverware-variant
+# switch.fibaro_system_fgs223_double_relay_switch_2_0_2:
+#   friendly_name: Esstisch_2_unverkabelt
 sensor.wz_temp:
   friendly_name: "Temperatur"
 sensor.wz_lfeucht:
@@ -83,46 +84,46 @@ scene.green:
   icon: mdi:cards-playing-outline
 scene.wz_fireplace:
   icon: mdi:fire
-#binary_sensor.wohnungstuer:
-#  friendly_name: "Wohnungstür"
-#  entity_picture: /local/door_closed-512.png
+# binary_sensor.wohnungstuer:
+#   friendly_name: "Wohnungstür"
+#   entity_picture: /local/door_closed-512.png
 binary_sensor.door_window_sensor_158d00014df204:
-   friendly_name: "WZ Fenster 1"
-## hide ##
-#group.automation:
-#  hidden: True
-## OSM ##
-#sensor.owm_cloud_coverage:
-#  hidden: True
-#sensor.owm_condition:
-#  hidden: True
-#sensor.owm_forecast:
-#  hidden: True
-#sensor.owm_humidity:
-#  hidden: True
-#sensor.owm_pressure:
-#  hidden: True
-#sensor.owm_rain:
-#  hidden: True
-#sensor.owm_snow:
-#  hidden: True
-#sensor.owm_temperature:
-#  hidden: True
-#sensor.owm_wind_speed:
-#  hidden: True
-#sun.sun:
-#  hidden: True
-#sensor.yr_symbol:
-#  hidden: True
+  friendly_name: "WZ Fenster 1"
+# # hide ##
+# group.automation:
+#   hidden: True
+# # OSM ##
+# sensor.owm_cloud_coverage:
+#   hidden: True
+# sensor.owm_condition:
+#   hidden: True
+# sensor.owm_forecast:
+#   hidden: True
+# sensor.owm_humidity:
+#   hidden: True
+# sensor.owm_pressure:
+#   hidden: True
+# sensor.owm_rain:
+#   hidden: True
+# sensor.owm_snow:
+#   hidden: True
+# sensor.owm_temperature:
+#   hidden: True
+# sensor.owm_wind_speed:
+#   hidden: True
+# sun.sun:
+#   hidden: True
+# sensor.yr_symbol:
+#   hidden: True
 
-#weather
+# weather
 sun.sun:
   icon: mdi:white-balance-sunny
 sensor.owm_cloud_coverage:
   icon: mdi:cloud
 sensor.owm_condition:
   icon: mdi:weather-sunny
-#sensor.owm_forecast:
+# sensor.owm_forecast:
 sensor.owm_humidity:
   icon: mdi:water-percent
 sensor.owm_pressure:

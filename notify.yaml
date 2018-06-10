@@ -1,3 +1,4 @@
+---
 - name: jabber
   platform: xmpp
   sender: !secret xmpp_user

@@ -1,7 +1,7 @@
 - alias: "Button 1 All off"
   trigger:
     - platform: event
-      event_type: click 
+      event_type: click
       event_data:
         entity_id: binary_sensor.switch_158d000128afa3
         click_type: long_click_press
@@ -34,5 +34,3 @@
     service: scene.turn_on
     data:
       entity_id: scene.all_on
-
-

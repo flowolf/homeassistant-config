@@ -1,3 +1,4 @@
+---
 - name: All on
   entities:
     switch.wz_light_1: on
@@ -19,13 +20,13 @@
     light.ledstrip:
       state: on
       brightness: 254
-      rgb_color: [0,69,108]
+      rgb_color: [0, 69, 108]
 
 - name: All off
   entities:
     switch.wz_light_1: off
-    #switch.wz_light_2: off
-    #switch.wz_light_3: off
+    # switch.wz_light_2: off
+    # switch.wz_light_3: off
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
@@ -57,15 +58,15 @@
     light.ledstrip:
       state: on
       brightness: 55
-      rgb_color: [0,151,205]
+      rgb_color: [0, 151, 205]
     light.gateway_light_286c07fa1faa:
       state: on
       brightness: 255
-      rgb_color: [0,34,128]
+      rgb_color: [0, 34, 128]
     light.wordclock:
       state: on
       brightness: 33
-      rgb_color: [0,185,255]
+      rgb_color: [0, 185, 255]
 
 - name: WZ Movies 2
   entities:
@@ -84,13 +85,13 @@
     light.ledstrip:
       state: on
       brightness: 90
-      rgb_color: [0,69,108]
+      rgb_color: [0, 69, 108]
     light.gateway_light_286c07fa1faa:
       state: off
     light.wordclock:
       state: on
       brightness: 33
-      rgb_color: [0,185,255]
+      rgb_color: [0, 185, 255]
 
 - name: WZ Movies 3
   entities:
@@ -103,8 +104,8 @@
     light.ledstrip:
       state: on
       brightness: 9
-      rgb_color: [228,48,0]
-    #input_select.ledstrip_effect: Solid
+      rgb_color: [228, 48, 0]
+    # input_select.ledstrip_effect: Solid
     light.lego_lampe:
       state: on
       color_temp: 454.54
@@ -116,32 +117,32 @@
     light.wordclock:
       state: on
       brightness: 33
-      rgb_color: [0,185,255]
+      rgb_color: [0, 185, 255]
 
 - name: Blue
   entities:
     switch.wz_light_1: off
     switch.wz_light_2: on
-#    switch.wz_light_3: off
+    # switch.wz_light_3: off
     switch.wz_vitrine: off
     switch.christbaum: off
     switch.esstisch_switch: off
     light.lego_lampe:
       state: on
-      rgb_color: [0,151,205]
+      rgb_color: [0, 151, 205]
       brightness: 40
     light.ledstrip:
       state: on
       brightness: 155
-      rgb_color: [0,151,205]
+      rgb_color: [0, 151, 205]
     light.gateway_light_286c07fa1faa:
       state: on
       brightness: 255
-      rgb_color: [0,34,128]
+      rgb_color: [0, 34, 128]
     light.wordclock:
       state: on
       brightness: 33
-      rgb_color: [0,185,255]
+      rgb_color: [0, 185, 255]
 
 - name: Green
   entities:
@@ -161,15 +162,15 @@
     light.ledstrip:
       state: on
       brightness: 255
-      rgb_color: [5,149,0]
+      rgb_color: [5, 149, 0]
     light.gateway_light_286c07fa1faa:
       state: on
       brightness: 255
-      rgb_color: [4,111,0]
+      rgb_color: [4, 111, 0]
     light.wordclock:
       state: on
       brightness: 200
-      rgb_color: [0,255,0]
+      rgb_color: [0, 255, 0]
 
 
 - name: Red
@@ -181,22 +182,22 @@
     switch.esstisch_switch: off
     light.lego_lampe:
       state: on
-      rgb_color: [255,0,0]
+      rgb_color: [255, 0, 0]
       brightness: 150
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: off
     light.ledstrip:
       state: on
       brightness: 255
-      rgb_color: [255,20,0]
+      rgb_color: [255, 20, 0]
     light.gateway_light_286c07fa1faa:
       state: on
       brightness: 255
-      rgb_color: [255,20,0]
+      rgb_color: [255, 20, 0]
     light.wordclock:
       state: on
       brightness: 50
-      rgb_color: [255,0,0]
+      rgb_color: [255, 0, 0]
 
 - name: WZ Fireplace
   entities:
@@ -213,12 +214,12 @@
     light.ledstrip:
       state: on
       brightness: 9
-      rgb_color: [228,48,0]
-    #input_select.ledstrip_effect: Solid
+      rgb_color: [228, 48, 0]
+    # input_select.ledstrip_effect: Solid
     light.gateway_light_286c07fa1faa:
       state: on
       brightness: 122
-      rgb_color: [182,39,0]
+      rgb_color: [182, 39, 0]
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: on
       color_temp: 454.54
@@ -227,21 +228,23 @@
     light.wordclock:
       state: on
       brightness: 50
-      rgb_color: [255,255,255]
+      rgb_color: [255, 255, 255]
     script.fireplace:
       state: on
-    #   #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
-    #   sequence:
-    #     #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
-    # service: media_player.kodi_call_method
-    #   data:
-    #     entity_id: media_player.osmcwaldo
-    #     method: Player.Open
-    #     #addonid: script.json-cec
-    #     item:
-    # TODO try:
-    # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
-    #         file: "plugin://plugin.video.youtube/?action=play_video&videoid=quYru3pzhYo&t=120"
-    # "params":{"item":{"file":"plugin://plugin.video.youtube/
-    # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
-    # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/jsonrpc
+      # #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
+      #   sequence:
+      #     #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
+      # service: media_player.kodi_call_method
+      #   data:
+      #     entity_id: media_player.osmcwaldo
+      #     method: Player.Open
+      #     #addonid: script.json-cec
+      #     item:
+      # TODO try:
+      # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
+      # file: "plugin://plugin.video.youtube/?action=play_video&\
+      # videoid=quYru3pzhYo&t=120"
+      # "params":{"item":{"file":"plugin://plugin.video.youtube/
+      # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
+      # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/\
+      # jsonrpc

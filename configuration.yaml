@@ -1,3 +1,4 @@
+---
 homeassistant:
   # Name of the location where Home Assistant is running
   name: !secret name_home
@@ -8,7 +9,8 @@ homeassistant:
   elevation: 459
   # metric for Metric, imperial for Imperial
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  # Pick yours from here:
+  # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Vienna
 
   customize: !include customize.yaml
@@ -42,13 +44,13 @@ zone 4:
 
 
 # Show links to resources in log and frontend
-#introduction:
+# introduction:
 
 # Enables the frontend
 frontend:
   themes:
     darkcyan:
-    # Main colors that can be changed
+      # Main colors that can be changed
       primary-color: "#00bcd4"
       disabled-text-color: "#545454"
       divider-color: "rgba(255, 255, 255, 0.12)"
@@ -61,7 +63,7 @@ frontend:
       primary-text-color: "#cfcfcf"
       secondary-background-color: "#2b2b2b"
       secondary-text-color: "#04a7bc"
-    # Colors based on variables, see above
+      # Colors based on variables, see above
       label-badge-background-color: "var(--secondary-background-color)"
       label-badge-text-color: "var(--text-primary-color)"
       paper-card-header-color: "#var(--paper-item-icon-color)"
@@ -78,13 +80,11 @@ frontend:
       paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
       paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
 
-
-
 http:
   api_password: !secret api_password
-  #use_x_forwarded_for: True
-  #ip_ban_enabled: False
-  #login_attempts_threshold: 5
+  # use_x_forwarded_for: True
+  # ip_ban_enabled: False
+  # login_attempts_threshold: 5
 
 # Checks for available updates
 updater:
@@ -95,7 +95,7 @@ discovery:
 config:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-#conversation:
+# conversation:
 
 # Enables support for tracking state changes over time.
 history:
@@ -104,9 +104,9 @@ history:
 # trying external USB-stick
 recorder:
   db_url: !secret external_sqlite_url
-  #purge_keep_days: 360
+  # purge_keep_days: 360
   purge_interval: 0
-#  db_url: !secret mariadb_url
+# db_url: !secret mariadb_url
 
 # View all events in a logbook
 logbook:
@@ -114,7 +114,7 @@ logbook:
 # Track the sun
 sun:
 
-#shell_command: !include shell_command.yaml
+# shell_command: !include shell_command.yaml
 
 switch: !include switches.yaml
 
@@ -140,8 +140,9 @@ tradfri:
 
 zwave:
   usb_path: /dev/ttyACM0
-  #config_path: /srv/homeassistant/src/open-zwave-control-panel/config
-  #config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config/
+  # config_path: /srv/homeassistant/src/open-zwave-control-panel/config
+  # config_path:
+  # /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config/
 
 xiaomi_aqara:
   gateways:
@@ -165,8 +166,8 @@ android_ip_webcam:
 binary_sensor: !include_dir_merge_list binary_sensors/
 
 sensor: !include_dir_merge_list sensors/
-#sensor 1:
-#  platform: yr
+# sensor 1:
+#   platform: yr
 
 media_player:
   - platform: kodi
@@ -178,17 +179,17 @@ media_player:
       data:
         mac: !secret kodi_mac_address
         broadcast_address: !secret broadcast_IP
-#      service: media_player.kodi_call_method
-#      data:
-#        entity_id: media_player.kodi
-#        method: Addons.ExecuteAddon
-#        addonid: script.json-cec
-#        params:
-#          command: activate
+    #  service: media_player.kodi_call_method
+    #  data:
+    #    entity_id: media_player.kodi
+    #    method: Addons.ExecuteAddon
+    #    addonid: script.json-cec
+    #    params:
+    #      command: activate
     turn_off_action:
-#      - service: media_player.media_stop
-#        data:
-#          entity_id: media_player.kodi
+      #  - service: media_player.media_stop
+      #    data:
+      #      entity_id: media_player.kodi
       - service: media_player.kodi_call_method
         data:
           entity_id: media_player.kodi
@@ -197,9 +198,9 @@ media_player:
           # addonid: script.json-cec
           # params:
           #  command: standby
-#    turn_off_action: none
+  #  turn_off_action: none
 
-# not working as expected... put asleep
+  # not working as expected... put asleep
   - platform: samsungtv
     # UE55MU6170UXZG
     # requires pip3 install websocket-client
@@ -216,7 +217,7 @@ media_player:
 
 device_tracker: !include device_tracker.yaml
 
-###### fancy lights ######
+# ##### fancy lights ######
 light:
   - platform: mqtt
     name: "LEDstrip"
@@ -228,24 +229,26 @@ light:
     brightness_command_topic: "esp8266/mqttstrip/setbrightness"
     optimistic: false
     retain: true
-#  - platform: mqtt
-#    name: 'B1 Light TEST'
-#    state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0'
-#    command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0/set'
-#    payload_on: 1
-#    payload_off: 0
-#    rgb_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color'
-#    rgb_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color/set'
-#    rgb: true
-#    optimistic: false
-#    color_temp: true
-#    color_temp_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/mired/set'
-#    brightness: true
-#    brightness_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/brightness/set'
-#    brightness_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/brightness'
-#    white_value: true
-#    white_value_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3/set'
-#    white_value_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3'
+  # - platform: mqtt
+  #   name: 'B1 Light TEST'
+  #   state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0'
+  #   command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0/set'
+  #   payload_on: 1
+  #   payload_off: 0
+  #   rgb_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color'
+  #   rgb_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color/set'
+  #   rgb: true
+  #   optimistic: false
+  #   color_temp: true
+  #   color_temp_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/mired/set'
+  #   brightness: true
+  #   brightness_command_topic:
+  # '/br38/sonoff/light/SONOFF_B1_8677F2/brightness/set'
+  #   brightness_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/brightness'
+  #   white_value: true
+  #   white_value_command_topic:
+  # '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3/set'
+  #   white_value_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3'
 
 
   - platform: mqtt
@@ -261,30 +264,30 @@ input_select:
   ledstrip_effect:
     name: LEDstrip Effect
     options:
-     - "Solid"
-     - "BPM"
-     - "Confetti"
-     - "Cyclon Rainbow"
-     - "Dots"
-     - "Fire"
-     - "Glitter"
-     - "Juggle"
-     - "Lightning"
-     - "Noise"
-     - "Police All"
-     - "Police One"
-     - "Rainbow"
-     - "Ripple"
-     - "Sinelon"
-     - "Solid"
-     - "Twinkle"
+      - "Solid"
+      - "BPM"
+      - "Confetti"
+      - "Cyclon Rainbow"
+      - "Dots"
+      - "Fire"
+      - "Glitter"
+      - "Juggle"
+      - "Lightning"
+      - "Noise"
+      - "Police All"
+      - "Police One"
+      - "Rainbow"
+      - "Ripple"
+      - "Sinelon"
+      - "Solid"
+      - "Twinkle"
     initial: "Solid"
   wordclock_effect:
     name: wordclock effect
     options:
-     - "clock"
-     - "rgb_sparcle"
-     - "blue_sparcle"
+      - "clock"
+      - "rgb_sparcle"
+      - "blue_sparcle"
     initial: "clock"
   radio_stations:
     name: Radio Stations
@@ -297,9 +300,9 @@ input_select:
       - "Soundportal:s25852"
       - "Antenne:s1139"
       - "BBC1:s24939"
-      
 
-#input_slider:
+
+# input_slider:
 input_number:
   ledstrip_animation_speed:
     name: LEDstrip Animation Speed
@@ -355,21 +358,23 @@ automation 12:
       - service: media_player.play_media
         data_template:
           entity_id: media_player.mpd
-          media_content_id: 'tunein:station:{{ states("input_select.radio_stations").split(":")[1] | string }}'
+          media_content_id: |
+            'tunein:station:{{
+              states("input_select.radio_stations").split(":")[1] | string
+              }}'
           media_content_type: "channel"
-
-
 
 notify: !include notify.yaml
 
 scene: !include scenes.yaml
-#script: !include_dir_list script/
+# script: !include_dir_list script/
 
 script: !include_dir_named scripts/
 
 automation: !include_dir_merge_list automations/
 
-# via https://github.com/arsaboo/homeassistant-config/blob/01ed7ded33f7cc64ad878f123d3f2118dd77ba07/configuration.yaml#L288
+# via https://github.com/arsaboo/\
+# homeassistant-config/blob/01ed7ded33f7cc64ad878f123d3f2118dd77ba07/configuration.yaml#L288
 logger:
   # levels: notset, debug, info, warn, warning, error, fatal, critical
   default: warn

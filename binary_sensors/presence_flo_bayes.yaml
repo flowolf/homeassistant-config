@@ -2,9 +2,8 @@
 # https://home-assistant.io/components/binary_sensor.bayesian/
 #
 #
-# https://github.com/home-assistant/home-assistant/issues/9347 
+# https://github.com/home-assistant/home-assistant/issues/9347
 # https://community.home-assistant.io/t/best-implementation-strategy-for-bayesian-binary-sensor/22673/15
-
 
 - platform: bayesian
   prior: 0.25

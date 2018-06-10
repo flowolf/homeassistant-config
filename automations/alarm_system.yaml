@@ -13,7 +13,7 @@
   action:
     - service: notify.sms_to_flo
       data:
-        message: "Alarm! Someone tampered with the door sensor" 
+        message: "Alarm! Someone tampered with the door sensor"
 
 - alias: Alarm for door opening when no-one is home
   hide_entity: False
@@ -24,16 +24,15 @@
     to: 'on'
   condition:
     condition: and
-    conditions: 
+    conditions:
       - condition: state
         entity_id: group.all_devices
         state: "not_home"
   action:
     - service: notify.sms_to_flo
       data:
-        message: "Alarm! Door openend and no-one home!!" 
+        message: "Alarm! Door openend and no-one home!!"
     - service: notify.jabber
-      data: 
+      data:
         title: "ALARM!"
         message: "Door openend and no-one home!!"
-
