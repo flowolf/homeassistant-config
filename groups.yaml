@@ -270,6 +270,7 @@ wordclock:
 #########################################################################
 ## VIEWS ##
 default_view:
+  name: Zhaus
   view: yes
   icon: mdi:home
   entities:
@@ -282,6 +283,7 @@ default_view:
     - group.kitchen
     - group.doors
 wohnzimmer_view:
+  name: Wohnzimmer
   view: yes
   entities:
     - group.wohnzimmer
@@ -292,6 +294,7 @@ wohnzimmer_view:
     - scene.wz_movies_2
     - group.wordclock
 sensors_view:
+  name: Sensoren
   view: yes
   entities:
     - group.loggia_sensors
@@ -306,6 +309,7 @@ sensors_view:
     - group.presence_sensors
     - group.other
 player_view:
+  name: Media Player
   view: yes
   entities:
     - group.radio_stations
@@ -320,11 +324,13 @@ radio_stations:
   entities:
     - input_select.radio_stations
 scenes_view:
+  name: Scenen
   view: yes
   entities:
     - group.scenes_wz
     - group.scenes
 automation_view:
+  name: Automations
   view: yes
   entities:
     - group.automation_switch
@@ -332,16 +338,19 @@ automation_view:
     - group.automation_timer
     - group.scripts
 kitchen_view:
+  name: Küche
   view: yes
   entities:
     - group.kitchen
     - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
 vacuum_view:
+  name: Staubsauger
   view: yes
   entities:
     #- group.xiaomi_vacuum_controls
     - group.xiaomi_vacuum_sensors
 camera_view:
+  name: Cameras
   view: yes
   icon: mdi:camera
   entities:
@@ -354,6 +363,7 @@ camera_view:
 #   entities:
 #     - group.kinderzimmer
 weather_view:
+  name: Wetter
   view: yes
   entities:
     - group.owm_weather
