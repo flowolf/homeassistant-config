@@ -1,7 +1,7 @@
 * Home Assistant config
 
 
-Pipeline status - [[https://gitlab.com/flowolf/homeassistant-config/badges/master/pipeline.svg]]
+[[https://gitlab.com/flowolf/homeassistant-config/commits/master][https://gitlab.com/flowolf/homeassistant-config/badges/master/pipeline.svg]]
 
 
 currently my [[https://home-assistant.io][Home Assistant]] setup contains the following devices:
