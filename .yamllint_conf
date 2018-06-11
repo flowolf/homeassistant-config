@@ -3,5 +3,4 @@ extends: default
 rules:
   line-length:
     max: 200
-    allow-non-breakable-words: True
-
+    allow-non-breakable-words: true
