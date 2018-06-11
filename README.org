@@ -1,5 +1,9 @@
 * Home Assistant config
 
+
+[![pipeline status](https://gitlab.com/flowolf/homeassistant-config/badges/master/pipeline.svg)](https://gitlab.com/flowolf/homeassistant-config/commits/master)
+
+
 currently my [[https://home-assistant.io][Home Assistant]] setup contains the following devices:
 
 - Ikea [[http://www.ikea.com/de/de/catalog/categories/departments/lighting/smart_lighting/][Trådfri]]
