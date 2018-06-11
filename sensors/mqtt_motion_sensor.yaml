@@ -6,4 +6,4 @@
 - platform: mqtt
   state_topic: "/sensor/uPy/uPy-70dd0600/motion"
   name: "WZ motion"
-  device_class: motion
+  # device_class: motion
