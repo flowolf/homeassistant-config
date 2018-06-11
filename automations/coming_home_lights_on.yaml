@@ -1,3 +1,4 @@
+---
 - alias: "coming home (turn on VZ light)"
   hide_entity: False
   trigger:

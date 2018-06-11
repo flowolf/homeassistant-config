@@ -1,3 +1,4 @@
+---
 - platform: rest
   name: staub_10u
   resource: !secret feinstaub_URL

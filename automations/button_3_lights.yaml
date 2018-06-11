@@ -1,3 +1,4 @@
+---
 - alias: "toggle living room lights"
   initial_state: True
   trigger:

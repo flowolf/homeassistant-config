@@ -1,3 +1,4 @@
+---
 - alias: "welcome message for flo"
   hide_entity: False
   trigger:

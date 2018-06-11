@@ -1,3 +1,4 @@
+---
 - alias: "Sunset 2"
   initial_state: True
   trigger:

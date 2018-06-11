@@ -1,3 +1,4 @@
+# ---
 # - alias: "Christmas Tree Lights toggle"
 #   initial_state: True
 #   trigger:

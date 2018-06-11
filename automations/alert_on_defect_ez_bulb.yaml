@@ -1,3 +1,4 @@
+---
 - alias: "Esstisch Lampe defekt"
   hide_entity: False
   trigger:

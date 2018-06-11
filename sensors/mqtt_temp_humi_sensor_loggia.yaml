@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "/sensor/uPy/uPy-326e1b00/temp"
   name: "Aussen Temp"

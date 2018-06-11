@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "/sensor/uPy/uPy-4d701b00/temp"
   name: "WZ Temp"

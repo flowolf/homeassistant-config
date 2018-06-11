@@ -1,3 +1,4 @@
+---
 - alias: "Button Loggia Lights toggle"
   initial_state: True
   trigger:

@@ -1,3 +1,4 @@
+---
 - platform: template
   sensors:
     flo_phone_battery:

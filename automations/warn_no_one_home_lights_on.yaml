@@ -1,3 +1,4 @@
+---
 - alias: "warn no one home but lights on"
   initial_state: True
   trigger:

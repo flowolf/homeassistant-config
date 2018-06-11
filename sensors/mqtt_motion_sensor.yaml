@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "home/esp8266_7b910a00"
   name: "uPyMotion1"

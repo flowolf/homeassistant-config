@@ -1,3 +1,4 @@
+---
 - alias: "Loggia Lights"
   trigger:
     - platform: state

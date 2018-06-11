@@ -1,3 +1,4 @@
+---
 - alias: "set dark theme for the night"
   initial_state: True
   trigger:

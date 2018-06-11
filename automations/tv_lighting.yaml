@@ -1,10 +1,11 @@
+---
 - alias: "auto media player lighting"
   initial_state: False
   trigger:
     - platform: state
       entity_id: media_player.osmcwaldo
       to: 'playing'
-#      from: 'idle'
+      # from: 'idle'
       for:
         minutes: 2
   condition:

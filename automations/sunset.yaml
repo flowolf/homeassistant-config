@@ -1,10 +1,11 @@
+---
 - alias: "Sunset"
   initial_state: True
   trigger:
     platform: sun
     event: sunset
     # summer
-    #offset: "-00:15:00"
+    # offset: "-00:15:00"
     # winter
     offset: "-00:25:00"
   condition:
@@ -18,7 +19,7 @@
             true
           {%- endif -%}
       - condition: state
-        #entity_id: group.all_devices
+        # entity_id: group.all_devices
         entity_id: sensor.flo_home
         state: "home"
       - condition: state

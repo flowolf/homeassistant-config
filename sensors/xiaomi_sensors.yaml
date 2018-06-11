@@ -1,3 +1,4 @@
+---
 - platform: template
   sensors:
     xiaomi_vacuum_battery:

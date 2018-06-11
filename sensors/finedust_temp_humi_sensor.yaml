@@ -1,3 +1,4 @@
+---
 - platform: rest
   name: staub_humi
   resource: !secret feinstaub_URL

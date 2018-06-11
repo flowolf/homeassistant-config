@@ -1,3 +1,4 @@
+---
 - alias: "Button 1 All off"
   trigger:
     - platform: event

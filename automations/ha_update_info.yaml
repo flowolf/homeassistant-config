@@ -1,3 +1,4 @@
+---
 - alias: "Update info"
   trigger:
     platform: state

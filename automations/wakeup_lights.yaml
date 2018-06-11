@@ -1,3 +1,4 @@
+---
 - alias: "wakeup lights"
   hide_entity: False
   initial_state: True

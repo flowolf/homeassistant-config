@@ -1,3 +1,4 @@
+---
 - alias: "Test Automation"
   initial_state: False
   trigger:
@@ -38,4 +39,4 @@
   action:
     service: homeassistant.turn_off
     entity_id: light.tradfri_bulb_e27_ws_opal_980lm
-        # transition: 30
+    # transition: 30

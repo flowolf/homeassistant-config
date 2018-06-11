@@ -1,3 +1,4 @@
+---
 - platform: template
   sensors:
     zwave_battery_wohnzimmerbalkontuer_sensor:

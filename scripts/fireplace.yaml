@@ -1,18 +1,19 @@
+---
 sequence:
-  # - TODO: send CEC power action to TV
+  # send CEC power action to TV
   - service: media_player.turn_on
     data:
       entity_id: media_player.tv
-  # source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
+      # source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
   - service: media_player.kodi_call_method
     data:
       entity_id: media_player.osmcwaldo
       method: Player.Open
-      #addonid: script.json-cec
+      # addonid: script.json-cec
       item:
         file: "plugin://plugin.video.youtube/?action=play_video&videoid=quYru3pzhYo&t=120"
-    # same as:
-    # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
-    # "params":{"item":{"file":"plugin://plugin.video.youtube/
-    # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
-    # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/jsonrpc
+        # same as:
+        # curl -s --data-binary '{"jsonrpc":"2.0","id":"1","method":"Player.Open",
+        # "params":{"item":{"file":"plugin://plugin.video.youtube/
+        # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
+        # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/jsonrpc

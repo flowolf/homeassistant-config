@@ -1,3 +1,4 @@
+---
 - alias: Alarm for tampering with door sensor
   hide_entity: False
   trigger:

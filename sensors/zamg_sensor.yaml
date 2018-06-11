@@ -1,3 +1,4 @@
+---
 - platform: zamg
   station_id: 11240
   monitored_conditions:

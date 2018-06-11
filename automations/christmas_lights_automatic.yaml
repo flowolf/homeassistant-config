@@ -1,3 +1,4 @@
+---
 - alias: "Christmas lights on"
   trigger:
     platform: sun

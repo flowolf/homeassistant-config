@@ -1,3 +1,4 @@
+---
 - alias: "lights out in the living room"
   initial_state: True
   trigger:

@@ -1,3 +1,4 @@
+---
 - platform: workday
   country: AT
   province: ST

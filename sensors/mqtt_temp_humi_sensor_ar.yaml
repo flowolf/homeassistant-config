@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "/sensor/uPy/uPy-ba662400/temp"
   name: "Abstellraum Temp"
