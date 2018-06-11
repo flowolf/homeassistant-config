@@ -82,8 +82,8 @@ frontend:
 
 http:
   api_password: !secret api_password
-  # use_x_forwarded_for: True
-  # ip_ban_enabled: False
+  # use_x_forwarded_for: true
+  # ip_ban_enabled: false
   # login_attempts_threshold: 5
 
 # Checks for available updates
@@ -313,8 +313,8 @@ input_number:
 
 automation 12:
   - alias: "LEDstrip Input Effect"
-    initial_state: True
-    hide_entity: False
+    initial_state: true
+    hide_entity: false
     trigger:
       - platform: state
         entity_id: input_select.ledstrip_effect
@@ -325,8 +325,8 @@ automation 12:
           payload: '{{ trigger.to_state.state | string }}'
 
   - alias: "LEDstrip Animation Speed"
-    initial_state: True
-    hide_entity: False
+    initial_state: true
+    hide_entity: false
     trigger:
       - platform: state
         entity_id: input_number.ledstrip_animation_speed
@@ -337,8 +337,8 @@ automation 12:
           payload: '{{ trigger.to_state.state | int }}'
 
   - alias: "wordclock update"
-    initial_state: True
-    hide_entity: False
+    initial_state: true
+    hide_entity: false
     trigger:
       - platform: state
         entity_id: input_select.wordclock_effect
@@ -349,8 +349,8 @@ automation 12:
           payload: '{{ trigger.to_state.state | string }}'
 
   - alias: "radio select"
-    initial_state: True
-    hide_entity: False
+    initial_state: true
+    hide_entity: false
     trigger:
       - platform: state
         entity_id: input_select.radio_stations

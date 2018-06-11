@@ -1,6 +1,6 @@
 ---
 - alias: "tine_home"
-  hide_entity: False
+  hide_entity: false
   trigger:
     platform: state
     entity_id: !secret tine_phone_tracker

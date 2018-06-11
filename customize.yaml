@@ -91,30 +91,30 @@ binary_sensor.door_window_sensor_158d00014df204:
   friendly_name: "WZ Fenster 1"
 # # hide ##
 # group.automation:
-#   hidden: True
+#   hidden: true
 # # OSM ##
 # sensor.owm_cloud_coverage:
-#   hidden: True
+#   hidden: true
 # sensor.owm_condition:
-#   hidden: True
+#   hidden: true
 # sensor.owm_forecast:
-#   hidden: True
+#   hidden: true
 # sensor.owm_humidity:
-#   hidden: True
+#   hidden: true
 # sensor.owm_pressure:
-#   hidden: True
+#   hidden: true
 # sensor.owm_rain:
-#   hidden: True
+#   hidden: true
 # sensor.owm_snow:
-#   hidden: True
+#   hidden: true
 # sensor.owm_temperature:
-#   hidden: True
+#   hidden: true
 # sensor.owm_wind_speed:
-#   hidden: True
+#   hidden: true
 # sun.sun:
-#   hidden: True
+#   hidden: true
 # sensor.yr_symbol:
-#   hidden: True
+#   hidden: true
 
 # weather
 sun.sun:

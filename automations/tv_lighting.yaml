@@ -1,6 +1,6 @@
 ---
 - alias: "auto media player lighting"
-  initial_state: False
+  initial_state: false
   trigger:
     - platform: state
       entity_id: media_player.osmcwaldo

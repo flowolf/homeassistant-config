@@ -1,6 +1,6 @@
 ---
 - alias: "warn no one home but lights on"
-  initial_state: True
+  initial_state: true
   trigger:
     # when no one is home OR
     - platform: state

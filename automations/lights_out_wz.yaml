@@ -1,6 +1,6 @@
 ---
 - alias: "lights out in the living room"
-  initial_state: True
+  initial_state: true
   trigger:
     - platform: time
       at: '02:50'

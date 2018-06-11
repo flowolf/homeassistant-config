@@ -1,6 +1,6 @@
 # ---
 # - alias: "Christmas Tree Lights toggle"
-#   initial_state: True
+#   initial_state: true
 #   trigger:
 #     - platform: state
 #       entity_id: binary_sensor.switch_158d00016bf562

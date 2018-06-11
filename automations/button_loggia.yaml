@@ -1,6 +1,6 @@
 ---
 - alias: "Button Loggia Lights toggle"
-  initial_state: True
+  initial_state: true
   trigger:
     - platform: event
       event_type: click
@@ -17,7 +17,7 @@
         transition: 2
 
 - alias: "Button Loggia toggle kitchen light"
-  initial_state: True
+  initial_state: true
   trigger:
     - platform: event
       event_type: click
@@ -32,7 +32,7 @@
 
 
 # - alias: "Button Loggia Lights toggle"
-#   initial_state: True
+#   initial_state: true
 #   trigger:
 #     # - platform: state
 #     #   entity_id: input_boolean.testinger

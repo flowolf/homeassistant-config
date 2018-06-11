@@ -1,7 +1,7 @@
 ---
 - alias: "wakeup lights"
-  hide_entity: False
-  initial_state: True
+  hide_entity: false
+  initial_state: true
   trigger:
     platform: time
     minutes: '/1'

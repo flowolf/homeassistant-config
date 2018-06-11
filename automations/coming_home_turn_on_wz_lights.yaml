@@ -1,6 +1,6 @@
 ---
 - alias: "coming home (turn on WZ light)"
-  hide_entity: False
+  hide_entity: false
   trigger:
     platform: state
     entity_id: sensor.flo_home

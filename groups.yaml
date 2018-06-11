@@ -272,7 +272,7 @@ wordclock:
 # # VIEWS ##
 default_view:
   name: Zhaus
-  view: yes
+  view: true
   icon: mdi:home
   entities:
     - group.wohnzimmer_compact
@@ -285,7 +285,7 @@ default_view:
     - group.doors
 wohnzimmer_view:
   name: Wohnzimmer
-  view: yes
+  view: true
   entities:
     - group.wohnzimmer
     - media_player.tv
@@ -296,7 +296,7 @@ wohnzimmer_view:
     - group.wordclock
 sensors_view:
   name: Sensoren
-  view: yes
+  view: true
   entities:
     - group.loggia_sensors
     - group.system_sensors
@@ -311,7 +311,7 @@ sensors_view:
     - group.other
 player_view:
   name: Media Player
-  view: yes
+  view: true
   entities:
     - group.radio_stations
     - media_player.osmcwaldo
@@ -326,13 +326,13 @@ radio_stations:
     - input_select.radio_stations
 scenes_view:
   name: Scenen
-  view: yes
+  view: true
   entities:
     - group.scenes_wz
     - group.scenes
 automation_view:
   name: Automations
-  view: yes
+  view: true
   entities:
     - group.automation_switch
     - group.automation_notify
@@ -340,19 +340,19 @@ automation_view:
     - group.scripts
 kitchen_view:
   name: Küche
-  view: yes
+  view: true
   entities:
     - group.kitchen
     - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
 vacuum_view:
   name: Staubsauger
-  view: yes
+  view: true
   entities:
     # - group.xiaomi_vacuum_controls
     - group.xiaomi_vacuum_sensors
 camera_view:
   name: Cameras
-  view: yes
+  view: true
   icon: mdi:camera
   entities:
     - camera.balkonblick
@@ -360,12 +360,12 @@ camera_view:
     - camera.dornbirn
     # - camera.raspy_cam
 # kinderzimmer_view:
-#   view: yes
+#   view: true
 #   entities:
 #     - group.kinderzimmer
 weather_view:
   name: Wetter
-  view: yes
+  view: true
   entities:
     - group.owm_weather
     - group.zamg
@@ -389,7 +389,7 @@ xiaomi_vacuum_sensors:
     - sensor.xiaomi_vacuum_side_brush_left
     - sensor.xiaomi_vacuum_cleaned_area
 warn_all_lights:
-  view: no
+  view: false
   entities:
     - light.gateway_light_286c07fa1faa
     - light.ledstrip

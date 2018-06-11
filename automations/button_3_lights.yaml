@@ -1,6 +1,6 @@
 ---
 - alias: "toggle living room lights"
-  initial_state: True
+  initial_state: true
   trigger:
     - platform: event
       event_type: click
@@ -17,7 +17,7 @@
         entity_id: switch.wz_light_1
 
 - alias: "toggle big light"
-  initial_state: True
+  initial_state: true
   trigger:
     - platform: event
       event_type: click
@@ -31,7 +31,7 @@
         entity_id: switch.wz_light_1
 
 - alias: "turn off living room lights"
-  initial_state: True
+  initial_state: true
   trigger:
     - platform: event
       event_type: click

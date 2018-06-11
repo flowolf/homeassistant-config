@@ -3,7 +3,7 @@
   host: !secret router_IP
   username: !secret router_user
   password: !secret router_pwd
-  track_new_devices: False
+  track_new_devices: false
 
 # install deps first:
 # https://home-assistant.io/components/device_tracker.bluetooth_le_tracker/
@@ -15,6 +15,6 @@
 
 - platform: owntracks
   max_gps_accuracy: 200
-  waypoints: True
+  waypoints: true
   waypoint_whitelist:
     - flo

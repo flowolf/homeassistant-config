@@ -1,8 +1,8 @@
 ---
 testinger:
-  initial: off
+  initial: false
 
 vacuum_bot_auto:
-  initial: on
+  initial: true
   name: "automatisch staubsaugen"
   icon: mdi:auto-fix

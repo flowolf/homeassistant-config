@@ -1,236 +1,236 @@
 ---
 - name: All on
   entities:
-    switch.wz_light_1: on
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: on
-    switch.christbaum: on
-    switch.esstisch_switch: on
+    switch.wz_light_1: true
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: true
+    switch.christbaum: true
+    switch.esstisch_switch: true
     light.lego_lampe:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 255
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 254
     light.tradfri_bulb_e27_ws_opal_980lm_2:
-      state: on
+      state: true
     light.ledstrip:
-      state: on
+      state: true
       brightness: 254
       rgb_color: [0, 69, 108]
 
 - name: All off
   entities:
-    switch.wz_light_1: off
-    # switch.wz_light_2: off
-    # switch.wz_light_3: off
-    switch.wz_vitrine: off
-    switch.christbaum: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: false
+    # switch.wz_light_2: false
+    # switch.wz_light_3: false
+    switch.wz_vitrine: false
+    switch.christbaum: false
+    switch.esstisch_switch: false
     light.lego_lampe:
-      state: off
+      state: false
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: off
+      state: false
     light.ledstrip:
-      state: off
+      state: false
     light.tradfri_bulb_e27_ws_opal_980lm_2:
-      state: off
+      state: false
     light.gateway_light_286c07fa1faa:
-      state: off
+      state: false
 
 - name: WZ Movies
   entities:
-    switch.wz_light_1: off
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: off
-    switch.christbaum: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: false
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: false
+    switch.christbaum: false
+    switch.esstisch_switch: false
     light.lego_lampe:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 9
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: off
+      state: false
     light.ledstrip:
-      state: on
+      state: true
       brightness: 55
       rgb_color: [0, 151, 205]
     light.gateway_light_286c07fa1faa:
-      state: on
+      state: true
       brightness: 255
       rgb_color: [0, 34, 128]
     light.wordclock:
-      state: on
+      state: true
       brightness: 33
       rgb_color: [0, 185, 255]
 
 - name: WZ Movies 2
   entities:
-    switch.wz_light_1: off
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: off
-    switch.christbaum: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: false
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: false
+    switch.christbaum: false
+    switch.esstisch_switch: false
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: off
+      state: false
     light.lego_lampe:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 9
     light.ledstrip:
-      state: on
+      state: true
       brightness: 90
       rgb_color: [0, 69, 108]
     light.gateway_light_286c07fa1faa:
-      state: off
+      state: false
     light.wordclock:
-      state: on
+      state: true
       brightness: 33
       rgb_color: [0, 185, 255]
 
 - name: WZ Movies 3
   entities:
-    switch.wz_light_1: on
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: off
-    switch.christbaum: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: true
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: false
+    switch.christbaum: false
+    switch.esstisch_switch: false
     light.ledstrip:
-      state: on
+      state: true
       brightness: 9
       rgb_color: [228, 48, 0]
     # input_select.ledstrip_effect: Solid
     light.lego_lampe:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 20
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: off
+      state: false
     light.gateway_light_286c07fa1faa:
-      state: off
+      state: false
     light.wordclock:
-      state: on
+      state: true
       brightness: 33
       rgb_color: [0, 185, 255]
 
 - name: Blue
   entities:
-    switch.wz_light_1: off
-    switch.wz_light_2: on
-    # switch.wz_light_3: off
-    switch.wz_vitrine: off
-    switch.christbaum: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: false
+    switch.wz_light_2: true
+    # switch.wz_light_3: false
+    switch.wz_vitrine: false
+    switch.christbaum: false
+    switch.esstisch_switch: false
     light.lego_lampe:
-      state: on
+      state: true
       rgb_color: [0, 151, 205]
       brightness: 40
     light.ledstrip:
-      state: on
+      state: true
       brightness: 155
       rgb_color: [0, 151, 205]
     light.gateway_light_286c07fa1faa:
-      state: on
+      state: true
       brightness: 255
       rgb_color: [0, 34, 128]
     light.wordclock:
-      state: on
+      state: true
       brightness: 33
       rgb_color: [0, 185, 255]
 
 - name: Green
   entities:
-    switch.wz_light_1: on
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: on
-    switch.esstisch_switch: on
+    switch.wz_light_1: true
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: true
+    switch.esstisch_switch: true
     light.lego_lampe:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 255
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: on
+      state: true
       color_temp: 373.412
       brightness: 145
     light.ledstrip:
-      state: on
+      state: true
       brightness: 255
       rgb_color: [5, 149, 0]
     light.gateway_light_286c07fa1faa:
-      state: on
+      state: true
       brightness: 255
       rgb_color: [4, 111, 0]
     light.wordclock:
-      state: on
+      state: true
       brightness: 200
       rgb_color: [0, 255, 0]
 
 
 - name: Red
   entities:
-    switch.wz_light_1: off
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: false
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: false
+    switch.esstisch_switch: false
     light.lego_lampe:
-      state: on
+      state: true
       rgb_color: [255, 0, 0]
       brightness: 150
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: off
+      state: false
     light.ledstrip:
-      state: on
+      state: true
       brightness: 255
       rgb_color: [255, 20, 0]
     light.gateway_light_286c07fa1faa:
-      state: on
+      state: true
       brightness: 255
       rgb_color: [255, 20, 0]
     light.wordclock:
-      state: on
+      state: true
       brightness: 50
       rgb_color: [255, 0, 0]
 
 - name: WZ Fireplace
   entities:
-    switch.wz_light_1: off
-    switch.wz_light_2: on
-    switch.wz_light_3: on
-    switch.wz_vitrine: off
-    switch.christbaum: off
-    switch.esstisch_switch: off
+    switch.wz_light_1: false
+    switch.wz_light_2: true
+    switch.wz_light_3: true
+    switch.wz_vitrine: false
+    switch.christbaum: false
+    switch.esstisch_switch: false
     light.lego_lampe:
-      state: on
+      state: true
       color_temp: 454.54
       brightness: 20
     light.ledstrip:
-      state: on
+      state: true
       brightness: 9
       rgb_color: [228, 48, 0]
     # input_select.ledstrip_effect: Solid
     light.gateway_light_286c07fa1faa:
-      state: on
+      state: true
       brightness: 122
       rgb_color: [182, 39, 0]
     light.tradfri_bulb_e27_ws_opal_980lm:
-      state: on
+      state: true
       color_temp: 454.54
       transition: 30
       brightness: 40
     light.wordclock:
-      state: on
+      state: true
       brightness: 50
       rgb_color: [255, 255, 255]
     script.fireplace:
-      state: on
+      state: true
       # #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
       #   sequence:
       #     #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"

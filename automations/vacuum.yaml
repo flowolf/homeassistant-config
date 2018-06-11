@@ -1,6 +1,6 @@
 ---
 - alias: "Automatic vacuum on"
-  hide_entity: False
+  hide_entity: false
   trigger:
     - platform: state
       entity_id: group.all_devices
@@ -40,7 +40,7 @@
         entity_id: vacuum.xiaomi_vacuum_cleaner
 
 - alias: "Automatic vacuum off"
-  hide_entity: False
+  hide_entity: false
   trigger:
     platform: state
     entity_id: group.all_devices

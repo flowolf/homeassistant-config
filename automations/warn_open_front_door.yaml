@@ -1,6 +1,6 @@
 ---
 - alias: "warn for open front door"
-  initial_state: True
+  initial_state: true
   trigger:
     platform: state
     entity_id: binary_sensor.wohnungstuer
