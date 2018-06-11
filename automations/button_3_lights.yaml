@@ -45,4 +45,3 @@
     - service: switch.turn_off
       data:
         entity_id: switch.wz_light_1
-

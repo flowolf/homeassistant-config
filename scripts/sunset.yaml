@@ -17,4 +17,3 @@ sequence:
   - service: switch.turn_on
     data:
       entity_id: switch.wz_light_1
-
