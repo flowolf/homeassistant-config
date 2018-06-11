@@ -1,0 +1,6 @@
+before_script:
+  - pip install yamllint
+
+test:
+  script:
+    - yamllint -d relaxed .
