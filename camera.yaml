@@ -18,3 +18,9 @@
 - platform: mjpeg
   name: "Dornbirn"
   mjpeg_url: "http://212.51.246.241/mjpg/video.mjpg?COUNTER"
+
+- platform: generic
+  name: Unwetter_Stmk
+  still_image_url: http://unwetter.wetteralarm.at/images/map/steiermark_index.png
+  #  content_type: image/png
+  #  framerate: 0.05

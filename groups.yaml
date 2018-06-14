@@ -367,6 +367,7 @@ weather_view:
   name: Wetter
   view: true
   entities:
+    - camera.unwetter_stmk
     - group.owm_weather
     - group.zamg
     - group.darksky_weather
