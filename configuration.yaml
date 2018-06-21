@@ -358,10 +358,7 @@ automation 12:
       - service: media_player.play_media
         data_template:
           entity_id: media_player.mpd
-          media_content_id: |
-            'tunein:station:{{
-              states("input_select.radio_stations").split(":")[1] | string
-              }}'
+          media_content_id: 'tunein:station:{{ states("input_select.radio_stations").split(":")[1] | string}}'
           media_content_type: "channel"
 
 notify: !include notify.yaml
