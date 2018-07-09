@@ -87,7 +87,7 @@ panel_custom:
     sidebar_title: floorplan
     sidebar_icon: mdi:home
     url_path: floorplan
-    config: !include ha-floorplan/floorplan.yaml
+    config: !include floorplan.yaml
 
 http:
   api_password: !secret api_password
