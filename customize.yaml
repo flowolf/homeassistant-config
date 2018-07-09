@@ -259,3 +259,7 @@ sensor.tine_home:
 
 input_datetime.time_wakeup_lights:
   icon: mdi:alarm
+
+binary_sensor.floorplan:
+  custom_ui_state_card: state-card-floorplan
+  config: !include floorplan.yaml
