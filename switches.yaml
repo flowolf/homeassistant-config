@@ -95,7 +95,7 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   optimistic: false
-  # retain: true
+  retain: true
 - platform: mqtt
   name: "SONOFF1"
   friendly_name: "SONOFF1"
