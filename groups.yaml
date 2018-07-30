@@ -115,6 +115,7 @@ loggia_compact:
     - sensor.staub_10u
     - light.tradfri_bulb_e27_opal_1000lm
     # - switch.christmas_lights
+    - switch.sonoffS20_6448
     - camera.balkonblick
 loggia:
   name: Loggia

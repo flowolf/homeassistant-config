@@ -30,6 +30,20 @@
       data:
         entity_id: switch.kitchen_light1
 
+- alias: "Button Loggia toggle tiny lights"
+  initial_state: true
+  trigger:
+    - platform: event
+      event_type: click
+      event_data:
+        # xiaomi button n°2
+        entity_id: binary_sensor.switch_158d00016bf4aa
+        click_type: long_click_press
+  action:
+    - service: switch.toggle
+      data:
+        entity_id: switch.sonoffS20_6448
+
 
 # - alias: "Button Loggia Lights toggle"
 #   initial_state: true
