@@ -86,7 +86,7 @@ frontend:
 #     sidebar_icon: mdi:home
 #     url_path: floorplan
 #     config: !include floorplan.yaml
- 
+#
 http:
   api_password: !secret api_password
   # use_x_forwarded_for: true
