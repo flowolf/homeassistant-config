@@ -48,8 +48,6 @@ zone 4:
 
 # Enables the frontend
 frontend:
-#   extra_html_url:
-#     - /local/custom_ui/state-card-floorplan.html
   themes:
     darkcyan:
       # Main colors that can be changed
