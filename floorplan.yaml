@@ -1,4 +1,4 @@
-      name: Demo Floorplan
+      name: Floorplan
       image: /local/custom_ui/floorplan/floorplan.svg
       stylesheet: /local/custom_ui/floorplan/floorplan.css
 
@@ -31,11 +31,14 @@
 
         - name: Lights
           entities:
-             - light.hallway
-             - light.living_room
-             - light.patio
-             - group.kitchen_lights
-             - group.living_room_lights
+             - light.vzlicht_level
+             - switch.kitchen_light1
+             - switch.esstisch_switch
+             - switch.wz_light_1
+             - light.tradfri_bulb_e27_ws_opal_980lm
+             - light.lego_lampe
+             - light.tradfri_bulb_e27_opal_1000lm
+             - light.tradfri_bulb_e27_ws_opal_980lm_2
           states:
             - state: 'on'
               class: 'light-on'
@@ -45,59 +48,26 @@
             domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
             service: toggle
 
-        - name: Switches
-          entities:
-             - switch.doorbell
-          states:
-            - state: 'on'
-              class: 'doorbell-on'
-            - state: 'off'
-              class: 'doorbell-off'
-
-        - name: NVR
-          entities:
-             - binary_sensor.blue_iris_nvr
-          text_template: '${(entity.state === "on") ? "online" : "offline"}'
-          states:
-            - state: 'off'
-              class: 'danger-text'
-            - state: 'on'
-              class: 'success-text'
-
-        - name: Alarm Panel
-          entities:
-             - alarm_control_panel.alarm
-          states:
-            - state: 'armed_away'
-              class: 'alarm-armed'
-            - state: 'armed_home'
-              class: 'alarm-armed'
-            - state: 'disarmed'
-              class: 'alarm-disarmed'
-
-        - name: Binary sensors
-          entities:
-            - binary_sensor.front_hallway
-            - binary_sensor.kitchen
-            - binary_sensor.master_bedroom
-            - binary_sensor.theatre_room
-          states:
-            - state: 'off'
-              class: 'info-background'
-            - state: 'on'
-              class: 'warning-background'
-          state_transitions:
-            - name: On to off
-              from_state: 'on'
-              to_state: 'off'
-              duration: 10
+#         - name: Binary sensors
+#           entities:
+#             - binary_sensor.front_hallway
+#             - binary_sensor.kitchen
+#             - binary_sensor.master_bedroom
+#             - binary_sensor.theatre_room
+#           states:
+#             - state: 'off'
+#               class: 'info-background'
+#             - state: 'on'
+#               class: 'warning-background'
+#           state_transitions:
+#             - name: On to off
+#               from_state: 'on'
+#               to_state: 'off'
+#               duration: 10
 
         - name: Cameras
           entities:
-            - camera.hallway
-            - camera.driveway
-            - camera.front_door
-            - camera.backyard
+            - camera.balkonblick
           states:
             - state: 'idle'
               class: 'camera-idle'

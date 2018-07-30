@@ -83,8 +83,8 @@ frontend:
       paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
 
 panel_custom:
-  - name: floorplan
-    sidebar_title: floorplan
+  - name: Floorplan
+    sidebar_title: Floorplan
     sidebar_icon: mdi:home
     url_path: floorplan
     config: !include floorplan.yaml
