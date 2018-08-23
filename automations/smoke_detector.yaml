@@ -1,0 +1,11 @@
+---
+- alias: "smoke alarm"
+  trigger:
+    platform: mqtt
+    topic: "/br38/smoke/vorzimmer"
+    payload: "smoke"
+  action:
+    # TODO add fancier notifications
+    - service: notify.sms_to_flo
+      data:
+        message: "Alarm! Smoke detected!"
