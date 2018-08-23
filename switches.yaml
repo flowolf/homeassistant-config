@@ -136,10 +136,10 @@
 - platform: mqtt
   name: "Ventilator"
   friendly_name: "Ventilator"
-  command_topic: "/br38/sonoff/switch/SONOFF_BASIC_3EFBC1/relay/0/set"
-  state_topic: "/br38/sonoff/switch/SONOFF_BASIC_3EFBC1/relay/0"
-  payload_on: "1"
-  payload_off: "0"
+  command_topic: "cmnd/sonoff_3EFBC1/POWER"
+  state_topic: "stat/sonoff_3EFBC1/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
   optimistic: false
 
 #   command_topic: "/socket/uPy/uPy-488b2400"
