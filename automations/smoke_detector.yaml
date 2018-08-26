@@ -4,8 +4,19 @@
     platform: mqtt
     topic: "/br38/smoke/vorzimmer"
     payload: "smoke"
+  condition:
+    - condition: template
+      value_template: >
+        {%- if states.automation.smoke_alarm.attributes.last_triggered -%}
+          {{ (as_timestamp(now()) - as_timestamp(states.automation.smoke_alarm.attributes.last_triggered)) > 150 }}
+        {%- else -%}
+          true
+        {%- endif -%}
   action:
     # TODO add fancier notifications
     - service: notify.sms_to_flo
+      data:
+        message: "Alarm! Smoke detected!"
+    - service: notify.jabber
       data:
         message: "Alarm! Smoke detected!"
