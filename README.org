@@ -18,6 +18,7 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
   - [[https://www.fibaro.com/en/products/door-window-sensor/][fibaro door/window sensor]] - the far better choice, although more expensive. Supports tamper sensor (for removing from wall, and removing battery cover)
 - self built MQTT temperature/humidity sensors ([[https://micropython.org][MicroPython]]), with ESP8266 NodeMCU boards and a DTH-22
 - self built [[https://github.com/bruhautomation/ESP-MQTT-JSON-Digital-LEDs][RGB-led strip light]]
+- Hacked Ikea Smoke Detector (with Wemos D1 mini Wifi module, [[https://blog.flo.cx/s/bu/][blog post]], [[https://gitlab.com/flowolf/iot-smoke-detector][Documentation]])
 - Kodi on a Raspberry Pi
 - Samsung Smart TV
 - Raspberry Pi with [[https://github.com/badaix/snapcast][Snapcast]] and the [[https://www.hifiberry.com/shop/boards/hifiberry-amp2/][HiFiBerry Amp2]] in an upcycled old speaker
