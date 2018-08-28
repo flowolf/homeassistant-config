@@ -221,6 +221,7 @@ battery_sensors:
     - sensor.zwave_battery_wohnzimmerbalkontuer_sensor
     - sensor.zwave_battery_kuechenbalkontuer_sensor
     - sensor.xiaomi_battery_sensor_wohnzimmerfenster
+    - sensor.battery_smoke_detector
 mobile_sensors:
   name: Mobile Sensors
   entities:
