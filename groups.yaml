@@ -91,6 +91,7 @@ automation_notify:
     - automation.warn_no_one_home_but_lights_on
     - automation.alarm_for_door_opening_when_noone_is_home
     - automation.alarm_for_tampering_with_door_sensor
+    - automation.smoke_alarm
 
 scripts:
   name: Scripts
