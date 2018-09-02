@@ -40,6 +40,9 @@ switch.ventilator:
 switch.esstisch_switch:
   friendly_name: Esstisch
   icon: mdi:silverware-variant
+switch.kitchen:
+  friendly_name: Küche
+  icon: mdi:ceiling-light
 switch.kitchen_light1:
   friendly_name: Küche Licht 1
   icon: mdi:lightbulb

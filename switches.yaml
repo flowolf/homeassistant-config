@@ -85,6 +85,18 @@
   optimistic: false
   retain: true
 - platform: mqtt
+  name: "Kitchen"
+  friendly_name: "Küche"
+  command_topic: "cmnd/br38/shelly-kitchen/POWER"
+  state_topic: "stat/br38/shelly-kitchen/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  availability_topic: "tele/br38/shelly-kitchen/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  optimistic: false
+  retain: false
+- platform: mqtt
   name: "Kitchen light1"
   friendly_name: "Licht 1"
   command_topic: "cmnd/sonoff_kitchen1/POWER"

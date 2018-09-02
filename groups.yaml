@@ -42,6 +42,7 @@ doors:
 kitchen:
   name: Küche
   entities:
+    - switch.kitchen
     - switch.kitchen_light1
     - binary_sensor.kuechenbalkontuer
 vorzimmer_sensors:
