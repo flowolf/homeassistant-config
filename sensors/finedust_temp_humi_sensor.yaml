@@ -3,12 +3,29 @@
   name: staub_humi
   resource: !secret feinstaub_URL
   method: GET
-  value_template: '{{ value_json.sensordatavalues[3]["value"] }}'
+  # Sensor sometimes reports values outside of possible scope:
+  # e.g: temperature at 600.000 C
+  value_template: >-
+    {% set val = value_json.sensordatavalues[3]["value"] | float %}
+    {% if val > 100 %}
+      {{ None }}
+    {% else %}
+      {{ val }}
+    {% endif %}
   unit_of_measurement: "%"
+  # scan_interval: 300
 
 - platform: rest
   name: staub_temp
   resource: !secret feinstaub_URL
   method: GET
-  value_template: '{{ value_json.sensordatavalues[2]["value"] }}'
+  # value_template: '{{ value_json.sensordatavalues[2]["value"] }}'
+  value_template: >
+    {% set val = value_json.sensordatavalues[2]["value"] | float %}
+    {% if val > 100 %}
+      {{ None }}
+    {% else%}
+      {{ val }}
+    {% endif %}
   unit_of_measurement: "°C"
+  # scan_interval: 300
