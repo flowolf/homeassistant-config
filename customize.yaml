@@ -90,6 +90,10 @@ scene.green:
   icon: mdi:cards-playing-outline
 scene.wz_fireplace:
   icon: mdi:fire
+sensor.download_speed:
+  icon: mdi:download-network
+sensor.upload_speed:
+  icon: mdi:upload-network
 # binary_sensor.wohnungstuer:
 #   friendly_name: "Wohnungstür"
 #   entity_picture: /local/door_closed-512.png
