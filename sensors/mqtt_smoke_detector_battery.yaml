@@ -2,7 +2,7 @@
 - platform: mqtt
   state_topic: "/br38/smoke/vorzimmer/voltage"
   name: "battery smoke detector"
-  friendly_name: "Batterie Rauchmelder"
+  friendly_name: "Rauchmelder"
   unit_of_measurement: "V"
   icon_template: >
     {% set battery_level = states.sensor.battery_smoke_detector.state | default(0) | float %}

@@ -1,0 +1,17 @@
+---
+- platform: template
+  sensors:
+    mqtt_smoke_detector_battery_template:
+      friendly_name: "Rauchmelderbatteriestand"
+      unit_of_measurement: 'V'
+      value_template: '{{ states.sensor.battery_smoke_detector.state |default(0) }}'
+      icon_template: >
+        {% set battery_level = states.sensor.battery_smoke_detector.state | default(0) | float %}
+        {% set battery_round = ((battery_level - 7)/(9.5-7) * 10 ) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
