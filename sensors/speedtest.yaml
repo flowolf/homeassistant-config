@@ -1,0 +1,24 @@
+---
+# - platform: command_line
+#   name: Download Speed
+#   unit_of_measurement: "Mbit/s"
+#   scan_interval: 300
+#   command: "curl http://192.168.3.2/sensor/speedtest.txt 2> /dev/null | grep Download: | cut -d ' ' -f 2"
+# - platform: command_line
+#   name: Upload Speed
+#   unit_of_measurement: "Mbit/s"
+#   scan_interval: 300
+#   command: "curl http://192.168.3.2/sensor/speedtest.txt 2> /dev/null | grep Upload: | cut -d ' ' -f 2"
+
+- platform: rest
+  name: Download Speed
+  unit_of_measurement: "Mbit/s"
+  resource: "http://192.168.3.2/sensor/speedtest.txt"
+  value_template: '{{ value.split(" ")[3] }}'
+  scan_interval: 300
+- platform: rest
+  name: Upload Speed
+  unit_of_measurement: "Mbit/s"
+  resource: "http://192.168.3.2/sensor/speedtest.txt"
+  value_template: '{{ value.split(" ")[5] }}'
+  scan_interval: 300

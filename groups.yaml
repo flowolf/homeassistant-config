@@ -206,6 +206,11 @@ zamg:
     - sensor.zamg_wind_speed
     - sensor.zamg_wind_bearing
     - sensor.zamg_wind_max_speed
+speedtest_sensors:
+  name: Speedtest
+  entities:
+    - sensor.download_speed
+    - sensor.upload_speed
 system_sensors:
   name: System Sensoren
   entities:
@@ -304,6 +309,7 @@ sensors_view:
     - group.loggia_sensors
     - group.system_sensors
     - group.power_sensors
+    - group.speedtest_sensors
     - group.abstellraum_sensors
     - group.wohnzimmer_sensors
     - group.vorzimmer_sensors
