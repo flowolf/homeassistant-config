@@ -92,6 +92,7 @@ automation_notify:
     - automation.esstisch_lampe_defekt
     - automation.warn_for_open_front_door
     - automation.warn_no_one_home_but_lights_on
+    - automation.door_bell_notify
     - automation.alarm_for_door_opening_when_noone_is_home
     - automation.alarm_for_tampering_with_door_sensor
     - automation.smoke_alarm

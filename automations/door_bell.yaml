@@ -1,0 +1,20 @@
+---
+- alias: Door Bell notify
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: binary_sensor.door_bell
+    # from: 'off'
+    to: 'on'
+  # condition:
+  #   - condition: template
+  #     value_template: >
+  #       {%- if states.automation.door_bell_notify.attributes.last_triggered -%}
+  #         {{ (as_timestamp(now()) - as_timestamp(states.automation.door_bell_notify.attributes.last_triggered)) > 20 }}
+  #       {%- else -%}
+  #         true
+  #       {%- endif -%}
+  action:
+    - service: notify.jabber
+      data:
+        message: "Ding Dong! Door bell rung"
