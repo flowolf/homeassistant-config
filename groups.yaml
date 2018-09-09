@@ -50,6 +50,7 @@ vorzimmer_sensors:
   entities:
     - binary_sensor.motion_sensor_158d00015ef681
     - binary_sensor.wohnungstuer_burglar
+    - binary_sensor.smoke
     - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
     - sensor.vzlicht_power
 automation_switch:

@@ -28,7 +28,7 @@
   action:
     - service: switch.toggle
       data:
-        entity_id: switch.kitchen_light1
+        entity_id: switch.kitchen
 
 - alias: "Button Loggia toggle tiny lights"
   initial_state: true
