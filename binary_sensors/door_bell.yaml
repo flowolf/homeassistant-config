@@ -1,0 +1,9 @@
+---
+# DIY door bell sensor. Goes automatically back to off after 0.5 seconds
+- platform: mqtt
+  name: "Door Bell"
+  friendly_name: "Tür Glocke"
+  device_class: sound
+  state_topic: "/br38/door_buzzer/uPy-5d032700/bell"
+  payload_on: "ON"
+  payload_off: "OFF"

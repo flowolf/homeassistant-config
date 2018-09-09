@@ -48,6 +48,7 @@ kitchen:
 vorzimmer_sensors:
   name: Vorzimmer
   entities:
+    - binary_sensor.door_bell
     - binary_sensor.motion_sensor_158d00015ef681
     - binary_sensor.wohnungstuer_burglar
     - binary_sensor.smoke
