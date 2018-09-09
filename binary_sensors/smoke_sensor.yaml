@@ -1,0 +1,10 @@
+---
+# DIY smoke sensor only sends "smoke" every 10 seconds.
+# no OFF is actively sent, so an automation to reset the smoke alarm is needed.
+- platform: mqtt
+  name: "smoke"
+  friendly_name: "Rauch Vorzimmer"
+  device_class: smoke
+  state_topic: "/br38/smoke/vorzimmer"
+  payload_on: "smoke"
+  payload_off: "OFF"
