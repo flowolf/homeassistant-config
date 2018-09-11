@@ -1,6 +1,6 @@
 ---
 - alias: "Sunset 2"
-  initial_state: true
+  initial_state: false
   trigger:
     platform: numeric_state
     entity_id: sensor.balkon_light_level

@@ -5,10 +5,10 @@ sequence:
   #     title: ""
   #     message: "sunset is around the corner!"
   # - delay: 00:00:10
-  - service: notify.jabber
-    data:
-      title: ""
-      message: "it's getting dark, activated lights :)"
+  # - service: notify.jabber
+  #   data:
+  #     title: ""
+  #     message: "it's getting dark, activated lights :)"
   - service: light.turn_on
     data:
       entity_id: light.tradfri_bulb_e27_ws_opal_980lm
