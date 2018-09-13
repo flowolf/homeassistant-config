@@ -116,15 +116,17 @@
   payload_on: "1"
   payload_off: "0"
   optimistic: false
+
 - platform: mqtt
   name: "Door Buzzer"
-  friendly_name: "Türoffner"
+  friendly_name: "Türöffner"
   command_topic: "/br38/door_buzzer/uPy-5d032700"
   state_topic: "/br38/door_buzzer/uPy-5d032700/state"
   payload_on: "buzzing"
   payload_off: "off"
   optimistic: false
   retain: false
+
 - platform: mqtt
   name: "wz light 1"
   friendly_name: "Licht S20 0954"
