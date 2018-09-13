@@ -82,6 +82,12 @@ automation_timer:
   entities:
     - automation.wakeup_lights
     - input_datetime.time_wakeup_lights
+automation_door:
+  control: hidden
+  name: Door Bell
+  entities:
+    - automation.auto_door_buzzer
+    - automation.door_bell_notify
 automation_notify:
   control: hidden
   entities:
@@ -349,6 +355,7 @@ automation_view:
   name: Automations
   view: true
   entities:
+    - group.automation_door
     - group.automation_switch
     - group.automation_notify
     - group.automation_timer
