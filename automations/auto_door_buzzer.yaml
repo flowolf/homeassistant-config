@@ -1,0 +1,17 @@
+---
+- alias: Auto Door Buzzer
+  hide_entity: false
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: binary_sensor.door_bell
+    # from: 'off'
+    to: 'on'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.door_buzzer
+    - service: notify.jabber
+      data:
+        title: ""
+        message: "Ding Dong! Door opened!"

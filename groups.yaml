@@ -65,12 +65,13 @@ automation_switch:
     - automation.coming_home_turn_on_vz_light
     - automation.coming_home_turn_on_wz_light
     - automation.loggia_lights
-    - automation.motion_light
-    - automation.motion_test
-    - automation.motion_test_off
+    # - automation.motion_light
+    # - automation.motion_test
+    # - automation.motion_test_off
     - automation.auto_media_player_lighting
     - automation.toggle_living_room_lights
     - automation.lights_out_in_the_living_room
+    - automation.auto_door_buzzer
     # - automation.button_press
     # - automation.set_dark_theme_for_night
     # - automation.set_default_theme_for_day
