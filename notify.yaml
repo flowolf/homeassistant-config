@@ -5,7 +5,7 @@
   password: !secret xmpp_pwd
   recipient: !secret xmpp_recipient
   tls: true
-  verify: false
+  verify: true
 
 # version 0.57
 - name: sms_to_flo
