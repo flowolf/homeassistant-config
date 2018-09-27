@@ -13,3 +13,6 @@
   username: !secret yesss_user
   password: !secret yesss_pw
   recipient: !secret yesss_sms_flo
+
+- name: html5_push
+  platform: html5
