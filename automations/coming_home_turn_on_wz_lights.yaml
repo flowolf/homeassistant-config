@@ -6,9 +6,9 @@
     entity_id: sensor.flo_home
     to: 'home'
   condition:
-    condition: numeric_state
-    entity_id: sensor.balkon_light_level
-    below: 25
+    - condition: sun
+      after: sunset
+      after_offset: "-00:30:00"
   action:
     - service: homeassistant.turn_on
       entity_id:

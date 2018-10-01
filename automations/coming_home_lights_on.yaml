@@ -9,11 +9,9 @@
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: "below_horizon"
-        for:
-          minutes: 10
+      - condition: sun
+        after: sunset
+        after_offset: "-01:00:00"
       - condition: state
         entity_id: light.vzlicht_level
         state: "off"
