@@ -16,10 +16,7 @@
     # making sure all devices catch the scene
     - service: scene.turn_on
       entity_id: scene.wz_movies
-    - delay: 00:00:05
-    - service: scene.turn_on
-      entity_id: scene.wz_movies
-    - delay: 00:00:05
+    - delay: 00:00:02
     - service: scene.turn_on
       entity_id: scene.wz_movies
     # automatically disable automation after one run
