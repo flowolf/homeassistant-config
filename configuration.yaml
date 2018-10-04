@@ -352,6 +352,7 @@ logger:
   # levels: notset, debug, info, warn, warning, error, fatal, critical
   default: warn
   logs:
+    homeassistant.component.notify.yessssms: debug
     homeassistant.core: warn
     # supress 'unparsed data' WARNING from AndroidIPCam
     urllib3.connectionpool: critical
