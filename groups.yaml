@@ -249,6 +249,7 @@ presence_sensors:
     - sensor.flo_home
     - device_tracker.floop3_oneplus3
     - device_tracker.flo_laptop
+    - device_tracker.flo_laptop2
     - device_tracker.ble_f9e7c2412ef2
     - sensor.tine_home
     - device_tracker.tine_g6

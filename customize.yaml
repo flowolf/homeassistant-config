@@ -258,7 +258,10 @@ group.scenes_view:
   friendly_name: "Scenen"
 
 device_tracker.flo_laptop:
-  friendly_name: "Flo Laptop"
+  friendly_name: "Flo Laptop Wifi"
+device_tracker.flo_laptop2:
+  friendly_name: "Flo Laptop LAN"
+
 
 sensor.flo_home:
   friendly_name: "Flo home bayes"
