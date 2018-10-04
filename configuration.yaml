@@ -130,14 +130,14 @@ vacuum:
     host: 192.168.3.138
     token: !secret xiaomi_vacuum_key
 
-android_ip_webcam:
-  - host: !secret android_ip_cam_ip
-    name: "Balkon"
-    username: !secret android_ipc_user
-    password: !secret android_ipc_pass
-    scan_interval: 60
-    sensors:
-      - light
+# android_ip_webcam:
+#   - host: !secret android_ip_cam_ip
+#     name: "Balkon"
+#     username: !secret android_ipc_user
+#     password: !secret android_ipc_pass
+#     scan_interval: 60
+#     sensors:
+#       - light
 
 binary_sensor: !include_dir_merge_list binary_sensors/
 
