@@ -260,6 +260,7 @@ scenes_wz:
   entities:
     - scene.wz_movies
     - scene.wz_fireplace
+    - scene.just_fire
     - scene.wz_movies_2
     - scene.wz_movies_3
     - scene.wz_movies_4

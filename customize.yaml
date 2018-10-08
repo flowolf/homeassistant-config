@@ -90,6 +90,8 @@ scene.green:
   icon: mdi:cards-playing-outline
 scene.wz_fireplace:
   icon: mdi:fire
+scene.just_fire:
+  icon: mdi:fire
 sensor.download_speed:
   icon: mdi:download-network
 sensor.upload_speed:

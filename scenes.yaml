@@ -248,3 +248,8 @@
       # ?action=play_video&videoid=YOUTUBE_VIDEO_ID"}}}'
       # -H 'content-type: application/json;' http://KODISERVERIP:KODIPORT/\
       # jsonrpc
+
+- name: Just Fire
+  entities:
+    script.fireplace:
+      state: true
