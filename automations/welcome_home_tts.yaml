@@ -1,6 +1,7 @@
 ---
 - alias: "say welcome home"
   hide_entity: false
+  initial_state: false
   trigger:
     platform: state
     entity_id: binary_sensor.wohnungstuer
