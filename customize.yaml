@@ -101,6 +101,9 @@ sensor.upload_speed:
 #   entity_picture: /local/door_closed-512.png
 binary_sensor.door_window_sensor_158d00014df204:
   friendly_name: "WZ Fenster 1"
+
+sensor.flo_phone_battery:
+  device_class: battery
 # # hide ##
 # group.automation:
 #   hidden: true

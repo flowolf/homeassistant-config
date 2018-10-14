@@ -5,13 +5,13 @@
       friendly_name: "Flo Phone"
       unit_of_measurement: '%'
       value_template: '{{ states.device_tracker.floop3_oneplus3.attributes.battery| default(0) }}'
-      icon_template: >
-        {% set battery_level = states.device_tracker.floop3_oneplus3.attributes.battery | default(0) | int %}
-        {% set battery_round = (battery_level / 10) |int * 10 %}
-        {% if battery_round >= 100 %}
-          mdi:battery
-        {% elif battery_round > 0 %}
-          mdi:battery-{{ battery_round }}
-        {% else %}
-          mdi:battery-alert
-        {% endif %}
+      # icon_template: >
+      #   {% set battery_level = states.device_tracker.floop3_oneplus3.attributes.battery | default(0) | int %}
+      #   {% set battery_round = (battery_level / 10) |int * 10 %}
+      #   {% if battery_round >= 100 %}
+      #     mdi:battery
+      #   {% elif battery_round > 0 %}
+      #     mdi:battery-{{ battery_round }}
+      #   {% else %}
+      #     mdi:battery-alert
+      #   {% endif %}
