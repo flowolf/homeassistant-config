@@ -57,7 +57,7 @@ frontend:
 #     config: !include floorplan.yaml
 #
 http:
-  api_password: !secret api_password
+  # api_password: !secret api_password
   # use_x_forwarded_for: true
   # ip_ban_enabled: false
   # login_attempts_threshold: 5
