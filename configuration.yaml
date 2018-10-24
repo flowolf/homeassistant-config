@@ -353,7 +353,11 @@ logger:
   default: warn
   logs:
     homeassistant.component.notify.yessssms: debug
+    homeassistant.component.notify.xmpp: info
+    homeassistant.component.device_tracker.gpslogger: info
     homeassistant.core: warn
+    miio.device: critical
+    homeassistant.components.vacuum.xiaomi_miio: critical
     # supress 'unparsed data' WARNING from AndroidIPCam
     urllib3.connectionpool: critical
 

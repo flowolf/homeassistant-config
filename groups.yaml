@@ -251,6 +251,7 @@ presence_sensors:
     - device_tracker.flo_laptop
     - device_tracker.flo_laptop2
     - device_tracker.ble_f9e7c2412ef2
+    - device_tracker.bb1798a1
     - sensor.tine_home
     - device_tracker.tine_g6
     - device_tracker.40d32d9c185d
@@ -381,7 +382,8 @@ camera_view:
   entities:
     - camera.balkonblick
     - camera.freibad_furstenfeld
-    - camera.dornbirn
+    # - camera.dornbirn
+    - camera.karren
     # - camera.raspy_cam
 # kinderzimmer_view:
 #   view: true

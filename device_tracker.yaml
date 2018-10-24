@@ -5,6 +5,9 @@
   password: !secret router_pwd
   track_new_devices: false
 
+- platform: gpslogger
+  # password: !secret gps_logger_pwd
+ 
 # install deps first:
 # https://home-assistant.io/components/device_tracker.bluetooth_le_tracker/
 # LOOONG build time at next startup!
