@@ -15,9 +15,15 @@
   name: "Freibad Fürstenfeld"
   mjpeg_url: "http://84.115.191.3/mjpg/video.mjpg?COUNTER"
 
-- platform: mjpeg
-  name: "Dornbirn"
-  mjpeg_url: "http://212.51.246.241/mjpg/video.mjpg?COUNTER"
+# - platform: mjpeg
+#   name: "Dornbirn"
+#   mjpeg_url: "http://212.51.246.241/mjpg/video.mjpg?COUNTER"
+
+# - platform: generic
+#   name: "Karren"
+#   still_image_url: "https://www.foto-webcam.eu/webcam/dornbirn/{{ now().year }}/{{ now().month }}/{{ now().day }}/{{ now().hour }}{{ now().minute//10 | default(0) }}0_lm.jpg"
+#   # limit_refetch_to_url_change: true
+#   ## framerate: 0.003
 
 - platform: generic
   name: Unwetter_Stmk
