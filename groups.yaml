@@ -247,11 +247,11 @@ presence_sensors:
   name: Presence
   entities:
     - sensor.flo_home
-    - device_tracker.floop3_oneplus3
+    - device_tracker.bb1798a1
     - device_tracker.flo_laptop
     - device_tracker.flo_laptop2
     - device_tracker.ble_f9e7c2412ef2
-    - device_tracker.bb1798a1
+    - device_tracker.floop3_oneplus3
     - sensor.tine_home
     - device_tracker.tine_g6
     - device_tracker.40d32d9c185d
@@ -300,7 +300,7 @@ default_view:
   entities:
     - group.wohnzimmer_compact
     - group.loggia_compact
-    - !secret flo_phone_tracker
+    - device_tracker.bb1798a1
     - !secret tine_phone_tracker
     - group.kinderzimmer
     - group.vorzimmer

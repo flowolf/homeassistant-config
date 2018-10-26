@@ -11,9 +11,14 @@
   name: "flo_home"
   probability_threshold: 0.85
   observations:
-    - entity_id: 'device_tracker.floop3_oneplus3'
+    - entity_id: 'device_tracker.bb1798a1'
       prob_given_true: '0.99'
       prob_given_false: '0.05'
+      platform: 'state'
+      to_state: 'home'
+    - entity_id: 'device_tracker.floop3_oneplus3'
+      prob_given_true: '0.97'
+      prob_given_false: '0.5'
       platform: 'state'
       to_state: 'home'
     - entity_id: 'device_tracker.flo_laptop'
@@ -24,11 +29,6 @@
     - entity_id: 'device_tracker.flo_laptop2'
       prob_given_true: '0.97'
       prob_given_false: '0.1'
-      platform: 'state'
-      to_state: 'home'
-    - entity_id: 'device_tracker.bb1798a1'
-      prob_given_true: '0.5'
-      prob_given_false: '0.5'
       platform: 'state'
       to_state: 'home'
     - entity_id: 'media_player.osmcwaldo'

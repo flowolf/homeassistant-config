@@ -76,6 +76,8 @@ config:
 # Enables support for tracking state changes over time.
 history:
 
+map:
+
 # NoSQL really pounded the SD-card of my Raspberry Pi
 # trying external USB-stick
 recorder:
