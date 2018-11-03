@@ -104,6 +104,10 @@ binary_sensor.door_window_sensor_158d00014df204:
 
 sensor.flo_phone_battery:
   device_class: battery
+sensor.flo_phone_direction:
+  icon: mdi:compass-outline
+sensor.flo_phone_speed:
+  icon: mdi:speedometer
 # # hide ##
 # group.automation:
 #   hidden: true

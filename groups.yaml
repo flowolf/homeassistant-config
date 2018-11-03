@@ -243,6 +243,8 @@ mobile_sensors:
   name: Mobile Sensors
   entities:
     - sensor.flo_phone_battery
+    - sensor.flo_phone_speed
+    - sensor.flo_phone_direction
 presence_sensors:
   name: Presence
   entities:
