@@ -1,0 +1,50 @@
+---
+- platform: template
+  sensors:
+    flo_phone_battery:
+      friendly_name: "Flo Phone"
+      unit_of_measurement: '%'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.battery| default(0) }}'
+      device_class: battery
+
+- platform: template
+  sensors:
+    flo_phone_direction:
+      friendly_name: "Flo Phone Direction"
+      unit_of_measurement: '°'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.direction| default(0) }}'
+
+- platform: template
+  sensors:
+    flo_phone_speed:
+      friendly_name: "Flo Phone Speed"
+      unit_of_measurement: 'km/h'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.speed| default(0) }}'
+
+- platform: template
+  sensors:
+    flo_phone_latitude:
+      friendly_name: "Flo Phone Latitude"
+      unit_of_measurement: '°'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.latitude| default(0) }}'
+
+- platform: template
+  sensors:
+    flo_phone_longitude:
+      friendly_name: "Flo Phone Longitude"
+      unit_of_measurement: '°'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.longitude| default(0) }}'
+
+- platform: template
+  sensors:
+    flo_phone_altitude:
+      friendly_name: "Flo Phone Altitude"
+      unit_of_measurement: 'm'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.altitude| default(0) }}'
+
+- platform: template
+  sensors:
+    flo_phone_gps_accuracy:
+      friendly_name: "Flo Phone GPS Accuracy"
+      unit_of_measurement: 'm'
+      value_template: '{{ states.device_tracker.bb1798a1.attributes.gps_accuracy| default(500) }}'

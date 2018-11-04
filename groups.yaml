@@ -245,6 +245,10 @@ mobile_sensors:
     - sensor.flo_phone_battery
     - sensor.flo_phone_speed
     - sensor.flo_phone_direction
+    - sensor.flo_phone_altitude
+    - sensor.flo_phone_longitude
+    - sensor.flo_phone_latitude
+    - sensor.flo_phone_gps_accuracy
 presence_sensors:
   name: Presence
   entities:
