@@ -5,9 +5,7 @@
       friendly_name: "Akku"
       unit_of_measurement: '%'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level|default(None) }}'
-      icon_template: >
-        {% set battery_icon = states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon %}
-        {{ battery_icon }}
+      device_class: battery
 
 - platform: template
   sensors:
@@ -37,6 +35,7 @@
       unit_of_measurement: 'h'
       value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }}'
       icon_template: '{{ "mdi:filter-outline" }}'
+
 - platform: template
   sensors:
     xiaomi_vacuum_main_brush_left:
