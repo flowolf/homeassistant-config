@@ -3,9 +3,17 @@
 #   mjpeg_url: !secret raspi_camera
 #   name: "Raspy Cam"
 
+# Raspy with motionEyeOS
+- platform: mjpeg
+  name: "Balkonblick"
+  # still_image_url: !secret raspy_motioneye1_pic
+  mjpeg_url: !secret raspy_motioneye1_path
+  username: !secret raspy_motioneye1_user
+  password: !secret raspy_motioneye1_pass
+
 # android IP cam
 # - platform: mjpeg
-#   name: "Balkonblick"
+#   name: "Balkonblick2"
 #   # still_image_url: !secret android_ipc_photo_path
 #   mjpeg_url: !secret android_ipc_video_path
 #   username: !secret android_ipc_user

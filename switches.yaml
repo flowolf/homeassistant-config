@@ -120,8 +120,8 @@
 - platform: mqtt
   name: "Door Buzzer"
   friendly_name: "Türöffner"
-  command_topic: "/br38/door_buzzer/uPy-5d032700"
-  state_topic: "/br38/door_buzzer/uPy-5d032700/state"
+  command_topic: "/br38/door_buzzer/uPy-93474e00"
+  state_topic: "/br38/door_buzzer/uPy-93474e00/state"
   payload_on: "buzzing"
   payload_off: "off"
   optimistic: false

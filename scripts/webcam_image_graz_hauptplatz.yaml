@@ -1,0 +1,9 @@
+---
+sequence:
+  - service: notify.jabber
+    data:
+      title: ""
+      message: ""
+      data:
+        url: "https://www.graz.at:8443/webcam_neu/getimg.php"
+        verify: false

@@ -110,6 +110,8 @@ scripts:
     - script.sunset
     - script.test_speech
     - script.say_welcome_home
+    - script.webcam_image_from_karren
+    - script.webcam_image_graz_hauptplatz
 abstellraum:
   name: Abstellraum
   entities:
@@ -229,6 +231,7 @@ system_sensors:
     - sensor.ram_free
     - sensor.ram_use
     - sensor.since_last_boot
+    - sensor.current_version
     - updater.updater
 battery_sensors:
   name: Batterie Sensoren
