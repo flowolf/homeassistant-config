@@ -176,6 +176,7 @@ other:
     - switch.wz_light_2
     - switch.wz_light_3
     - switch.sonoffS20_6448
+    - switch.rundumleuchte
     # - switch.sonoffS20_0954
     # - switch.sonoff
 owm_weather:

@@ -76,6 +76,16 @@
 # - platform: zwave
 
 - platform: mqtt
+  name: "Rundumleuchte"
+  friendly_name: "Rundumleuchte"
+  command_topic: "cmnd/sonoff_A7FEB5/POWER"
+  state_topic: "stat/sonoff_A7FEB5/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  retain: false
+
+- platform: mqtt
   name: "WZ Vitrine"
   friendly_name: "Vitrine"
   command_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
