@@ -1,7 +1,7 @@
 * Home Assistant config
 
 
-[[https://gitlab.com/flowolf/homeassistant-config/commits/master][https://gitlab.com/flowolf/homeassistant-config/badges/master/pipeline.svg]]
+[[https://git.flo.cx/flowolf/homeassistant-config/commits/master][https://git.flo.cx/flowolf/homeassistant-config/badges/master/pipeline.svg]]
 
 
 currently my [[https://home-assistant.io][Home Assistant]] setup contains the following devices:
@@ -28,5 +28,5 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
   - Xiaomi door sensor
   - Xiaomi motion sensor
   - Xiaomi switch (button)
-- IP webcam with an old Android phone and [[https://play.google.com/store/apps/details?id=com.pas.webcam][IPWebcam]] ... currently out of order
+- IP webcam running MotionEyeOS and a RaspberryPi Zero W with Zero Cam.
 - RF-433MHz plugs - fading out, were too unreliable and status is not reported to HA
