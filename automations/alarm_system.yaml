@@ -1,5 +1,6 @@
 ---
 - alias: Alarm for tampering with door sensor
+  initial_state: true
   hide_entity: false
   trigger:
     platform: state
@@ -15,8 +16,13 @@
     - service: notify.sms_to_flo
       data:
         message: "Alarm! Someone tampered with the door sensor"
+    - service: notify.jabber
+      data:
+        title: ""
+        message: "Alarm! Someone tampered with the door sensor"
 
 - alias: Alarm for door opening when no-one is home
+  initial_state: true
   hide_entity: false
   trigger:
     platform: state
