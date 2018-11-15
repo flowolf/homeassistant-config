@@ -342,6 +342,7 @@ sensors_view:
     - group.battery_sensors
     - group.presence_sensors
     - group.other
+    - weblink.grafana
 player_view:
   name: Media Player
   view: true
@@ -352,6 +353,7 @@ player_view:
     - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
     - media_player.mpd
     - media_player.tv
+    - weblink.mopidy
 radio_stations:
   view: false
   name: Radio Sender
@@ -425,6 +427,7 @@ xiaomi_vacuum_sensors:
     - sensor.xiaomi_vacuum_side_brush_left
     - sensor.xiaomi_vacuum_cleaned_area
 warn_all_lights:
+  # for warning if no one home but lights on
   view: false
   entities:
     - light.gateway_light_286c07fa1faa
@@ -442,6 +445,28 @@ warn_all_lights:
     # - switch.wz_light_2
     # - switch.wz_light_3
     - switch.wz_vitrine
+    - switch.kitchen
     - switch.kitchen_light1
     # tv is also a 'light'
     - media_player.tv
+alarm_all_lights:
+  # for alarms, such as fire/smoke
+  view: false
+  entities:
+    # sonoff
+    - switch.wz_light_1
+    # rf plugs
+    - switch.wz_light_2
+    - switch.wz_light_3
+    # - light.kz
+    - light.tradfri_bulb_e27_ws_opal_980lm_2
+    # wz couch
+    - light.tradfri_bulb_e27_ws_opal_980lm
+    # - light.loggia
+    - light.tradfri_bulb_e27_opal_1000lm
+    - light.vzlicht_level
+    # - light.wz
+    - switch.esstisch_switch
+    - light.lego_lampe
+    - switch.kitchen
+    - switch.kitchen_light1

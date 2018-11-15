@@ -14,9 +14,36 @@
         {%- endif -%}
   action:
     # TODO add fancier notifications
+    - service: switch.turn_on
+      entity_id: switch.rundumleuchte
+    - service: homeassistant.turn_on
+      entity_id: group.alarm_all_lights
+    - service: switch.turn_on
+      entity_id: switch.rundumleuchte
     - service: notify.sms_to_flo
       data:
         message: "Alarm! Smoke detected!"
     - service: notify.jabber
       data:
         message: "Alarm! Smoke detected!"
+
+- alias: "reset smoke alarm"
+  trigger:
+    platform: mqtt
+    topic: "/br38/smoke/vorzimmer"
+    payload: "smoke"
+  # condition:
+  #   - condition: template
+  #     value_template: >
+  #       {%- if states.automation.reset_smoke_alarm.attributes.last_triggered -%}
+  #         {{ (as_timestamp(now()) - as_timestamp(states.automation.reset_smoke_alarm.attributes.last_triggered)) > 30 }}
+  #       {%- else -%}
+  #         true
+  #       {%- endif -%}
+  action:
+    - delay: '00:00:27'
+    - service: mqtt.publish
+      data:
+        topic: "/br38/smoke/vorzimmer"
+        payload: "OFF"
+        # retain: True
