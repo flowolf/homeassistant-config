@@ -280,7 +280,7 @@ input_select:
     name: wordclock effect
     options:
       - "clock"
-      - "rgb_sparcle"
+      - "color_sparcle"
       - "blue_sparcle"
     initial: "clock"
   radio_stations:
