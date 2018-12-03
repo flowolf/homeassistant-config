@@ -28,6 +28,7 @@
         message: "Alarm! Smoke detected!"
 
 - alias: "reset smoke alarm"
+  initial_state: true
   trigger:
     platform: mqtt
     topic: "/br38/smoke/vorzimmer"
