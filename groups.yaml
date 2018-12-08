@@ -60,8 +60,8 @@ automation_switch:
     - automation.sunset
     - automation.sunset_2
     - automation.tree_on
-    # - automation.christmas_lights_on
-    # - automation.christmas_lights_off
+    - automation.christmas_lights_on
+    - automation.christmas_lights_off
     - automation.coming_home_turn_on_vz_light
     - automation.coming_home_turn_on_wz_light
     - automation.loggia_lights
@@ -139,6 +139,7 @@ loggia:
     - sensor.balkon_light_level
     - sensor.staub_10u
     - light.tradfri_bulb_e27_opal_1000lm
+    - switch.sonoffS20_6448
     # - switch.christmas_lights
     - camera.balkonblick
 loggia_sensors:
