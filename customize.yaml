@@ -4,7 +4,7 @@ switch.wz_light_1:
   icon: mdi:lightbulb
   friendly_name: "grosse Stehlampe"
 light.tradfri_bulb_e27_ws_opal_980lm:
-  icon: mdi:lightbulb
+  icon: mdi:floor-lamp
   friendly_name: "Lampe Couch"
 switch.wz_light_2:
   icon: mdi:power-plug
@@ -37,6 +37,7 @@ switch.rundumleuchte:
   icon: mdi:alarm-light
 switch.christbaum:
   icon: mdi:pine-tree
+  # icon: mdi:android
 switch.ventilator:
   icon: mdi:fan
 switch.esstisch_switch:
