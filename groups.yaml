@@ -25,7 +25,7 @@ wohnzimmer:
     - input_number.ledstrip_animation_speed
     - sensor.wz_temp
     - sensor.wz_lfeucht
-    - switch.ventilator
+      #- switch.ventilator
     # - media_player.tv
     # - light.b1_light_test
     # - switch.wz_light_3
