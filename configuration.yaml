@@ -98,7 +98,7 @@ map:
 # trying external USB-stick
 recorder:
   db_url: !secret external_sqlite_url
-  purge_keep_days: 5
+  purge_keep_days: 3
   purge_interval: 1
 # db_url: !secret mariadb_url
 
