@@ -2,7 +2,7 @@
 - alias: "Button 1 All off"
   trigger:
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         entity_id: binary_sensor.switch_158d000128afa3
         click_type: long_click_press
@@ -10,24 +10,22 @@
     service: scene.turn_on
     entity_id: scene.all_off
 
-- alias: "Button 1 lego lamp"
+- alias: "Button 1 christmas tree"
   trigger:
     platform: event
-    event_type: click
+    event_type: xiaomi_aqara.click
     event_data:
       entity_id: binary_sensor.switch_158d000128afa3
       click_type: single
   action:
-    service: light.toggle
+    service: switch.toggle
     data:
-      entity_id: light.lego_lampe
-      # color_temp: 450
-      # brightness: 150
+      entity_id: switch.christbaum
 
 - alias: "Button 1 all on"
   trigger:
     platform: event
-    event_type: click
+    event_type: xiaomi_aqara.click
     event_data:
       entity_id: binary_sensor.switch_158d000128afa3
       click_type: double

@@ -3,7 +3,7 @@
   initial_state: true
   trigger:
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         # xiaomi button n°2
         entity_id: binary_sensor.switch_158d00016bf4aa
@@ -20,7 +20,7 @@
   initial_state: true
   trigger:
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         # xiaomi button n°2
         entity_id: binary_sensor.switch_158d00016bf4aa
@@ -34,7 +34,7 @@
   initial_state: true
   trigger:
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         # xiaomi button n°2
         entity_id: binary_sensor.switch_158d00016bf4aa
