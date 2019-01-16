@@ -4,7 +4,6 @@
     switch.wz_light_1: true
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: true
     switch.christbaum: true
     switch.esstisch_switch: true
     light.lego_lampe:
@@ -17,6 +16,10 @@
       brightness: 254
     light.tradfri_bulb_e27_ws_opal_980lm_2:
       state: true
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 95
+      rgb_color: [255, 255, 255]
     light.ledstrip:
       state: true
       brightness: 254
@@ -27,7 +30,7 @@
     switch.wz_light_1: false
     # switch.wz_light_2: false
     # switch.wz_light_3: false
-    switch.wz_vitrine: false
+    light.wz_vitrine: false
     switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
@@ -46,7 +49,6 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: false
     switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
@@ -55,6 +57,10 @@
       brightness: 9
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: false
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 15
+      rgb_color: [0, 90, 255]
     light.ledstrip:
       state: true
       brightness: 55
@@ -73,7 +79,6 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: false
     switch.christbaum: false
     switch.esstisch_switch: false
     light.tradfri_bulb_e27_ws_opal_980lm:
@@ -82,6 +87,10 @@
       state: true
       color_temp: 454.54
       brightness: 9
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 15
+      rgb_color: [0, 90, 255]
     light.ledstrip:
       state: true
       brightness: 90
@@ -98,7 +107,7 @@
     switch.wz_light_1: true
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: false
+    light.wz_vitrine: false
     switch.christbaum: false
     switch.esstisch_switch: false
     light.ledstrip:
@@ -124,13 +133,16 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     # switch.wz_light_3: false
-    switch.wz_vitrine: false
     switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: true
       rgb_color: [0, 151, 205]
       brightness: 40
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 55
+      rgb_color: [0, 90, 255]
     light.ledstrip:
       state: true
       brightness: 155
@@ -149,7 +161,6 @@
     switch.wz_light_1: true
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: true
     switch.esstisch_switch: true
     light.lego_lampe:
       state: true
@@ -159,6 +170,10 @@
       state: true
       color_temp: 373.412
       brightness: 145
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 80
+      rgb_color: [20, 200, 0]
     light.ledstrip:
       state: true
       brightness: 255
@@ -178,7 +193,6 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: true
@@ -186,6 +200,10 @@
       brightness: 150
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: false
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 80
+      rgb_color: [250, 0, 0]
     light.ledstrip:
       state: true
       brightness: 255
@@ -204,13 +222,13 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.wz_vitrine: false
     switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: true
       color_temp: 454.54
       brightness: 20
+    light.wz_vitrine: false
     light.ledstrip:
       state: true
       brightness: 9
