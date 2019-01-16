@@ -16,7 +16,7 @@ wohnzimmer:
     - switch.wz_light_1
     - light.tradfri_bulb_e27_ws_opal_980lm
     - light.lego_lampe
-    - switch.wz_vitrine
+    - light.wz_vitrine
     - switch.esstisch_switch
     - switch.christbaum
     - light.gateway_light_286c07fa1faa
@@ -25,7 +25,7 @@ wohnzimmer:
     - input_number.ledstrip_animation_speed
     - sensor.wz_temp
     - sensor.wz_lfeucht
-      #- switch.ventilator
+    # - switch.ventilator
     # - media_player.tv
     # - light.b1_light_test
     # - switch.wz_light_3
@@ -445,7 +445,7 @@ warn_all_lights:
     - light.lego_lampe
     # - switch.wz_light_2
     # - switch.wz_light_3
-    - switch.wz_vitrine
+    - light.wz_vitrine
     - switch.kitchen
     - switch.kitchen_light1
     # tv is also a 'light'

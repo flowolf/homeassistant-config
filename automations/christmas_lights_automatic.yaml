@@ -8,7 +8,7 @@
     service: homeassistant.turn_on
     entity_id:
       - switch.sonoffs20_6448
-        #      - switch.christmas_lights
+      # - switch.christmas_lights
 - alias: "Christmas lights off"
   trigger:
     platform: sun
