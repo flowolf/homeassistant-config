@@ -3,7 +3,7 @@
   hide_entity: false
   # initial_state: true
   trigger:
-    platform: time
+    platform: time_pattern
     minutes: '/1'
     seconds: '10'
   condition:
