@@ -1,5 +1,6 @@
 ---
 - alias: "Christmas lights on"
+  initial_state: false
   trigger:
     platform: sun
     event: sunset
@@ -10,6 +11,7 @@
       - switch.sonoffs20_6448
       # - switch.christmas_lights
 - alias: "Christmas lights off"
+  initial_state: false
   trigger:
     platform: sun
     event: sunset

@@ -1,0 +1,433 @@
+title: BR38-6
+views:
+  - path: default_view
+    title: Zhaus
+    badges:
+      - device_tracker.bb1798a1
+      - device_tracker.tine_g6
+    icon: 'mdi:home-variant'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        title: Wohnzimmer
+        entities:
+          - switch.wz_light_1
+          - light.tradfri_bulb_e27_ws_opal_980lm
+          - light.lego_lampe
+          - switch.esstisch_switch
+      - type: glance
+        entities:
+          - sensor.wz_temp
+          - sensor.wz_lfeucht
+      - show_header_toggle: false
+        # title: Loggia
+        type: glance
+        entities:
+          - sensor.aussen_temp
+          - sensor.aussen_lfeucht
+          - sensor.staub_10u
+          - light.tradfri_bulb_e27_opal_1000lm
+          # - switch.sonoffs20_6448
+      - type: glance
+        entities:
+          - light.tradfri_bulb_e27_ws_opal_980lm_2
+          - light.vzlicht_level
+          - switch.kitchen
+          - switch.kitchen_light1
+      - entity: camera.balkonblick
+        type: picture-entity
+      - show_header_toggle: false
+        title: Haustür
+        type: entities
+        entities:
+          - switch.door_buzzer
+  - path: wohnzimmer_view
+    title: Wohnzimmer
+    badges: []
+    icon: 'mdi:sofa'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - switch.wz_light_1
+          - light.tradfri_bulb_e27_ws_opal_980lm
+          - light.lego_lampe
+          - light.wz_vitrine
+          - switch.esstisch_switch
+          - light.gateway_light_286c07fa1faa
+          - light.ledstrip
+          - input_select.ledstrip_effect
+          - input_number.ledstrip_animation_speed
+        title: Wohnzimmer
+      - type: glance
+        entities:
+          - sensor.wz_temp
+          - sensor.wz_lfeucht
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - light.wordclock
+          - input_select.wordclock_effect
+        title: Wordclock
+      - entity: media_player.tv
+        type: media-control
+      - entity:  media_player.osmc_waldo
+        type: media-control
+      - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
+        type: media-control
+      - type: entities
+        entities:
+          - scene.wz_movies
+          - scene.wz_movies_2
+        title: Scene
+  # SENSOR View
+  - path: sensors_view
+    title: Sensoren
+    badges: []
+    icon: 'mdi:gauge'
+    cards:
+      - show_header_toggle: false
+        title: Loggia
+        type: entities
+        entities:
+          - sensor.aussen_temp
+          - sensor.aussen_lfeucht
+          # - sensor.staub_10u
+          # - sensor.staub_25u
+          - sensor.staub_temp
+          - sensor.staub_humi
+      - type: sensor
+        entity: sensor.staub_10u
+        name: Feinstaub 10u
+        graph: line
+        icon: mdi:blur-radial
+      - type: sensor
+        entity: sensor.staub_25u
+        name: Feinstaub 2.5u
+        graph: line
+        icon: mdi:blur
+
+      - show_header_toggle: false
+        type: glance
+        entities:
+          - sensor.current_version
+        # title: System Sensoren
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - sensor.esstisch_power
+          - sensor.esstisch_power_2
+          - sensor.vzlicht_power
+        title: Power Sensors
+      # - show_header_toggle: false
+      #   title: Speedtest
+      #   type: entities
+      #   entities:
+      #     - sensor.download_speed
+      #     - sensor.upload_speed
+      - type: sensor
+        entity: sensor.download_speed
+        name: Speedtest Download
+        graph: line
+        icon: mdi:download-network
+        detail: 2
+      - type: sensor
+        entity: sensor.upload_speed
+        name: Speedtest Upload
+        graph: line
+        icon: mdi:upload-network
+        detail: 2
+      # - show_header_toggle: false
+      #   type: entities
+      #   entities:
+      #     - sensor.abstellraum_temp
+      #     - sensor.abstellraum_lfeucht
+      #   title: Abstellraum
+      - show_header_toggle: false
+        title: Abstellraum
+        type: horizontal-stack
+        cards:
+          - type: sensor
+            graph: line
+            entity: sensor.abstellraum_temp
+          - type: sensor
+            graph: line
+            entity: sensor.abstellraum_lfeucht
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - sensor.wz_temp
+          - sensor.wz_lfeucht
+          - sensor.illumination_286c07fa1faa
+        title: Wohnzimmer
+      - type: sensor
+        graph: line
+        entity: sensor.illumination_286c07fa1faa
+      - show_header_toggle: false
+        type: glance
+        entities:
+          # - binary_sensor.door_bell
+          - binary_sensor.motion_sensor_158d00015ef681
+          - binary_sensor.wohnungstuer_burglar
+          - binary_sensor.smoke
+          - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
+        title: Vorzimmer
+      - show_header_toggle: false
+        type: glance
+        entities:
+          - binary_sensor.wohnungstuer
+          - binary_sensor.wohnzimmerbalkontuer
+          - binary_sensor.kuechenbalkontuer
+          - binary_sensor.door_window_sensor_158d00014df204
+        # title: Tür Sensoren
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - sensor.flo_phone_battery
+          - sensor.flo_phone_speed
+          - sensor.flo_phone_direction
+          - sensor.flo_phone_altitude
+          - sensor.flo_phone_longitude
+          - sensor.flo_phone_latitude
+          - sensor.flo_phone_gps_accuracy
+        title: Mobile Sensors
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - sensor.zwave_battery_wohnungstuer_sensor
+          - sensor.zwave_battery_wohnzimmerbalkontuer_sensor
+          - sensor.zwave_battery_kuechenbalkontuer_sensor
+          - sensor.xiaomi_battery_sensor_wohnzimmerfenster
+          - sensor.xiaomi_motion_battery_sensor
+          - sensor.mqtt_smoke_detector_battery_template
+        title: Batterie Sensoren
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - sensor.flo_home
+          - device_tracker.bb1798a1
+          - device_tracker.flo_laptop
+          - device_tracker.flo_laptop2
+          - device_tracker.ble_f9e7c2412ef2
+          - sensor.tine_home
+          - device_tracker.tine_g6
+          - device_tracker.40d32d9c185d
+          - device_tracker.tine_ipad
+        title: Presence
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - input_boolean.testinger
+          - switch.wz_light_2
+          - switch.wz_light_3
+          - switch.sonoffs20_6448
+          - switch.rundumleuchte
+        title: other
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - type: weblink
+            url: >-
+              https://grafana.klienux.net/d/umGJzvfik/homeassistant?refresh=1m&orgId=1
+            name: Grafana
+        title: Weblink
+  - path: player_view
+    title: Media Player
+    badges: []
+    icon: 'mdi:play-circle-outline'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - input_select.radio_stations
+        title: Radio Sender
+      - entity: media_player.mpd
+        type: media-control
+      - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+        type: media-control
+      - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
+        type: media-control
+      - entity: media_player.tv
+        type: media-control
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - type: weblink
+            url: 'http://192.168.3.137:6681/musicbox_webclient'
+            name: Mopidy
+        # title: Weblink
+  - path: scenes_view
+    title: Scenen
+    badges: []
+    icon: 'mdi:movie'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - scene.wz_movies
+          - scene.wz_fireplace
+          - scene.just_fire
+          - scene.wz_movies_2
+          - scene.wz_movies_3
+          - scene.green
+          - scene.red
+        title: Scenen Wohnzimmer
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - scene.all_off
+          - scene.all_on
+        title: Scenen
+  - path: automation_view
+    title: Automations
+    badges: []
+    icon: 'mdi:robot'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - automation.auto_door_buzzer
+          - automation.door_bell_notify
+        title: Door Bell
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - automation.sunset
+          - automation.sunset_2
+          # - automation.christmas_lights_on
+          # - automation.christmas_lights_off
+          - automation.coming_home_turn_on_vz_light
+          - automation.coming_home_turn_on_wz_light
+          - automation.loggia_lights
+          - automation.auto_media_player_lighting
+          - automation.toggle_living_room_lights
+          - automation.lights_out_in_the_living_room
+          # - automation.auto_door_buzzer
+        title: automation_switch
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - automation.update_info
+          - automation.tine_home
+          - automation.say_welcome_home
+          - automation.welcome_message_for_flo
+          - automation.esstisch_lampe_defekt
+          - automation.warn_for_open_front_door
+          - automation.warn_no_one_home_but_lights_on
+          - automation.door_bell_notify
+          - automation.alarm_for_door_opening_when_no_one_is_home
+          - automation.alarm_for_tampering_with_door_sensor
+          - automation.smoke_alarm
+        title: automation_notify
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - automation.wakeup_lights
+          - input_datetime.time_wakeup_lights
+        title: automation_timer
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - script.say_welcome_home
+          - script.sunset
+          - script.test_speech
+          - script.webcam_image_from_karren
+          - script.webcam_image_graz_hauptplatz
+        title: Scripts
+  - path: kitchen_view
+    title: Küche
+    badges: []
+    icon: 'mdi:stove'
+    cards:
+      - show_header_toggle: true
+        type: entities
+        entities:
+          - switch.kitchen
+          - switch.kitchen_light1
+          - binary_sensor.kuechenbalkontuer
+        title: Küche
+      - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+        type: media-control
+  - path: vacuum_view
+    title: Staubsauger
+    badges: []
+    icon: 'mdi:robot-vacuum'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - input_boolean.vacuum_bot_auto
+          - vacuum.xiaomi_vacuum_cleaner
+          - sensor.xiaomi_vacuum_battery
+          - sensor.xiaomi_vacuum_fan_speed
+          - sensor.xiaomi_vacuum_status
+          - sensor.xiaomi_vacuum_cleaning_time
+          - sensor.xiaomi_vacuum_filter_left
+          - sensor.xiaomi_vacuum_main_brush_left
+          - sensor.xiaomi_vacuum_side_brush_left
+          - sensor.xiaomi_vacuum_cleaned_area
+        title: Staubsaugerroboter
+  - path: camera_view
+    title: Cameras
+    badges: []
+    icon: 'mdi:camera'
+    cards:
+      - entity: camera.balkonblick
+        type: picture-entity
+      - entity: camera.freibad_furstenfeld
+        type: picture-entity
+  - path: weather_view
+    title: Wetter
+    badges: []
+    icon: 'mdi:weather-partlycloudy'
+    cards:
+      - type: iframe
+        url: 'https://embed.windy.com/embed2.html?rain,47.0704,15.3531,7'
+        aspect_ratio: 90%
+      # - type: weather-forecast
+      #   entity: weather.dark_sky
+      - show_header_toggle: true
+        type: entities
+        entities:
+          - sensor.owm_temperature
+          - sensor.owm_humidity
+          - sensor.owm_cloud_coverage
+          - sensor.owm_condition
+          - sensor.owm_forecast
+          - sensor.owm_pressure
+          - sensor.owm_rain
+          - sensor.owm_snow
+          - sensor.owm_wind_speed
+        title: Open Weather Map
+      - show_header_toggle: true
+        type: entities
+        entities:
+          - sensor.zamg_temperature
+          - sensor.zamg_humidity
+          - sensor.zamg_dewpoint
+          - sensor.zamg_precipitation
+          - sensor.zamg_sun_last_hour
+          - sensor.zamg_wind_speed
+          - sensor.zamg_wind_bearing
+          - sensor.zamg_wind_max_speed
+        title: ZAMG Weather
+      - show_header_toggle: true
+        type: entities
+        entities:
+          - entity: sensor.dark_sky_temperature
+          - entity: sensor.dark_sky_humidity
+          - entity: sensor.dark_sky_dew_point
+          - entity: sensor.dark_sky_summary
+          - entity: sensor.dark_sky_apparent_temperature
+          - entity: sensor.dark_sky_precip
+          - entity: sensor.dark_sky_precip_probability
+          - entity: sensor.dark_sky_precip_intensity
+          - entity: sensor.dark_sky_nearest_storm_distance
+          - entity: sensor.dark_sky_wind_speed
+          - entity: sensor.dark_sky_wind_bearing
+          - entity: sensor.dark_sky_visibility
+          - entity: sensor.dark_sky_ozone
+          - entity: sensor.dark_sky_pressure
+        title: DarkSky Weather
+      - entity: camera.unwetter_stmk
+        type: picture-entity
