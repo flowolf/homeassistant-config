@@ -4,7 +4,7 @@
     switch.wz_light_1: true
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.christbaum: true
+    # switch.christbaum: true
     switch.esstisch_switch: true
     light.lego_lampe:
       state: true
@@ -30,8 +30,8 @@
     switch.wz_light_1: false
     # switch.wz_light_2: false
     # switch.wz_light_3: false
+    # switch.christbaum: false
     light.wz_vitrine: false
-    switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: false
@@ -49,7 +49,7 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.christbaum: false
+    # switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: true
@@ -79,7 +79,7 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.christbaum: false
+    # switch.christbaum: false
     switch.esstisch_switch: false
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: false
@@ -108,7 +108,7 @@
     switch.wz_light_2: true
     switch.wz_light_3: true
     light.wz_vitrine: false
-    switch.christbaum: false
+    # switch.christbaum: false
     switch.esstisch_switch: false
     light.ledstrip:
       state: true
@@ -133,7 +133,7 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     # switch.wz_light_3: false
-    switch.christbaum: false
+    # switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: true
@@ -222,7 +222,7 @@
     switch.wz_light_1: false
     switch.wz_light_2: true
     switch.wz_light_3: true
-    switch.christbaum: false
+    # switch.christbaum: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: true

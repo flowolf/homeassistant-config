@@ -39,32 +39,14 @@
       pulselength: 500
       protocol: 1
 
-
 # - platform: mqtt
-#   name: "WZ Vitrine"
-#   friendly_name: "Vitrine"
-#   command_topic: "/socket/uPy/uPy-c4872400"
-#   state_topic: "/socket/uPy/uPy-c4872400/status"
-#   payload_on: "on"
-#   payload_off: "off"
+#   name: "Christbaum"
+#   friendly_name: "Christbaum"
+#   command_topic: "cmnd/sonoff_3EFBC1/POWER"
+#   state_topic: "stat/sonoff_3EFBC1/POWER"
+#   payload_on: "ON"
+#   payload_off: "OFF"
 #   optimistic: false
-
-- platform: mqtt
-  name: "Christbaum"
-  friendly_name: "Christbaum"
-  command_topic: "cmnd/sonoff_3EFBC1/POWER"
-  state_topic: "stat/sonoff_3EFBC1/POWER"
-  # command_topic: "/br38/sonoff/switch/SONOFF_BASIC_3EFBC1/relay/0/set"
-  # state_topic: "/br38/sonoff/switch/SONOFF_BASIC_3EFBC1/relay/0"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  # retain: true
-  # command_topic: "/socket/uPy/uPy-488b2400"
-  # state_topic: "/socket/uPy/uPy-488b2400/status"
-  # payload_on: "on"
-  # payload_off: "off"
-  # optimistic: false
 
 # - platform: mqtt
 #   name: "christmas lights"
@@ -75,7 +57,14 @@
 #   payload_off: "0"
 #   optimistic: false
 
-# - platform: zwave
+- platform: mqtt
+  name: "Ventilator"
+  friendly_name: "Ventilator"
+  command_topic: "cmnd/sonoff_3EFBC1/POWER"
+  state_topic: "stat/sonoff_3EFBC1/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
 
 - platform: mqtt
   name: "Rundumleuchte"
@@ -148,19 +137,3 @@
   payload_off: "OFF"
   optimistic: false
   # retain: true
-
-
-- platform: mqtt
-  name: "Ventilator"
-  friendly_name: "Ventilator"
-  command_topic: "cmnd/sonoff_3EFBC1/POWER"
-  state_topic: "stat/sonoff_3EFBC1/POWER"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-
-#   command_topic: "/socket/uPy/uPy-488b2400"
-#   state_topic: "/socket/uPy/uPy-488b2400/status"
-#   payload_on: "on"
-#   payload_off: "off"
-#   optimistic: false

@@ -3,7 +3,7 @@
   initial_state: true
   trigger:
     - platform: time
-      at: '21:00'
+      at: '21:00:00'
   action:
     - service: frontend.set_theme
       data:
@@ -13,7 +13,7 @@
   initial_state: true
   trigger:
     - platform: time
-      at: '06:00'
+      at: '06:00:00'
   action:
     - service: frontend.set_theme
       data:

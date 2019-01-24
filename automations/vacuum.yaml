@@ -22,8 +22,8 @@
         entity_id: input_boolean.vacuum_bot_auto
         state: 'on'
       - condition: time
-        after: '09:00'
-        before: '18:00'
+        after: '09:00:00'
+        before: '18:00:00'
       - condition: state
         entity_id: binary_sensor.workday_sensor
         state: 'on'
