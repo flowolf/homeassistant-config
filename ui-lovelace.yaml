@@ -1,3 +1,4 @@
+---
 title: BR38-6
 views:
   - path: default_view
@@ -71,7 +72,7 @@ views:
         title: Wordclock
       - entity: media_player.tv
         type: media-control
-      - entity:  media_player.osmc_waldo
+      - entity: media_player.osmc_waldo
         type: media-control
       - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
         type: media-control
@@ -111,7 +112,7 @@ views:
         type: glance
         entities:
           - sensor.current_version
-        # title: System Sensoren
+      # title: System Sensoren
       - show_header_toggle: false
         type: entities
         entities:
@@ -179,7 +180,7 @@ views:
           - binary_sensor.wohnzimmerbalkontuer
           - binary_sensor.kuechenbalkontuer
           - binary_sensor.door_window_sensor_158d00014df204
-        # title: Tür Sensoren
+      # title: Tür Sensoren
       - show_header_toggle: false
         type: entities
         entities:
@@ -250,12 +251,12 @@ views:
       - entity: media_player.tv
         type: media-control
       - show_header_toggle: false
+        # title: Weblink
         type: entities
         entities:
           - type: weblink
             url: 'http://192.168.3.137:6681/musicbox_webclient'
             name: Mopidy
-        # title: Weblink
   - path: scenes_view
     title: Scenen
     badges: []
