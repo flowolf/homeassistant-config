@@ -10,6 +10,12 @@
         {%- else -%}
           False
         {%- endif -%}
+      icon_template: >
+        {% if is_state('binary_sensor.wohnungstuer', 'on') %}
+          mdi:door-open
+        {% else %}
+          mdi:door
+        {% endif %}
 
 - platform: template
   sensors:
@@ -35,6 +41,12 @@
         {%- else -%}
           False
         {%- endif -%}
+      icon_template: >
+        {% if is_state('binary_sensor.wohnzimmerbalkontuer', 'on') %}
+          mdi:door-open
+        {% else %}
+          mdi:door
+        {% endif %}
 
 - platform: template
   sensors:
@@ -47,3 +59,9 @@
         {%- else -%}
           False
         {%- endif -%}
+      icon_template: >
+        {% if is_state('binary_sensor.kuechenbalkontuer', 'on') %}
+          mdi:door-open
+        {% else %}
+          mdi:door
+        {% endif %}

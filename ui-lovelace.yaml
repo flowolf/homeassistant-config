@@ -150,6 +150,7 @@ views:
       - show_header_toggle: false
         type: glance
         entities:
+          - sensor.last_boot
           - sensor.current_version
       # title: System Sensoren
       - show_header_toggle: false
@@ -215,11 +216,10 @@ views:
       - show_header_toggle: false
         type: glance
         entities:
-          - binary_sensor.wohnungstuer
-          - binary_sensor.wohnzimmerbalkontuer
-          - binary_sensor.kuechenbalkontuer
-          - binary_sensor.door_window_sensor_158d00014df204
-      # title: Tür Sensoren
+          - entity: binary_sensor.wohnungstuer
+          - entity: binary_sensor.wohnzimmerbalkontuer
+          - entity: binary_sensor.kuechenbalkontuer
+          - entity: binary_sensor.door_window_sensor_158d00014df204
       - show_header_toggle: false
         type: entities
         entities:
