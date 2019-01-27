@@ -89,6 +89,17 @@ views:
     badges: []
     icon: 'mdi:gauge'
     cards:
+      - cards:
+          - type: gauge
+            entity: sensor.processor_use
+            name: CPU
+          - type: gauge
+            entity: sensor.disk_use_percent
+            name: Disk space
+          - type: gauge
+            entity: sensor.memory_use_percent
+            name: Memory
+        type: horizontal-stack
       - show_header_toggle: false
         title: Loggia
         type: entities
@@ -204,19 +215,45 @@ views:
           - sensor.xiaomi_motion_battery_sensor
           - sensor.mqtt_smoke_detector_battery_template
         title: Batterie Sensoren
-      - show_header_toggle: false
+
+      - entities:
+          - entity: sensor.flo_home
+            icon: 'mdi:map-marker-circle'
+            name: Flo presence
+            secondary_info: last-changed
+          - entity: device_tracker.bb1798a1
+            secondary_info: last-changed
+            name: Flo Fon
+            icon: 'mdi:cellphone-android'
+          - entity: device_tracker.flo_laptop
+            secondary_info: last-changed
+            name: Flo Laptop Wifi
+            icon: 'mdi:wifi'
+          - entity: device_tracker.flo_laptop2
+            secondary_info: last-changed
+            name: Flo Laptop LAN
+            icon: 'mdi:lan'
         type: entities
-        entities:
-          - sensor.flo_home
-          - device_tracker.bb1798a1
-          - device_tracker.flo_laptop
-          - device_tracker.flo_laptop2
-          - device_tracker.ble_f9e7c2412ef2
-          - sensor.tine_home
-          - device_tracker.tine_g6
-          - device_tracker.40d32d9c185d
-          - device_tracker.tine_ipad
-        title: Presence
+      - entities:
+          - entity: sensor.tine_home
+            icon: 'mdi:map-marker-circle'
+            name: Tine presence
+            secondary_info: last-changed
+          - entity: device_tracker.tine_g6
+            secondary_info: last-changed
+            name: Tine Fon
+            icon: 'mdi:cellphone-android'
+          - entity: device_tracker.tine_ipad
+            secondary_info: last-changed
+            name: Tine iPad Wifi
+            icon: 'mdi:wifi'
+          - entity: device_tracker.40d32d9c185d
+            secondary_info: last-changed
+            name: Tine Laptop Wifi
+            icon: 'mdi:wifi'
+            # - name: Proximity to home
+            #   entity: proximity.home_flo
+        type: entities
       - show_header_toggle: false
         type: entities
         entities:
@@ -296,7 +333,6 @@ views:
         type: entities
         entities:
           - automation.sunset
-          - automation.sunset_2
           # - automation.christmas_lights_on
           # - automation.christmas_lights_off
           - automation.coming_home_turn_on_vz_light
