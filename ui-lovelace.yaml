@@ -55,12 +55,24 @@ views:
           - sensor.staub_10u
           - light.tradfri_bulb_e27_opal_1000lm
           # - switch.sonoffs20_6448
-      - type: glance
-        entities:
-          - light.tradfri_bulb_e27_ws_opal_980lm_2
-          - light.vzlicht_level
-          - switch.kitchen
-          - switch.kitchen_light1
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: light.tradfri_bulb_e27_ws_opal_980lm_2
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.vzlicht_level
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: switch.kitchen
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: switch.kitchen_light1
+            tap_action:
+              action: toggle
       - entity: camera.balkonblick
         type: picture-entity
       - show_header_toggle: false
@@ -68,6 +80,20 @@ views:
         type: entities
         entities:
           - switch.door_buzzer
+      - type: entity-filter
+        entities:
+          - entity: switch.wz_light_1
+          - entity: light.tradfri_bulb_e27_ws_opal_980lm
+          - entity: light.tradfri_bulb_e27_opal_1000lm
+          - entity: light.wz_vitrine
+          - entity: light.tradfri_bulb_e27_ws_opal_980lm_2
+          - entity: light.vzlicht_level
+          - entity: switch.esstisch_switch
+          - entity: light.lego_lampe
+          - entity: switch.kitchen
+          - entity: switch.kitchen_light1
+        state_filter:
+          - "on"
       - type: shopping-list
         title: Einkaufsliste
   - path: wohnzimmer_view
