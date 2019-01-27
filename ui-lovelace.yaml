@@ -114,6 +114,12 @@ views:
           - input_select.ledstrip_effect
           - input_number.ledstrip_animation_speed
         title: Wohnzimmer
+      - type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.wz_vitrine
+          - type: light
+            entity: light.ledstrip
       - type: glance
         entities:
           - sensor.wz_temp
