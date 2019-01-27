@@ -110,8 +110,9 @@ logbook:
 # Track the sun
 sun:
 
-# shell_command: !include shell_command.yaml
+shopping_list:
 
+# shell_command: !include shell_command.yaml
 switch: !include switches.yaml
 
 # Groups

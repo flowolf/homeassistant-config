@@ -42,6 +42,8 @@ views:
         type: entities
         entities:
           - switch.door_buzzer
+      - type: shopping-list
+        title: Einkaufsliste
   - path: wohnzimmer_view
     title: Wohnzimmer
     badges: []
