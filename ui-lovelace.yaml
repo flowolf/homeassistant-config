@@ -59,18 +59,23 @@ views:
         cards:
           - type: entity-button
             entity: light.tradfri_bulb_e27_ws_opal_980lm_2
+            icon:
+            name: 'K.Zimmer'
             tap_action:
               action: toggle
           - type: entity-button
             entity: light.vzlicht_level
+            icon: mdi:ceiling-light
             tap_action:
               action: toggle
           - type: entity-button
             entity: switch.kitchen
+            name: 'Küche1'
             tap_action:
               action: toggle
           - type: entity-button
             entity: switch.kitchen_light1
+            name: 'Küche2'
             tap_action:
               action: toggle
       - entity: camera.balkonblick
