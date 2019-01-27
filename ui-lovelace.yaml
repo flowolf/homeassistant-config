@@ -3,11 +3,37 @@ title: BR38-6
 views:
   - path: default_view
     title: Zhaus
-    badges:
-      - device_tracker.bb1798a1
-      - device_tracker.tine_g6
+    # badges:
+    #   - device_tracker.bb1798a1
+    #   - device_tracker.tine_g6
     icon: 'mdi:home-variant'
     cards:
+      - cards:
+          - image: /local/flo_avatar.jpg
+            elements:
+              - style:
+                  color: white
+                  top: 93%
+                  left: 20%
+                type: state-label
+                entity: sensor.flo_home
+              - style:
+                  color: white
+                  top: 93%
+                  left: 90%
+                type: state-label
+                entity: sensor.flo_phone_battery
+            type: picture-elements
+          - image: /local/tine_avatar.jpg
+            elements:
+              - style:
+                  color: white
+                  top: 92%
+                  left: 20%
+                type: state-label
+                entity: sensor.tine_home
+            type: picture-elements
+        type: horizontal-stack
       - show_header_toggle: false
         type: entities
         title: Wohnzimmer
