@@ -23,7 +23,8 @@
       entity_id: media_player.mpd
       is_volume_muted: "{{ not state_attr('media_player.mpd','is_volume_muted') }}"
 
-- alias: "Button 1 all on"
+
+- alias: "Button 1 mute for 1 minute"
   trigger:
     platform: event
     event_type: xiaomi_aqara.click
@@ -31,6 +32,12 @@
       entity_id: binary_sensor.switch_158d000128afa3
       click_type: double
   action:
-    service: scene.turn_on
-    data:
-      entity_id: scene.all_on
+    - service: media_player.volume_mute
+      data:
+        entity_id: media_player.mpd
+        is_volume_muted: true
+    - delay: 00:01:00
+    - service: media_player.volume_mute
+      data:
+        entity_id: media_player.mpd
+        is_volume_muted: false
