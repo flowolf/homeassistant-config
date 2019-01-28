@@ -29,3 +29,10 @@ darkcyan:
   paper-toggle-button-checked-button-color: "var(--primary-color)"
   paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
   paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+
+# custom styles for lovelace cards
+green-line:
+  accent-color: '#25bc39'
+
+blue-line:
+  accent-color: '#2550bc'

@@ -204,12 +204,14 @@ views:
       #     - sensor.download_speed
       #     - sensor.upload_speed
       - type: sensor
+        theme: blue-line
         entity: sensor.download_speed
         name: Speedtest Download
         graph: line
         icon: mdi:download-network
         detail: 2
       - type: sensor
+        theme: green-line
         entity: sensor.upload_speed
         name: Speedtest Upload
         graph: line
@@ -344,6 +346,8 @@ views:
         entities:
           - input_select.radio_stations
         title: Radio Sender
+      - entity: media_player.osmc_waldo
+        type: media-control
       - entity: media_player.mpd
         type: media-control
       - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
