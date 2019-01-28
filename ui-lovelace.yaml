@@ -173,16 +173,22 @@ views:
           # - sensor.staub_25u
           - sensor.staub_temp
           - sensor.staub_humi
-      - type: sensor
-        entity: sensor.staub_10u
-        name: Feinstaub 10u
-        graph: line
-        icon: mdi:blur-radial
-      - type: sensor
-        entity: sensor.staub_25u
-        name: Feinstaub 2.5u
-        graph: line
-        icon: mdi:blur
+      # - type: sensor
+      #   entity: sensor.staub_10u
+      #   name: Feinstaub 10u
+      #   graph: line
+      #   icon: mdi:blur-radial
+      # - type: sensor
+      #   entity: sensor.staub_25u
+      #   name: Feinstaub 2.5u
+      #   graph: line
+      #   icon: mdi:blur
+      - type: history-graph
+        entities:
+          - entity: sensor.staub_10u
+            name: 10u Feinstaub
+          - entity: sensor.staub_25u
+            name: 25u Feinstaub
 
       - show_header_toggle: false
         type: glance
