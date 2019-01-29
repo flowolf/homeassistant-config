@@ -3,7 +3,7 @@ wohnzimmer_compact:
   name: Wohnzimmer
   control: hidden
   entities:
-    - switch.wz_light_1
+    - switch.tradfri_outlet
     - light.tradfri_bulb_e27_ws_opal_980lm
     - light.lego_lampe
     - switch.esstisch_switch
@@ -12,7 +12,7 @@ wohnzimmer:
   name: Wohnzimmer
   # control: hidden
   entities:
-    - switch.wz_light_1
+    - switch.tradfri_outlet
     - light.tradfri_bulb_e27_ws_opal_980lm
     - light.lego_lampe
     - light.wz_vitrine
@@ -438,7 +438,7 @@ warn_all_lights:
     - light.vzlicht_level
     # - light.wz
     - switch.esstisch_switch
-    - switch.wz_light_1
+    - switch.tradfri_outlet
     - light.lego_lampe
     # - switch.wz_light_2
     # - switch.wz_light_3
@@ -451,8 +451,8 @@ alarm_all_lights:
   # for alarms, such as fire/smoke
   view: false
   entities:
-    # sonoff
-    - switch.wz_light_1
+    # tradfri outlet
+    - switch.tradfri_outlet
     # rf plugs
     - switch.wz_light_2
     - switch.wz_light_3

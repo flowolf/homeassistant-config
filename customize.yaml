@@ -1,6 +1,6 @@
 ---
 # customize:
-switch.wz_light_1:
+switch.tradfri_outlet:
   icon: mdi:lightbulb
   friendly_name: "grosse Stehlampe"
 light.tradfri_bulb_e27_ws_opal_980lm:

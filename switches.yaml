@@ -120,7 +120,7 @@
   retain: false
 
 - platform: mqtt
-  name: "wz light 1"
+  name: "sonoff_s20_0954"
   friendly_name: "Licht S20 0954"
   command_topic: "cmnd/sonoff_s20_0954/POWER"
   state_topic: "stat/sonoff_s20_0954/POWER"

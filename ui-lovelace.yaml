@@ -38,7 +38,7 @@ views:
         type: entities
         title: Wohnzimmer
         entities:
-          - switch.wz_light_1
+          - switch.tradfri_outlet
           - light.tradfri_bulb_e27_ws_opal_980lm
           - light.lego_lampe
           - switch.esstisch_switch
@@ -87,7 +87,7 @@ views:
           - switch.door_buzzer
       - type: entity-filter
         entities:
-          - entity: switch.wz_light_1
+          - entity: switch.tradfri_outlet
           - entity: light.tradfri_bulb_e27_ws_opal_980lm
           - entity: light.tradfri_bulb_e27_opal_1000lm
           - entity: light.wz_vitrine
@@ -109,7 +109,7 @@ views:
       - show_header_toggle: false
         type: entities
         entities:
-          - switch.wz_light_1
+          - switch.tradfri_outlet
           - light.tradfri_bulb_e27_ws_opal_980lm
           - light.lego_lampe
           - light.wz_vitrine

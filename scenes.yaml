@@ -1,7 +1,7 @@
 ---
 - name: All on
   entities:
-    switch.wz_light_1: true
+    switch.tradfri_outlet: true
     switch.wz_light_2: true
     switch.wz_light_3: true
     # switch.christbaum: true
@@ -27,7 +27,7 @@
 
 - name: All off
   entities:
-    switch.wz_light_1: false
+    switch.tradfri_outlet: false
     # switch.wz_light_2: false
     # switch.wz_light_3: false
     # switch.christbaum: false
@@ -46,7 +46,7 @@
 
 - name: WZ Movies
   entities:
-    switch.wz_light_1: false
+    switch.tradfri_outlet: false
     switch.wz_light_2: true
     switch.wz_light_3: true
     # switch.christbaum: false
@@ -76,7 +76,7 @@
 
 - name: WZ Movies 2
   entities:
-    switch.wz_light_1: false
+    switch.tradfri_outlet: false
     switch.wz_light_2: true
     switch.wz_light_3: true
     # switch.christbaum: false
@@ -104,7 +104,7 @@
 
 - name: WZ Movies 3
   entities:
-    switch.wz_light_1: true
+    switch.tradfri_outlet: true
     switch.wz_light_2: true
     switch.wz_light_3: true
     light.wz_vitrine: false
@@ -130,7 +130,7 @@
 
 - name: Blue
   entities:
-    switch.wz_light_1: false
+    switch.tradfri_outlet: false
     switch.wz_light_2: true
     # switch.wz_light_3: false
     # switch.christbaum: false
@@ -158,7 +158,7 @@
 
 - name: Green
   entities:
-    switch.wz_light_1: true
+    switch.tradfri_outlet: true
     switch.wz_light_2: true
     switch.wz_light_3: true
     switch.esstisch_switch: true
@@ -190,7 +190,7 @@
 
 - name: Red
   entities:
-    switch.wz_light_1: false
+    switch.tradfri_outlet: false
     switch.wz_light_2: true
     switch.wz_light_3: true
     switch.esstisch_switch: false
@@ -219,7 +219,7 @@
 
 - name: WZ Fireplace
   entities:
-    switch.wz_light_1: false
+    switch.tradfri_outlet: false
     switch.wz_light_2: true
     switch.wz_light_3: true
     # switch.christbaum: false

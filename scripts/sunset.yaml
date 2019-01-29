@@ -17,4 +17,4 @@ sequence:
       transition: 20
   - service: switch.turn_on
     data:
-      entity_id: switch.wz_light_1
+      entity_id: switch.tradfri_outlet

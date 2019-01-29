@@ -14,7 +14,7 @@
         entity_id: light.tradfri_bulb_e27_ws_opal_980lm
     - service: switch.toggle
       data:
-        entity_id: switch.wz_light_1
+        entity_id: switch.tradfri_outlet
 
 - alias: "toggle big light"
   initial_state: true
@@ -28,7 +28,7 @@
   action:
     - service: switch.toggle
       data:
-        entity_id: switch.wz_light_1
+        entity_id: switch.tradfri_outlet
 
 - alias: "turn off living room lights"
   initial_state: true
@@ -45,4 +45,4 @@
         entity_id: light.tradfri_bulb_e27_ws_opal_980lm
     - service: switch.turn_off
       data:
-        entity_id: switch.wz_light_1
+        entity_id: switch.tradfri_outlet
