@@ -16,7 +16,7 @@
       brightness: 254
     light.tradfri_bulb_e27_ws_opal_980lm_2:
       state: true
-    light.wz_vitrine:
+    light.tv_light:
       state: true
       brightness_pct: 95
       rgb_color: [255, 255, 255]
@@ -31,7 +31,7 @@
     # switch.wz_light_2: false
     # switch.wz_light_3: false
     # switch.christbaum: false
-    light.wz_vitrine: false
+    light.tv_light: false
     switch.esstisch_switch: false
     light.lego_lampe:
       state: false
@@ -57,10 +57,10 @@
       brightness: 9
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: false
-    light.wz_vitrine:
+    light.tv_light:
       state: true
       brightness_pct: 15
-      rgb_color: [0, 90, 255]
+      rgb_color: [0, 9, 38]
     light.ledstrip:
       state: true
       brightness: 55
@@ -87,7 +87,7 @@
       state: true
       color_temp: 454.54
       brightness: 9
-    light.wz_vitrine:
+    light.tv_light:
       state: true
       brightness_pct: 15
       rgb_color: [0, 90, 255]
@@ -107,7 +107,7 @@
     switch.tradfri_outlet: true
     switch.wz_light_2: true
     switch.wz_light_3: true
-    light.wz_vitrine: false
+    light.tv_light: false
     # switch.christbaum: false
     switch.esstisch_switch: false
     light.ledstrip:
@@ -139,7 +139,7 @@
       state: true
       rgb_color: [0, 151, 205]
       brightness: 40
-    light.wz_vitrine:
+    light.tv_light:
       state: true
       brightness_pct: 55
       rgb_color: [0, 90, 255]
@@ -170,7 +170,7 @@
       state: true
       color_temp: 373.412
       brightness: 145
-    light.wz_vitrine:
+    light.tv_light:
       state: true
       brightness_pct: 80
       rgb_color: [20, 200, 0]
@@ -200,7 +200,7 @@
       brightness: 150
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: false
-    light.wz_vitrine:
+    light.tv_light:
       state: true
       brightness_pct: 80
       rgb_color: [250, 0, 0]
@@ -228,7 +228,7 @@
       state: true
       color_temp: 454.54
       brightness: 20
-    light.wz_vitrine: false
+    light.tv_light: false
     light.ledstrip:
       state: true
       brightness: 9

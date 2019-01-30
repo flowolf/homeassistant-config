@@ -3,11 +3,11 @@
   # initial_state: false
   trigger:
     - platform: state
-      entity_id: media_player.osmcwaldo
+      entity_id: media_player.osmc_waldo
       to: 'playing'
-      # from: 'idle'
-      for:
-        minutes: 2
+      from: 'idle'
+      # for:
+      #   seconds: 0
   condition:
     - condition: state
       entity_id: sun.sun
@@ -16,9 +16,83 @@
     # making sure all devices catch the scene
     - service: scene.turn_on
       entity_id: scene.wz_movies
-    - delay: 00:00:02
-    - service: scene.turn_on
-      entity_id: scene.wz_movies
-    # automatically disable automation after one run
-    - service: automation.turn_off
+      # - delay: 00:00:02
+      # - service: scene.turn_on
+      #   entity_id: scene.wz_movies
+      # automatically disable automation after one run
+      # - service: automation.turn_off
+      #   entity_id: automation.auto_media_player_lighting
+
+- alias: "tv led lights undimm"
+  trigger:
+    - platform: state
+      entity_id: media_player.osmc_waldo
+      # from: 'playing'
+      to: 'paused'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: state
       entity_id: automation.auto_media_player_lighting
+      state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.tv_light
+      data:
+        rgb_color: [0, 63, 255]
+        brightness: 255100
+
+- alias: "tv led lights dimmed"
+  trigger:
+    - platform: state
+      entity_id: media_player.osmc_waldo
+      from: 'paused'
+      to: 'playing'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: state
+      entity_id: automation.auto_media_player_lighting
+      state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.tv_light
+      data:
+        brightness: 45
+        rgb_color: [0, 63, 255]
+
+- alias: "tv led lights idle"
+  trigger:
+    - platform: state
+      entity_id: media_player.osmc_waldo
+      # from: 'paused'
+      to: 'idle'
+      for:
+        seconds: 2
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: state
+      entity_id: automation.auto_media_player_lighting
+      state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.tv_light
+      data:
+        rgb_color: [255, 0, 127]
+        brightness: 255
+
+- alias: "tv led lights off"
+  trigger:
+    - platform: state
+      entity_id: media_player.tv
+      # from: 'paused'
+      to: 'off'
+      for:
+        seconds: 5
+  action:
+    - service: light.turn_off
+      entity_id: light.tv_light

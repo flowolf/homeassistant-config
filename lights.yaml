@@ -1,18 +1,23 @@
 ---
 - platform: mqtt
-  name: "WZ Vitrine"
-  friendly_name: "Vitrine"
+  name: "TV light"
+  friendly_name: "TV Licht"
   # command_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
   # state_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
   command_topic: "cmnd/DVES_33C0B2/POWER"
   state_topic: "stat/DVES_33C0B2/POWER"
-  rgb_command_topic: "cmnd/DVES_33C0B2/Color"
-  rgb_state_topic: "stat/DVES_33C0B2/Color"
-  brightness_command_topic: "cmnd/DVES_33C0B2/Dimmer"
-  brightness_state_topic: "stat/DVES_33C0B2/Dimmer"
-  brightness_scale: 100
   payload_on: "ON"
   payload_off: "OFF"
+  availability_topic: "tele/DVES_33C0B2/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  rgb_command_topic: "cmnd/DVES_33C0B2/Color"
+  rgb_state_topic: "stat/DVES_33C0B2/RESULT"
+  rgb_value_template: "Color"
+  brightness_command_topic: "cmnd/DVES_33C0B2/Dimmer"
+  brightness_state_topic: "stat/DVES_33C0B2/RESULT"
+  brightness_value_template: "{{ value_json.Dimmer }}"
+  brightness_scale: 100
   optimistic: false
   # retain: true
 
