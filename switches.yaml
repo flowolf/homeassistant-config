@@ -59,7 +59,7 @@
 
 - platform: mqtt
   name: "Ventilator"
-  friendly_name: "Ventilator"
+  # friendly_name: "Ventilator"
   command_topic: "cmnd/sonoff_3EFBC1/POWER"
   state_topic: "stat/sonoff_3EFBC1/POWER"
   payload_on: "ON"
@@ -68,7 +68,7 @@
 
 - platform: mqtt
   name: "Rundumleuchte"
-  friendly_name: "Rundumleuchte"
+  # friendly_name: "Rundumleuchte"
   command_topic: "cmnd/sonoff_A7FEB5/POWER"
   state_topic: "stat/sonoff_A7FEB5/POWER"
   payload_on: "ON"
@@ -78,7 +78,7 @@
 
 - platform: mqtt
   name: "Kitchen"
-  friendly_name: "Küche"
+  # friendly_name: "Küche"
   command_topic: "cmnd/br38/shelly-kitchen/POWER"
   state_topic: "stat/br38/shelly-kitchen/POWER"
   payload_on: "ON"
@@ -90,7 +90,7 @@
   retain: false
 - platform: mqtt
   name: "Kitchen light1"
-  friendly_name: "Licht 1"
+  # friendly_name: "Licht 1"
   command_topic: "cmnd/sonoff_kitchen1/POWER"
   state_topic: "stat/sonoff_kitchen1/POWER"
   payload_on: "ON"
@@ -102,7 +102,7 @@
   retain: false
 - platform: mqtt
   name: "SONOFF1"
-  friendly_name: "SONOFF1"
+  # friendly_name: "SONOFF1"
   command_topic: "/br38/sonoff/switch/SONOFF_BASIC_A7FEB5/relay/0/set"
   state_topic: "/br38/sonoff/switch/SONOFF_BASIC_A7FEB5/relay/0"
   payload_on: "1"
@@ -111,7 +111,7 @@
 
 - platform: mqtt
   name: "Door Buzzer"
-  friendly_name: "Türöffner"
+  # friendly_name: "Türöffner"
   command_topic: "/br38/door_buzzer/uPy-93474e00"
   state_topic: "/br38/door_buzzer/uPy-93474e00/state"
   payload_on: "buzzing"
@@ -121,7 +121,7 @@
 
 - platform: mqtt
   name: "sonoff_s20_0954"
-  friendly_name: "Licht S20 0954"
+  # friendly_name: "Licht S20 0954"
   command_topic: "cmnd/sonoff_s20_0954/POWER"
   state_topic: "stat/sonoff_s20_0954/POWER"
   payload_on: "ON"
@@ -130,7 +130,7 @@
   # retain: true
 - platform: mqtt
   name: "sonoffS20_6448"
-  friendly_name: "S20 6448"
+  # friendly_name: "S20 6448"
   command_topic: "cmnd/sonoff_s20_6448/POWER"
   state_topic: "stat/sonoff_s20_6448/POWER"
   payload_on: "ON"

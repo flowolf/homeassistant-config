@@ -1,7 +1,6 @@
 ---
 - platform: mqtt
   name: "TV light"
-  friendly_name: "TV Licht"
   # command_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
   # state_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
   command_topic: "cmnd/DVES_33C0B2/POWER"

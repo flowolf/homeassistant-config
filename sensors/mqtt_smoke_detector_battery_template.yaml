@@ -2,7 +2,6 @@
 - platform: template
   sensors:
     mqtt_smoke_detector_battery_template:
-      friendly_name: "Rauchmelderbatteriestand"
       unit_of_measurement: 'V'
       value_template: '{{ states.sensor.battery_smoke_detector.state |default(0) }}'
       icon_template: >

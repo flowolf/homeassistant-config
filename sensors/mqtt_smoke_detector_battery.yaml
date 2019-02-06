@@ -2,16 +2,4 @@
 - platform: mqtt
   state_topic: "/br38/smoke/vorzimmer/voltage"
   name: "battery smoke detector"
-  friendly_name: "Rauchmelder"
   unit_of_measurement: "V"
-  icon_template: >
-    {% set battery_level = states.sensor.battery_smoke_detector.state | default(0) | float %}
-    {% set battery_round = ((battery_level - 7)/(9.5-7) * 10 ) |int * 10 %}
-    {% if battery_round >= 100 %}
-      mdi:battery
-    {% elif battery_round > 0 %}
-      mdi:battery-{{ battery_round }}
-    {% else %}
-      mdi:battery-alert
-    {% endif %}
-    #  value_template: "{{ value_json.temperature | round(1) }}"
