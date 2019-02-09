@@ -1,5 +1,6 @@
 ---
 - alias: "smoke alarm"
+  initial_state: true
   trigger:
     platform: mqtt
     topic: "/br38/smoke/vorzimmer"
