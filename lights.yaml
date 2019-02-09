@@ -12,10 +12,10 @@
   payload_not_available: "Offline"
   rgb_command_topic: "cmnd/DVES_33C0B2/Color"
   rgb_state_topic: "stat/DVES_33C0B2/RESULT"
-  rgb_value_template: "Color"
+  rgb_value_template: "{{value_json.Color.split(',')[0:3]|join(',')}}"
   brightness_command_topic: "cmnd/DVES_33C0B2/Dimmer"
   brightness_state_topic: "stat/DVES_33C0B2/RESULT"
-  brightness_value_template: "{{ value_json.Dimmer }}"
+  brightness_value_template: "{{value_json.Dimmer}}"
   brightness_scale: 100
   optimistic: false
   # retain: true
