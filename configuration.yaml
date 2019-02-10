@@ -17,6 +17,9 @@ homeassistant:
 
 lovelace:
   mode: yaml
+
+system_health:
+
 zone 1:
   name: !secret zone1_name
   latitude: !secret lat
@@ -146,10 +149,11 @@ xiaomi_aqara:
     - mac: !secret xiaomi_gw_mac
       key: !secret xiaomi_gw_key
 
-vacuum:
-  - platform: xiaomi_miio
-    host: 192.168.3.138
-    token: !secret xiaomi_vacuum_key
+# temp disable
+# vacuum:
+#   - platform: xiaomi_miio
+#     host: 192.168.3.138
+#     token: !secret xiaomi_vacuum_key
 
 # android_ip_webcam:
 #   - host: !secret android_ip_cam_ip
