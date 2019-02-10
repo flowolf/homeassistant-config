@@ -18,9 +18,9 @@
   sensors:
     gitlab_tests_passed:
       friendly_name: Gitlab Tests
-      value_template: '{{ states.sensor.sensor.gitlab_ci_status.state }}'
+      value_template: '{{ states.sensor.gitlab_ci_status.state }}'
       icon_template: >-
-        {%- set val = states.sensor.sensor.gitlab_ci_status.state -%}
+        {%- set val = states.sensor.gitlab_ci_status.state -%}
         {%- if val == 'failed' -%}
           mdi:alert-decagram
         {%- elif val == 'success' -%}
