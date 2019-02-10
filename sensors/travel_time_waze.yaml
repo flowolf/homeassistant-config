@@ -1,0 +1,18 @@
+---
+- platform: waze_travel_time
+  name: Time to Work
+  origin: !secret waze_home_coord
+  destination: !secret waze_work_coord
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: Time to Rosemountain
+  origin: !secret waze_home_coord
+  destination: !secret waze_rosemountain_coord
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: Time to Stein
+  origin: !secret waze_home_coord
+  destination: !secret waze_stein_coord
+  region: 'EU'

@@ -199,6 +199,15 @@ views:
           - sensor.gitlab_tests_passed
       # title: System Sensoren
       - show_header_toggle: false
+        type: glance
+        entities:
+          - entity: sensor.time_home_to_work
+            name: Fahrzeit i.d. Arbeit
+          - entity: sensor.time_home_to_rosemountain
+            name: Fahrzeit z. Rosenberg
+          - entity: sensor.time_home_to_stein
+            name: Fahrzeit bis Stein
+      - show_header_toggle: false
         type: entities
         entities:
           - sensor.esstisch_power
