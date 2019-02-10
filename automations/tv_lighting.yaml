@@ -1,6 +1,6 @@
 ---
 - alias: "auto media player lighting"
-  # initial_state: false
+  initial_state: true
   trigger:
     - platform: state
       entity_id: media_player.osmc_waldo
@@ -27,6 +27,7 @@
       #   entity_id: automation.auto_media_player_lighting
 
 - alias: "tv led lights undimm"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: media_player.osmc_waldo
@@ -47,6 +48,7 @@
         brightness: 255100
 
 - alias: "tv led lights dimmed"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: media_player.osmc_waldo
@@ -67,6 +69,7 @@
         rgb_color: [0, 63, 255]
 
 - alias: "tv led lights idle"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: media_player.osmc_waldo
@@ -89,6 +92,7 @@
         brightness: 255
 
 - alias: "tv led lights off"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: media_player.tv
