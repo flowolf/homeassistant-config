@@ -1,16 +1,18 @@
 ---
 - alias: "Button 1 All off"
+  initial_state: true
   trigger:
-    - platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-        entity_id: binary_sensor.switch_158d000128afa3
-        click_type: long_click_press
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d000128afa3
+      click_type: long_click_press
   action:
     service: scene.turn_on
     entity_id: scene.all_off
 
 - alias: "Button 1 mute mpd radio"
+  initial_state: true
   trigger:
     platform: event
     event_type: xiaomi_aqara.click
@@ -23,8 +25,8 @@
       entity_id: media_player.mpd
       is_volume_muted: "{{ not state_attr('media_player.mpd','is_volume_muted') }}"
 
-
 - alias: "Button 1 mute for 1 minute"
+  initial_state: true
   trigger:
     platform: event
     event_type: xiaomi_aqara.click
