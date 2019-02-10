@@ -25,7 +25,7 @@
       entity_id: media_player.mpd
       is_volume_muted: "{{ not state_attr('media_player.mpd','is_volume_muted') }}"
 
-- alias: "Button 1 mute for 1 minute"
+- alias: "Button 1 mute for 2 minutes"
   initial_state: true
   trigger:
     platform: event
@@ -38,7 +38,7 @@
       data:
         entity_id: media_player.mpd
         is_volume_muted: true
-    - delay: 00:01:00
+    - delay: 00:02:00
     - service: media_player.volume_mute
       data:
         entity_id: media_player.mpd
