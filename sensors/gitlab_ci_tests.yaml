@@ -1,0 +1,8 @@
+---
+- platform: rest
+  name: gitlab_tests_passed
+  resource: https://gitlab.com/api/v4/projects/6655922/pipelines
+  method: GET
+  headers:
+    PRIVATE-TOKEN: !secret gitlab_API_private_token_header
+  value_template: "{{ value_json[0].status }}"
