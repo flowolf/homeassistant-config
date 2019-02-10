@@ -118,6 +118,7 @@ views:
           - light.ledstrip
           - input_select.ledstrip_effect
           - input_number.ledstrip_animation_speed
+          - light.wz_led_strips
         title: Wohnzimmer
       - type: horizontal-stack
         cards:

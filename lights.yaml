@@ -1,4 +1,10 @@
 ---
+- platform: group
+  name: WZ Led strips
+  entities:
+    - light.ledstrip
+    - light.tv_light
+
 - platform: mqtt
   name: "TV light"
   # command_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"

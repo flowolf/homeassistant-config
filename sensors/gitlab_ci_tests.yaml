@@ -2,6 +2,7 @@
 - platform: gitlab_ci
   gitlab_id: flowolf/homeassistant-config
   token: !secret gitlab_API_private_token
+  # scan_interval: 300
 
 # almost equivalent ;)
 # - platform: rest
