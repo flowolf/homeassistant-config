@@ -1,20 +1,25 @@
 ---
-- platform: rest
-  name: gitlab_test_pipeline_status
-  resource: https://gitlab.com/api/v4/projects/6655922/pipelines
-  scan_interval: 300
-  method: GET
-  headers:
-    PRIVATE-TOKEN: !secret gitlab_API_private_token
-  value_template: "{{ value_json[0].status }}"
+- platform: gitlab_ci
+  gitlab_id: flowolf/homeassistant-config
+  token: !secret gitlab_API_private_token
+
+# almost equivalent ;)
+# - platform: rest
+#   name: gitlab_test_pipeline_status
+#   resource: https://gitlab.com/api/v4/projects/6655922/pipelines
+#   scan_interval: 300
+#   method: GET
+#   headers:
+#     PRIVATE-TOKEN: !secret gitlab_API_private_token
+#   value_template: "{{ value_json[0].status }}"
 
 - platform: template
   sensors:
     gitlab_tests_passed:
       friendly_name: Gitlab Tests
-      value_template: '{{ states.sensor.gitlab_test_pipeline_status.state }}'
+      value_template: '{{ states.sensor.sensor.gitlab_ci_status.state }}'
       icon_template: >-
-        {%- set val = states.sensor.gitlab_test_pipeline_status.state -%}
+        {%- set val = states.sensor.sensor.gitlab_ci_status.state -%}
         {%- if val == 'failed' -%}
           mdi:alert-decagram
         {%- elif val == 'success' -%}
