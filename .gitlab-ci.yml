@@ -13,30 +13,16 @@ stages:
     - python -m homeassistant --version
     - cp secrets_CI.yaml secrets.yaml
   script:
-    - |
-      python -m homeassistant \
-        --config . \
-        --script check_config \
-        --info all
-  tags:
-    - test
-
-
-before_script:
-  - pip install yamllint
-  - python --version
-  - pip --version
+    - python -m homeassistant --config . --script check_config --info all
 
 yamllint:
-  image: sdesbure/yamllint
   stage: linting
+  image: sdesbure/yamllint
   before_script:
     - yamllint --version
     - cat .yamllint_conf
   script:
     - yamllint -c .yamllint_conf .
-  tags:
-    - lint
 
 ha-configtest:
   <<: *ha
