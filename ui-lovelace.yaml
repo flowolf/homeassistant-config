@@ -195,6 +195,7 @@ views:
         entities:
           - sensor.last_boot
           - sensor.current_version
+          - sensor.gitlab_tests_passed
       # title: System Sensoren
       - show_header_toggle: false
         type: entities
