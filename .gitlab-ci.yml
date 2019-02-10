@@ -1,14 +1,52 @@
 ---
 image: python:3
 
+stages:
+  - linting
+  - configtest
+
+.ha: &ha
+  stage: configtest
+  variables:
+    PYTHONPATH: "/usr/src/app:$PYTHONPATH"
+  before_script:
+    - python -m homeassistant --version
+    - cp secrets_CI.yaml secrets.yaml
+  script:
+    - |
+      python -m homeassistant \
+        --config . \
+        --script check_config \
+        --info all
+  tags:
+    - test
+
+
 before_script:
   - pip install yamllint
   - python --version
   - pip --version
 
-test:
+yamllint:
+  image: sdesbure/yamllint
+  stage: linting
+  before_script:
+    - yamllint --version
+    - cat .yamllint_conf
   script:
     - yamllint -c .yamllint_conf .
-    - mv secrets_CI.yaml secrets.yaml
-    - pip install homeassistant
-    - hass -c . --script check_config --info all
+  tags:
+    - lint
+
+ha-configtest:
+  <<: *ha
+  image:
+    name: homeassistant/home-assistant:latest
+    entrypoint: [""]
+
+ha-rc-configtest:
+  <<: *ha
+  image:
+    name: homeassistant/home-assistant:rc
+    entrypoint: [""]
+  allow_failure: true
