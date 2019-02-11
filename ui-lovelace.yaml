@@ -165,33 +165,6 @@ views:
             name: Memory
         type: horizontal-stack
       - show_header_toggle: false
-        title: Loggia
-        type: entities
-        entities:
-          - sensor.aussen_temp
-          - sensor.aussen_lfeucht
-          # - sensor.staub_10u
-          # - sensor.staub_25u
-          - sensor.staub_temp
-          - sensor.staub_humi
-      # - type: sensor
-      #   entity: sensor.staub_10u
-      #   name: Feinstaub 10u
-      #   graph: line
-      #   icon: mdi:blur-radial
-      # - type: sensor
-      #   entity: sensor.staub_25u
-      #   name: Feinstaub 2.5u
-      #   graph: line
-      #   icon: mdi:blur
-      - type: history-graph
-        entities:
-          - entity: sensor.staub_10u
-            name: 10u Feinstaub
-          - entity: sensor.staub_25u
-            name: 25u Feinstaub
-
-      - show_header_toggle: false
         type: glance
         entities:
           - sensor.last_boot
@@ -201,11 +174,11 @@ views:
       - show_header_toggle: false
         type: glance
         entities:
-          - entity: sensor.time_home_to_work
+          - entity: sensor.time_to_work
             name: Fahrzeit i.d. Arbeit
-          - entity: sensor.time_home_to_rosemountain
+          - entity: sensor.time_to_rosemountain
             name: Fahrzeit z. Rosenberg
-          - entity: sensor.time_home_to_stein
+          - entity: sensor.time_to_stein
             name: Fahrzeit bis Stein
       - show_header_toggle: false
         type: entities
@@ -297,7 +270,6 @@ views:
           - sensor.xiaomi_motion_battery_sensor
           - sensor.mqtt_smoke_detector_battery_template
         title: Batterie Sensoren
-
       - entities:
           - entity: sensor.flo_home
             icon: 'mdi:map-marker-circle'
@@ -504,6 +476,33 @@ views:
     badges: []
     icon: 'mdi:weather-partlycloudy'
     cards:
+      - show_header_toggle: false
+        title: Loggia
+        type: entities
+        entities:
+          - sensor.aussen_temp
+          - sensor.aussen_lfeucht
+          # - sensor.staub_10u
+          # - sensor.staub_25u
+          - sensor.staub_temp
+          - sensor.staub_humi
+      # - type: sensor
+      #   entity: sensor.staub_10u
+      #   name: Feinstaub 10u
+      #   graph: line
+      #   icon: mdi:blur-radial
+      # - type: sensor
+      #   entity: sensor.staub_25u
+      #   name: Feinstaub 2.5u
+      #   graph: line
+      #   icon: mdi:blur
+      - type: history-graph
+        entities:
+          - entity: sensor.staub_10u
+            name: 10u Feinstaub
+          - entity: sensor.staub_25u
+            name: 25u Feinstaub
+
       - type: iframe
         url: 'https://embed.windy.com/embed2.html?rain,47.0704,15.3531,7'
         aspect_ratio: 90%
