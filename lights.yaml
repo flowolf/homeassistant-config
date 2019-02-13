@@ -5,6 +5,8 @@
     - light.ledstrip
     - light.tv_light
     - light.gateway_light_286c07fa1faa
+    - light.wordclock
+
 
 - platform: mqtt
   name: "TV light"
