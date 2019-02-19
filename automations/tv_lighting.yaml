@@ -7,11 +7,11 @@
       to: 'playing'
       from: 'idle'
       # for:
-      #   seconds: 0
+      #   seconds: 10
   condition:
-    - condition: time
-      after: '19:00:00'
-      before: '22:30:00'
+    # - condition: time
+    #   after: '19:00:00'
+    #   before: '23:59:59'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
@@ -52,7 +52,7 @@
   trigger:
     - platform: state
       entity_id: media_player.osmc_waldo
-      from: 'paused'
+      # from: 'paused'
       to: 'playing'
   condition:
     - condition: state
