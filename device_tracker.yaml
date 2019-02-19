@@ -7,6 +7,13 @@
 
 - platform: gpslogger
 # password: !secret gps_logger_pwd
+
+- platform: nmap_tracker
+  hosts: !secret local_tracking_subnet
+  exclude: !secret dont_scan_hosts
+  scan_options: " --privileged -sP "
+  # home_interval: 5
+
 # install deps first:
 # https://home-assistant.io/components/device_tracker.bluetooth_le_tracker/
 # LOOONG build time at next startup!
