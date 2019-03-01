@@ -320,6 +320,8 @@ input_select:
       - "Helsinki:s17838"
       - "Soundportal:s25852"
       - "Antenne:s1139"
+      - "FM4:s8235"
+      - "Welle1:s149491"
       - "BBC1:s24939"
       - "BBC2:s24940"
       - "---"
