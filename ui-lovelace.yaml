@@ -91,6 +91,7 @@ views:
           - entity: light.tradfri_bulb_e27_ws_opal_980lm
           - entity: light.tradfri_bulb_e27_opal_1000lm
           - entity: light.tv_light
+          - entity: light.wz_vitrine
           - entity: light.tradfri_bulb_e27_ws_opal_980lm_2
           - entity: light.vzlicht_level
           - entity: switch.esstisch_switch
@@ -168,6 +169,9 @@ views:
         type: glance
         entities:
           - sensor.last_boot
+          - entity: sensor.ha_latest_release
+            name: latest release
+            icon: mdi:source-branch
           - sensor.current_version
           - sensor.gitlab_tests_passed
       # title: System Sensoren
