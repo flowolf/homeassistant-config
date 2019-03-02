@@ -1,5 +1,9 @@
 ---
 title: BR38-6
+resources:
+  # https://github.com/kalkih/mini-media-player
+  - url: /local/mini-media-player-bundle.js?v=1.0.2
+    type: module
 views:
   - path: default_view
     title: Zhaus
@@ -121,6 +125,12 @@ views:
           - input_number.ledstrip_animation_speed
           - light.wz_led_strips
         title: Wohnzimmer
+      - type: custom:mini-media-player
+        entity: media_player.mpd
+        icon: mdi:radio
+        artwork: cover
+        hide:
+          power: true
       - type: horizontal-stack
         cards:
           - type: light
@@ -336,6 +346,12 @@ views:
     badges: []
     icon: 'mdi:play-circle-outline'
     cards:
+      - type: custom:mini-media-player
+        entity: media_player.mpd
+        icon: mdi:radio
+        artwork: cover
+        hide:
+          power: true
       - show_header_toggle: false
         type: entities
         entities:
