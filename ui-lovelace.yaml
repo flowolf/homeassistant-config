@@ -124,7 +124,7 @@ views:
       - type: horizontal-stack
         cards:
           - type: light
-            entity: light.tv_light
+            entity: light.wz_led_strips
           - type: light
             entity: light.ledstrip
       - type: glance
@@ -273,7 +273,8 @@ views:
           - sensor.zwave_battery_kuechenbalkontuer_sensor
           - sensor.xiaomi_battery_sensor_wohnzimmerfenster
           - sensor.xiaomi_motion_battery_sensor
-          - sensor.mqtt_smoke_detector_battery_template
+          - entity: sensor.mqtt_smoke_detector_battery_template
+            name: Rauchmelderbatterievoltlevel
         title: Batterie Sensoren
       - entities:
           - entity: sensor.flo_home
