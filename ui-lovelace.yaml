@@ -170,9 +170,10 @@ views:
         entities:
           - sensor.last_boot
           - entity: sensor.ha_latest_release
-            name: latest release
+            name: Latest Release
             icon: mdi:source-branch
-          - sensor.current_version
+          - entity: sensor.current_version
+            name: Current Version
           - sensor.gitlab_tests_passed
       # title: System Sensoren
       - show_header_toggle: false

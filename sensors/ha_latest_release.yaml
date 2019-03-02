@@ -1,0 +1,7 @@
+# Example configuration.yaml entry
+- platform: scrape
+  resource: https://www.home-assistant.io
+  name: ha latest release
+  select: ".current-version h1"
+  scan_interval: 10800
+  value_template: '{{ value.split(":")[1].strip() }}'
