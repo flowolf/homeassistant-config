@@ -77,11 +77,15 @@ weblink:
       url: !secret mopidy_webclient_url
     - name: Grafana
       url: !secret grafana_link_url
+
 http:
-# api_password: !secret api_password
 # use_x_forwarded_for: true
 # ip_ban_enabled: false
 # login_attempts_threshold: 5
+
+# auth_providers:
+#  - type: legacy_api_password
+#    api_password: !secret api_password
 
 # Checks for available updates
 updater:
@@ -104,7 +108,7 @@ map:
 recorder:
   # db_url: !secret external_sqlite_url
   db_url: !secret postgres_url
-  purge_keep_days: 3
+  purge_keep_days: 5
   purge_interval: 1
 # db_url: !secret mariadb_url
 
