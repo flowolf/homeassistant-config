@@ -175,51 +175,7 @@ sensor: !include_dir_merge_list sensors/
 # sensor 1:
 #   platform: yr
 
-media_player:
-  - platform: kodi
-    host: !secret kodi_IP
-    port: !secret kodi_port
-    name: "osmc-Waldo"
-    turn_on_action:
-      service: wake_on_lan.send_magic_packet
-      data:
-        mac: !secret kodi_mac_address
-        broadcast_address: !secret broadcast_IP
-    #  service: media_player.kodi_call_method
-    #  data:
-    #    entity_id: media_player.kodi
-    #    method: Addons.ExecuteAddon
-    #    addonid: script.json-cec
-    #    params:
-    #      command: activate
-    turn_off_action:
-      #  - service: media_player.media_stop
-      #    data:
-      #      entity_id: media_player.kodi
-      - service: media_player.kodi_call_method
-        data:
-          entity_id: media_player.kodi
-          method: System.suspend
-          # method: Addons.ExecuteAddon
-          # addonid: script.json-cec
-          # params:
-          #  command: standby
-  #  turn_off_action: none
-
-  # not working as expected... put asleep
-  - platform: samsungtv
-    # UE55MU6170UXZG
-    # requires pip3 install websocket-client
-    host: !secret samsung_smart_tv
-    # mac: !secret samsung_smart_tv_mac
-    port: 8001
-    name: "TV"
-
-  - platform: snapcast
-    host: !secret snapcast_main_ip
-  - platform: mpd
-    host: !secret mpd_main_ip
-    port: 6601
+media_player: !include media_player.yaml
 
 device_tracker: !include device_tracker.yaml
 
@@ -400,9 +356,12 @@ automation 12:
 
 notify: !include notify.yaml
 
-scene: !include scenes.yaml
-# script: !include_dir_list script/
+# new in 0.90, not supported by raspy cam with motioneyeOS
+# stream:
 
+scene: !include scenes.yaml
+
+# script: !include_dir_list script/
 script: !include_dir_named scripts/
 
 automation: !include_dir_merge_list automations/
