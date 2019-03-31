@@ -57,6 +57,10 @@
       brightness: 9
     light.tradfri_bulb_e27_ws_opal_980lm:
       state: false
+    light.wz_vitrine:
+      state: true
+      brightness_pct: 15
+      rgb_color: [0, 9, 38]
     light.tv_light:
       state: true
       brightness_pct: 15
