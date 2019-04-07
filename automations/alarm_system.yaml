@@ -33,8 +33,10 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: group.all_devices
-        state: "not_home"
+        # entity_id: group.all_devices
+        entity_id: group.all_devices_presence
+        # state: "not_home"
+        state: "off"
   action:
     - service: notify.sms_to_flo
       data:

@@ -468,3 +468,8 @@ alarm_all_lights:
     - light.lego_lampe
     - switch.kitchen
     - switch.kitchen_light1
+all_devices_presence:
+  view: false
+  entities:
+    - binary_sensor.flo_home
+    - binary_sensor.tine_home
