@@ -3,7 +3,7 @@
   hide_entity: false
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.all_devices_presence
       from: 'home'
       to: 'not_home'
       for:
@@ -16,7 +16,7 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: group.all_devices
+        entity_id: group.all_devices_presence
         state: "not_home"
       - condition: state
         entity_id: input_boolean.vacuum_bot_auto
@@ -43,7 +43,7 @@
   hide_entity: false
   trigger:
     platform: state
-    entity_id: group.all_devices
+    entity_id: group.all_devices_presence
     from: 'not_home'
     to: 'home'
   condition:

@@ -4,7 +4,7 @@
   trigger:
     # when no one is home OR
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.all_devices_presence
       to: 'not_home'
       for:
         minutes: 10
@@ -20,7 +20,7 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: group.all_devices
+        entity_id: group.all_devices_presence
         state: "not_home"
       - condition: state
         entity_id: group.warn_all_lights
