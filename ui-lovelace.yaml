@@ -290,7 +290,7 @@ views:
       - entities:
           - entity: input_boolean.flo_at_home
             icon: 'mdi:toggle-switch'
-            name: Flo at home (manual)
+            name: Flo @ home (manual)
             secondary_info: last-changed
           - entity: sensor.flo_home
             icon: 'mdi:map-marker-circle'
@@ -310,6 +310,10 @@ views:
             icon: 'mdi:lan'
         type: entities
       - entities:
+          - entity: input_boolean.tine_at_home
+            icon: 'mdi:toggle-switch'
+            name: Tine @ home (manual)
+            secondary_info: last-changed
           - entity: sensor.tine_home
             icon: 'mdi:map-marker-circle'
             name: Tine presence
