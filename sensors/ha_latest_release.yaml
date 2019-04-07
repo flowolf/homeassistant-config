@@ -1,4 +1,5 @@
 # Example configuration.yaml entry
+---
 - platform: scrape
   resource: https://www.home-assistant.io
   name: ha latest release

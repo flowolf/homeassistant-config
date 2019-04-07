@@ -6,7 +6,7 @@
     switch.wz_light_3: true
     # switch.christbaum: true
     switch.esstisch_switch: true
-    light.wz_vitrine: 
+    light.wz_vitrine:
       state: true
       brightness_pct: 100
       rgb_color: [0, 69, 108]
