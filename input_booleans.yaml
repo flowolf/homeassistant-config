@@ -6,3 +6,7 @@ vacuum_bot_auto:
   initial: true
   name: "automatisch staubsaugen"
   icon: mdi:auto-fix
+
+flo_at_home:
+  initial: false
+  name: "flo @ home"
