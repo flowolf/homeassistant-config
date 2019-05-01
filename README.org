@@ -20,7 +20,7 @@ currently my [[https://home-assistant.io][Home Assistant]] setup contains the fo
   - [[https://de.aliexpress.com/item/alarme-system-with-mini-siren-quad-band-GSM-PIR-motion-PIR-detector-burglar-alarm-systemsecurity-alarm/907236108.html][door sensors]] - Don't(!) use these, they use batteries like crazy
 - self built [[https://gitlab.com/flowolf/micropython_mqtt_dht22][MQTT temperature/humidity sensors]] ([[https://micropython.org][MicroPython]]), with ESP8266 NodeMCU boards and a DTH-22.
 - self built [[https://github.com/bruhautomation/ESP-MQTT-JSON-Digital-LEDs][RGB-led strip light]]
-- self build door buzzer and door bell sensor
+- self build door buzzer ([ESPhome](https://esphome.io))
 - Hacked Ikea Smoke Detector (with Wemos D1 mini Wifi module, [[https://blog.flo.cx/s/bu/][blog post]], [[https://gitlab.com/flowolf/iot-smoke-detector][Documentation]])
 - Samsung Smart TV
 - Kodi on a Raspberry Pi
