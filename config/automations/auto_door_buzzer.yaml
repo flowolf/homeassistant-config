@@ -10,7 +10,7 @@
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.door_buzzer
+        entity_id: switch.buzzer
     - service: notify.jabber
       data:
         title: ""

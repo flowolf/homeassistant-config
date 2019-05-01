@@ -88,7 +88,7 @@ views:
         title: Haustür
         type: entities
         entities:
-          - switch.door_buzzer
+          - switch.buzzer
       - type: entity-filter
         entities:
           - entity: switch.tradfri_outlet
