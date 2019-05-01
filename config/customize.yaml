@@ -48,7 +48,7 @@ switch.kitchen:
 switch.kitchen_light1:
   friendly_name: Küche Licht 1
   icon: mdi:lightbulb
-switch.door_buzzer:
+switch.buzzer:
   icon: mdi:lock-open
 switch.sonoffS20_6448:
   icon: mdi:lightbulb-on-outline
