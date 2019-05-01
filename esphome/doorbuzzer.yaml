@@ -1,0 +1,31 @@
+esphome:
+  name: doorbuzzer
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pass
+
+switch:
+  - platform: gpio
+    name: "Buzzer"
+    pin: D5
+    id: buzzer
+    on_turn_on:
+    - logger.log: "turned on :) now waiting"
+    - delay: 5s
+    - switch.turn_off: buzzer
+    - logger.log: "turned off - all good"
+
+# door bell sensor on D2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret node_pass
+
+ota:
+  password: !secret node_pass
