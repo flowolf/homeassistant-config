@@ -11,9 +11,9 @@ stages:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - python -m homeassistant --version
-    - cp secrets_CI.yaml secrets.yaml
+    - cp config/secrets_CI.yaml config/secrets.yaml
   script:
-    - python -m homeassistant --config . --script check_config --info all
+    - python -m homeassistant --config config/ --script check_config --info all
 
 yamllint:
   stage: linting
@@ -22,7 +22,7 @@ yamllint:
     - yamllint --version
     - cat .yamllint_conf
   script:
-    - yamllint -c .yamllint_conf .
+    - yamllint -c .yamllint_conf config/
 
 ha-configtest:
   <<: *ha
