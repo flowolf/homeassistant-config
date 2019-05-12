@@ -28,6 +28,10 @@
       state: true
       brightness: 254
       rgb_color: [0, 69, 108]
+    light.lightstrip2:
+      state: true
+      brightness: 254
+      rgb_color: [0, 69, 108]
 
 - name: All off
   entities:
@@ -49,6 +53,8 @@
       state: false
     light.gateway_light_286c07fa1faa:
       state: false
+    light.lightstrip2:
+      state: false
 
 - name: WZ Movies
   entities:
@@ -68,6 +74,10 @@
       brightness_pct: 15
       rgb_color: [0, 9, 38]
     light.tv_light:
+      state: true
+      brightness_pct: 15
+      rgb_color: [0, 9, 38]
+    light.lightstrip2:
       state: true
       brightness_pct: 15
       rgb_color: [0, 9, 38]
@@ -102,6 +112,10 @@
       brightness_pct: 15
       rgb_color: [0, 9, 38]
     light.tv_light:
+      state: true
+      brightness_pct: 15
+      rgb_color: [0, 90, 255]
+    light.lightstrip2:
       state: true
       brightness_pct: 15
       rgb_color: [0, 90, 255]
@@ -161,6 +175,10 @@
       state: true
       brightness_pct: 55
       rgb_color: [0, 90, 255]
+    light.lightstrip2:
+      state: true
+      brightness_pct: 15
+      rgb_color: [0, 90, 255]
     light.ledstrip:
       state: true
       brightness: 155
@@ -196,6 +214,10 @@
       state: true
       brightness_pct: 80
       rgb_color: [20, 200, 0]
+    light.lightstrip2:
+      state: true
+      brightness_pct: 15
+      rgb_color: [20, 200, 0]
     light.ledstrip:
       state: true
       brightness: 255
@@ -229,6 +251,10 @@
     light.tv_light:
       state: true
       brightness_pct: 80
+      rgb_color: [250, 0, 0]
+    light.lightstrip2:
+      state: true
+      brightness_pct: 15
       rgb_color: [250, 0, 0]
     light.ledstrip:
       state: true
