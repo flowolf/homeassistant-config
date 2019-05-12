@@ -7,7 +7,7 @@
     - light.tv_light
     - light.wz_vitrine
     - light.gateway_light_286c07fa1faa
-    - light.wordclock
+    # - light.wordclock
 
 
 - platform: mqtt
