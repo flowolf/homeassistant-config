@@ -121,6 +121,7 @@ views:
           - light.wz_led_strips
           - light.tv_light
           - light.wz_vitrine
+          - light.lightstrip2
           - light.gateway_light_286c07fa1faa
           - light.ledstrip
           - input_select.ledstrip_effect
@@ -500,8 +501,10 @@ views:
     cards:
       - entity: camera.balkonblick
         type: picture-entity
+        camera_view: live
       - entity: camera.freibad_furstenfeld
         type: picture-entity
+        camera_view: live
   - path: weather_view
     title: Wetter
     badges: []

@@ -103,6 +103,8 @@ history:
 
 map:
 
+stream:
+
 # NoSQL really pounded the SD-card of my Raspberry Pi
 # trying external USB-stick
 recorder:
