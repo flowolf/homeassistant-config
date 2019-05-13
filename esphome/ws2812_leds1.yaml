@@ -1,0 +1,55 @@
+esphome:
+  name: rgbleds1
+  platform: ESP8266
+  board: d1_mini
+  # on_boot:
+  #   priority: -10
+  #   then:
+  #     - light.turn_on:
+  #         id: light1
+  #         brightness: 20%
+  #         red: 0
+  #         blue: 1
+  #         green: 0.4
+
+logger:
+
+# Example configuration entry
+light:
+  - platform: neopixelbus
+    id: light1
+    type: GRB
+    method: BIT_BANG
+    variant: WS2812X
+    pin: D1
+    num_leds: 10
+    name: "NeoPixel Light"
+    effects:
+      # Customize parameters
+      # - random:
+      #     name: "My Slow Random Effect"
+      #     transition_length: 30s
+      #     update_interval: 30s
+      - random:
+          name: "My Fast Random Effect"
+          transition_length: 4s
+          update_interval: 5s
+      - random:
+          name: "My Faster Random Effect"
+          transition_length: 1.5s
+          update_interval: 3s
+
+mqtt:
+  broker: !secret mqtt_broker
+  username: !secret mqtt_user
+  password:  !secret mqtt_pass
+
+api:
+  password: !secret node_pass
+
+ota:
+  password: !secret node_pass
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pass

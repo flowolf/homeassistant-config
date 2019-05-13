@@ -342,6 +342,7 @@ views:
           - switch.wz_light_3
           - switch.sonoffs20_6448
           - switch.rundumleuchte
+          - light.neopixel_light_2
         title: other
       - show_header_toggle: false
         type: entities
