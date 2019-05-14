@@ -26,10 +26,10 @@ light:
     name: "NeoPixel Light"
     effects:
       # Customize parameters
-      # - random:
-      #     name: "My Slow Random Effect"
-      #     transition_length: 30s
-      #     update_interval: 30s
+      - random:
+          name: "My Slow Random Effect"
+          transition_length: 15s
+          update_interval: 30s
       - random:
           name: "My Fast Random Effect"
           transition_length: 4s
@@ -38,7 +38,25 @@ light:
           name: "My Faster Random Effect"
           transition_length: 1.5s
           update_interval: 3s
-
+      - addressable_rainbow:
+      - addressable_rainbow:
+          name: Rainbow Effect With Custom Values
+          speed: 10
+          width: 10
+      - addressable_scan:
+      - addressable_scan:
+          name: Scan Effect With Custom Values
+          move_interval: 100ms
+      - addressable_twinkle:
+      - addressable_twinkle:
+          name: Twinkle Effect With Custom Values
+          twinkle_probability: 5%
+          progress_interval: 4ms
+      - addressable_random_twinkle:
+      - addressable_random_twinkle:
+          name: Random Twinkle Effect With Custom Values
+          twinkle_probability: 5%
+          progress_interval: 32ms
 mqtt:
   broker: !secret mqtt_broker
   username: !secret mqtt_user
