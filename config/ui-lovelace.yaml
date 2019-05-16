@@ -2,7 +2,7 @@
 title: BR38-6
 resources:
   # https://github.com/kalkih/mini-media-player
-  - url: /local/mini-media-player-bundle.js?v=1.0.2
+  - url: /local/mini-media-player-bundle.js?v=1.1.2
     type: module
 views:
   - path: default_view
