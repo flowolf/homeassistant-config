@@ -3,10 +3,11 @@
   name: WZ Led strips
   entities:
     - light.ledstrip
+    - light.lightstrip2
     - light.tv_light
     - light.wz_vitrine
     - light.gateway_light_286c07fa1faa
-    - light.wordclock
+    # - light.wordclock
 
 
 - platform: mqtt
@@ -27,6 +28,13 @@
   brightness_state_topic: "stat/DVES_33C0B2/RESULT"
   brightness_value_template: "{{value_json.Dimmer}}"
   brightness_scale: 100
+  effect_command_topic: "cmnd/DVES_33C0B2/Scheme"
+  effect_state_topic: "stat/DVES_33C0B2/RESULT"
+  effect_value_template: "{{value_json.Scheme}}"
+  effect_list:
+    - "0 Solid"
+    - "2 Rainbow"
+    - "4 Rainbow random"
   optimistic: false
   # retain: true
 
@@ -52,9 +60,9 @@
   effect_state_topic: "stat/DVES_33C018/RESULT"
   effect_value_template: "{{value_json.Scheme}}"
   effect_list:
-    - "1"
-    - "2"
-    - "4"
+    - "0 Solid"
+    - "2 Rainbow"
+    - "4 Rainbow random"
   optimistic: false
   # retain: true
 
@@ -76,6 +84,13 @@
   brightness_state_topic: "stat/DVES_33BDB1/RESULT"
   brightness_value_template: "{{value_json.Dimmer}}"
   brightness_scale: 100
+  effect_command_topic: "cmnd/DVES_33BDB1/Scheme"
+  effect_state_topic: "stat/DVES_33BDB1/RESULT"
+  effect_value_template: "{{value_json.Scheme}}"
+  effect_list:
+    - "0 Solid"
+    - "2 Rainbow"
+    - "4 Rainbow random"
   optimistic: false
   # retain: true
 
