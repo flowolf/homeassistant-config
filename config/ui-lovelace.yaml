@@ -122,6 +122,7 @@ views:
           - light.tv_light
           - light.wz_vitrine
           - light.lightstrip2
+          - light.status_led_1
           - light.gateway_light_286c07fa1faa
           - light.ledstrip
           - input_select.ledstrip_effect

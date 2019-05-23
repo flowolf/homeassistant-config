@@ -1,0 +1,60 @@
+esphome:
+  name: statusled1
+  platform: ESP8266
+  board: d1_mini
+
+logger:
+
+# Example configuration entry
+light:
+  - platform: neopixelbus
+    id: light1
+    type: GRB
+    # method: BIT_BANG
+    variant: WS2812X
+    pin: GPIO3
+    num_leds: 1
+    name: "status led 1"
+    effects:
+      # Customize parameters
+      - random:
+          name: "My Slow Random Effect"
+          transition_length: 15s
+          update_interval: 30s
+      - random:
+          name: "My Fast Random Effect"
+          transition_length: 4s
+          update_interval: 5s
+      - random:
+          name: "My Faster Random Effect"
+          transition_length: 1.5s
+          update_interval: 3s
+      - addressable_rainbow:
+      - addressable_rainbow:
+          name: Rainbow Effect With Custom Values
+          speed: 10
+          width: 10
+      - addressable_twinkle:
+      - addressable_twinkle:
+          name: Twinkle Effect With Custom Values
+          twinkle_probability: 5%
+          progress_interval: 4ms
+      - addressable_random_twinkle:
+      - addressable_random_twinkle:
+          name: Random Twinkle Effect With Custom Values
+          twinkle_probability: 5%
+          progress_interval: 32ms
+mqtt:
+  broker: !secret mqtt_broker
+  username: !secret mqtt_user
+  password:  !secret mqtt_pass
+
+api:
+  password: !secret node_pass
+
+ota:
+  password: !secret node_pass
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pass
