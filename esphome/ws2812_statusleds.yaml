@@ -5,6 +5,14 @@ esphome:
 
 logger:
 
+binary_sensor:
+  - platform: gpio
+    name: "Button"
+    pin:
+      number: D3
+      inverted: True
+      mode: INPUT_PULLUP
+
 # Example configuration entry
 light:
   - platform: neopixelbus
@@ -44,6 +52,21 @@ light:
           name: Random Twinkle Effect With Custom Values
           twinkle_probability: 5%
           progress_interval: 32ms
+sensor:
+  - platform: bmp280
+    temperature:
+      name: "Temperature"
+      oversampling: 16x
+    pressure:
+      name: "Pressure"
+    address: 0x76
+    update_interval: 60s
+
+i2c:
+  sda: 4
+  scl: 5
+  scan: True
+
 mqtt:
   broker: !secret mqtt_broker
   username: !secret mqtt_user
