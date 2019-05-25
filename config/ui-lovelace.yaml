@@ -477,25 +477,17 @@ views:
         title: Küche
       - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
         type: media-control
-  # - path: vacuum_view
-  #   title: Staubsauger
-  #   badges: []
-  #   icon: 'mdi:robot-vacuum'
-  #   cards:
-  #     - show_header_toggle: false
-  #       type: entities
-  #       entities:
-  #         - input_boolean.vacuum_bot_auto
-  #         - vacuum.xiaomi_vacuum_cleaner
-  #         - sensor.xiaomi_vacuum_battery
-  #         - sensor.xiaomi_vacuum_fan_speed
-  #         - sensor.xiaomi_vacuum_status
-  #         - sensor.xiaomi_vacuum_cleaning_time
-  #         - sensor.xiaomi_vacuum_filter_left
-  #         - sensor.xiaomi_vacuum_main_brush_left
-  #         - sensor.xiaomi_vacuum_side_brush_left
-  #         - sensor.xiaomi_vacuum_cleaned_area
-  #       title: Staubsaugerroboter
+  - path: vacuum_view
+    title: Staubsauger
+    badges: []
+    icon: 'mdi:robot-vacuum'
+    cards:
+      - show_header_toggle: false
+        type: entities
+        entities:
+          - input_boolean.vacuum_bot_auto
+          - vacuum.bruno
+        title: Staubsaugerroboter
   - path: camera_view
     title: Cameras
     badges: []

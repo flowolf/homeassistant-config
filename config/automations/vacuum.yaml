@@ -27,9 +27,9 @@
       - condition: state
         entity_id: binary_sensor.workday_sensor
         state: 'on'
-      - condition: numeric_state
-        entity_id: sensor.xiaomi_vacuum_battery
-        above: 99
+      # - condition: numeric_state
+      #   entity_id: sensor.xiaomi_vacuum_battery
+      #   above: 99
   action:
     - service: notify.jabber
       data:
@@ -37,7 +37,7 @@
         message: "activated, cleaning now!"
     - service: vacuum.turn_on
       data:
-        entity_id: vacuum.xiaomi_vacuum_cleaner
+        entity_id: vacuum.bruno
 
 - alias: "Automatic vacuum off"
   hide_entity: false
@@ -57,4 +57,4 @@
         message: "someone coming home, going to base!"
     - service: vacuum.return_to_base
       data:
-        entity_id: vacuum.xiaomi_vacuum_cleaner
+        entity_id: vacuum.bruno
