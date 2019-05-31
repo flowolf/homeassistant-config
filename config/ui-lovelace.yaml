@@ -150,8 +150,8 @@ views:
           - light.wordclock
           - input_select.wordclock_effect
         title: Wordclock
-      - entity: media_player.tv
-        type: media-control
+      # - entity: media_player.tv
+      #   type: media-control
       - entity: media_player.osmc_waldo
         type: media-control
       - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
@@ -377,8 +377,8 @@ views:
         type: media-control
       - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
         type: media-control
-      - entity: media_player.tv
-        type: media-control
+      # - entity: media_player.tv
+      #   type: media-control
       - show_header_toggle: false
         # title: Weblink
         type: entities
