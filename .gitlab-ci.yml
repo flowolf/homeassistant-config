@@ -22,7 +22,7 @@ yamllint:
     - yamllint --version
     - cat .yamllint_conf
   script:
-    - yamllint -c .yamllint_conf config/
+    - yamllint -c .yamllint_conf config/ esphome/*.yaml
 
 ha-configtest:
   <<: *ha
