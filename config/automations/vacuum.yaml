@@ -27,9 +27,9 @@
       - condition: state
         entity_id: binary_sensor.workday_sensor
         state: 'on'
-      # - condition: numeric_state
-      #   entity_id: sensor.xiaomi_vacuum_battery
-      #   above: 99
+        # - condition: numeric_state
+        #   entity_id: sensor.xiaomi_vacuum_battery
+        #   above: 99
   action:
     - service: notify.jabber
       data:
