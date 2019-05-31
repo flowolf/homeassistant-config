@@ -1,3 +1,4 @@
+---
 esphome:
   name: rgbleds1
   platform: ESP8266
@@ -60,7 +61,7 @@ light:
 mqtt:
   broker: !secret mqtt_broker
   username: !secret mqtt_user
-  password:  !secret mqtt_pass
+  password: !secret mqtt_pass
 
 api:
   password: !secret node_pass

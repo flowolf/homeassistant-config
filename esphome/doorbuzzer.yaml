@@ -1,3 +1,4 @@
+---
 esphome:
   name: doorbuzzer
   platform: ESP8266
@@ -13,10 +14,10 @@ switch:
     pin: D5
     id: buzzer
     on_turn_on:
-    - logger.log: "turned on :) now waiting"
-    - delay: 5s
-    - switch.turn_off: buzzer
-    - logger.log: "turned off - all good"
+      - logger.log: "turned on :) now waiting"
+      - delay: 5s
+      - switch.turn_off: buzzer
+      - logger.log: "turned off - all good"
 
 # door bell sensor on D2
 
