@@ -8,7 +8,7 @@ views:
   - path: default_view
     title: Zhaus
     # badges:
-    #   - device_tracker.bb1798a1
+    #   - device_tracker.nokia_pnxgam88c1104874
     #   - device_tracker.tine_g6
     icon: 'mdi:home-variant'
     cards:
@@ -298,7 +298,7 @@ views:
             icon: 'mdi:map-marker-circle'
             name: Flo presence
             secondary_info: last-changed
-          - entity: device_tracker.bb1798a1
+          - entity: device_tracker.nokia_pnxgam88c1104874
             secondary_info: last-changed
             name: Flo Fon
             icon: 'mdi:cellphone-android'
@@ -341,7 +341,6 @@ views:
           - input_boolean.testinger
           - switch.wz_light_2
           - switch.wz_light_3
-          - switch.sonoffs20_6448
           - switch.rundumleuchte
           - light.neopixel_light_2
         title: other
@@ -473,6 +472,7 @@ views:
         entities:
           - switch.kitchen
           - switch.kitchen_light1
+          - switch.sonoffs20_6448
           - binary_sensor.kuechenbalkontuer
         title: Küche
       - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26

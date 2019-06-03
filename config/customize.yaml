@@ -51,8 +51,8 @@ switch.kitchen_light1:
 switch.buzzer:
   icon: mdi:lock-open
 switch.sonoffS20_6448:
-  icon: mdi:lightbulb-on-outline
-  friendly_name: Lichterkette
+  icon: mdi:coffee
+  friendly_name: Kaffeemaschine
 # switch.fibaro_system_fgs223_double_relay_switch_2_0:
 #   friendly_name: Esstisch
 #   icon: mdi:silverware-variant
