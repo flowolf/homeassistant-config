@@ -395,14 +395,16 @@ logger:
   # levels: notset, debug, info, warn, warning, error, fatal, critical
   default: warn
   logs:
-    homeassistant.component.notify.yessssms: debug
-    homeassistant.component.notify.xmpp: info
-    homeassistant.component.device_tracker.gpslogger: info
+    homeassistant.components.notify.yessssms: debug
+    homeassistant.components.notify.xmpp: info
+    homeassistant.components.device_tracker.gpslogger: debug
+    homeassistant.components.gpslogger: debug
     homeassistant.core: warn
     miio.device: critical
     homeassistant.components.vacuum.xiaomi_miio: critical
     # supress 'unparsed data' WARNING from AndroidIPCam
     urllib3.connectionpool: critical
+
 
 input_boolean: !include input_booleans.yaml
 
