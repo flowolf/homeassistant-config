@@ -144,6 +144,8 @@ views:
         entities:
           - sensor.wz_temp
           - sensor.wz_lfeucht
+          - sensor.temperature
+          - sensor.pressure
       - show_header_toggle: false
         type: entities
         entities:
