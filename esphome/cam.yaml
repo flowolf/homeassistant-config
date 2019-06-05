@@ -1,0 +1,88 @@
+---
+substitutions:
+  name: ttgo_board
+esphome:
+  name: $name
+  platform: ESP32
+  board: esp-wrover-kit
+
+logger:
+
+sensor:
+  - platform: wifi_signal
+    name: $name WiFi Signal
+    update_interval: 10s
+  - platform: uptime
+    name: $name Uptime
+
+esp32_camera:
+  external_clock:
+    pin: GPIO27
+    frequency: 20MHz
+  i2c_pins:
+    sda: GPIO25
+    scl: GPIO23
+  data_pins: [GPIO17, GPIO35, GPIO34, GPIO5, GPIO39, GPIO18, GPIO36, GPIO19]
+  vsync_pin: GPIO22
+  href_pin: GPIO26
+  pixel_clock_pin: GPIO21
+  reset_pin: GPIO15
+  horizontal_mirror: false
+  vertical_flip: false
+  # external_clock:
+  #   pin: GPIO32
+  #   frequency: 20MHz
+  # i2c_pins:
+  #   sda: GPIO13
+  #   scl: GPIO12
+  # data_pins: [GPIO5, GPIO14, GPIO4, GPIO15, GPIO18, GPIO23, GPIO36, GPIO39]
+  # vsync_pin: GPIO27
+  # href_pin: GPIO25
+  # pixel_clock_pin: GPIO19
+  # power_down_pin: GPIO26
+
+  # Image settings
+  name: $name cam
+  # resolution: 640x480
+  resolution: 800x600
+  jpeg_quality: 10
+
+mqtt:
+  broker: !secret mqtt_broker
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+
+api:
+  password: !secret node_pass
+
+ota:
+  password: !secret node_pass
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pass
+
+
+# i2c:
+#   sda: GPIO21
+#   scl: GPIO22
+#
+# time:
+#   - platform: homeassistant
+#     id: homeassistant_time
+#
+# font:
+#   - file: "fonts/DroidSansFallbackFull.ttf"
+#     id: font1
+#     size: 20
+#   - file: "fonts/DroidSansFallbackFull.ttf"
+#     id: font2
+#     size: 35
+
+# display:
+#   - platform: ssd1306_i2c
+#     model: "SSD1306 128x64"
+#     address: 0x3C
+#     lambda: |-
+#       it.strftime(64, 0, id(font1), TextAlign::TOP_CENTER,"%d-%m-%Y", id(homeassistant_time).now());
+#       it.strftime(64, 64, id(font2), TextAlign::BASELINE_CENTER, "%H:%M", id(homeassistant_time).now());
