@@ -478,6 +478,7 @@ views:
           - switch.kitchen_light1
           - switch.sonoffs20_6448
           - binary_sensor.kuechenbalkontuer
+          - switch.rundumleuchte
         title: Küche
       - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
         type: media-control
