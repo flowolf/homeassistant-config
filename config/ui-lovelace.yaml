@@ -248,6 +248,8 @@ views:
         entities:
           - sensor.wz_temp
           - sensor.wz_lfeucht
+          - sensor.temperature
+          - sensor.pressure
           - sensor.illumination_286c07fa1faa
         title: Wohnzimmer
       - type: sensor
@@ -300,7 +302,7 @@ views:
             icon: 'mdi:map-marker-circle'
             name: Flo presence
             secondary_info: last-changed
-          - entity: device_tracker.nokia_pnxgam88c1104874
+          - entity: device_tracker.nokia_pnxgam88c1104874_2
             secondary_info: last-changed
             name: Flo Fon
             icon: 'mdi:cellphone-android'
@@ -313,30 +315,30 @@ views:
             name: Flo Laptop LAN
             icon: 'mdi:lan'
         type: entities
-      - entities:
-          - entity: input_boolean.tine_at_home
-            icon: 'mdi:toggle-switch'
-            name: Tine @ home (manual)
-            secondary_info: last-changed
-          - entity: sensor.tine_home
-            icon: 'mdi:map-marker-circle'
-            name: Tine presence
-            secondary_info: last-changed
-          - entity: device_tracker.tine_g6
-            secondary_info: last-changed
-            name: Tine Fon
-            icon: 'mdi:cellphone-android'
-          - entity: device_tracker.tine_ipad
-            secondary_info: last-changed
-            name: Tine iPad Wifi
-            icon: 'mdi:wifi'
-          - entity: device_tracker.40d32d9c185d
-            secondary_info: last-changed
-            name: Tine Laptop Wifi
-            icon: 'mdi:wifi'
-            # - name: Proximity to home
-            #   entity: proximity.home_flo
-        type: entities
+        # - entities:
+        #     - entity: input_boolean.tine_at_home
+        #       icon: 'mdi:toggle-switch'
+        #       name: Tine @ home (manual)
+        #       secondary_info: last-changed
+        #     - entity: sensor.tine_home
+        #       icon: 'mdi:map-marker-circle'
+        #       name: Tine presence
+        #       secondary_info: last-changed
+        #     - entity: device_tracker.tine_g6
+        #       secondary_info: last-changed
+        #       name: Tine Fon
+        #       icon: 'mdi:cellphone-android'
+        #     - entity: device_tracker.tine_ipad
+        #       secondary_info: last-changed
+        #       name: Tine iPad Wifi
+        #       icon: 'mdi:wifi'
+        #     - entity: device_tracker.40d32d9c185d
+        #       secondary_info: last-changed
+        #       name: Tine Laptop Wifi
+        #       icon: 'mdi:wifi'
+        #       # - name: Proximity to home
+        #       #   entity: proximity.home_flo
+        #   type: entities
       - show_header_toggle: false
         type: entities
         entities:

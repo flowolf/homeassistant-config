@@ -16,7 +16,7 @@
       prob_given_false: '0.01'
       platform: 'state'
       to_state: 'on'
-    - entity_id: 'device_tracker.nokia_pnxgam88c1104874'
+    - entity_id: 'device_tracker.nokia_pnxgam88c1104874_2'
       prob_given_true: '0.99'
       prob_given_false: '0.05'
       platform: 'state'

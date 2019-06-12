@@ -181,7 +181,32 @@ sensor: !include_dir_merge_list sensors/
 
 media_player: !include media_player.yaml
 
-device_tracker: !include device_tracker.yaml
+person:
+  - name: Flo
+    id: flo0001
+    user_id: !secret flo_user_id
+    device_trackers:
+      - device_tracker.nokia_pnxgam88c1104874_2
+      #   - device_tracker.gpslogger
+      # - name: tine
+      #   id: tine0001
+      #   user_id: !secret tine_user_id
+
+# device_tracker: !include device_tracker.yaml
+device_tracker:
+  - platform: luci
+    host: !secret router_IP
+    username: !secret router_user
+    password: !secret router_pwd
+    track_new_devices: false
+
+    # - platform: gpslogger
+    # password: !secret gps_logger_pwd
+
+  # - platform: nmap_tracker
+  #   hosts: !secret local_tracking_subnet
+  #   exclude: !secret dont_scan_hosts
+  #   scan_options: " --privileged -sP "
 
 # ##### fancy lights ######
 light: !include lights.yaml
