@@ -26,11 +26,11 @@
 - alias: "auto media player lighting on sundown"
   initial_state: true
   trigger:
-    - condition: state
+    - platform: state
       entity_id: sun.sun
       to: 'below_horizon'
   condition:
-    - platform: state
+    - condition: state
       entity_id: media_player.osmc_waldo
       state: 'playing'
   action:
