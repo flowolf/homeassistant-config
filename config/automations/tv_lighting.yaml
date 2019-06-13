@@ -5,9 +5,6 @@
     - platform: state
       entity_id: media_player.osmc_waldo
       to: 'playing'
-      from: 'idle'
-      # for:
-      #   seconds: 10
   condition:
     # - condition: time
     #   after: '19:00:00'
@@ -25,6 +22,20 @@
       # automatically disable automation after one run
       # - service: automation.turn_off
       #   entity_id: automation.auto_media_player_lighting
+
+- alias: "auto media player lighting on sundown"
+  initial_state: true
+  trigger:
+    - condition: state
+      entity_id: sun.sun
+      to: 'below_horizon'
+  condition:
+    - platform: state
+      entity_id: media_player.osmc_waldo
+      state: 'playing'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.wz_movies
 
 - alias: "tv led lights undimm"
   initial_state: true
