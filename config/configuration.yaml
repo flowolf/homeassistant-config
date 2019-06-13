@@ -15,6 +15,7 @@ homeassistant:
 
   customize: !include customize.yaml
 
+# configuring lovelace through yaml, not via frontend
 lovelace:
   mode: yaml
 
@@ -61,15 +62,6 @@ influxdb:
 # Enables the frontend
 frontend:
   themes: !include themes.yaml
-# panel_custom:
-#   - name: Floorplan
-#     sidebar_title: Floorplan
-#     sidebar_icon: mdi:home
-#     url_path: floorplan
-#     config: !include floorplan.yaml
-#
-#
-
 
 weblink:
   entities:
@@ -331,7 +323,9 @@ input_select:
       # - "Radio TEDDY:s80044"
 
 
-# input_slider:
+# input_slider:      # - "Ö3___tunein:s15552"
+      # - "loungeFM___:tunein:s177755"
+
 input_number:
   ledstrip_animation_speed:
     name: LEDstrip Animation Speed
@@ -404,12 +398,8 @@ automation 12:
 
 notify: !include notify.yaml
 
-# new in 0.90, not supported by raspy cam with motioneyeOS
-# stream:
-
 scene: !include scenes.yaml
 
-# script: !include_dir_list script/
 script: !include_dir_named scripts/
 
 automation: !include_dir_merge_list automations/
