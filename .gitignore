@@ -5,20 +5,20 @@
 *.key
 *.conf
 *.pickle
-OZW_Log.txt
-home-assistant.log
-home-assistant_v2.db
+config/OZW_Log.txt
+config/home-assistant.log
+config/home-assistant_v2.db
 *.db-journal
 *.db-shm
 *.db-wal
 lib
 deps
 tts
-secrets.yaml
+config/secrets.yaml
 secrets
-tradfri.conf
-.tradfri_psk.conf
-known_devices.yaml
+config/tradfri.conf
+config/.tradfri_psk.conf
+config/known_devices.yaml
 phue.conf
 ios.conf
 pyozw.sqlite
@@ -38,4 +38,5 @@ zwcfg_*xml
 .zamg-stations.json.gz
 
 # www folder for images
-www
+config/www
+other
