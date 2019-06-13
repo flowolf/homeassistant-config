@@ -255,7 +255,7 @@ presence_sensors:
   name: Presence
   entities:
     - sensor.flo_home
-    - device_tracker.bb1798a1
+    - device_tracker.nokia_pnxgam88c1104874_2
     - device_tracker.flo_laptop
     - device_tracker.flo_laptop2
     - device_tracker.ble_f9e7c2412ef2

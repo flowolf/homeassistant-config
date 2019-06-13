@@ -20,7 +20,7 @@
           {%- endif -%}
       # only continue if media_player is not playing
       - condition: template
-        value_template: '{{ not is_state("media_player.osmcwaldo", "playing") }}'
+        value_template: '{{ not is_state("media_player.osmc_waldo", "playing") }}'
       - condition: state
         # entity_id: group.all_devices
         entity_id: sensor.flo_home
