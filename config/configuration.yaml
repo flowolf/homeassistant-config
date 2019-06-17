@@ -95,10 +95,12 @@ history:
 
 map:
 
+# webcam stream for configured cameras (ui-lovelace.yaml)
 stream:
 
 # NoSQL really pounded the SD-card of my Raspberry Pi
-# trying external USB-stick
+# trying external USB-stick didn't work. That failed...
+# postgres works much better, with faster startup times.
 recorder:
   # db_url: !secret external_sqlite_url
   db_url: !secret postgres_url
@@ -156,20 +158,9 @@ xiaomi_aqara:
 #     host: 192.168.3.138
 #     token: !secret xiaomi_vacuum_key
 
-# android_ip_webcam:
-#   - host: !secret android_ip_cam_ip
-#     name: "Balkon"
-#     username: !secret android_ipc_user
-#     password: !secret android_ipc_pass
-#     scan_interval: 60
-#     sensors:
-#       - light
-
 binary_sensor: !include_dir_merge_list binary_sensors/
 
 sensor: !include_dir_merge_list sensors/
-# sensor 1:
-#   platform: yr
 
 media_player: !include media_player.yaml
 
@@ -195,10 +186,10 @@ device_tracker:
     # - platform: gpslogger
     # password: !secret gps_logger_pwd
 
-    # - platform: nmap_tracker
-    #   hosts: !secret local_tracking_subnet
-    #   exclude: !secret dont_scan_hosts
-    #   scan_options: " --privileged -sP "
+  # - platform: nmap_tracker
+  #   hosts: !secret local_tracking_subnet
+  #   exclude: !secret dont_scan_hosts
+  #   scan_options: " --privileged -sP "
 
 # ##### fancy lights ######
 light: !include lights.yaml
@@ -322,9 +313,9 @@ input_select:
       # - "Radio Pucki:s101757"
       # - "Radio TEDDY:s80044"
 
-# input_slider:
-# - "Ö3___tunein:s15552"
-# - "loungeFM___:tunein:s177755"
+
+# input_slider:      # - "Ö3___tunein:s15552"
+      # - "loungeFM___:tunein:s177755"
 
 input_number:
   ledstrip_animation_speed:
