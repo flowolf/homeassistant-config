@@ -34,28 +34,3 @@
       data_template:
         topic: "/wordclock-01201b00/wordclock/command"
         payload: '{{ trigger.to_state.state | string }}'
-
-- alias: "radio select"
-  initial_state: true
-  hide_entity: false
-  trigger:
-    - platform: state
-      entity_id: input_select.radio_stations
-  action:
-    - service: media_player.play_media
-      data_template:
-        entity_id: media_player.mpd
-        media_content_id: >
-          {% if states('input_select.radio_stations').split(':')[1] is eq 'tunein' %}
-            tunein:station:{{ states('input_select.radio_stations').split(':')[2] | string}}
-          {% elif states('input_select.radio_stations').split(':')[1] is eq 'pl'%}
-            {{ states('input_select.radio_stations').split('|')[1] | string}}
-          {% else %}
-            {{ states('input_select.radio_stations').split('|')[1] | string}}
-          {% endif %}
-        media_content_type: >
-          {% if states('input_select.radio_stations').split(':')[1] is eq 'playlist' %}
-            "playlist"
-          {% else %}
-            "channel"
-          {% endif %}

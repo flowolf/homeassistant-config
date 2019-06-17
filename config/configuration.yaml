@@ -186,10 +186,10 @@ device_tracker:
     # - platform: gpslogger
     # password: !secret gps_logger_pwd
 
-  # - platform: nmap_tracker
-  #   hosts: !secret local_tracking_subnet
-  #   exclude: !secret dont_scan_hosts
-  #   scan_options: " --privileged -sP "
+    # - platform: nmap_tracker
+    #   hosts: !secret local_tracking_subnet
+    #   exclude: !secret dont_scan_hosts
+    #   scan_options: " --privileged -sP "
 
 # ##### fancy lights ######
 light: !include lights.yaml
@@ -313,9 +313,6 @@ input_select:
       # - "Radio Pucki:s101757"
       # - "Radio TEDDY:s80044"
 
-
-# input_slider:      # - "Ö3___tunein:s15552"
-      # - "loungeFM___:tunein:s177755"
 
 input_number:
   ledstrip_animation_speed:
