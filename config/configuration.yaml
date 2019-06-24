@@ -293,16 +293,18 @@ input_select:
   radio_stations:
     name: Radio Stations
     options:
-      - "Soundportal___:tunein:s25852"
+      # - "Soundportal___:tunein:s25852"
+      - "Soundportal___:playlist|https://www.stream24.net/tune-in/r8235.pls"
       - "Welle1___:tunein:s149491"
       # - "loungeFM___:tunein:s177755"
       - "loungeFM___|http://188.138.9.183/digital.mp3"
       - "Austria Rock Radio |http://stream5.liferadio.at/"
       - "Helsinki___:tunein:s17838"
       - "--- ORF ---"
-      - "Ö1___:tunein:s15555"
+      # - "Ö1___:tunein:s15555"
+      - "Ö1___:playlist|http://mp3stream3.apasf.apa.at:8000/listen.pls"
       # - "Ö3___tunein:s15552"
-      - "Ö3:playlist___|http://mp3stream7.apasf.apa.at:8000/listen.pls"
+      - "Ö3___:playlist|http://mp3stream7.apasf.apa.at:8000/listen.pls"
       # - "FM4___:tunein:s8235"
       - "FM4___:playlist|http://mp3stream1.apasf.apa.at:8000/listen.pls"
       - "---"
