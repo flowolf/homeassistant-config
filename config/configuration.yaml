@@ -170,6 +170,9 @@ person:
     user_id: !secret flo_user_id
     device_trackers:
       - device_tracker.nokia_pnxgam88c1104874_2
+      - !secret flo_phone_tracker
+      - device_tracker.flo_laptop
+      - device_tracker.flo_laptop2
       #   - device_tracker.gpslogger
       # - name: tine
       #   id: tine0001
@@ -321,6 +324,11 @@ input_number:
     min: 1
     max: 150
     step: 10
+  outside_temp_diff:
+    name: Outside to inside temperature difference
+    initial: 1
+    min: -200
+    max: 150
 
 notify: !include notify.yaml
 
