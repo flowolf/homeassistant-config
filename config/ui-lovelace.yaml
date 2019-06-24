@@ -294,6 +294,10 @@ views:
             name: Rauchmelderbatterievoltlevel
         title: Batterie Sensoren
       - entities:
+          - entity: person.flo
+            icon: 'mdi:account-circle'
+            name: Flo Person
+            secondary_info: last-changed
           - entity: input_boolean.flo_at_home
             icon: 'mdi:toggle-switch'
             name: Flo @ home (manual)
@@ -306,6 +310,10 @@ views:
             secondary_info: last-changed
             name: Flo Fon
             icon: 'mdi:cellphone-android'
+          - entity: !secret flo_phone_tracker
+            secondary_info: last-changed
+            name: Flo Phone Wifi
+            icon: 'mdi:cellphone-wireless'
           - entity: device_tracker.flo_laptop
             secondary_info: last-changed
             name: Flo Laptop Wifi
