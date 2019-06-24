@@ -332,8 +332,8 @@ input_number:
   outside_temp_diff:
     name: Outside to inside temperature difference
     initial: 1
-    min: -200
-    max: 150
+    min: 0
+    max: 360
 
 notify: !include notify.yaml
 

@@ -32,6 +32,7 @@
       data_template:
         entity_id: "light.status_led_1"
         effect: "None"
+        brightness: 90
         hs_color:
           - "{{ states('input_number.outside_temp_diff')|default(120)|int }}"
           - 90
