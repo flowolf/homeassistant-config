@@ -477,6 +477,8 @@ views:
           - automation.auto_media_player_lighting
           - automation.toggle_living_room_lights
           - automation.lights_out_in_the_living_room
+          - automation.automatic_vacuum_on
+          - automation.automatic_vacuum_off
           # - automation.auto_door_buzzer
         title: automation_switch
       - show_header_toggle: false
