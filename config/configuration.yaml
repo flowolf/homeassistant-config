@@ -164,6 +164,11 @@ sensor: !include_dir_merge_list sensors/
 
 media_player: !include media_player.yaml
 
+lock:
+  platform: nuki
+  host: !secret nuki_host
+  token: !secret nuki_token
+
 person:
   - name: Flo
     id: flo0001

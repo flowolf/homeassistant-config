@@ -262,8 +262,14 @@ views:
           - binary_sensor.motion_sensor_158d00015ef681
           - binary_sensor.wohnungstuer_burglar
           - binary_sensor.smoke
-          - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
+          - binary_sensor.schloss_wohnungstuer
         title: Vorzimmer
+      - show_header_toggle: false
+        type: glance
+        entities:
+          # - binary_sensor.door_bell
+          - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
+        title: Temperatures
       - show_header_toggle: false
         type: glance
         entities:
@@ -355,6 +361,7 @@ views:
           - switch.wz_light_3
           - switch.rundumleuchte
           - light.neopixel_light_2
+          - lock.br38
         title: other
       - show_header_toggle: false
         type: entities
@@ -364,6 +371,34 @@ views:
               https://grafana.klienux.net/d/umGJzvfik/homeassistant?refresh=1m&orgId=1
             name: Grafana
         title: Weblink
+  # security view
+  - path: security
+    title: Security
+    badges: []
+    icon: 'mdi:shield-home'
+    cards:
+      - show_header_toggle: false
+        type: glance
+        entities:
+          # - binary_sensor.door_bell
+          - binary_sensor.motion_sensor_158d00015ef681
+          - binary_sensor.wohnungstuer_burglar
+          - binary_sensor.schloss_wohnungstuer
+          - binary_sensor.smoke
+      - show_header_toggle: false
+        title: Türen
+        type: entities
+        entities:
+          - switch.buzzer
+          - lock.br38
+      - show_header_toggle: false
+        type: glance
+        entities:
+          - entity: binary_sensor.wohnungstuer
+          - entity: binary_sensor.wohnzimmerbalkontuer
+          - entity: binary_sensor.kuechenbalkontuer
+          - entity: binary_sensor.door_window_sensor_158d00014df204
+
   - path: player_view
     title: Media Player
     badges: []
