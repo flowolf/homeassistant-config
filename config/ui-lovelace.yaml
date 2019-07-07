@@ -62,6 +62,12 @@ views:
       - type: horizontal-stack
         cards:
           - type: entity-button
+            entity: switch.sonoff_s20_0954
+            icon: mdi:lightbulb
+            name: 'Lampions'
+            tap_action:
+              action: toggle
+          - type: entity-button
             entity: light.tradfri_bulb_e27_ws_opal_980lm_2
             icon:
             name: 'K.Zimmer'
