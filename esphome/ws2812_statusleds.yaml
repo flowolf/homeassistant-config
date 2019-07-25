@@ -80,5 +80,10 @@ ota:
   password: !secret node_pass
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_pass
+  networks:
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_pass
+  - ssid: !secret demo_wifi_ssid
+    password: !secret demo_wifi_pass
+  - ssid: !secret mobile_wifi_ssid
+    password: !secret mobile_wifi_pass
