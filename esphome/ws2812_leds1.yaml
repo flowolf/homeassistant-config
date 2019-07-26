@@ -24,7 +24,7 @@ light:
     variant: WS2812X
     pin: D1
     num_leds: 10
-    name: "NeoPixel Light"
+    name: "10 status leds"
     effects:
       # Customize parameters
       - random:
@@ -64,10 +64,10 @@ mqtt:
   password: !secret mqtt_pass
 
 api:
-  password: !secret node_pass
+  password: !secret api_pass_2
 
 ota:
-  password: !secret node_pass
+  password: !secret ota_pass
 
 wifi:
   ssid: !secret wifi_ssid

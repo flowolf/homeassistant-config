@@ -56,10 +56,10 @@ light:
 sensor:
   - platform: bmp280
     temperature:
-      name: "Temperature"
+      name: "status_led_Temperature"
       oversampling: 16x
     pressure:
-      name: "Pressure"
+      name: "status_led_Pressure"
     address: 0x76
     update_interval: 60s
 
@@ -74,10 +74,10 @@ mqtt:
   password: !secret mqtt_pass
 
 api:
-  password: !secret node_pass
+  password: !secret api_pass
 
 ota:
-  password: !secret node_pass
+  password: !secret ota_pass
 
 wifi:
   networks:

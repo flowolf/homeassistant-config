@@ -26,7 +26,7 @@ logger:
 
 # Enable Home Assistant API
 api:
-  password: !secret node_pass
+  password: !secret buzzer_api_pass
 
 ota:
-  password: !secret node_pass
+  password: !secret buzzer_ota_pass

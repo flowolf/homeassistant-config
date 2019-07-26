@@ -150,8 +150,8 @@ views:
         entities:
           - sensor.wz_temp
           - sensor.wz_lfeucht
-          - sensor.temperature
-          - sensor.pressure
+          - sensor.status_led_temperature
+          - sensor.status_led_pressure
       - show_header_toggle: false
         type: entities
         entities:
@@ -254,8 +254,8 @@ views:
         entities:
           - sensor.wz_temp
           - sensor.wz_lfeucht
-          - sensor.temperature
-          - sensor.pressure
+          - sensor.status_led_temperature
+          - sensor.status_led_pressure
           - sensor.illumination_286c07fa1faa
         title: Wohnzimmer
       - type: sensor
