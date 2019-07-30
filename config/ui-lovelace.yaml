@@ -366,7 +366,7 @@ views:
           - switch.wz_light_2
           - switch.wz_light_3
           - switch.rundumleuchte
-          - light.neopixel_light_2
+          - light.10_status_leds
           - lock.br38
         title: other
       - show_header_toggle: false
