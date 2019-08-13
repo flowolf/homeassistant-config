@@ -1,5 +1,5 @@
 ---
-- alias: "Button Loggia Lights toggle"
+- alias: "toggle Loggia Lights"
   initial_state: true
   trigger:
     - platform: event
@@ -16,7 +16,7 @@
         # brightness: 254
         transition: 2
 
-- alias: "Button Loggia toggle kitchen light"
+- alias: "Button Loggia toggle kitchen lights"
   initial_state: true
   trigger:
     - platform: event
@@ -29,8 +29,11 @@
     - service: switch.toggle
       data:
         entity_id: switch.kitchen
+    - service: switch.toggle
+      data:
+        entity_id: switch.kitchen_light1
 
-- alias: "Button Loggia toggle tiny lights"
+- alias: "Button Loggia toggle smart plug"
   initial_state: true
   trigger:
     - platform: event
