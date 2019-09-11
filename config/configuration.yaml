@@ -202,64 +202,6 @@ device_tracker:
 # ##### fancy lights ######
 light: !include lights.yaml
 
-# light:
-# - platform: mqtt
-#   name: "WZ Vitrine"
-#   friendly_name: "Vitrine"
-#   # command_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
-#   # state_topic: "/br38/sonoff/switch/SONOFF_A751BC/relay/0"
-#   command_topic: "cmnd/DVES_33C0B2/POWER"
-#   state_topic: "stat/DVES_33C0B2/POWER"
-#   rgb_command_topic: "cmnd/DVES_33C0B2/Color"
-#   rgb_state_topic: "stat/DVES_33C0B2/Color"
-#   brightness_command_topic: "cmnd/DVES_33C0B2/Dimmer"
-#   brightness_state_topic: "stat/DVES_33C0B2/Dimmer"
-#   brightness_scale: 100
-#   payload_on: "ON"
-#   payload_off: "OFF"
-#   optimistic: false
-#   # retain: true
-#
-# - platform: mqtt
-#   name: "LEDstrip"
-#   command_topic: "esp8266/mqttstrip/setpower"
-#   state_topic: "esp8266/mqttstrip/setpowerpub"
-#   rgb_state_topic: "esp8266/mqttstrip/setcolorpub"
-#   rgb_command_topic: "esp8266/mqttstrip/setcolor"
-#   brightness_state_topic: "esp8266/mqttstrip/setbrightnesspub"
-#   brightness_command_topic: "esp8266/mqttstrip/setbrightness"
-#   optimistic: false
-#   retain: true
-# # - platform: mqtt
-# #   name: 'B1 Light TEST'
-# #   state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0'
-# #   command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/relay/0/set'
-# #   payload_on: 1
-# #   payload_off: 0
-# #   rgb_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color'
-# #   rgb_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/color/set'
-# #   rgb: true
-# #   optimistic: false
-# #   color_temp: true
-# #   color_temp_command_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/mired/set'
-# #   brightness: true
-# #   brightness_command_topic:
-# # '/br38/sonoff/light/SONOFF_B1_8677F2/brightness/set'
-# #   brightness_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/brightness'
-# #   white_value: true
-# #   white_value_command_topic:
-# # '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3/set'
-# #   white_value_state_topic: '/br38/sonoff/light/SONOFF_B1_8677F2/channel/3'
-#
-#
-# - platform: mqtt
-#   name: "wordclock"
-#   command_topic: "/wordclock-01201b00/wordclock/command"
-#   rgb_state_topic: "/wordclock-01201b00/wordclock/color"
-#   rgb_command_topic: "/wordclock-01201b00/wordclock/color"
-#   brightness_command_topic: "/wordclock-01201b00/wordclock/brightness"
-#   retain: true
-
 
 input_select:
   ledstrip_effect:
@@ -295,7 +237,8 @@ input_select:
     options:
       # - "Soundportal___:tunein:s25852"
       - "Soundportal___:playlist|https://www.stream24.net/tune-in/r8235.pls"
-      - "Welle1___:tunein:s149491"
+      # - "Welle1___:tunein:s149491"
+      - "Welle1___|http://live.welle1.at:9128/"
       # - "loungeFM___:tunein:s177755"
       - "loungeFM___|http://188.138.9.183/digital.mp3"
       - "Austria Rock Radio |http://stream5.liferadio.at/"
