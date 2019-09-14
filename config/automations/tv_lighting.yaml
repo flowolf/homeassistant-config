@@ -5,6 +5,9 @@
     - platform: state
       entity_id: media_player.osmc_waldo
       to: 'playing'
+    - platform: state
+      entity_id: media_player.elec
+      to: 'playing'
   condition:
     # - condition: time
     #   after: '19:00:00'
@@ -31,7 +34,7 @@
       to: 'below_horizon'
   condition:
     - condition: state
-      entity_id: media_player.osmc_waldo
+      entity_id: media_player.elec
       state: 'playing'
   action:
     - service: scene.turn_on
@@ -43,6 +46,9 @@
     - platform: state
       entity_id: media_player.osmc_waldo
       # from: 'playing'
+      to: 'paused'
+    - platform: state
+      entity_id: media_player.elec
       to: 'paused'
   condition:
     - condition: state
@@ -65,6 +71,9 @@
       entity_id: media_player.osmc_waldo
       # from: 'paused'
       to: 'playing'
+    - platform: state
+      entity_id: media_player.elec
+      to: 'paused'
   condition:
     - condition: state
       entity_id: sun.sun
@@ -85,6 +94,11 @@
     - platform: state
       entity_id: media_player.osmc_waldo
       # from: 'paused'
+      to: 'idle'
+      for:
+        seconds: 2
+    - platform: state
+      entity_id: media_player.elec
       to: 'idle'
       for:
         seconds: 2

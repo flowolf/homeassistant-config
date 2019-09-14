@@ -160,10 +160,15 @@ views:
         title: Wordclock
       # - entity: media_player.tv
       #   type: media-control
-      - entity: media_player.osmc_waldo
+      - entity: media_player.elec
         type: media-control
-      - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
+      - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad 
         type: media-control
+      - type: custom:mini-media-player
+        entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
+        icon: mdi:speaker-multiple
+        hide:
+          power: true
       - type: entities
         entities:
           - scene.wz_movies
@@ -367,7 +372,7 @@ views:
           - switch.wz_light_3
           - switch.rundumleuchte
           - light.10_status_leds
-          - lock.br38
+          # - lock.br38
         title: other
       - show_header_toggle: false
         type: entities
@@ -421,14 +426,34 @@ views:
         entities:
           - input_select.radio_stations
         title: Radio Sender
-      - entity: media_player.osmc_waldo
+      - entity: media_player.elec
         type: media-control
       - entity: media_player.mpd
         type: media-control
-      - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+      # küche
+      - entity: media_player.snapcast_client_7c_dd_90_16_ea_27
         type: media-control
-      - entity: media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
+      - type: custom:mini-media-player
+        entity: media_player.snapcast_client_7c_dd_90_16_ea_27
+        icon: mdi:speaker
+        hide:
+          power: true
+      # zerostream
+      - entity: media_player.snapcast_client_b8_27_eb_25_60_15
         type: media-control
+      - type: custom:mini-media-player
+        entity: media_player.snapcast_client_b8_27_eb_25_60_15
+        icon: mdi:speaker-bluetooth
+        hide:
+          power: true
+      # wohnzimmer
+      - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad 
+        type: media-control
+      - type: custom:mini-media-player
+        entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
+        icon: mdi:speaker-multiple
+        hide:
+          power: true
       # - entity: media_player.tv
       #   type: media-control
       - show_header_toggle: false
@@ -531,8 +556,14 @@ views:
           - binary_sensor.kuechenbalkontuer
           - switch.rundumleuchte
         title: Küche
-      - entity: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+      - entity: media_player.snapcast_client_7c_dd_90_16_ea_27
         type: media-control
+      - type: custom:mini-media-player
+        entity: media_player.snapcast_client_7c_dd_90_16_ea_27
+        icon: mdi:speaker
+        hide:
+          power: true
+
   - path: vacuum_view
     title: Staubsauger
     badges: []

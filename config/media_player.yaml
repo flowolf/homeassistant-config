@@ -29,6 +29,36 @@
         #  command: standby
 #  turn_off_action: none
 
+- platform: kodi
+  host: !secret elec_IP
+  port: !secret elec_port
+  name: "elec"
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: !secret elec_mac_address
+      broadcast_address: !secret broadcast_IP
+  #  service: media_player.kodi_call_method
+  #  data:
+  #    entity_id: media_player.kodi
+  #    method: Addons.ExecuteAddon
+  #    addonid: script.json-cec
+  #    params:
+  #      command: activate
+  turn_off_action:
+    #  - service: media_player.media_stop
+    #    data:
+    #      entity_id: media_player.kodi
+    - service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.elec
+        method: System.suspend
+        # method: Addons.ExecuteAddon
+        # addonid: script.json-cec
+        # params:
+        #  command: standby
+#  turn_off_action: none
+
 # not working as expected... put asleep
 # - platform: samsungtv
 #   # UE55MU6170UXZG
@@ -37,6 +67,7 @@
 #   # mac: !secret samsung_smart_tv_mac
 #   port: 8001
 #   name: "TV"
+
 
 - platform: snapcast
   host: !secret snapcast_main_ip
