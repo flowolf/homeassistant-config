@@ -8,7 +8,7 @@
     data:
       mac: !secret kodi_mac_address
       broadcast_address: !secret broadcast_IP
-  #  service: media_player.kodi_call_method
+  #  service: kodi.call_method
   #  data:
   #    entity_id: media_player.kodi
   #    method: Addons.ExecuteAddon
@@ -19,7 +19,7 @@
     #  - service: media_player.media_stop
     #    data:
     #      entity_id: media_player.kodi
-    - service: media_player.kodi_call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.kodi
         method: System.suspend
@@ -38,7 +38,7 @@
     data:
       mac: !secret elec_mac_address
       broadcast_address: !secret broadcast_IP
-  #  service: media_player.kodi_call_method
+  #  service: kodi.call_method
   #  data:
   #    entity_id: media_player.kodi
   #    method: Addons.ExecuteAddon
@@ -49,7 +49,7 @@
     #  - service: media_player.media_stop
     #    data:
     #      entity_id: media_player.kodi
-    - service: media_player.kodi_call_method
+    - service: kodi.call_method
       data:
         entity_id: media_player.elec
         method: System.suspend

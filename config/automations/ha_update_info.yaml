@@ -2,7 +2,8 @@
 - alias: "Update info"
   trigger:
     platform: state
-    entity_id: updater.updater
+    entity_id: binary_sensor.updater
+    to: 'on'
   action:
     service: notify.jabber
     data:
