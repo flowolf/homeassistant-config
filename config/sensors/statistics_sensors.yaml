@@ -2,15 +2,15 @@
 - platform: statistics
   name: stat_motion_changes_vz_1h
   entity_id: binary_sensor.motion_sensor_158d00015ef681
-  max_age: 
+  max_age:
    hours: 1
 - platform: statistics
   name: stat_wz_mean_temp_1h
   entity_id: sensor.wz_temp
-  max_age: 
+  max_age:
    hours: 1
 - platform: statistics
   name: stat_outside_mean_temp_1h
-  entity_id: sensor.staub_temp 
-  max_age: 
+  entity_id: sensor.staub_temp
+  max_age:
    hours: 1

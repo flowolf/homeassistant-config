@@ -294,9 +294,8 @@ logger:
   # levels: notset, debug, info, warn, warning, error, fatal, critical
   default: warn
   logs:
-    homeassistant.components.notify.yessssms: debug
-    homeassistant.components.notify.xmpp: info
-    homeassistant.components.device_tracker.gpslogger: debug
+    homeassistant.components.yessssms: debug
+    homeassistant.components.xmpp: info
     homeassistant.components.gpslogger: debug
     homeassistant.core: warn
     miio.device: critical

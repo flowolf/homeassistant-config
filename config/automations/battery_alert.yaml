@@ -18,8 +18,6 @@
     #       Check battery: {{ states('sensor.battery_status') }}
     - service: notify.jabber
       data_template:
-        title: "Battery status"
+        title: "Battery status low"
         message: >
           Check battery: {{ states('sensor.battery_status') }}
-
-

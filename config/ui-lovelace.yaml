@@ -162,7 +162,7 @@ views:
       #   type: media-control
       - entity: media_player.elec
         type: media-control
-      - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad 
+      - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
         type: media-control
       - type: custom:mini-media-player
         entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
@@ -447,7 +447,7 @@ views:
         hide:
           power: true
       # wohnzimmer
-      - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad 
+      - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
         type: media-control
       - type: custom:mini-media-player
         entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
