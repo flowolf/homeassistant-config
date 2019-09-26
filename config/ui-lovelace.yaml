@@ -589,7 +589,7 @@ views:
   - path: weather_view
     title: Wetter
     badges: []
-    icon: 'mdi:weather-partlycloudy'
+    icon: 'mdi:weather-partly-cloudy'
     cards:
       - show_header_toggle: false
         title: Loggia
