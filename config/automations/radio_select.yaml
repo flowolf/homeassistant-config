@@ -4,20 +4,20 @@
   hide_entity: false
   trigger:
     - platform: state
-      entity_id: input_select.radio_stations
+      entity_id: sensor.radio_data
   action:
     - service: media_player.play_media
       data_template:
         entity_id: media_player.mpd
         media_content_id: >
-          {% set radio = states.sensor.radio_data.attributes.current.split('|') %}
+          {% set radio = states.sensor.radio_data.state.split('|') %}
           {% if radio[0] is eq 'tunein' %}
             tunein:station:{{ radio[1] | string}}
           {% else %}
             {{ radio[1] | string}}
           {% endif %}
         media_content_type: >
-          {% set radio = states.sensor.radio_data.attributes.current.split('|') %}
+          {% set radio = states.sensor.radio_data.state.split('|') %}
           {% if radio[0] is eq 'playlist' %}
             "playlist"
           {% else %}
