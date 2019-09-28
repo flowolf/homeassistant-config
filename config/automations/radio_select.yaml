@@ -10,16 +10,83 @@
       data_template:
         entity_id: media_player.mpd
         media_content_id: >
-          {% if states('input_select.radio_stations').split(':')[1] is eq 'tunein' %}
-            tunein:station:{{ states('input_select.radio_stations').split(':')[2] | string}}
-          {% elif states('input_select.radio_stations').split(':')[1] is eq 'pl'%}
-            {{ states('input_select.radio_stations').split('|')[1] | string}}
+          {% set name = states('input_select.radio_stations') %}
+          {% set radios = {
+            'Welle1': ('Welle1', 'playlist', 'http://live.welle1.at:9128/'),
+            'loungeFM': ('loungeFM', 'channel', 'http://188.138.9.183/digital.mp3'),
+            'Austria Rock Radio': ('Austria Rock Radio', 'channel', 'http://stream5.liferadio.at/'),
+            'Helsinki': ('Helsinki', 'tunein', 's17838'),
+            'Ö1': ('Ö1', 'playlist', 'http://mp3stream3.apasf.apa.at:8000/listen.pls'),
+            'Ö3': ('ö3', 'playlist', 'http://mp3stream7.apasf.apa.at:8000/listen.pls'),
+            'FM4': ('FM4', 'playlist', 'http://mp3stream1.apasf.apa.at:8000/listen.pls'),
+            'Kronehit': ('Kronehit', 'tunein', 's15570'),
+            'Antenne': ('Antenne', 'tunein', 's1139'),
+            'Film Music - Movie Scores - Movie Soundtracks': ('Film Music', 'tunein', 's302173'),
+            'GotRadio The Big Score': ('GotRadio The Big Score', 'tunein', 's49696'),
+            'ClassicFM': ('ClassicFM', 'tunein', 's8439'),
+            'BBC1': ('BBC1', 'tunein', 's24939'),
+            'BBC2': ('BBC2', 'tunein', 's24940'),
+            'Kinderlieder 1-2-3': ('Kinderlieder 1-2-3', 'tunein', 's260986'),
+            'Kinderradio (D)': ('Kinderradio (D)', 'tunein', 's230573'),
+            'Omega 105.1 FM (Costa Rica)': ('Omega 105.1 FM (Costa Rica)', 'tunein', 's82770'),
+          }%}
+          {% set radio = radios[name] %}
+          {% if radio[1] is eq 'tunein' %}
+            tunein:station:{{ radio[2] | string}}
           {% else %}
-            {{ states('input_select.radio_stations').split('|')[1] | string}}
+            {{ radio[2] | string}}
           {% endif %}
         media_content_type: >
-          {% if states('input_select.radio_stations').split(':')[1] is eq 'playlist' %}
+          {% set name = states('input_select.radio_stations') %}
+          {% set radios = {
+            'Welle1': ('Welle1', 'playlist', 'http://live.welle1.at:9128/'),
+            'loungeFM': ('loungeFM', 'channel', 'http://188.138.9.183/digital.mp3'),
+            'Austria Rock Radio': ('Austria Rock Radio', 'channel', 'http://stream5.liferadio.at/'),
+            'Helsinki': ('Helsinki', 'tunein', 's17838'),
+            'Ö1': ('Ö1', 'playlist', 'http://mp3stream3.apasf.apa.at:8000/listen.pls'),
+            'Ö3': ('ö3', 'playlist', 'http://mp3stream7.apasf.apa.at:8000/listen.pls'),
+            'FM4': ('FM4', 'playlist', 'http://mp3stream1.apasf.apa.at:8000/listen.pls'),
+            'Kronehit': ('Kronehit', 'tunein', 's15570'),
+            'Antenne': ('Antenne', 'tunein', 's1139'),
+            'Film Music - Movie Scores - Movie Soundtracks': ('Film Music', 'tunein', 's302173'),
+            'GotRadio The Big Score': ('GotRadio The Big Score', 'tunein', 's49696'),
+            'ClassicFM': ('ClassicFM', 'tunein', 's8439'),
+            'BBC1': ('BBC1', 'tunein', 's24939'),
+            'BBC2': ('BBC2', 'tunein', 's24940'),
+            'Kinderlieder 1-2-3': ('Kinderlieder 1-2-3', 'tunein', 's260986'),
+            'Kinderradio (D)': ('Kinderradio (D)', 'tunein', 's230573'),
+            'Omega 105.1 FM (Costa Rica)': ('Omega 105.1 FM (Costa Rica)', 'tunein', 's82770'),
+          }%}
+          {% set radio = radios[name] %}
+
+          {% if radio[1] is eq 'playlist' %}
             "playlist"
           {% else %}
             "channel"
           {% endif %}
+
+# # old working radio select
+# - alias: "radio select old"
+#   initial_state: true
+#   hide_entity: false
+#   trigger:
+#     - platform: state
+#       entity_id: input_select.radio_stations
+#   action:
+#     - service: media_player.play_media
+#       data_template:
+#         entity_id: media_player.mpd
+#         media_content_id: >
+#           {% if states('input_select.radio_stations').split(':')[1] is eq 'tunein' %}
+#             tunein:station:{{ states('input_select.radio_stations').split(':')[2] | string}}
+#           {% elif states('input_select.radio_stations').split(':')[1] is eq 'pl'%}
+#             {{ states('input_select.radio_stations').split('|')[1] | string}}
+#           {% else %}
+#             {{ states('input_select.radio_stations').split('|')[1] | string}}
+#           {% endif %}
+#         media_content_type: >
+#           {% if states('input_select.radio_stations').split(':')[1] is eq 'playlist' %}
+#             "playlist"
+#           {% else %}
+#             "channel"
+#           {% endif %}
