@@ -8,4 +8,4 @@
     service: notify.jabber
     data:
       title: "Update: "
-      message: "New Home Assistant version available ({{states.updater.updater.state }})"
+      message: "New Home Assistant version available ({{states.sensor.ha_latest_release.state }})"
