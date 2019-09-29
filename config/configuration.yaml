@@ -209,4 +209,4 @@ logger: !include logging.yaml
 
 input_boolean: !include input_booleans.yaml
 
-input_datetime: !include input_datatime.yaml
+input_datetime: !include input_datetime.yaml

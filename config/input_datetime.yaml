@@ -1,5 +1,5 @@
 ---
-- time_wakeup_lights:
+time_wakeup_lights:
   name: Time for wakeup lights
   has_date: false
   has_time: true
