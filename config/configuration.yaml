@@ -283,18 +283,7 @@ automation: !include_dir_merge_list automations/
 
 # via https://github.com/arsaboo/\
 # homeassistant-config/blob/01ed7ded33f7cc64ad878f123d3f2118dd77ba07/configuration.yaml#L288
-logger:
-  # levels: notset, debug, info, warn, warning, error, fatal, critical
-  default: warn
-  logs:
-    homeassistant.components.yessssms: debug
-    homeassistant.components.xmpp: info
-    homeassistant.components.gpslogger: debug
-    homeassistant.core: warn
-    miio.device: critical
-    homeassistant.components.vacuum.xiaomi_miio: critical
-    # supress 'unparsed data' WARNING from AndroidIPCam
-    urllib3.connectionpool: critical
+logger: !include logging.yaml
 
 
 input_boolean: !include input_booleans.yaml

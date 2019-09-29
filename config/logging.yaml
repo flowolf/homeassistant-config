@@ -1,0 +1,11 @@
+---
+# levels: notset, debug, info, warn, warning, error, fatal, critical
+default: warn
+logs:
+  homeassistant.components.yessssms: debug
+  homeassistant.components.xmpp: info
+  homeassistant.components.gpslogger: warn
+  homeassistant.core: warn
+  miio.device: critical
+  homeassistant.components.vacuum.xiaomi_miio: critical
+  urllib3.connectionpool: error
