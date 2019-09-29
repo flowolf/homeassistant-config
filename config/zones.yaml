@@ -4,11 +4,11 @@
   longitude: !secret lon
   radius: 40
 
-- name: !secret zone2_name
-  icon: mdi:factory
-  latitude: !secret lat_zone2
-  longitude: !secret lon_zone2
-  radius: 90
+# - name: !secret zone2_name
+#   icon: mdi:factory
+#   latitude: !secret lat_zone2
+#   longitude: !secret lon_zone2
+#   radius: 90
 
 - name: !secret zone3_name
   icon: mdi:castle
