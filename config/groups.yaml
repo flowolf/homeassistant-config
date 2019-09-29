@@ -320,7 +320,7 @@ wohnzimmer_view:
     - group.wohnzimmer
     - media_player.tv
     - media_player.osmcwaldo
-    - media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
+    - media_player.snapcast_client_7c_dd_90_a7_f7_ad
     - scene.wz_movies
     - scene.wz_movies_2
     - group.wordclock
@@ -347,8 +347,8 @@ player_view:
   entities:
     - group.radio_stations
     - media_player.osmcwaldo
-    - media_player.snapcast_client_b6faf34167dc4f13bf3cd6cefd7cbece
-    - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+    - media_player.snapcast_client_7c_dd_90_a7_f7_ad
+    - media_player.snapcast_client_7c_dd_90_16_ea_27
     - media_player.mpd
     - media_player.tv
     - weblink.mopidy
@@ -377,7 +377,7 @@ kitchen_view:
   view: true
   entities:
     - group.kitchen
-    - media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+    - media_player.snapcast_client_7c_dd_90_16_ea_27
 vacuum_view:
   name: Staubsauger
   view: true

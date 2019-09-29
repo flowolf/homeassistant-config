@@ -2,11 +2,10 @@
 sequence:
   - delay: '00:00:20'
   - service: media_player.volume_set
-    entity_id: media_player.snapcast_client_526e25aa4ee047779d34c67ee7529d26
+    entity_id:  media_player.snapcast_client_7c_dd_90_16_ea_27
     data:
       volume_level: 0.85
   - service: tts.picotts_say
-    # entity_id: media_player.osmc_waldo
     entity_id: media_player.mpd
     data:
       message: '. Willkommen Zuhause, Florian!'
