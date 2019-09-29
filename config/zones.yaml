@@ -1,0 +1,23 @@
+---
+- name: !secret zone1_name
+  latitude: !secret lat
+  longitude: !secret lon
+  radius: 40
+
+- name: !secret zone2_name
+  icon: mdi:factory
+  latitude: !secret lat_zone2
+  longitude: !secret lon_zone2
+  radius: 90
+
+- name: !secret zone3_name
+  icon: mdi:castle
+  latitude: !secret lat_zone3
+  longitude: !secret lon_zone3
+  radius: 150
+
+- name: !secret zone4_name
+  icon: mdi:wrench
+  latitude: !secret lat_zone4
+  longitude: !secret lon_zone4
+  radius: 40

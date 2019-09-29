@@ -1,16 +1,11 @@
 ---
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: !secret name_home
   # Location required to calculate the time the sun rises and sets
   latitude: !secret lat
   longitude: !secret lon
-  # Impacts weather/sunrise data
   elevation: 459
-  # metric for Metric, imperial for Imperial
   unit_system: metric
-  # Pick yours from here:
-  # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Vienna
 
   customize: !include customize.yaml
@@ -21,32 +16,7 @@ lovelace:
 
 system_health:
 
-zone 1:
-  name: !secret zone1_name
-  latitude: !secret lat
-  longitude: !secret lon
-  radius: 40
-
-zone 2:
-  name: !secret zone2_name
-  icon: mdi:factory
-  latitude: !secret lat_zone2
-  longitude: !secret lon_zone2
-  radius: 90
-
-zone 3:
-  name: !secret zone3_name
-  icon: mdi:castle
-  latitude: !secret lat_zone3
-  longitude: !secret lon_zone3
-  radius: 150
-
-zone 4:
-  name: !secret zone4_name
-  icon: mdi:wrench
-  latitude: !secret lat_zone4
-  longitude: !secret lon_zone4
-  radius: 40
+zone: !include zones.yaml
 
 influxdb:
   host: !secret influx_host
@@ -281,8 +251,6 @@ script: !include_dir_named scripts/
 
 automation: !include_dir_merge_list automations/
 
-# via https://github.com/arsaboo/\
-# homeassistant-config/blob/01ed7ded33f7cc64ad878f123d3f2118dd77ba07/configuration.yaml#L288
 logger: !include logging.yaml
 
 
