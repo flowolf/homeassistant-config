@@ -3,7 +3,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: media_player.osmc_waldo
+      entity_id: media_player.kodi
       to: 'playing'
     - platform: state
       entity_id: media_player.elec
@@ -44,7 +44,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: media_player.osmc_waldo
+      entity_id: media_player.kodi
       # from: 'playing'
       to: 'paused'
     - platform: state
@@ -68,7 +68,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: media_player.osmc_waldo
+      entity_id: media_player.kodi
       # from: 'paused'
       to: 'playing'
     - platform: state
@@ -92,7 +92,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: media_player.osmc_waldo
+      entity_id: media_player.kodi
       # from: 'paused'
       to: 'idle'
       for:

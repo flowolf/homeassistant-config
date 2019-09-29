@@ -13,7 +13,7 @@
         after: sunset
         after_offset: "-00:30:00"
       - condition: state
-        entity_id: media_player.osmc_waldo
+        entity_id: media_player.kodi
         state: idle
   action:
     - service: homeassistant.turn_on

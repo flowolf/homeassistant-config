@@ -63,7 +63,7 @@ camera: !include camera.yaml
 
 tts:
   - platform: picotts
-    language: 'de-DE'
+    language: "de-DE"
 
 mqtt: !include mqtt.yaml
 
@@ -128,7 +128,6 @@ device_tracker:
 # ##### fancy lights ######
 light: !include lights.yaml
 
-
 input_select:
   ledstrip_effect:
     name: LEDstrip Effect
@@ -184,7 +183,6 @@ input_select:
       - "Kinderlieder 1-2-3"
       - "Kinderradio (D)"
       - "Omega 105.1 FM (Costa Rica)"
-
 
 input_number:
   ledstrip_animation_speed:
