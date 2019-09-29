@@ -209,12 +209,6 @@ automation: !include_dir_merge_list automations/
 
 logger: !include logging.yaml
 
-
 input_boolean: !include input_booleans.yaml
 
-input_datetime:
-  time_wakeup_lights:
-    name: Time for wakeup lights
-    has_date: false
-    has_time: true
-    # initial: "6:43"
+input_datetime: !include input_datatime.yaml
