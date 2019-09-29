@@ -1,0 +1,6 @@
+---
+entities:
+  - name: Mopidy
+    url: !secret mopidy_webclient_url
+  - name: Grafana
+    url: !secret grafana_link_url

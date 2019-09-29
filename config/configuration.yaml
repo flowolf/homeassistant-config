@@ -18,13 +18,7 @@ system_health:
 
 zone: !include zones.yaml
 
-influxdb:
-  host: !secret influx_host
-  port: !secret influx_port
-  username: !secret influx_user
-  password: !secret influx_pass
-  ssl: true
-  database: hass_db
+influxdb: !include influx.yaml
 
 # Show links to resources in log and frontend
 # introduction:
@@ -33,34 +27,19 @@ influxdb:
 frontend:
   themes: !include themes.yaml
 
-weblink:
-  entities:
-    - name: Mopidy
-      url: !secret mopidy_webclient_url
-    - name: Grafana
-      url: !secret grafana_link_url
+weblink: !include links.yaml
 
 http:
 # use_x_forwarded_for: true
 # ip_ban_enabled: false
 # login_attempts_threshold: 5
 
-# auth_providers:
-#  - type: legacy_api_password
-#    api_password: !secret api_password
-
-# Checks for available updates
 updater:
 
-# Discover some devices automatically
 discovery:
 
 config:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-# conversation:
-
-# Enables support for tracking state changes over time.
 history:
 
 map:
@@ -68,28 +47,16 @@ map:
 # webcam stream for configured cameras (ui-lovelace.yaml)
 stream:
 
-# NoSQL really pounded the SD-card of my Raspberry Pi
-# trying external USB-stick didn't work. That failed...
-# postgres works much better, with faster startup times.
-recorder:
-  # db_url: !secret external_sqlite_url
-  db_url: !secret postgres_url
-  purge_keep_days: 5
-  purge_interval: 1
-# db_url: !secret mariadb_url
+recorder: !include db.yaml
 
-# View all events in a logbook
 logbook:
 
-# Track the sun
 sun:
 
 shopping_list:
 
-# shell_command: !include shell_command.yaml
 switch: !include switches.yaml
 
-# Groups
 group: !include groups.yaml
 
 camera: !include camera.yaml
@@ -98,13 +65,7 @@ tts:
   - platform: picotts
     language: 'de-DE'
 
-mqtt:
-  broker: localhost
-  port: 1883
-  username: !secret mqtt_user
-  password: !secret mqtt_pwd
-  discovery: true
-  discovery_prefix: homeassistant
+mqtt: !include mqtt.yaml
 
 tradfri:
   host: !secret tradfri_ip

@@ -1,0 +1,7 @@
+---
+host: !secret influx_host
+port: !secret influx_port
+username: !secret influx_user
+password: !secret influx_pass
+ssl: true
+database: hass_db
