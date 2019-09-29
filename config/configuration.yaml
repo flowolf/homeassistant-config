@@ -69,8 +69,6 @@ mqtt: !include mqtt.yaml
 
 tradfri:
   host: !secret tradfri_ip
-# do not use the API_KEY from v0.57 and above!
-#  api_key: !secret tradfri_security_key
 
 zwave:
   usb_path: /dev/ttyACM0
@@ -95,10 +93,7 @@ sensor: !include_dir_merge_list sensors/
 
 media_player: !include media_player.yaml
 
-lock:
-  platform: nuki
-  host: !secret nuki_host
-  token: !secret nuki_token
+lock: !include lock.yaml
 
 person:
   - name: Flo

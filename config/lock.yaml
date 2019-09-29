@@ -1,0 +1,4 @@
+---
+- platform: nuki
+  host: !secret nuki_host
+  token: !secret nuki_token
