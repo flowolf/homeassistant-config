@@ -1,0 +1,14 @@
+---
+# fancy lights
+ledstrip_animation_speed:
+  name: LEDstrip Animation Speed
+  initial: 150
+  min: 1
+  max: 150
+  step: 10
+
+outside_temp_diff:
+  name: Outside to inside temperature difference
+  initial: 1
+  min: 0
+  max: 360

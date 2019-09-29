@@ -10,21 +10,20 @@ homeassistant:
 
   customize: !include customize.yaml
 
+frontend:
+  themes: !include themes.yaml
+
 # configuring lovelace through yaml, not via frontend
 lovelace:
   mode: yaml
-
-system_health:
 
 zone: !include zones.yaml
 
 influxdb: !include influx.yaml
 
-# Enables the frontend
-frontend:
-  themes: !include themes.yaml
-
 weblink: !include links.yaml
+
+system_health:
 
 http:
 # use_x_forwarded_for: true
@@ -58,9 +57,7 @@ group: !include groups.yaml
 
 camera: !include camera.yaml
 
-tts:
-  - platform: picotts
-    language: "de-DE"
+tts: !include tts.yaml
 
 mqtt: !include mqtt.yaml
 
@@ -96,23 +93,11 @@ person: !include person.yaml
 
 device_tracker: !include device_tracker.yaml
 
-# ##### fancy lights ######
-light: !include lights.yaml
-
 input_select: !include input_select.yaml
 
-input_number:
-  ledstrip_animation_speed:
-    name: LEDstrip Animation Speed
-    initial: 150
-    min: 1
-    max: 150
-    step: 10
-  outside_temp_diff:
-    name: Outside to inside temperature difference
-    initial: 1
-    min: 0
-    max: 360
+input_number: !include input_number.yaml
+
+light: !include lights.yaml
 
 notify: !include notify.yaml
 
