@@ -1,0 +1,57 @@
+---
+ledstrip_effect:
+  name: LEDstrip Effect
+  options:
+    - "Solid"
+    - "BPM"
+    - "Confetti"
+    - "Cyclon Rainbow"
+    - "Dots"
+    - "Fire"
+    - "Glitter"
+    - "Juggle"
+    - "Lightning"
+    - "Noise"
+    - "Police All"
+    - "Police One"
+    - "Rainbow"
+    - "Ripple"
+    - "Sinelon"
+    - "Solid"
+    - "Twinkle"
+  initial: "Solid"
+
+
+wordclock_effect:
+  name: wordclock effect
+  options:
+    - "clock"
+    - "color_sparcle"
+    - "blue_sparcle"
+  initial: "clock"
+
+# radio station select. See sensors/radio_stations.yaml for details.
+radio_stations:
+  name: Radio Stations
+  options:
+    - "Soundportal"
+    - "Welle1"
+    - "loungeFM"
+    - "Austria Rock Radio"
+    - "Helsinki"
+    - "--- ORF ---"
+    - "Ö1"
+    - "Ö3"
+    - "FM4"
+    - "---"
+    - "Kronehit"
+    - "Antenne"
+    - "Film Music - Movie Scores - Movie Soundtracks"
+    - "GotRadio The Big Score"
+    - "ClassicFM"
+    - "--- div ---"
+    - "BBC1"
+    - "BBC2"
+    - "Kinderlieder 1-2-3"
+    - "Kinderradio (D)"
+    - "Omega 105.1 FM (Costa Rica)"
