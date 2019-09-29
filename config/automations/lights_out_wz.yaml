@@ -8,6 +8,6 @@
     - service: scene.turn_on
       entity_id: scene.all_off
     - service: media_player.media_pause
-      entity_id: media_player.osmcwaldo
+      entity_id: media_player.kodi
     - service: media_player.turn_off
       entity_id: media_player.tv

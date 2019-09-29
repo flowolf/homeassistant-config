@@ -319,7 +319,7 @@ wohnzimmer_view:
   entities:
     - group.wohnzimmer
     - media_player.tv
-    - media_player.osmcwaldo
+    - media_player.kodi
     - media_player.snapcast_client_7c_dd_90_a7_f7_ad
     - scene.wz_movies
     - scene.wz_movies_2
@@ -346,7 +346,7 @@ player_view:
   view: true
   entities:
     - group.radio_stations
-    - media_player.osmcwaldo
+    - media_player.kodi
     - media_player.snapcast_client_7c_dd_90_a7_f7_ad
     - media_player.snapcast_client_7c_dd_90_16_ea_27
     - media_player.mpd

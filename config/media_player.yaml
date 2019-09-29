@@ -2,7 +2,7 @@
 - platform: kodi
   host: !secret kodi_IP
   port: !secret kodi_port
-  name: "osmc-Waldo"
+  name: "Kodi"
   turn_on_action:
     service: wake_on_lan.send_magic_packet
     data:

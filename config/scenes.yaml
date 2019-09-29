@@ -307,7 +307,7 @@
       #     #source: "https://www.youtube.com/watch?v=quYru3pzhYo&t=120"
       # service: media_player.kodi_call_method
       #   data:
-      #     entity_id: media_player.osmcwaldo
+      #     entity_id: media_player.kodi
       #     method: Player.Open
       #     #addonid: script.json-cec
       #     item:
