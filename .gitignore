@@ -26,6 +26,9 @@ nest.conf
 .uuid
 ipchange.yaml
 
+# esphome
+esphome/**/
+
 # meta
 .HA_VERSION
 .uuid
