@@ -12,3 +12,6 @@ flo_at_home:
 
 tine_at_home:
   initial: false
+
+enable_red_button:
+  icon: mdi:volume-mute

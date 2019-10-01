@@ -7,6 +7,10 @@
     event_data:
       entity_id: binary_sensor.switch_158d000128afa3
       click_type: long_click_press
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_red_button
+      state: 'on'
   action:
     service: scene.turn_on
     entity_id: scene.all_off
@@ -19,6 +23,10 @@
     event_data:
       entity_id: binary_sensor.switch_158d000128afa3
       click_type: single
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_red_button
+      state: 'on'
   action:
     service: media_player.volume_mute
     data_template:
@@ -33,6 +41,10 @@
     event_data:
       entity_id: binary_sensor.switch_158d000128afa3
       click_type: double
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_red_button
+      state: 'on'
   action:
     - service: media_player.volume_mute
       data:

@@ -510,6 +510,7 @@ views:
           - automation.lights_out_in_the_living_room
           - automation.automatic_vacuum_on
           - automation.automatic_vacuum_off
+          - input_boolean.enable_red_button
           # - automation.auto_door_buzzer
         title: automation_switch
       - show_header_toggle: false
