@@ -11,6 +11,11 @@
   username: !secret raspy_motioneye1_user
   password: !secret raspy_motioneye1_pass
 
+# wallPanel
+- platform: mjpeg
+  name: "WallPanel"
+  mjpeg_url: !secret wallpanel_stream
+
 # android IP cam
 # - platform: mjpeg
 #   name: "Balkonblick2"
