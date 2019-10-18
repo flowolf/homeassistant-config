@@ -323,7 +323,7 @@ views:
             icon: 'mdi:map-marker-circle'
             name: Flo presence
             secondary_info: last-changed
-          - entity: device_tracker.nokia_pnxgam88c1104874_2
+          - entity: device_tracker.nokia_unknown
             secondary_info: last-changed
             name: Flo Fon
             icon: 'mdi:cellphone-android'

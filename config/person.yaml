@@ -3,7 +3,7 @@
   id: flo0001
   user_id: !secret flo_user_id
   device_trackers:
-    - device_tracker.nokia_pnxgam88c1104874_2
+    - device_tracker.nokia_unknown
     - !secret flo_phone_tracker
     - device_tracker.flo_laptop
     - device_tracker.flo_laptop2
