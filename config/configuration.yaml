@@ -13,6 +13,9 @@ homeassistant:
 frontend:
   themes: !include themes.yaml
 
+# gpslogger integration depends on
+cloud:
+
 # configuring lovelace through yaml, not via frontend
 lovelace:
   mode: yaml
