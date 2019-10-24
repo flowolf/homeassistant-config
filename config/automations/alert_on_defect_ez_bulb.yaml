@@ -14,6 +14,13 @@
       above: 2
       below: 120
   action:
+    - service: persistent_notification.create
+      data_template:
+        title: "Esszimmerlicht defekt"
+        notification_id: bulb-broken
+        message: >
+          "Birne wechseln!
+          (OSRAM Classic 64542 P, E14 Halogen 30W/2700K, 405lm, kleine Birnenform"
     - service: notify.jabber
       data:
         title: "Esszimmerlicht defekt"
