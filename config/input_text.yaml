@@ -1,4 +1,4 @@
 ---
-  home_url: 
-    name: Home URL
-    initial: !secret home_url
+home_url:
+  name: Home URL
+  initial: !secret home_url

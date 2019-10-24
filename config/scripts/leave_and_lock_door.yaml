@@ -5,14 +5,14 @@
 sequence:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.flo
-      state: home
-    - condition: state
-      entity_id: binary_sensor.wohnungstuer
-      state: 'on'
+      - condition: state
+        entity_id: person.flo
+        state: home
+      - condition: state
+        entity_id: binary_sensor.wohnungstuer
+        state: 'on'
   - delay: '00:00:15'
-  - condition: state 
+  - condition: state
     entity_id: binary_sensor.wohnungstuer
     state: 'off'
   - service: lock.lock

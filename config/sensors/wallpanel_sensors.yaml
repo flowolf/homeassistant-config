@@ -10,4 +10,3 @@
   state_topic: "wallpanel/sensor/qrcode"
   name: "QR Code"
   value_template: ''
-
