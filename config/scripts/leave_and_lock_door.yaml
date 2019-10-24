@@ -1,0 +1,8 @@
+---
+sequence:
+  - delay: '00:00:20'
+  - service: lock.lock
+    entity_id: lock.br38
+  - service: notify.jabber
+    data:
+      message: 'Door locked!'
