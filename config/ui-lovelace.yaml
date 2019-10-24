@@ -42,22 +42,22 @@ views:
         type: entities
         title: Wohnzimmer
         entities:
-          - switch.tradfri_outlet
-          - light.tradfri_bulb_e27_ws_opal_980lm
-          - light.lego_lampe
-          - switch.esstisch_switch
+          - entity: switch.tradfri_outlet
+          - entity: light.tradfri_bulb_e27_ws_opal_980lm
+          - entity: light.lego_lampe
+          - entity: switch.esstisch_switch
       - type: glance
         entities:
-          - sensor.wz_temp
-          - sensor.wz_lfeucht
+          - entity: sensor.wz_temp
+          - entity: sensor.wz_lfeucht
       - show_header_toggle: false
         # title: Loggia
         type: glance
         entities:
-          - sensor.aussen_temp
-          - sensor.aussen_lfeucht
-          - sensor.staub_10u
-          - light.tradfri_bulb_e27_opal_1000lm
+          - entity: sensor.aussen_temp
+          - entity: sensor.aussen_lfeucht
+          - entity: sensor.staub_10u
+          - entity: light.tradfri_bulb_e27_opal_1000lm
           # - switch.sonoffs20_6448
       - type: horizontal-stack
         cards:
@@ -194,13 +194,13 @@ views:
       - show_header_toggle: false
         type: glance
         entities:
-          - sensor.last_boot
+          - entity: sensor.last_boot
           - entity: sensor.ha_latest_release
             name: Latest Release
             icon: mdi:source-branch
           - entity: sensor.current_version
             name: Current Version
-          - sensor.gitlab_tests_passed
+          - entity: sensor.gitlab_tests_passed
       # title: System Sensoren
       - show_header_toggle: false
         type: glance
@@ -238,6 +238,13 @@ views:
         graph: line
         icon: mdi:upload-network
         detail: 2
+      - type: sensor
+        # theme: yellow-line
+        entity: sensor.wallpanel_battery
+        name: Wallpanel Battery
+        graph: line
+        icon: mdi:tablet
+        detail: 2
       # - show_header_toggle: false
       #   type: entities
       #   entities:
@@ -270,16 +277,16 @@ views:
         type: glance
         entities:
           # - binary_sensor.door_bell
-          - binary_sensor.motion_sensor_158d00015ef681
-          - binary_sensor.wohnungstuer_burglar
-          - binary_sensor.smoke
-          - binary_sensor.schloss_wohnungstuer
+          - entity: binary_sensor.motion_sensor_158d00015ef681
+          - entity: binary_sensor.wohnungstuer_burglar
+          - entity: binary_sensor.smoke
+          - entity: binary_sensor.schloss_wohnungstuer
         title: Vorzimmer
       - show_header_toggle: false
         type: glance
         entities:
           # - binary_sensor.door_bell
-          - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
+          - entity: sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
         title: Temperatures
       - show_header_toggle: false
         type: glance
@@ -392,16 +399,23 @@ views:
         type: glance
         entities:
           # - binary_sensor.door_bell
-          - binary_sensor.motion_sensor_158d00015ef681
-          - binary_sensor.wohnungstuer_burglar
-          - binary_sensor.schloss_wohnungstuer
-          - binary_sensor.smoke
+          - entity: binary_sensor.motion_sensor_158d00015ef681
+          - entity: binary_sensor.wohnungstuer_burglar
+          - entity: binary_sensor.schloss_wohnungstuer
+          - entity: binary_sensor.smoke
       - show_header_toggle: false
         title: Türen
         type: entities
         entities:
-          - switch.buzzer
-          - lock.br38
+          - entity: switch.buzzer
+          - entity: lock.br38
+            name: Wohnungstür
+          - entity: script.leave_and_lock_door
+            name: Leave and Lock
+            icon: mdi:walk
+          - entity: script.unlatch_door
+            name: Wohnugstür öffnen
+            icon: mdi:door-open
       - show_header_toggle: false
         type: glance
         entities:

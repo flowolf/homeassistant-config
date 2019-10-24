@@ -1,0 +1,10 @@
+---
+sequence:
+  - condition: state
+    entity_id: person.flo
+    state: home
+  - service: lock.open
+    entity_id: lock.br38
+  - service: notify.jabber
+    data:
+      message: 'Door unlatched!'

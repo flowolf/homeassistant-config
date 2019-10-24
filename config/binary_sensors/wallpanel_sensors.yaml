@@ -1,0 +1,34 @@
+---
+- platform: mqtt
+  state_topic: "wallpanel/sensor/motion"
+  name: "Wallpanel motion"
+  qos: 0
+  payload_on: '{"value":true}'
+  payload_off: '{"value":false}'
+
+- platform: mqtt
+  state_topic: "wallpanel/sensor/face"
+  name: "Wallpanel face"
+  qos: 0
+  payload_on: '{"value":true}'
+  payload_off: '{"value":false}'
+
+# - platform: mqtt
+#   state_topic: "wallpanel/sensor/battery"
+#   name: "Wallpanel AC plugged in"
+#   qos: 0
+#   value_template: "{{ value_json.acPlugged == 'true' }}"
+#   device_class: power
+
+# - platform: mqtt
+#   state_topic: "wallpanel/sensor/battery"
+#   name: "Wallpanel charging"
+#   qos: 0
+#   value_template: "{{ value_json.charging }}"
+#   device_class: power
+
+# - platform: mqtt
+#   state_topic: "wallpanel/sensor/battery"
+#   name: "Wallpanel USB plugged in"
+#   qos: 0
+#   value_template: "{{ value_json.usbPlugged }}"

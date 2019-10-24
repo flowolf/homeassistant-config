@@ -1,0 +1,26 @@
+---
+- alias: "wallpanel on when front door opened from inside"
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wohnungstuer
+    to: 'on'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "wallpanel/command"
+        payload: '{"url": "{{ states("input_text.home_url") }}/lovelace/security"}'
+    - delay: "00:00:01"
+    - service: mqtt.publish
+      data:
+        topic: "wallpanel/command"
+        payload: '{"wake": true, "wakeTime": 30}'
+    - delay: "00:01:00"
+    - service: mqtt.publish
+      data_template:
+        topic: "wallpanel/command"
+        payload: '{"url": "{{ states("input_text.home_url") }}/"}'
+    - service: mqtt.publish
+      data_template:
+        topic: "wallpanel/command"
+        payload: '{"reload": true}'

@@ -1,6 +1,20 @@
 ---
+# only can be triggered when door is open
+# waits for 15 seconds, then expects a closed door
+# then locks the door
 sequence:
-  - delay: '00:00:20'
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.flo
+      state: home
+    - condition: state
+      entity_id: binary_sensor.wohnungstuer
+      state: 'on'
+  - delay: '00:00:15'
+  - condition: state 
+    entity_id: binary_sensor.wohnungstuer
+    state: 'off'
   - service: lock.lock
     entity_id: lock.br38
   - service: notify.jabber
