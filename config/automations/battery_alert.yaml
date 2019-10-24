@@ -10,12 +10,12 @@
       value_template: >
         {{ trigger.to_state.state | length > 0 }}
   action:
-    # - service: persistent_notification.create
-    #   data_template:
-    #     title: Low Battery levels
-    #     notification_id: low-battery-alert
-    #     message: >
-    #       Check battery: {{ states('sensor.battery_status') }}
+    - service: persistent_notification.create
+      data_template:
+        title: Low Battery levels
+        notification_id: low-battery-alert
+        message: >
+          Check battery: {{ states('sensor.battery_status') }}
     - service: notify.jabber
       data_template:
         title: "Battery status low"
