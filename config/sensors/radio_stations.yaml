@@ -18,6 +18,7 @@
           'Helsinki': ('Helsinki', 'tunein', 's17838'),
           'Kinderlieder 1-2-3': ('Kinderlieder 1-2-3', 'tunein', 's260986'),
           'Kinderradio (D)': ('Kinderradio (D)', 'tunein', 's230573'),
+          'KlassikRadio': ('KlassikRadio', 'channel', 'http://stream.klassikradio.de/live/mp3-192/stream.klassikradio.de/play.m3u'),
           'Kronehit': ('Kronehit', 'tunein', 's15570'),
           'loungeFM': ('loungeFM', 'channel', 'http://188.138.9.183/digital.mp3'),
           'Ö1': ('Ö1', 'playlist', 'http://mp3stream3.apasf.apa.at:8000/listen.pls'),
