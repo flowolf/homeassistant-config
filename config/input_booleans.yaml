@@ -10,6 +10,9 @@ vacuum_bot_auto:
 flo_at_home:
   initial: false
 
+flo_not_at_home:
+  initial: false
+
 tine_at_home:
   initial: false
 

@@ -10,10 +10,16 @@
   prior: 0.25
   name: "flo_home"
   probability_threshold: 0.85
+  device_class: presence
   observations:
     - entity_id: 'input_boolean.flo_at_home'
       prob_given_true: '1.0'
       prob_given_false: '0.01'
+      platform: 'state'
+      to_state: 'on'
+    - entity_id: 'input_boolean.flo_not_at_home'
+      prob_given_true: '0.01'
+      prob_given_false: '1.0'
       platform: 'state'
       to_state: 'on'
     - entity_id: 'device_tracker.nokia_unknown'
@@ -22,12 +28,12 @@
       platform: 'state'
       to_state: 'home'
     - entity_id: !secret flo_phone_tracker
-      prob_given_true: '0.99'
+      prob_given_true: '0.59'
       prob_given_false: '0.05'
       platform: 'state'
       to_state: 'home'
     - entity_id: 'device_tracker.flo_laptop'
-      prob_given_true: '0.97'
+      prob_given_true: '0.65'
       prob_given_false: '0.5'
       platform: 'state'
       to_state: 'home'

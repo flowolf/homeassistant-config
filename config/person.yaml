@@ -3,10 +3,12 @@
   id: flo0001
   user_id: !secret flo_user_id
   device_trackers:
-    - device_tracker.nokia_unknown
-    - !secret flo_phone_tracker
-    - device_tracker.flo_laptop
-    - device_tracker.flo_laptop2
+    # - binary_sensor.flo_home
+    
+    # - device_tracker.nokia_unknown
+    # - !secret flo_phone_tracker
+    # - device_tracker.flo_laptop
+    # - device_tracker.flo_laptop2
     # - device_tracker.gpslogger
 # - name: tine
 #   id: tine0001
