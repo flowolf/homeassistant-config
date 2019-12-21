@@ -6,6 +6,5 @@ logs:
   homeassistant.components.xmpp: info
   homeassistant.components.gpslogger: warn
   homeassistant.core: warn
-  miio.device: critical
-  homeassistant.components.vacuum.xiaomi_miio: critical
+  homeassistant.components.xiaomi_miio.vacuum: critical
   urllib3.connectionpool: error
