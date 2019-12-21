@@ -602,9 +602,6 @@ views:
       - entity: camera.balkonblick
         type: picture-entity
         camera_view: live
-      - entity: camera.wallpanel
-        type: picture-entity
-        camera_view: live
       - entity: camera.freibad_furstenfeld
         type: picture-entity
         camera_view: live
