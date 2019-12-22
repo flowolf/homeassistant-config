@@ -35,8 +35,8 @@ switch.wz_vitrine:
   friendly_name: "Vitrine"
 switch.rundumleuchte:
   icon: mdi:alarm-light
-# switch.christbaum:
-#   icon: mdi:pine-tree
+switch.christbaum:
+  icon: mdi:pine-tree
 switch.ventilator:
   icon: mdi:fan
 switch.esstisch_switch:

@@ -39,14 +39,13 @@
       pulselength: 500
       protocol: 1
 
-# - platform: mqtt
-#   name: "Christbaum"
-#   friendly_name: "Christbaum"
-#   command_topic: "cmnd/sonoff_3EFBC1/POWER"
-#   state_topic: "stat/sonoff_3EFBC1/POWER"
-#   payload_on: "ON"
-#   payload_off: "OFF"
-#   optimistic: false
+- platform: mqtt
+  name: "Christbaum"
+  command_topic: "cmnd/tasmota_plug1/POWER"
+  state_topic: "stat/tasmota_plug1/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
 
 # - platform: mqtt
 #   name: "christmas lights"

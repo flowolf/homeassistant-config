@@ -46,6 +46,7 @@ views:
           - entity: light.tradfri_bulb_e27_ws_opal_980lm
           - entity: light.lego_lampe
           - entity: switch.esstisch_switch
+          - entity: switch.christbaum
       - type: glance
         entities:
           - entity: sensor.wz_temp
@@ -100,6 +101,7 @@ views:
           - entity: switch.tradfri_outlet
           - entity: light.tradfri_bulb_e27_ws_opal_980lm
           - entity: light.tradfri_bulb_e27_opal_1000lm
+          - entity: switch.christbaum
           - entity: light.tv_light
           - entity: light.wz_vitrine
           - entity: light.tradfri_bulb_e27_ws_opal_980lm_2
@@ -124,6 +126,7 @@ views:
           - light.tradfri_bulb_e27_ws_opal_980lm
           - light.lego_lampe
           - switch.esstisch_switch
+          - switch.christbaum
           - light.wz_led_strips
           - light.tv_light
           - light.wz_vitrine

@@ -30,7 +30,24 @@
       data:
         entity_id: switch.tradfri_outlet
 
-- alias: "turn off living room lights"
+# - alias: "turn off living room lights"
+#   initial_state: true
+#   trigger:
+#     - platform: event
+#       event_type: xiaomi_aqara.click
+#       event_data:
+#         # xiaomi button n°3
+#         entity_id: binary_sensor.switch_158d00016bf562
+#         click_type: long_click_press
+#   action:
+#     - service: light.turn_off
+#       data:
+#         entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+#     - service: switch.turn_off
+#       data:
+#         entity_id: switch.tradfri_outlet
+
+- alias: "turn on christmas tree"
   initial_state: true
   trigger:
     - platform: event
@@ -40,9 +57,6 @@
         entity_id: binary_sensor.switch_158d00016bf562
         click_type: long_click_press
   action:
-    - service: light.turn_off
+    - service: switch.toggle
       data:
-        entity_id: light.tradfri_bulb_e27_ws_opal_980lm
-    - service: switch.turn_off
-      data:
-        entity_id: switch.tradfri_outlet
+        entity_id: switch.christbaum
