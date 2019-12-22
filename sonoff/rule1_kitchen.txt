@@ -1,0 +1,16 @@
+# toggle second light on quick on/off of main switch
+# 192.168.3.135
+Rule1 
+  ON Switch1#state do add1 1 endon
+  ON Switch1#state do Power1 %value% endon 
+  ON var1#state == 2 do publish cmnd/sonoff_kitchen1/POWER 2 endon
+  ON var1#state != 0 do backlog delay 4; var1 0 endon  
+
+
+# 'hardwire' both relays
+Rule1 
+  ON power1#state do publish cmnd/sonoff_kitchen1/POWER %value% endon
+
+# just switch 2nd relay
+Rule1 
+  ON switch1#state do publish cmnd/sonoff_kitchen1/POWER %value% endon
