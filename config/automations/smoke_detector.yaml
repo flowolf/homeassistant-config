@@ -22,8 +22,6 @@
       entity_id: switch.rundumleuchte
     - service: homeassistant.turn_on
       entity_id: group.alarm_all_lights
-    - service: switch.turn_on
-      entity_id: switch.rundumleuchte
     - service: notify.sms_to_flo
       data:
         message: "Alarm! Smoke detected!"
