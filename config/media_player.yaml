@@ -1,12 +1,12 @@
 ---
 - platform: kodi
-  host: !secret kodi_IP
-  port: !secret kodi_port
+  host: !secret elec_IP
+  port: !secret elec_port
   name: "Kodi"
   turn_on_action:
     service: wake_on_lan.send_magic_packet
     data:
-      mac: !secret kodi_mac_address
+      mac: !secret elec_mac_address
       broadcast_address: !secret broadcast_IP
   #  service: kodi.call_method
   #  data:
@@ -29,35 +29,6 @@
         #  command: standby
 #  turn_off_action: none
 
-- platform: kodi
-  host: !secret elec_IP
-  port: !secret elec_port
-  name: "elec"
-  turn_on_action:
-    service: wake_on_lan.send_magic_packet
-    data:
-      mac: !secret elec_mac_address
-      broadcast_address: !secret broadcast_IP
-  #  service: kodi.call_method
-  #  data:
-  #    entity_id: media_player.kodi
-  #    method: Addons.ExecuteAddon
-  #    addonid: script.json-cec
-  #    params:
-  #      command: activate
-  turn_off_action:
-    #  - service: media_player.media_stop
-    #    data:
-    #      entity_id: media_player.kodi
-    - service: kodi.call_method
-      data:
-        entity_id: media_player.elec
-        method: System.suspend
-        # method: Addons.ExecuteAddon
-        # addonid: script.json-cec
-        # params:
-        #  command: standby
-#  turn_off_action: none
 
 # not working as expected... put asleep
 # - platform: samsungtv

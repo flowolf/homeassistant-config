@@ -163,7 +163,7 @@ views:
         title: Wordclock
       # - entity: media_player.tv
       #   type: media-control
-      - entity: media_player.elec
+      - entity: media_player.kodi
         type: media-control
       - entity: media_player.snapcast_client_7c_dd_90_a7_f7_ad
         type: media-control
@@ -447,7 +447,7 @@ views:
         entities:
           - input_select.radio_stations
         title: Radio Sender
-      - entity: media_player.elec
+      - entity: media_player.kodi
         type: media-control
       - entity: media_player.mpd
         type: media-control
