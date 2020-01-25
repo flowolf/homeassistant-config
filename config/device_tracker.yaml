@@ -1,9 +1,10 @@
 ---
-- platform: luci
-  host: !secret router_IP
-  username: !secret router_user
-  password: !secret router_pwd
-  track_new_devices: false
+# fixme setup with new router
+# - platform: luci
+#   host: !secret router_IP
+#   username: !secret router_user
+#   password: !secret router_pwd
+#   track_new_devices: false
 
 # - platform: gpslogger
 # password: !secret gps_logger_pwd
