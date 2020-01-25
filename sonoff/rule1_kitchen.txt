@@ -6,7 +6,17 @@ Rule1
   ON var1#state == 2 do publish cmnd/sonoff_kitchen1/POWER 2 endon
   ON var1#state != 0 do backlog delay 4; var1 0 endon  
 
+Rule1 1
 
+{"Rule1":"OFF","Once":"OFF","StopOnError":"OFF","Free":312,
+"Rules":"
+ON Switch1#state do add1 1 endon   
+ON Switch1#state do Power1 %value% endon    
+ON var1#state == 2 do publish cmnd/sonoff_kitchen1/POWER 2 endon   
+ON var1#state != 0 do backlog delay 4; var1 0 endon
+"}
+
+########################
 # 'hardwire' both relays
 Rule1 
   ON power1#state do publish cmnd/sonoff_kitchen1/POWER %value% endon
