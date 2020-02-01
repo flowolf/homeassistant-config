@@ -1,0 +1,18 @@
+---
+- platform: synologydsm
+  host: !secret nas_ip
+  username: !secret nas_user
+  password: !secret nas_pass
+  port: !secret nas_port
+  ssl: false
+  monitored_conditions:
+    - cpu_total_load
+    - memory_real_usage
+    - network_up
+    - network_down
+    - disk_status
+    - disk_temp
+    - volume_status
+    - volume_size_total
+    - volume_size_used
+    - disk_smart_status
