@@ -13,6 +13,8 @@ homeassistant:
 frontend:
   themes: !include themes.yaml
 
+mobile_app:
+
 # gpslogger integration depends on
 cloud:
 

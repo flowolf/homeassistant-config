@@ -248,15 +248,14 @@ views:
         graph: line
         icon: mdi:tablet
         detail: 2
-      # - show_header_toggle: false
-      #   type: entities
-      #   entities:
-      #     - sensor.abstellraum_temp
-      #     - sensor.abstellraum_lfeucht
-      #   title: Abstellraum
-      - show_header_toggle: false
+        # - show_header_toggle: false
+        #   type: entities
+        #   entities:
+        #     - sensor.abstellraum_temp
+        #     - sensor.abstellraum_lfeucht
+        #   title: Abstellraum
+      - type: horizontal-stack
         title: Abstellraum
-        type: horizontal-stack
         cards:
           - type: sensor
             graph: line
@@ -276,8 +275,7 @@ views:
       - type: sensor
         graph: line
         entity: sensor.illumination_286c07fa1faa
-      - show_header_toggle: false
-        type: glance
+      - type: glance
         entities:
           # - binary_sensor.door_bell
           - entity: binary_sensor.motion_sensor_158d00015ef681
@@ -285,14 +283,12 @@ views:
           - entity: binary_sensor.smoke
           - entity: binary_sensor.schloss_wohnungstuer
         title: Vorzimmer
-      - show_header_toggle: false
-        type: glance
+      - type: glance
         entities:
           # - binary_sensor.door_bell
           - entity: sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
         title: Temperatures
-      - show_header_toggle: false
-        type: glance
+      - type: glance
         entities:
           - entity: binary_sensor.wohnungstuer
           - entity: binary_sensor.wohnzimmerbalkontuer
@@ -378,6 +374,37 @@ views:
         #       # - name: Proximity to home
         #       #   entity: proximity.home_flo
         #   type: entities
+      - title: NAS
+        show_header_toggle: false
+        type: entities
+        entities:
+          - sensor.synology_dsm_cpu_load_total
+          - sensor.synology_dsm_memory_usage_real
+          - sensor.synology_dsm_network_up
+          - sensor.synology_dsm_network_down
+          - sensor.synology_dsm_status_nvme0n1
+          - sensor.synology_dsm_status_smart_nvme0n1
+          - sensor.synology_dsm_status_sda
+          - sensor.synology_dsm_status_smart_sda
+          - sensor.synology_dsm_status_sdb
+          - sensor.synology_dsm_status_smart_sdb
+          - sensor.synology_dsm_temperature_nvme0n1
+          - sensor.synology_dsm_temperature_sda
+          - sensor.synology_dsm_temperature_sdb
+          - sensor.synology_dsm_total_size_volume_1
+          - sensor.synology_dsm_used_space_volume_1
+      - type: horizontal-stack
+        title: Abstellraum
+        cards:
+          - type: sensor
+            entity: sensor.synology_dsm_temperature_sda
+            graph: line
+          - type: sensor
+            entity: sensor.synology_dsm_temperature_sdb
+            graph: line
+          - type: sensor
+            entity: sensor.synology_dsm_temperature_nvme0n1
+            graph: line
       - show_header_toggle: false
         type: entities
         entities:
