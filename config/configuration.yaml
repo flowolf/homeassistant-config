@@ -26,8 +26,6 @@ zone: !include zones.yaml
 
 influxdb: !include influx.yaml
 
-weblink: !include links.yaml
-
 system_health:
 
 http:
