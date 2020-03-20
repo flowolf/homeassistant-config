@@ -110,32 +110,6 @@ sensor.flo_phone_direction:
   icon: mdi:compass-outline
 sensor.flo_phone_speed:
   icon: mdi:speedometer
-# # hide ##
-# group.automation:
-#   hidden: true
-# # OSM ##
-# sensor.owm_cloud_coverage:
-#   hidden: true
-# sensor.owm_condition:
-#   hidden: true
-# sensor.owm_forecast:
-#   hidden: true
-# sensor.owm_humidity:
-#   hidden: true
-# sensor.owm_pressure:
-#   hidden: true
-# sensor.owm_rain:
-#   hidden: true
-# sensor.owm_snow:
-#   hidden: true
-# sensor.owm_temperature:
-#   hidden: true
-# sensor.owm_wind_speed:
-#   hidden: true
-# sun.sun:
-#   hidden: true
-# sensor.yr_symbol:
-#   hidden: true
 
 # weather
 sun.sun:
