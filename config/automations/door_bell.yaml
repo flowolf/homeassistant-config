@@ -1,6 +1,5 @@
 ---
 - alias: Door Bell notify
-  hide_entity: false
   trigger:
     platform: state
     entity_id: binary_sensor.door_bell

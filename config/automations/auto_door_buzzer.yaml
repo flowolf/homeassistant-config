@@ -1,6 +1,5 @@
 ---
 - alias: Auto Door Buzzer
-  hide_entity: false
   initial_state: false
   trigger:
     platform: state

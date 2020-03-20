@@ -1,7 +1,6 @@
 ---
 - alias: "LEDstrip Input Effect"
   initial_state: true
-  hide_entity: false
   trigger:
     - platform: state
       entity_id: input_select.ledstrip_effect
@@ -13,7 +12,6 @@
 
 - alias: "LEDstrip Animation Speed"
   initial_state: true
-  hide_entity: false
   trigger:
     - platform: state
       entity_id: input_number.ledstrip_animation_speed
@@ -25,7 +23,6 @@
 
 - alias: "wordclock update"
   initial_state: true
-  hide_entity: false
   trigger:
     - platform: state
       entity_id: input_select.wordclock_effect

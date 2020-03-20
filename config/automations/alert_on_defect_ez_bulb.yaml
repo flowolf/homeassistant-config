@@ -1,6 +1,5 @@
 ---
 - alias: "Esstisch Lampe defekt"
-  hide_entity: false
   trigger:
     platform: state
     entity_id: switch.esstisch_switch

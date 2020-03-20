@@ -1,7 +1,6 @@
 # ---
 # - alias: "Tree on"
 #   initial_state: false
-#   hide_entity: false
 #   trigger:
 #     platform: time
 #     hours: 16

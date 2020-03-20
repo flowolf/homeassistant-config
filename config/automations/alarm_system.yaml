@@ -1,7 +1,6 @@
 ---
 - alias: Alarm for tampering with door sensor
   initial_state: true
-  hide_entity: false
   trigger:
     platform: state
     entity_id: binary_sensor.wohnungstuer_burglar
@@ -23,7 +22,6 @@
 
 - alias: Alarm for door opening when no-one is home
   initial_state: true
-  hide_entity: false
   trigger:
     platform: state
     entity_id: binary_sensor.wohnungstuer

@@ -1,6 +1,5 @@
 ---
 - alias: "wallpanel on when front door opened from inside"
-  hide_entity: false
   trigger:
     platform: state
     entity_id: binary_sensor.wohnungstuer

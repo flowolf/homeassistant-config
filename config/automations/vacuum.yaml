@@ -1,6 +1,5 @@
 ---
 - alias: "Automatic vacuum on"
-  hide_entity: false
   initial_state: true
   trigger:
     - platform: state
@@ -41,7 +40,6 @@
         entity_id: vacuum.bruno
 
 - alias: "Automatic vacuum off"
-  hide_entity: false
   initial_state: true
   trigger:
     platform: state

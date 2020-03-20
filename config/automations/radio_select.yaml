@@ -1,7 +1,6 @@
 ---
 - alias: "radio select"
   initial_state: true
-  hide_entity: false
   trigger:
     - platform: state
       entity_id: sensor.radio_data

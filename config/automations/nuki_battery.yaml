@@ -2,7 +2,6 @@
 id: Nuki battery low
 alias: Nuki battery low
 initial_state: true
-hide_entity: true
 trigger:
   platform: template
   value_template: "{{ states.lock.br38.attributes.battery_critical == 'true' }}"
