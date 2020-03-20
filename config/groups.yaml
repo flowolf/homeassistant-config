@@ -1,7 +1,6 @@
 ---
 wohnzimmer_compact:
   name: Wohnzimmer
-  control: hidden
   entities:
     - switch.tradfri_outlet
     - light.tradfri_bulb_e27_ws_opal_980lm
@@ -10,7 +9,6 @@ wohnzimmer_compact:
     - sensor.wz_temp
 wohnzimmer:
   name: Wohnzimmer
-  # control: hidden
   entities:
     - switch.tradfri_outlet
     - light.tradfri_bulb_e27_ws_opal_980lm
@@ -54,7 +52,6 @@ vorzimmer_sensors:
     - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
     - sensor.vzlicht_power
 automation_switch:
-  control: hidden
   entities:
     - automation.sunset
     - automation.sunset_2
@@ -76,18 +73,15 @@ automation_switch:
     # - automation.ledstrip_animation_speed
     # - automation.ledstrip_input_effect
 automation_timer:
-  control: hidden
   entities:
     - automation.wakeup_lights
     - input_datetime.time_wakeup_lights
 automation_door:
-  control: hidden
   name: Door Bell
   entities:
     - automation.auto_door_buzzer
     - automation.door_bell_notify
 automation_notify:
-  control: hidden
   entities:
     - automation.update_info
     - automation.tine_home
@@ -168,7 +162,6 @@ kinderzimmer:
     - light.tradfri_bulb_e27_ws_opal_980lm_2
 other:
   name: other
-  control: hidden
   entities:
     - input_boolean.testinger
     - switch.wz_light_2
@@ -302,7 +295,6 @@ wordclock:
 # # VIEWS ##
 default_view:
   name: Zhaus
-  view: true
   icon: mdi:home
   entities:
     - group.wohnzimmer_compact
@@ -315,7 +307,6 @@ default_view:
     - group.doors
 wohnzimmer_view:
   name: Wohnzimmer
-  view: true
   entities:
     - group.wohnzimmer
     - media_player.tv
@@ -326,7 +317,6 @@ wohnzimmer_view:
     - group.wordclock
 sensors_view:
   name: Sensoren
-  view: true
   entities:
     - group.loggia_sensors
     - group.system_sensors
@@ -343,7 +333,6 @@ sensors_view:
     - weblink.grafana
 player_view:
   name: Media Player
-  view: true
   entities:
     - group.radio_stations
     - media_player.kodi
@@ -353,19 +342,16 @@ player_view:
     - media_player.tv
     - weblink.mopidy
 radio_stations:
-  view: false
   name: Radio Sender
   entities:
     - input_select.radio_stations
 scenes_view:
   name: Scenen
-  view: true
   entities:
     - group.scenes_wz
     - group.scenes
 automation_view:
   name: Automations
-  view: true
   entities:
     - group.automation_door
     - group.automation_switch
@@ -374,19 +360,16 @@ automation_view:
     - group.scripts
 kitchen_view:
   name: Küche
-  view: true
   entities:
     - group.kitchen
     - media_player.snapcast_client_7c_dd_90_16_ea_27
 vacuum_view:
   name: Staubsauger
-  view: true
   entities:
     # - group.xiaomi_vacuum_controls
     - group.xiaomi_vacuum_sensors
 camera_view:
   name: Cameras
-  view: true
   icon: mdi:camera
   entities:
     - camera.balkonblick
@@ -395,12 +378,10 @@ camera_view:
     - camera.karren
     # - camera.raspy_cam
 # kinderzimmer_view:
-#   view: true
 #   entities:
 #     - group.kinderzimmer
 weather_view:
   name: Wetter
-  view: true
   entities:
     - camera.unwetter_stmk
     - group.owm_weather
@@ -412,7 +393,6 @@ weather_view:
 #     -
 xiaomi_vacuum_sensors:
   name: Staubsaugerroboter
-  control: hidden
   entities:
     - input_boolean.vacuum_bot_auto
     - vacuum.xiaomi_vacuum_cleaner
@@ -426,7 +406,6 @@ xiaomi_vacuum_sensors:
     - sensor.xiaomi_vacuum_cleaned_area
 warn_all_lights:
   # for warning if no one home but lights on
-  view: false
   entities:
     - light.gateway_light_286c07fa1faa
     - light.ledstrip
@@ -450,7 +429,6 @@ warn_all_lights:
     - media_player.tv
 alarm_all_lights:
   # for alarms, such as fire/smoke
-  view: false
   entities:
     # tradfri outlet
     - switch.tradfri_outlet
@@ -470,7 +448,6 @@ alarm_all_lights:
     - switch.kitchen
     - switch.kitchen_light1
 all_devices_presence:
-  view: false
   entities:
     - binary_sensor.flo_home
     - binary_sensor.tine_home
