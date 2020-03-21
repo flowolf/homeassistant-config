@@ -8,10 +8,10 @@ vacuum_bot_auto:
   icon: mdi:auto-fix
 
 flo_at_home:
-  initial: false
+# initial: false
 
 flo_not_at_home:
-  initial: false
+# initial: false
 
 tine_at_home:
   initial: false

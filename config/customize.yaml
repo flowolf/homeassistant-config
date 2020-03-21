@@ -123,8 +123,8 @@ sensor.owm_humidity:
   icon: mdi:water-percent
 sensor.owm_pressure:
   icon: mdi:weight
-sensor.owm_rain:
-  icon: mdi:weather-rainy
+# sensor.owm_rain:
+#   icon: mdi:weather-rainy
 sensor.owm_snow:
   icon: mdi:weather-snowy
 sensor.owm_temperature:
