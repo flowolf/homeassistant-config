@@ -74,6 +74,7 @@ zwave:
   # /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config/
 
 xiaomi_aqara:
+  discovery_retry: 5
   gateways:
     - mac: !secret xiaomi_gw_mac
       key: !secret xiaomi_gw_key
