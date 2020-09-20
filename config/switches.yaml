@@ -47,6 +47,40 @@
   payload_off: "OFF"
   optimistic: false
 
+- platform: mqtt
+  name: "gosund_042CFB"
+  command_topic: "cmnd/tasmota_042CFB/POWER"
+  state_topic: "stat/tasmota_042CFB/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "gosund_042C5F"
+  command_topic: "cmnd/tasmota_042C5F/POWER"
+  state_topic: "stat/tasmota_042C5F/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "gosund_042143"
+  command_topic: "cmnd/tasmota_042143/POWER"
+  state_topic: "stat/tasmota_042143/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+
+- platform: mqtt
+  name: "gosund_036643"
+  command_topic: "cmnd/tasmota_036643/POWER"
+  state_topic: "stat/tasmota_036643/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+
 # - platform: mqtt
 #   name: "christmas lights"
 #   friendly_name: "Weihnachtsbeleuchtung"
